@@ -11,15 +11,21 @@ python scripts\play.py
 python scripts\play.py --record-replay session
 python scripts\play.py --record-replay session --auto-click-splash
 python scripts\play.py --play-replay session
+python scripts\play.py --play-replay session_20260729_230725 `
+    --resume artifacts\snapshots\determinism_30000000\run_a.pfmacsnapshot
 python scripts\play.py --unthrottled
 python scripts\analyze.py
+python scripts\lift.py
 python scripts\verify_replay.py
+python scripts\verify_snapshot_resume.py
 ```
 
 The launcher builds `port_forge\pf_mac_qt.pro` and runs the original image at
-`assets\SimAnt_CD.iso`. Replays are written to `artifacts\replays`; diagnostic
-snapshots are written to `artifacts\snapshots` and are enabled by default.
-Press F11 to flush a recording or F12 to take a manual snapshot.
+`assets\SimAnt_CD.iso`. Replays are written to `artifacts\replays`; authenticated
+restorable snapshots are written to `artifacts\snapshots` and are enabled by
+default. Press F11 to flush a recording or F12 to take a manual checkpoint.
+Resume by full path or artifact name with `--resume`; when replay playback is
+also selected, its journal hash and saved cursor must match the checkpoint.
 Interactive execution is paced against the Macintosh Event Manager's 60 Hz
 timeline. Replay playback stays unthrottled for rapid deterministic
 regression runs; `--unthrottled` provides the same opt-out for a live run.
@@ -30,10 +36,19 @@ owns the ISO/creator defaults and artifact path; the CODE decoder, MPW
 jump-table lifting, trap catalog, and implementation comparison remain
 game-neutral code inside `port_forge`.
 
+`scripts\lift.py` generates
+`artifacts\analysis\mac_static_lift_plan.json`: source-authenticated decoded
+instructions, stable CODE identities, control-flow targets, MPW edges, and
+explicit frontiers. Supplying `--snapshot` overlays executed bytes and dynamic
+trap calls to rank native candidates without putting SimAnt policy into
+PortForge.
+
 `scripts\verify_replay.py` runs the canonical journal twice to the same exact
-instruction stop and compares the diagnostic manifest, guest RAM, and
-executed-byte bitmap byte-for-byte. It writes the current evidence to
-`artifacts\analysis\determinism_30m.json`.
+instruction stop and compares the restorable manifest, guest RAM,
+executed-byte bitmap, and persistent manager state byte-for-byte. It writes
+the current evidence to `artifacts\analysis\determinism_30m.json`.
+`scripts\verify_snapshot_resume.py` separately proves that a 10M checkpoint
+continued for 2M instructions is identical to an uninterrupted 12M run.
 
 The recording made before the launcher was moved is preserved as:
 

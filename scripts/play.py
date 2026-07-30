@@ -2,9 +2,9 @@
 """Build and run the classic Macintosh SimAnt Qt host.
 
 The player records deterministic guest input and asks the runner to preserve
-a raw diagnostic snapshot whenever guest execution stops on a diagnostic
-failure. F11 flushes the replay while the game is running; F12 writes a manual
-snapshot.
+a restorable snapshot whenever guest execution stops on a diagnostic failure.
+F11 flushes the replay while the game is running; F12 writes a manual
+restorable snapshot.
 """
 
 from __future__ import annotations
@@ -80,6 +80,41 @@ def replay_input(value: str) -> Path:
     return path
 
 
+def snapshot_input(value: str) -> Path:
+    candidate = Path(value)
+    if candidate.is_absolute():
+        path = candidate
+    elif len(candidate.parts) > 1:
+        path = PROJECT_ROOT / candidate
+    else:
+        direct = PROJECT_ROOT / "artifacts" / "snapshots" / candidate
+        if direct.is_dir():
+            path = direct
+        else:
+            name = candidate.name
+            if not name.endswith(SNAPSHOT_SUFFIX):
+                name += SNAPSHOT_SUFFIX
+            exact = PROJECT_ROOT / "artifacts" / "snapshots" / name
+            if exact.is_dir():
+                path = exact
+            else:
+                prefix = candidate.name.removesuffix(SNAPSHOT_SUFFIX)
+                matches = sorted(
+                    item
+                    for item in (
+                        PROJECT_ROOT / "artifacts" / "snapshots"
+                    ).glob(f"{prefix}_*{SNAPSHOT_SUFFIX}")
+                    if item.is_dir()
+                )
+                if not matches:
+                    raise RuntimeError(f"snapshot not found: {value}")
+                path = matches[-1]
+    path = path.resolve()
+    if not path.is_dir() or not (path / "snapshot.json").is_file():
+        raise RuntimeError(f"snapshot not found: {path}")
+    return path
+
+
 def parser() -> argparse.ArgumentParser:
     result = argparse.ArgumentParser(
         description="Run the real Macintosh SimAnt ISO through PortForge/Qt."
@@ -108,12 +143,19 @@ def parser() -> argparse.ArgumentParser:
         help="play an earlier deterministic Macintosh input journal",
     )
     result.add_argument(
+        "--resume",
+        "--resume-snapshot",
+        dest="resume_snapshot",
+        metavar="PATH_OR_NAME",
+        help="continue a restorable Macintosh snapshot",
+    )
+    result.add_argument(
         "--snapshot-on-crash",
         nargs="?",
         const="crash",
         default="crash",
         metavar="NAME",
-        help="snapshot raw memory/CPU/window/trap state on a guest stop",
+        help="write a restorable Macintosh checkpoint on a guest stop",
     )
     result.add_argument(
         "--no-snapshot-on-crash",
@@ -159,6 +201,10 @@ def main() -> int:
         )
     if args.instruction_limit is not None and args.instruction_limit <= 0:
         raise RuntimeError("--instruction-limit must be positive")
+    if args.resume_snapshot and args.auto_click_splash:
+        raise RuntimeError(
+            "--auto-click-splash cannot be added to a resumed state"
+        )
 
     if args.no_build:
         executable = (
@@ -195,6 +241,11 @@ def main() -> int:
         replay_path = replay_input(args.play_replay)
         command.extend(["--play-replay", str(replay_path)])
 
+    resume_path: Path | None = None
+    if args.resume_snapshot:
+        resume_path = snapshot_input(args.resume_snapshot)
+        command.extend(["--resume-snapshot", str(resume_path)])
+
     snapshot_path: Path | None = None
     if not args.no_snapshot_on_crash and args.snapshot_on_crash:
         snapshot_path = output_path(
@@ -220,6 +271,8 @@ def main() -> int:
     if replay_path:
         label = "recording" if args.record_replay else "replaying"
         print(f"{label}: {replay_path}", flush=True)
+    if resume_path:
+        print(f"resuming: {resume_path}", flush=True)
     if snapshot_path:
         print(f"crash snapshot: {snapshot_path}", flush=True)
     print(

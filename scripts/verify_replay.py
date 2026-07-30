@@ -2,7 +2,7 @@
 """Run a SimAnt Macintosh replay twice and compare exact stop state.
 
 This is intentionally game-project policy. PortForge owns the generic replay,
-coverage, and diagnostic snapshot formats; this script owns the SimAnt replay,
+coverage, and restorable snapshot formats; this script owns the SimAnt replay,
 instruction checkpoint, artifact paths, and optional golden digest.
 """
 
@@ -20,8 +20,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 PLAY = PROJECT_ROOT / "scripts" / "play.py"
 DEFAULT_REPLAY = "session_20260729_230725"
 DEFAULT_EXPECTED_MANIFEST_SHA256 = (
-    "f4eb7130d293d844d906938db9d6c6cf"
-    "6abc2bc16d7a801006c8158c7d9bc266"
+    "8f64c2e63d1be5528d3e87da37a8d9c6"
+    "4a80dce4b2505f2b2ce7a36fe70e4c02"
 )
 DEFAULT_OUTPUT = (
     PROJECT_ROOT / "artifacts" / "analysis" / "determinism_30m.json"
@@ -40,7 +40,7 @@ def parser() -> argparse.ArgumentParser:
     result = argparse.ArgumentParser(
         description=(
             "Replay Macintosh SimAnt twice to an exact instruction stop "
-            "and require byte-identical diagnostic state."
+            "and require byte-identical restorable state."
         )
     )
     result.add_argument("--replay", default=DEFAULT_REPLAY)
@@ -95,9 +95,10 @@ def run_once(
 def load_snapshot(snapshot: Path) -> tuple[dict, dict[str, str]]:
     manifest_path = snapshot / "snapshot.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("format") != (
-        "portforge-mac68k-diagnostic-snapshot-v2"
-    ):
+    if manifest.get("format") not in {
+        "portforge-mac68k-diagnostic-snapshot-v2",
+        "portforge-mac68k-restorable-snapshot-v1",
+    }:
         raise RuntimeError(
             f"snapshot has unsupported format: {manifest.get('format')}"
         )
@@ -111,11 +112,20 @@ def load_snapshot(snapshot: Path) -> tuple[dict, dict[str, str]]:
         "executed": sha256(snapshot / manifest["executed_file"]),
         "manifest": sha256(manifest_path),
     }
+    if "state_file" in manifest:
+        hashes["state"] = sha256(snapshot / manifest["state_file"])
     if hashes["memory"] != manifest["memory_sha256"]:
         raise RuntimeError("snapshot memory hash does not match its manifest")
     if hashes["executed"] != manifest["executed_sha256"]:
         raise RuntimeError(
             "snapshot execution-coverage hash does not match its manifest"
+        )
+    if (
+        "state" in hashes
+        and hashes["state"] != manifest["state_sha256"]
+    ):
+        raise RuntimeError(
+            "snapshot persistent-state hash does not match its manifest"
         )
     return manifest, hashes
 

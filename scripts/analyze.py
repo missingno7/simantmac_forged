@@ -63,7 +63,7 @@ def parser() -> argparse.ArgumentParser:
         type=Path,
         default=DEFAULT_SNAPSHOT,
         help=(
-            "optional v2 diagnostic snapshot used to rank executed "
+            "optional diagnostic or restorable snapshot used to rank executed "
             "MPW exports for native replacement"
         ),
     )
@@ -82,9 +82,10 @@ def executed(bitmap: bytes, address: int) -> bool:
 def attach_dynamic_evidence(report: dict, snapshot: Path) -> None:
     manifest_path = snapshot / "snapshot.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("format") != (
-        "portforge-mac68k-diagnostic-snapshot-v2"
-    ):
+    if manifest.get("format") not in {
+        "portforge-mac68k-diagnostic-snapshot-v2",
+        "portforge-mac68k-restorable-snapshot-v1",
+    }:
         raise RuntimeError(
             f"unsupported diagnostic snapshot: {manifest.get('format')}"
         )
