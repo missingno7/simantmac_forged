@@ -1,0 +1,7 @@
+# Original commercial game data and generated execution evidence stay local.
+assets/*
+!assets/README.md
+artifacts/
+_work/
+build/
+__pycache__/
