@@ -23,7 +23,10 @@ python scripts\verify_snapshot_resume.py
 The launcher builds `port_forge\pf_mac_qt.pro` and runs the original image at
 `assets\SimAnt_CD.iso`. Replays are written to `artifacts\replays`; authenticated
 restorable snapshots are written to `artifacts\snapshots` and are enabled by
-default. Press F11 to flush a recording or F12 to take a manual checkpoint.
+default. Automatic diagnostic stops use `crash_<timestamp>.pfmacsnapshot`;
+F12 checkpoints use `snapshot_<timestamp>.pfmacsnapshot`, so a normal manual
+capture is no longer mislabeled as a crash. Press F11 to flush a recording or
+F12 to take a manual checkpoint.
 Resume by full path or artifact name with `--resume`; when replay playback is
 also selected, its journal hash and saved cursor must match the checkpoint.
 Interactive execution is paced against the Macintosh Event Manager's 60 Hz

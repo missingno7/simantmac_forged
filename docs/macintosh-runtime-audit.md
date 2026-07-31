@@ -178,10 +178,11 @@ segment unloading/purging and full zone behavior remain approximate.
    and source-change fallback now exist. The Mac path still needs generated
    instruction semantics, function ABI/effect descriptions, and automatic
    original-versus-native entry/return checkpoint comparison.
-4. **Remaining graphics contracts.** `SetPortBits`, `ClosePort`, `SetCPortPix`,
-   and `SetCPixel` remain fail-loud. The reached `GetFontInfo`, `PaintRgn`, and
-   `FillCRgn` paths now use synthetic text metrics, retained regions, and
-   validated PixPat graphs. The 2026-07-31 `$AA12` snapshot resumes through
+4. **Remaining graphics contracts.** `SetPortBits`, `ClosePort`, and
+   `SetCPortPix` remain fail-loud. The reached `SetCPixel`, `GetFontInfo`,
+   `PaintRgn`, and `FillCRgn` paths now use indexed pixel writes, synthetic
+   text metrics, retained regions, and validated PixPat graphs. The
+   2026-07-31 `$AA12` snapshot resumes through
    one million further instructions after its `ditherPat` requested RGB is
    mapped to the active indexed palette.
    Region, PixMap, color-table, and `CopyBits` behavior should continue to be
@@ -197,7 +198,8 @@ segment unloading/purging and full zone behavior remain approximate.
    callbacks, queued same-channel host output, and Qt PCM output work.
    Disposed channel use returns `badChannel`; restoring the complete pre-trap
    stack from the 2026-07-31 `SndDoCommand` stop continues through one million
-   further instructions. Extended/compressed headers, MACE,
+   further instructions. Snapshot restore also preserves a queued buffer that
+   was canceled before its scheduled start tick. Extended/compressed headers, MACE,
    double-buffer commands, mixing/polyphony, MIDI/SONG sequencing, and exact
    completion timing do not.
 8. **Remaining utilities and explicit failure policy.** `FixMul`,
@@ -207,8 +209,14 @@ segment unloading/purging and full zone behavior remain approximate.
     but not automated frame/checkpoint comparison against Mini vMac, Basilisk
     II, or real captured System 7 behavior.
 
-The exact 45-slot frontier and every static caller site are in
+The exact 44-slot frontier and every static caller site are in
 `artifacts/analysis/mac_trap_frontier.json`.
+
+The 2026-07-31 gameplay journal reached `SetCPixel` at instruction
+432,751,354. The old checkpoint is repaired from its authenticated incomplete
+trap trace, re-enters `$AA16` at `mac.code.5.13210`, executes five pixel writes,
+and continues for one million instructions. New unresolved A-line stops retain
+the failing PC directly, so future trap snapshots need no legacy repair.
 
 ## First native replacement candidates
 

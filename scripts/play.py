@@ -255,6 +255,13 @@ def main() -> int:
             run_stamp,
         )
         command.extend(["--snapshot-on-stop", str(snapshot_path)])
+    manual_snapshot_path = output_path(
+        "snapshot",
+        PROJECT_ROOT / "artifacts" / "snapshots",
+        SNAPSHOT_SUFFIX,
+        run_stamp,
+    )
+    command.extend(["--manual-snapshot", str(manual_snapshot_path)])
     if args.quit_on_stop:
         command.append("--quit-on-stop")
     if args.unthrottled:
@@ -275,6 +282,7 @@ def main() -> int:
         print(f"resuming: {resume_path}", flush=True)
     if snapshot_path:
         print(f"crash snapshot: {snapshot_path}", flush=True)
+    print(f"manual snapshot: {manual_snapshot_path}", flush=True)
     print(
         "controls: left-click the splash; F11 saves replay; F12 snapshots",
         flush=True,
