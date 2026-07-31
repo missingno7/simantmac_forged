@@ -178,6 +178,15 @@ def parser() -> argparse.ArgumentParser:
         help="run interactive guest execution as fast as the host permits",
     )
     result.add_argument(
+        "--scale",
+        type=int,
+        metavar="INTEGER",
+        help=(
+            "exact positive integer Qt display scale (for example 1, 2, "
+            "or 3); omit to use the monitor DPI-derived scale"
+        ),
+    )
+    result.add_argument(
         "--auto-click-splash",
         action="store_true",
         help="click the center of the first visible guest window",
@@ -201,6 +210,8 @@ def main() -> int:
         )
     if args.instruction_limit is not None and args.instruction_limit <= 0:
         raise RuntimeError("--instruction-limit must be positive")
+    if args.scale is not None and args.scale <= 0:
+        raise RuntimeError("--scale must be a positive integer")
     if args.resume_snapshot and args.auto_click_splash:
         raise RuntimeError(
             "--auto-click-splash cannot be added to a resumed state"
@@ -266,6 +277,8 @@ def main() -> int:
         command.append("--quit-on-stop")
     if args.unthrottled:
         command.append("--unthrottled")
+    if args.scale is not None:
+        command.extend(["--scale", str(args.scale)])
     if args.auto_click_splash:
         command.extend(["--auto-click", "320", "240"])
     runner_args = args.runner_args
@@ -275,16 +288,19 @@ def main() -> int:
 
     print(f"runner: {executable}", flush=True)
     print(f"image:  {iso}", flush=True)
+    if args.scale is not None:
+        print(f"display scale: {args.scale}x (explicit)", flush=True)
     if replay_path:
         label = "recording" if args.record_replay else "replaying"
         print(f"{label}: {replay_path}", flush=True)
     if resume_path:
         print(f"resuming: {resume_path}", flush=True)
     if snapshot_path:
-        print(f"crash snapshot: {snapshot_path}", flush=True)
-    print(f"manual snapshot: {manual_snapshot_path}", flush=True)
+        print(f"failure snapshot target: {snapshot_path}", flush=True)
+    print(f"F12 snapshot target: {manual_snapshot_path}", flush=True)
     print(
-        "controls: left-click the splash; F11 saves replay; F12 snapshots",
+        "controls: left-click the splash; F11 saves replay; "
+        "F12 writes the manual snapshot",
         flush=True,
     )
     completed = subprocess.run(

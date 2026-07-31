@@ -133,9 +133,8 @@ replay determinism. At the Qt presentation boundary:
   thumb gesture commits its clamped guest value;
 - completed Qt frame resizes are attached to a synthetic consumed
   `mouseDown`; `FindWindow` reports the matching grow box and `GrowWindow`
-  returns the one-shot host size, preserving the guest minimum while not
-  imposing the historical resource maximum on an already completed native
-  resize. SimAnt then calls `SizeWindow` and
+  returns the one-shot host size clamped to the application's complete
+  minimum/maximum limit Rect. SimAnt then calls `SizeWindow` and
   repositions its own controls through its normal Macintosh code;
 - guest window visibility, title, order, document/dialog frame family,
   resizing, movement, and control state are re-read on every presenter slice.
@@ -174,8 +173,23 @@ Hosted presentation also revalidates each retained QuickDraw port against its
 authoritative guest `WindowRecord`, `portRect`, PixMap storage, and clip region
 before projection. This closes the intermittent case where the native frame
 accepted a resize while retained surface geometry still described the previous
-dimensions. New snapshots record guest, retained bitmap, and surface geometry
-for every window.
+dimensions. A same-size guest `SizeWindow` is also projected as a geometry
+transaction, so a second native drag beyond the maximum is snapped back rather
+than leaving a grey host-only extension. Replacement retained surfaces are
+identified by object identity as well as dimensions and version; moving or
+recreating a QuickDraw port can therefore no longer leave an older same-version
+surface on screen. New snapshots record guest, retained bitmap, and surface
+geometry for every window.
+
+SimAnt's main game window supplies `{minWidth=319, minHeight=271,
+maxWidth=639, maxHeight=431}` to `GrowWindow` from its own A5 globals at the
+reached call site `mac.code.2.2246`. The 639x431 ceiling is therefore game
+policy, not a PortForge or Qt restriction. Blindly raising it changes the
+logical QuickDraw port and game layout contract and is not yet proven safe.
+Making the view physically larger should use host-side integral scaling of the
+fixed logical surface. A larger logical play area belongs in an explicit
+SimAnt profile/native patch after parity tests prove its drawing, scrolling,
+hit-testing, map viewport, and saved state at the new dimensions.
 
 Color QuickDraw transparent transfers use the current RGB background color as
 the source transparency key. SimAnt's ant-wheel source uses white behind the

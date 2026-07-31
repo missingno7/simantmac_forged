@@ -122,8 +122,8 @@ The current slice adds:
 - correct `OpenRgn` recording of the outside `FrameRoundRect` boundary, so a
   closed region contains the rounded interior independently of pen width;
 - native shell maximize/resize presentation and host-completed guest resize
-  delivery that preserves Macintosh minimums without enforcing obsolete
-  resource maximums;
+  delivery that honors the application's complete Macintosh limit Rect and
+  reasserts accepted geometry after repeated out-of-range native drags;
 - reached styled TextEdit contracts for selection, deletion, insertion and
   update redraw, including deterministic guest Handle state, clipping,
   metrics, carriage returns and word wrapping;
