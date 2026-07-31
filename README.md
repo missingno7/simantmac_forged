@@ -133,10 +133,16 @@ replay determinism. At the Qt presentation boundary:
   thumb gesture commits its clamped guest value;
 - completed Qt frame resizes are attached to a synthetic consumed
   `mouseDown`; `FindWindow` reports the matching grow box and `GrowWindow`
-  returns the one-shot clamped host size. SimAnt then calls `SizeWindow` and
+  returns the one-shot host size, preserving the guest minimum while not
+  imposing the historical resource maximum on an already completed native
+  resize. SimAnt then calls `SizeWindow` and
   repositions its own controls through its normal Macintosh code;
 - guest window visibility, title, order, document/dialog frame family,
   resizing, movement, and control state are re-read on every presenter slice.
+
+The host desktop shell (`Classic Macintosh Application`) is now independently
+resizable and maximizable. It is presentation-only: resizing that shell does
+not synthesize a guest `WindowPtr` or mutate Macintosh state.
 
 Visible `MoveWindow` now translates simple or shaped structure/content/update
 regions, rebuilds the local visibility region, and updates the QuickDraw
@@ -176,6 +182,23 @@ the source transparency key. SimAnt's ant-wheel source uses white behind the
 yellow ants, so the wheel now overlays yellow ants without copying its white
 background.
 
+QuickDraw region recording now distinguishes screen framing from `OpenRgn`
+semantics. `FrameRoundRect` still draws only its pen-width outline, but while a
+region is open it records the infinitely thin outside boundary, so `CloseRgn`
+produces the filled enclosed region. SimAnt's top-of-map tip uses that region
+as the clip for `EraseRgn`; its rounded background is therefore erased to
+white instead of leaving grass behind the text.
+
+The late help-window checkpoint now resumes through `TESetSelect`, `TEDelete`,
+styled `TEDispatch` selector 7, and `TEUpdate`. The reusable TextEdit path
+retains text in the guest Handle graph, applies the primary style metrics,
+clips to the view/update rectangles, wraps at words and carriage returns, and
+restores the caller's GrafPort state. Its child-window pictures also exercise
+PICT v1 byte opcodes, patterned rectangle drawing, absolute/relative text, and
+one-bit BitMap transfers with classic source modes. From the pre-`TEUpdate`
+checkpoint, the repaired path continues for 1,000,000 instructions with seven
+guest windows and no unsupported stop.
+
 `TrackControl` (`A968`) with a NIL `actionProc` is implemented for completed
 native standard-scrollbar gestures. A custom `actionProc` remains an explicit
 boundary because it requires a re-entrant guest callback/modal continuation
@@ -187,7 +210,7 @@ scrollbar-value mutation.
 The current SimAnt report recursively decodes 123,172 of 182,266 CODE bytes
 (67.58%) from 359 entry seeds, resolves 1,595 MPW A5 jump-table transfers, and
 proves 1,587 direct A-line sites across 219 canonical trap slots. After the
-current implementations, 45 reachable slots remain fail-loud. The report also
+current implementations, 40 reachable slots remain fail-loud. The report also
 correlates loaded CODE ranges, executed bytes, and cumulative trap coverage to
 rank candidate functions for native parity experiments.
 

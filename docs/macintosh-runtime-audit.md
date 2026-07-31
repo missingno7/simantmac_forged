@@ -119,6 +119,16 @@ The current slice adds:
 - correct `ApplZone` and `MemErr` low-memory contracts;
 - generic implementations and focused tests for `SetPt`, `TextMode`,
   `PaintRect`, `InsetRect`, `DisposeRgn`, and `ExitToShell`;
+- correct `OpenRgn` recording of the outside `FrameRoundRect` boundary, so a
+  closed region contains the rounded interior independently of pen width;
+- native shell maximize/resize presentation and host-completed guest resize
+  delivery that preserves Macintosh minimums without enforcing obsolete
+  resource maximums;
+- reached styled TextEdit contracts for selection, deletion, insertion and
+  update redraw, including deterministic guest Handle state, clipping,
+  metrics, carriage returns and word wrapping;
+- a shared PICT v1/v2 decoder path with byte-opcode state, patterned rectangle
+  and relative-text records, and one-bit BitMap transfers in classic modes;
 - the game-owned two-run deterministic verifier.
 
 All runtime changes are general Macintosh contracts in `port_forge`.
@@ -169,9 +179,12 @@ segment unloading/purging and full zone behavior remain approximate.
    reached as `SFGetFile` (selector 2) in the 2026-07-31 interactive evidence.
    It remains explicit until the host picker can return an HFS/File Manager
    identity rather than only a host path.
-2. **Dialog Manager and TextEdit.** Ten Dialog and nine TextEdit slots account
-   for the largest coherent UI gap. They should share guest records and event
-   semantics with the existing Window/Control Managers and project only
+2. **Dialog Manager and remaining TextEdit selectors.** Styled creation,
+   selection, deletion, selector-7 insertion and update redraw now cover the
+   reached late help-window path. Dialog item text/event semantics and the
+   remaining TextEdit editing, measurement and scrolling selectors still form
+   the largest coherent UI gap. They should continue sharing guest records and
+   event semantics with the existing Window/Control Managers and project only
    standard widgets to Qt.
 3. **Macintosh generated semantics and parity machinery.** Stable identities,
    source-authenticated lift plans, movable-segment native block registration,
@@ -203,13 +216,14 @@ segment unloading/purging and full zone behavior remain approximate.
    double-buffer commands, mixing/polyphony, MIDI/SONG sequencing, and exact
    completion timing do not.
 8. **Remaining utilities and explicit failure policy.** `FixMul`,
-   `UpperString`, `TEGetOffset`/`TEDispatch`, `Pack2`, and `Debugger` need either
-   faithful implementations or tested application-appropriate error behavior.
+   `UpperString`, `TEGetOffset`, unimplemented `TEDispatch` selectors, `Pack2`,
+   and `Debugger` need either faithful implementations or tested
+   application-appropriate error behavior.
 9. **Trusted-oracle automation.** PortForge has deterministic self-comparison,
     but not automated frame/checkpoint comparison against Mini vMac, Basilisk
     II, or real captured System 7 behavior.
 
-The exact 44-slot frontier and every static caller site are in
+The exact 40-slot frontier and every static caller site are in
 `artifacts/analysis/mac_trap_frontier.json`.
 
 The 2026-07-31 gameplay journal reached `SetCPixel` at instruction
