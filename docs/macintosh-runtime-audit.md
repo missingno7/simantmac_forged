@@ -166,7 +166,9 @@ segment unloading/purging and full zone behavior remain approximate.
    `Read`, `Write`, positioning, metadata, create/delete, EOF and volume flush
    are still in the static frontier. Save games require a deterministic
    writable overlay preserving forks and Finder metadata. `Pack3` is also a
-   known reached failure in earlier interactive evidence.
+   reached as `SFGetFile` (selector 2) in the 2026-07-31 interactive evidence.
+   It remains explicit until the host picker can return an HFS/File Manager
+   identity rather than only a host path.
 2. **Dialog Manager and TextEdit.** Ten Dialog and nine TextEdit slots account
    for the largest coherent UI gap. They should share guest records and event
    semantics with the existing Window/Control Managers and project only
@@ -177,8 +179,11 @@ segment unloading/purging and full zone behavior remain approximate.
    instruction semantics, function ABI/effect descriptions, and automatic
    original-versus-native entry/return checkpoint comparison.
 4. **Remaining graphics contracts.** `SetPortBits`, `ClosePort`, `SetCPortPix`,
-   and `SetCPixel` remain fail-loud. The reached `GetFontInfo` and `PaintRgn`
-   paths now use the synthetic text metrics and retained region raster.
+   and `SetCPixel` remain fail-loud. The reached `GetFontInfo`, `PaintRgn`, and
+   `FillCRgn` paths now use synthetic text metrics, retained regions, and
+   validated PixPat graphs. The 2026-07-31 `$AA12` snapshot resumes through
+   one million further instructions after its `ditherPat` requested RGB is
+   mapped to the active indexed palette.
    Region, PixMap, color-table, and `CopyBits` behavior should continue to be
    expanded only from reached tests and oracle comparisons.
 5. **Timing/event completeness.** `Delay` and `FlushEvents` need deterministic
@@ -189,7 +194,10 @@ segment unloading/purging and full zone behavior remain approximate.
    purge, lock, resource detachment, and segment unpatching need stronger
    behavioral tests.
 7. **Sound and music breadth.** Standard 8-bit sampled buffers, looping,
-   callbacks, and Qt PCM output work. Extended/compressed headers, MACE,
+   callbacks, queued same-channel host output, and Qt PCM output work.
+   Disposed channel use returns `badChannel`; restoring the complete pre-trap
+   stack from the 2026-07-31 `SndDoCommand` stop continues through one million
+   further instructions. Extended/compressed headers, MACE,
    double-buffer commands, mixing/polyphony, MIDI/SONG sequencing, and exact
    completion timing do not.
 8. **Remaining utilities and explicit failure policy.** `FixMul`,
