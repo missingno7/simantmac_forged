@@ -2,7 +2,7 @@
   "format": "simant-mac-replay-conformance-v3",
   "result": "passed",
   "claim": "semantic-boundary-equivalence",
-  "portforge_revision": "44a57b3e9ade5be03aeaa19fb9d4c1f4ad22c731",
+  "portforge_revision": "ce9f4e93d69efbc5b60424ba371b60d4e2bab2ed",
   "artifact": {
     "path": "artifacts/replays/canonical-event-poll-v2.pfreplay.json",
     "sha256": "f136144ed64be3c9b70c59a4fb3a86e738a0b0e85c4ebcc66d560733d1e53fc9",
@@ -48,7 +48,7 @@
   "atlas": {
     "role": "regeneratable-evidence-projection",
     "path": "artifacts/atlas.pfatlas",
-    "binding_sha256": "4a7524c8d63943d94cac317b923150abc3457c2202387447f770a9e97d654b26",
+    "binding_sha256": "9193044c8f6b0ff09888aff9d379ae17d553164fdb46af91a0ea6fdc5c262809",
     "projection_sha256": "aff2bf9b45db78f183bd0c2fe826859b57ec6f4402d64b51ecb4ce232de297e9",
     "sources": 1,
     "nodes": 847,
