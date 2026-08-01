@@ -1,0 +1,109 @@
+{
+  "$schema": "port_forge/schemas/portforge-project-v1.schema.json",
+  "format": "portforge-project-v1",
+  "game": "game.json",
+  "portforge": "port_forge",
+  "assets": "assets",
+  "player": {
+    "default_runtime": "oracle",
+    "runtimes": {
+      "oracle": {
+        "supported": true,
+        "adapter": "scripts/play.py:mac68k-oracle",
+        "build_hint": "python scripts/play.py"
+      },
+      "generated": {
+        "supported": false,
+        "reason": "No generated Mac68k execution implementation is declared."
+      },
+      "port": {
+        "supported": false,
+        "reason": "No PortForge-independent Macintosh source port exists."
+      }
+    }
+  },
+  "artifacts": {
+    "replay_boundaries": "profiles/replay-boundaries-v1.json",
+    "platform_capabilities": "portforge.capabilities.json",
+    "implementation_catalog": "recovery/implementation-catalog.json",
+    "execution_plan_oracle": "recovery/execution-plan-oracle.json",
+    "execution_plan_oracle_detachment": "recovery/execution-plan-oracle.detachment.json",
+    "canonical_replay": "artifacts/replays/canonical-event-poll-v2.pfreplay.json",
+    "replay_evidence_oracle": "artifacts/evidence/canonical-event-poll-oracle-v3.json",
+    "atlas": "artifacts/atlas.pfatlas",
+    "canonical_regressions": "regressions/manifest.json",
+    "replay_conformance": "recovery/replay-conformance.json",
+    "snapshot_conformance": "recovery/snapshot-conformance.json",
+    "replays": "artifacts/replays",
+    "snapshots": "artifacts/snapshots"
+  },
+  "known_gaps": [
+    {
+      "severity": "risk",
+      "scope": "replay-continuation",
+      "summary": "The real Qt ArtifactV2 path uses a cold-start session and does not yet expose a persisted ReplaySession continuation envelope.",
+      "evidence": "recovery/replay-conformance.json"
+    },
+    {
+      "severity": "risk",
+      "scope": "canonical-output",
+      "summary": "Machine snapshots preserve deterministic QuickDraw and Sound Manager source state, but canonical audio/video stream hashing is not yet a project conformance gate.",
+      "evidence": "recovery/snapshot-conformance.json"
+    },
+    {
+      "severity": "risk",
+      "scope": "assets",
+      "summary": "Boot requires the original HFS image, resource fork, and Finder metadata.",
+      "evidence": "docs/asset-inventory.md"
+    }
+  ],
+  "workflows": {
+    "play": {
+      "command": ["python", "scripts/play.py"],
+      "scope": "interactive-oracle",
+      "description": "Run the original HFS application through the Mac68k oracle."
+    },
+    "record-canonical-replay": {
+      "command": ["python", "scripts/play.py", "--record-artifact", "canonical-event-poll-v2", "--replay-boundary-limit", "8", "--exit-after-replay", "--no-snapshot-on-crash", "--unthrottled"],
+      "scope": "semantic-replay-recording",
+      "description": "Record the canonical ReplayArtifactV2 at Event Manager poll boundaries."
+    },
+    "verify-replay": {
+      "command": ["python", "scripts/verify_replay.py"],
+      "scope": "semantic-replay-conformance",
+      "description": "Validate the current artifact and play it twice fail-closed.",
+      "gate": true
+    },
+    "collect-replay-evidence": {
+      "command": ["python", "scripts/play.py", "--play-artifact", "canonical-event-poll-v2", "--evidence-out", "artifacts/evidence/canonical-event-poll-oracle-v3.json", "--exit-after-replay", "--no-snapshot-on-crash", "--unthrottled"],
+      "scope": "normalized-replay-observation",
+      "description": "Replay the canonical artifact and publish execution-bound Mac68k EvidenceV3."
+    },
+    "rebuild-atlas": {
+      "command": ["python", "port_forge/tools/pf_project.py", "atlas", ".", "rebuild-evidence", "artifacts/evidence/canonical-event-poll-oracle-v3.json"],
+      "scope": "regeneratable-evidence-projection",
+      "description": "Delete and atomically rematerialize Atlas from declared EvidenceV3."
+    },
+    "verify-snapshot-resume": {
+      "command": ["python", "scripts/verify_snapshot_resume.py"],
+      "scope": "machine-continuation",
+      "description": "Compare a real resumed run byte-for-byte with uninterrupted execution.",
+      "gate": true
+    },
+    "plan-oracle": {
+      "command": ["python", "port_forge/tools/pf_project.py", "plan", ".", "oracle-interpreter", "--output", "recovery/execution-plan-oracle.json"],
+      "scope": "execution-planning",
+      "description": "Resolve the exact Mac oracle dependency closure."
+    },
+    "platform-status": {
+      "command": ["python", "port_forge/tools/pf_project.py", "platform", "status", ".", "--platform", "mac68k"],
+      "scope": "control-plane",
+      "description": "Report evidence-backed Mac68k maturity."
+    },
+    "platform-doctor": {
+      "command": ["python", "port_forge/tools/pf_project.py", "platform", "doctor", ".", "--platform", "mac68k"],
+      "scope": "control-plane",
+      "description": "Report the next missing Mac68k capability dependency."
+    }
+  }
+}

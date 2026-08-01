@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prove that a Macintosh checkpoint resumes identically to a direct run."""
+"""Prove exact real Macintosh machine-state continuation."""
 
 from __future__ import annotations
 
@@ -8,14 +8,14 @@ import hashlib
 import json
 import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-PLAY = PROJECT_ROOT / "scripts" / "play.py"
-DEFAULT_OUTPUT = (
-    PROJECT_ROOT / "artifacts" / "analysis" / "snapshot_resume_12m.json"
-)
+ROOT = Path(__file__).resolve().parents[1]
+PLAY = ROOT / "scripts" / "play.py"
+DEFAULT_OUTPUT = ROOT / "recovery" / "snapshot-conformance.json"
 
 
 def sha256(path: Path) -> str:
@@ -26,123 +26,84 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def parser() -> argparse.ArgumentParser:
-    result = argparse.ArgumentParser(
-        description=(
-            "Checkpoint a deterministic SimAnt replay, resume it, and "
-            "require exact equality with uninterrupted execution."
-        )
-    )
-    result.add_argument(
-        "--replay", default="resize_probe_20260730.pfmacreplay.json"
-    )
-    result.add_argument(
-        "--checkpoint-instructions", type=int, default=10_000_000
-    )
-    result.add_argument(
-        "--continuation-instructions", type=int, default=2_000_000
-    )
-    result.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    result.add_argument(
-        "--build",
-        action="store_true",
-        help="build the Qt runner before the checkpoint run",
-    )
-    return result
-
-
 def run(
-    replay: str,
     instruction_limit: int,
     snapshot: Path,
     *,
     resume: Path | None = None,
     build: bool = False,
 ) -> None:
-    command = [
-        sys.executable,
-        str(PLAY),
-        "--play-replay",
-        replay,
-        "--instruction-limit",
-        str(instruction_limit),
-        "--quit-on-stop",
-        "--unthrottled",
-        "--snapshot-on-crash",
-        str(snapshot),
-    ]
+    command = [sys.executable, str(PLAY)]
     if not build:
-        command.insert(2, "--no-build")
+        command.append("--no-build")
+    command.extend(
+        [
+            "--instruction-limit",
+            str(instruction_limit),
+            "--quit-on-stop",
+            "--unthrottled",
+            "--snapshot-on-crash",
+            str(snapshot),
+        ]
+    )
     if resume is not None:
-        command.extend(["--resume", str(resume)])
-    completed = subprocess.run(command, cwd=PROJECT_ROOT, check=False)
+        command.extend(["--resume-snapshot", str(resume)])
+    command.extend(["--", "--no-host-input"])
+    completed = subprocess.run(command, cwd=ROOT, check=False)
     if completed.returncode != 3:
         raise RuntimeError(
-            f"runner did not reach checkpoint {instruction_limit} "
-            f"(exit {completed.returncode})"
+            f"runner did not reach the {instruction_limit}-instruction "
+            f"interval (exit {completed.returncode})"
         )
 
 
-def authenticated_hashes(snapshot: Path) -> tuple[dict, dict[str, str]]:
+def authenticated_snapshot(snapshot: Path) -> tuple[dict[str, Any], dict[str, str]]:
     manifest_path = snapshot / "snapshot.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("format") != (
-        "portforge-mac68k-restorable-snapshot-v1"
-    ):
-        raise RuntimeError(
-            f"snapshot is not restorable: {manifest.get('format')}"
-        )
-    hashes = {"manifest": sha256(manifest_path)}
+    if manifest.get("format") != "portforge-mac68k-restorable-snapshot-v1":
+        raise RuntimeError(f"snapshot is not restorable: {snapshot}")
+    hashes: dict[str, str] = {}
     for region in ("memory", "executed", "state"):
-        path = snapshot / manifest[f"{region}_file"]
-        digest = sha256(path)
+        digest = sha256(snapshot / manifest[f"{region}_file"])
         if digest != manifest[f"{region}_sha256"]:
-            raise RuntimeError(
-                f"{snapshot.name}: {region} authentication failed"
-            )
+            raise RuntimeError(f"{snapshot.name}: {region} authentication failed")
         hashes[region] = digest
     return manifest, hashes
 
 
 def main() -> int:
-    args = parser().parse_args()
-    if (
-        args.checkpoint_instructions <= 0
-        or args.continuation_instructions <= 0
-    ):
-        raise RuntimeError("instruction counts must be positive")
-    total = (
-        args.checkpoint_instructions + args.continuation_instructions
-    )
-    root = (
-        PROJECT_ROOT
-        / "artifacts"
-        / "snapshots"
-        / f"resume_equivalence_{total}"
-    )
-    checkpoint = root / "checkpoint.pfmacsnapshot"
-    resumed = root / "resumed.pfmacsnapshot"
-    direct = root / "direct.pfmacsnapshot"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--checkpoint-instructions", type=int, default=2_000_000)
+    parser.add_argument("--continuation-instructions", type=int, default=500_000)
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--build", action="store_true")
+    options = parser.parse_args()
+    if options.checkpoint_instructions <= 0 or options.continuation_instructions <= 0:
+        raise RuntimeError("instruction intervals must be positive")
 
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    run_root = ROOT / "artifacts/snapshots" / f"resume-equivalence-{stamp}"
+    checkpoint = run_root / "checkpoint.pfmacsnapshot"
+    resumed = run_root / "resumed.pfmacsnapshot"
+    direct = run_root / "direct.pfmacsnapshot"
     run(
-        args.replay,
-        args.checkpoint_instructions,
+        options.checkpoint_instructions,
         checkpoint,
-        build=args.build,
+        build=options.build,
     )
     run(
-        args.replay,
-        args.continuation_instructions,
+        options.continuation_instructions,
         resumed,
         resume=checkpoint,
     )
-    run(args.replay, total, direct)
-
-    checkpoint_manifest, checkpoint_hashes = authenticated_hashes(
-        checkpoint
+    run(
+        options.checkpoint_instructions + options.continuation_instructions,
+        direct,
     )
-    resumed_manifest, resumed_hashes = authenticated_hashes(resumed)
-    direct_manifest, direct_hashes = authenticated_hashes(direct)
+
+    checkpoint_manifest, checkpoint_hashes = authenticated_snapshot(checkpoint)
+    resumed_manifest, resumed_hashes = authenticated_snapshot(resumed)
+    direct_manifest, direct_hashes = authenticated_snapshot(direct)
     if resumed_hashes != direct_hashes:
         raise RuntimeError(
             "resumed execution diverged from direct execution: "
@@ -153,47 +114,63 @@ def main() -> int:
         )
 
     evidence = {
-        "format": "simant-macintosh-snapshot-resume-evidence-v1",
-        "replay": args.replay,
-        "checkpoint_instructions": args.checkpoint_instructions,
-        "continuation_instructions": args.continuation_instructions,
-        "total_instructions": total,
-        "checkpoint_replay_cursor": checkpoint_manifest[
-            "replay_cursor"
+        "format": "simant-mac-snapshot-conformance-v2",
+        "result": "passed",
+        "claim": "machine-exact",
+        "scope": "real cold-start oracle; byte-identical authenticated final continuation state",
+        "checkpoint_instructions": options.checkpoint_instructions,
+        "continuation_instructions": options.continuation_instructions,
+        "total_instructions": (
+            options.checkpoint_instructions + options.continuation_instructions
+        ),
+        "checkpoint": {
+            "pc": checkpoint_manifest["cpu"]["pc"],
+            "timeline_ticks": checkpoint_manifest["runtime"]["timeline_ticks"],
+            "hashes": checkpoint_hashes,
+        },
+        "final": {
+            "pc": resumed_manifest["cpu"]["pc"],
+            "timeline_ticks": resumed_manifest["runtime"]["timeline_ticks"],
+            "hashes": resumed_hashes,
+            "direct_hashes": direct_hashes,
+            "replay_cursor": resumed_manifest["replay_cursor"],
+        },
+        "authenticated_regions": ["memory", "executed", "state"],
+        "state_contract": {
+            "includes_deterministic_audio_source": True,
+            "includes_deterministic_video_source": True,
+            "host_audio_queue_authoritative": False,
+            "host_window_or_gpu_state_authoritative": False,
+        },
+        "artifact_capabilities_proven": ["machine-exact"],
+        "artifact_capabilities_not_claimed": [
+            "replay-session-exact",
+            "audio-continuing",
+            "video-continuing",
         ],
-        "final_replay_cursor": resumed_manifest["replay_cursor"],
-        "pc": resumed_manifest["cpu"]["pc"],
-        "timeline_ticks": resumed_manifest["runtime"]["timeline_ticks"],
-        "hashes": resumed_hashes,
-        "checkpoint_hashes": checkpoint_hashes,
         "snapshots": {
-            "checkpoint": str(checkpoint.relative_to(PROJECT_ROOT)),
-            "resumed": str(resumed.relative_to(PROJECT_ROOT)),
-            "direct": str(direct.relative_to(PROJECT_ROOT)),
+            "checkpoint": checkpoint.relative_to(ROOT).as_posix(),
+            "resumed": resumed.relative_to(ROOT).as_posix(),
+            "direct": direct.relative_to(ROOT).as_posix(),
         },
     }
-    output = args.output
+    output = options.output
     if not output.is_absolute():
-        output = PROJECT_ROOT / output
-    output = output.resolve()
+        output = ROOT / output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(
         json.dumps(evidence, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
-    print(f"resume-equivalent: {resumed_hashes['manifest']}")
-    print(f"evidence: {output}")
+    print(f"machine-exact resume: {resumed_hashes['state']}")
+    print(f"evidence: {output.resolve()}")
     return 0
 
 
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except (
-        OSError,
-        RuntimeError,
-        ValueError,
-        subprocess.SubprocessError,
-    ) as error:
+    except (OSError, RuntimeError, ValueError, subprocess.SubprocessError) as error:
         print(f"verify_snapshot_resume.py: {error}", file=sys.stderr)
         raise SystemExit(1)

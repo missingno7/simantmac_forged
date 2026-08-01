@@ -1,0 +1,51 @@
+{
+  "mac.event.poll": {
+    "completed_visits": 8,
+    "evidence": [
+      "evidence-mac-oracle-f136144ed64b-ea6a2e7683c9"
+    ],
+    "replays": [
+      {
+        "active_calls_at_end": 1,
+        "completed_visits": 8,
+        "execution_mode": "mac-oracle",
+        "final_completed_exit": {
+          "predecessor": {
+            "boundary_ordinal": 15,
+            "checkpoint_cursor": 8,
+            "event_cursor": 1,
+            "selector": {
+              "occurrence": 7,
+              "phase": "after",
+              "point": "mac.event.poll"
+            }
+          },
+          "runtime_instruction": 1358629
+        },
+        "first_entry": {
+          "predecessor": {
+            "boundary_ordinal": 0,
+            "checkpoint_cursor": 0,
+            "event_cursor": 0,
+            "selector": {
+              "occurrence": 0,
+              "phase": "before",
+              "point": "mac.event.poll"
+            }
+          },
+          "runtime_instruction": 1354389
+        },
+        "id": "mac.event.poll",
+        "incomplete": true,
+        "label": "canonical-event-poll-v2.pfreplay.json",
+        "max_depth": 1,
+        "max_recursive_depth": 1,
+        "nested_visits": 0,
+        "recursive_visits": 0,
+        "replay": "f136144ed64be3c9b70c59a4fb3a86e738a0b0e85c4ebcc66d560733d1e53fc9",
+        "visits": 9
+      }
+    ],
+    "visits": 9
+  }
+}

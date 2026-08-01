@@ -1,0 +1,84 @@
+{
+  "$schema": "port_forge/schemas/portforge-detachment-report-v1.schema.json",
+  "format": "portforge-detachment-report-v1",
+  "plan_sha256": "342fdf0c5767947083dde8b2990dbbdd9c28e75f3040c1aa43c214f2ad2667b3",
+  "platform": "mac68k",
+  "project": "simant-mac",
+  "properties": {
+    "cpu-model": {
+      "detached": false,
+      "required_by": [
+        "portforge.mac68k.common-session"
+      ]
+    },
+    "diagnostics": {
+      "detached": true,
+      "required_by": []
+    },
+    "guest-memory": {
+      "detached": false,
+      "required_by": [
+        "portforge.mac68k.common-session"
+      ]
+    },
+    "interpreter": {
+      "detached": false,
+      "required_by": [
+        "simant-mac.oracle-interpreter"
+      ]
+    },
+    "oracle": {
+      "detached": false,
+      "required_by": [
+        "simant-mac.oracle-interpreter"
+      ]
+    },
+    "original-code": {
+      "detached": false,
+      "required_by": [
+        "simant-mac.bootstrap.original-hfs",
+        "simant-mac.oracle-interpreter"
+      ]
+    },
+    "original-executable": {
+      "detached": false,
+      "required_by": [
+        "simant-mac.bootstrap.original-hfs"
+      ]
+    },
+    "platform-services": {
+      "detached": false,
+      "required_by": [
+        "portforge.mac68k.common-session"
+      ]
+    },
+    "portforge-runtime": {
+      "detached": false,
+      "required_by": [
+        "portforge.mac68k.common-session"
+      ]
+    },
+    "replay": {
+      "detached": false,
+      "required_by": [
+        "portforge.mac68k.common-session"
+      ]
+    },
+    "snapshots": {
+      "detached": true,
+      "required_by": []
+    }
+  },
+  "remaining_dependencies": [
+    "cpu-model",
+    "guest-memory",
+    "interpreter",
+    "oracle",
+    "original-code",
+    "original-executable",
+    "platform-services",
+    "portforge-runtime",
+    "replay"
+  ],
+  "role": "oracle-interpreter"
+}

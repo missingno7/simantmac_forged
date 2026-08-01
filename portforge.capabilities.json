@@ -1,0 +1,100 @@
+{
+  "$schema": "port_forge/schemas/portforge-platform-capabilities-v1.schema.json",
+  "format": "portforge-platform-capabilities-v1",
+  "project": "simant-mac",
+  "platform": "mac68k",
+  "graph_sha256": "b2e0dea1d12c3592660ad73ff22cc6ada414d9c15de84c2b6bd8638a1177f699",
+  "claims": {
+    "bootable": {
+      "state": "conformant",
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "03204fd3064a50e64706e3a137743616616ddff594391c103d3017536f1587ea", "detail": "The bound HFS application boots from the exact ISO/resource-fork identities and reaches Event Manager polling."}],
+      "blockers": []
+    },
+    "deterministic-time": {
+      "state": "conformant",
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "03204fd3064a50e64706e3a137743616616ddff594391c103d3017536f1587ea", "detail": "Two playbacks repeat all checkpoints under CPU-cycle/Event-Manager time with host wall clock non-authoritative."}],
+      "blockers": []
+    },
+    "semantic-boundaries": {
+      "state": "conformant",
+      "evidence": [{"kind": "source", "path": "profiles/replay-boundaries-v1.json", "sha256": "e3c971cd69f7df35b971c2433e1196b5842662545022088886ecce643a1802c9", "detail": "Versioned Event Manager poll point with typed input visibility and point-local before/after occurrences."}],
+      "blockers": []
+    },
+    "replay-recording": {
+      "state": "conformant",
+      "evidence": [{"kind": "artifact", "path": "artifacts/replays/canonical-event-poll-v2.pfreplay.json", "sha256": "f136144ed64be3c9b70c59a4fb3a86e738a0b0e85c4ebcc66d560733d1e53fc9", "detail": "UTF-8 ReplayArtifactV2 with 17 poll boundaries, one typed activation, and eight canonical checkpoints."}],
+      "blockers": []
+    },
+    "replay-playback": {
+      "state": "conformant",
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "03204fd3064a50e64706e3a137743616616ddff594391c103d3017536f1587ea", "detail": "Two real playbacks consume the complete artifact and verify every checkpoint and terminal boundary."}],
+      "blockers": []
+    },
+    "deadline-safe": {
+      "state": "partial",
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "03204fd3064a50e64706e3a137743616616ddff594391c103d3017536f1587ea", "detail": "A-line poll gates prove untouched before and fully committed after semantics around real traps."}],
+      "blockers": ["Complete safe-point proofs for every long Toolbox service/callback relative to VBL, sound, and Event Manager deadlines."]
+    },
+    "machine-exact-snapshot": {
+      "state": "partial",
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "0f3cd6c8505b5df04fd0703a4577e70d0ada3a946d544eccfa2a8d28860d5339", "detail": "A real 2M + 0.5M resumed run exactly matches a direct 2.5M run across memory, executed coverage, and complete restorable state."}],
+      "blockers": ["The scoped machine-exact proof passes, but graph-level conformance awaits complete deadline-safe coverage."]
+    },
+    "replay-session-continuation": {
+      "state": "partial",
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "03204fd3064a50e64706e3a137743616616ddff594391c103d3017536f1587ea", "detail": "The common adapter supports execution-bound session state, but the real Qt artifact path is cold-start-only."}],
+      "blockers": ["Expose and pass a persisted ReplaySession continuation envelope in the real Qt workflow."]
+    },
+    "canonical-audio": {
+      "state": "partial",
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "0f3cd6c8505b5df04fd0703a4577e70d0ada3a946d544eccfa2a8d28860d5339", "detail": "Machine continuation includes deterministic Sound Manager source state and excludes the host queue."}],
+      "blockers": ["Add canonical PCM sequence/hash and host callback partition-invariance conformance with active playback."]
+    },
+    "canonical-video": {
+      "state": "partial",
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "0f3cd6c8505b5df04fd0703a4577e70d0ada3a946d544eccfa2a8d28860d5339", "detail": "Machine continuation includes QuickDraw/source surfaces and excludes Qt window/GPU authority."}],
+      "blockers": ["Add timestamped canonical video commit hashes independent of presentation cadence."]
+    },
+    "normalized-observation": {
+      "state": "conformant",
+      "evidence": [
+        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-oracle-v3.json", "sha256": "e0f3dcafd48a0f45dca9b8c1488706a219a543da4841e538da8c6cc6b3bb0e28", "detail": "ReplayEvidenceV3 binds 136 function visits, 608 observed transfers, 4,997 covered addresses, and 10 verification points to the Mac oracle execution identity."},
+        {"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "03204fd3064a50e64706e3a137743616616ddff594391c103d3017536f1587ea", "detail": "Coverage is complete for the replayed trace; Toolbox service interiors remain explicitly partial-native."}
+      ],
+      "blockers": []
+    },
+    "atlas": {
+      "state": "conformant",
+      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "4a7524c8d63943d94cac317b923150abc3457c2202387447f770a9e97d654b26", "detail": "Regeneratable one-source evidence projection with 847 nodes, 608 edges, 136 occurrences, and stable delete/rematerialize output."}],
+      "blockers": []
+    },
+    "implementation-planning": {
+      "state": "conformant",
+      "evidence": [
+        {"kind": "source", "path": "recovery/implementation-catalog.json", "sha256": "4971f5e476968764998b327ea7ca03862777b828897f8b9cdca998f4cc46fc17", "detail": "Content-bound HFS bootstrap, common session, and oracle descriptors."},
+        {"kind": "artifact", "path": "recovery/execution-plan-oracle.json", "sha256": "f607f691add554f85378356eb0f26dae13cf686540ac32d6e5dcdc3f512c065c", "detail": "Resolved immutable oracle dependency closure."}
+      ],
+      "blockers": []
+    },
+    "detachment-reporting": {
+      "state": "conformant",
+      "evidence": [{"kind": "workflow-report", "path": "recovery/execution-plan-oracle.detachment.json", "sha256": "5a241bf7b7037794a1475988b5ee41a61b0c1b96a97a703cec15a01805089b19", "detail": "The plan truthfully reports original media/code, interpreter, PortForge runtime, platform service, and replay dependencies."}],
+      "blockers": []
+    },
+    "generated-execution": {
+      "state": "unsupported",
+      "evidence": [],
+      "blockers": ["No generated Mac68k implementation exists."]
+    },
+    "native-replacement": {
+      "state": "unsupported",
+      "evidence": [],
+      "blockers": ["No cross-representation native candidate is declared or replay-verified."]
+    },
+    "detached-product": {
+      "state": "unsupported",
+      "evidence": [],
+      "blockers": ["The only plan requires the original HFS application, interpreter, and PortForge runtime."]
+    }
+  }
+}

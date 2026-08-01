@@ -1,0 +1,77 @@
+{
+  "$schema": "port_forge/schemas/portforge-execution-plan-v1.schema.json",
+  "catalog_sha256": "c1eb185bd6bd9e3c36ad91972b1e0965fcb02dfee0d6957741fcf7e61fc18e9c",
+  "descriptors": [
+    {
+      "descriptor_sha256": "b3b721dd47eb9c53b7737253e4de94ec89a3ba71d6d327a3c27bc3f363fba0ba",
+      "id": "portforge.mac68k.common-session",
+      "kind": "runtime-service",
+      "runtime_dependencies": [
+        "cpu-model",
+        "guest-memory",
+        "platform-services",
+        "portforge-runtime",
+        "replay"
+      ]
+    },
+    {
+      "descriptor_sha256": "40d685dd69b6f8e498bd8b354ee6913e7705bab778144b105389b8203b933f8d",
+      "id": "simant-mac.bootstrap.original-hfs",
+      "kind": "bootstrap-provider",
+      "runtime_dependencies": [
+        "original-code",
+        "original-executable"
+      ]
+    },
+    {
+      "descriptor_sha256": "a49ab387c893354d0ec0cf137e04e74c964eb81289d3c629cb0fd0f986f94e84",
+      "id": "simant-mac.oracle-interpreter",
+      "kind": "implementation",
+      "runtime_dependencies": [
+        "interpreter",
+        "oracle",
+        "original-code"
+      ]
+    }
+  ],
+  "format": "portforge-execution-plan-v1",
+  "order": [
+    "portforge.mac68k.common-session",
+    "simant-mac.bootstrap.original-hfs",
+    "simant-mac.oracle-interpreter"
+  ],
+  "owns": [
+    "bootstrap.application",
+    "bootstrap.media",
+    "execution.cpu",
+    "runtime.replay-session",
+    "runtime.semantic-boundary",
+    "services.classic-mac-toolbox"
+  ],
+  "plan_sha256": "342fdf0c5767947083dde8b2990dbbdd9c28e75f3040c1aa43c214f2ad2667b3",
+  "platform": "mac68k",
+  "project": "simant-mac",
+  "provides": [
+    "bootable",
+    "normalized-observation",
+    "replay-playback",
+    "replay-recording",
+    "semantic-boundaries"
+  ],
+  "required_capabilities": [],
+  "role": "oracle-interpreter",
+  "roots": [
+    "simant-mac.oracle-interpreter"
+  ],
+  "runtime_dependencies": [
+    "cpu-model",
+    "guest-memory",
+    "interpreter",
+    "oracle",
+    "original-code",
+    "original-executable",
+    "platform-services",
+    "portforge-runtime",
+    "replay"
+  ]
+}

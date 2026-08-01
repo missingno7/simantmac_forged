@@ -1,0 +1,94 @@
+{
+  "format": "simant-mac-replay-conformance-v3",
+  "result": "passed",
+  "claim": "semantic-boundary-equivalence",
+  "portforge_revision": "44a57b3e9ade5be03aeaa19fb9d4c1f4ad22c731",
+  "artifact": {
+    "path": "artifacts/replays/canonical-event-poll-v2.pfreplay.json",
+    "sha256": "f136144ed64be3c9b70c59a4fb3a86e738a0b0e85c4ebcc66d560733d1e53fc9",
+    "format": "portforge-replay-v2",
+    "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
+    "image_sha256": "8e7518796dbf32db9ff483dcc49069d4d8ec6e4625918fe4d47b03de8cc5fb0b",
+    "assets_sha256": "804a015a3bc99ee6c5e7b093f9239df7a7157a3b834a2d27ec0948d725edea25",
+    "replay_identity_sha256": "7370d79b5ba5fe1deb6270f2aaad65adad9db158b1d5be2adfe27d4f4c77ac22",
+    "canonical_schema": "pf-canonical-mac68k-v1",
+    "application_path": "SimAnt/SimAnt\\xAA",
+    "utf8_valid": true,
+    "boundaries": 17,
+    "events": 1,
+    "checkpoints": 8,
+    "terminal": "mac.event.poll#8/before"
+  },
+  "boundary_profile": {
+    "path": "profiles/replay-boundaries-v1.json",
+    "file_sha256": "e3c971cd69f7df35b971c2433e1196b5842662545022088886ecce643a1802c9",
+    "identity_sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096"
+  },
+  "execution": {
+    "role": "oracle-interpreter",
+    "plan": "recovery/execution-plan-oracle.json",
+    "plan_sha256": "342fdf0c5767947083dde8b2990dbbdd9c28e75f3040c1aa43c214f2ad2667b3",
+    "executable_sha256": "4d12c3cc00cdad98ab52f55c5562d1d15a9d943341bb5fa912c1f5a151319e83",
+    "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
+    "playback_passes": 2,
+    "result": "passed"
+  },
+  "normalized_observation": {
+    "format": "pf-replay-evidence-v3",
+    "path": "artifacts/evidence/canonical-event-poll-oracle-v3.json",
+    "sha256": "e0f3dcafd48a0f45dca9b8c1488706a219a543da4841e538da8c6cc6b3bb0e28",
+    "semantic_region": "mac.event.poll",
+    "function_visits": 136,
+    "transfers": 608,
+    "covered_addresses": 4997,
+    "verification_points": 10,
+    "graph_completeness": "partial-native",
+    "coverage_completeness": "complete"
+  },
+  "atlas": {
+    "role": "regeneratable-evidence-projection",
+    "path": "artifacts/atlas.pfatlas",
+    "binding_sha256": "4a7524c8d63943d94cac317b923150abc3457c2202387447f770a9e97d654b26",
+    "projection_sha256": "aff2bf9b45db78f183bd0c2fe826859b57ec6f4402d64b51ecb4ce232de297e9",
+    "sources": 1,
+    "nodes": 847,
+    "edges": 608,
+    "occurrences": 136,
+    "delete_and_rematerialize_stable": true
+  },
+  "machine_continuation": {
+    "report": "recovery/snapshot-conformance.json",
+    "report_sha256": "0f3cd6c8505b5df04fd0703a4577e70d0ada3a946d544eccfa2a8d28860d5339",
+    "claim": "machine-exact",
+    "result": "passed",
+    "checkpoint_instructions": 2000000,
+    "continuation_instructions": 500000,
+    "direct_total_instructions": 2500000
+  },
+  "boundary_safety": {
+    "source": "tests/mac68k_units.cpp",
+    "result": "passed",
+    "before_phase": "A-line fetch rewinds without instruction/trap/cycle mutation",
+    "after_phase": "exactly one trap and scheduler step commits",
+    "activation": "activation and deactivation are explicit",
+    "window_geometry": "completed moves are applied by Window Manager"
+  },
+  "artifact_capabilities": [
+    "mac-event-poll",
+    "replay-recording",
+    "replay-playback",
+    "semantic-boundaries"
+  ],
+  "artifact_capabilities_not_claimed": [
+    "machine-exact",
+    "replay-session-exact",
+    "audio-continuing",
+    "video-continuing"
+  ],
+  "limitations": [
+    "Toolbox service interiors make the transfer graph explicitly partial.",
+    "Machine-exact is proven by a separate snapshot workflow, not declared by this cold-start replay artifact.",
+    "Replay-session-exact continuation is unavailable in the real Qt artifact path.",
+    "Canonical audio/video stream hashes and generated/native/detached execution are not proven."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "port_forge/schemas/portforge-game-v0.schema.json",
+  "format": "portforge-game-v0",
+  "name": "simant-mac",
+  "title": "SimAnt for Macintosh",
+  "platform": "mac68k",
+  "program": {
+    "file": "SimAnt_CD.iso",
+    "sha256": "8e7518796dbf32db9ff483dcc49069d4d8ec6e4625918fe4d47b03de8cc5fb0b",
+    "size": 14663680,
+    "container": "HFS CD-ROM image"
+  },
+  "macintosh_application": {
+    "hfs_path": "SimAnt:SimAnt:SimAnt™",
+    "cnid": 23,
+    "finder_type": "APPL",
+    "finder_creator": "SANT",
+    "finder_flags": "0x2100",
+    "data_fork_size": 0,
+    "resource_fork_size": 1188458,
+    "resource_fork_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351"
+  },
+  "assets_provenance": {
+    "source": "user-supplied original Macintosh SimAnt media",
+    "identity_record": "docs/asset-inventory.md",
+    "policy": "ISO, StuffIt archive, resource forks, and extracted proprietary content remain ignored; HFS metadata is preserved"
+  }
+}

@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
-"""Run a SimAnt Macintosh replay twice and compare exact stop state.
-
-This is intentionally game-project policy. PortForge owns the generic replay,
-coverage, and restorable snapshot formats; this script owns the SimAnt replay,
-instruction checkpoint, artifact paths, and optional golden digest.
-"""
+"""Validate and replay the current semantic Macintosh SimAnt corpus."""
 
 from __future__ import annotations
 
@@ -14,203 +9,160 @@ import json
 import subprocess
 import sys
 from pathlib import Path
+from typing import Any
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-PLAY = PROJECT_ROOT / "scripts" / "play.py"
-DEFAULT_REPLAY = "session_20260729_230725"
-DEFAULT_EXPECTED_MANIFEST_SHA256 = (
-    "8f64c2e63d1be5528d3e87da37a8d9c6"
-    "4a80dce4b2505f2b2ce7a36fe70e4c02"
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_MANIFEST = ROOT / "regressions" / "manifest.json"
+MANIFEST_FORMAT = "portforge-replay-regressions-v1"
+MANIFEST_SCHEMA = (
+    "port_forge/schemas/portforge-replay-regressions-v1.schema.json"
 )
-DEFAULT_OUTPUT = (
-    PROJECT_ROOT / "artifacts" / "analysis" / "determinism_30m.json"
+SECTIONS = (
+    "schema_versions",
+    "identity",
+    "boundary_profile",
+    "environment",
+    "channels",
+    "timeline",
+    "events",
+    "checkpoints",
+    "terminal",
+    "capabilities",
 )
 
 
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as stream:
-        for block in iter(lambda: stream.read(1024 * 1024), b""):
-            digest.update(block)
-    return digest.hexdigest()
-
-
-def parser() -> argparse.ArgumentParser:
-    result = argparse.ArgumentParser(
-        description=(
-            "Replay Macintosh SimAnt twice to an exact instruction stop "
-            "and require byte-identical restorable state."
+def digest_json(value: Any) -> str:
+    wire = (
+        json.dumps(
+            value,
+            indent=2,
+            sort_keys=True,
+            ensure_ascii=False,
+            allow_nan=False,
         )
-    )
-    result.add_argument("--replay", default=DEFAULT_REPLAY)
-    result.add_argument(
-        "--instruction-limit", type=int, default=30_000_000
-    )
-    result.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    result.add_argument(
-        "--expected-manifest-sha256",
-        default=DEFAULT_EXPECTED_MANIFEST_SHA256,
-        help=(
-            "pinned SHA-256 for snapshot.json "
-            "(default: canonical 30m checkpoint)"
-        ),
-    )
-    result.add_argument(
-        "--build",
-        action="store_true",
-        help="build the Qt runner before the first replay",
-    )
-    return result
+        + "\n"
+    ).encode("utf-8")
+    return hashlib.sha256(wire).hexdigest()
 
 
-def run_once(
-    replay: str,
-    instruction_limit: int,
-    snapshot: Path,
-    build: bool,
-) -> None:
-    command = [
-        sys.executable,
-        str(PLAY),
-        "--play-replay",
-        replay,
-        "--instruction-limit",
-        str(instruction_limit),
-        "--quit-on-stop",
-        "--snapshot-on-crash",
-        str(snapshot),
-    ]
-    if not build:
-        command.insert(2, "--no-build")
-    completed = subprocess.run(command, cwd=PROJECT_ROOT, check=False)
-    # pf_mac_qt uses status 3 for the requested instruction-budget stop.
-    if completed.returncode != 3:
-        raise RuntimeError(
-            "replay did not reach the requested instruction checkpoint "
-            f"(exit {completed.returncode})"
-        )
+def load_manifest(path: Path) -> dict[str, Any]:
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    if manifest.get("$schema") != MANIFEST_SCHEMA:
+        raise RuntimeError(f"{path}: expected $schema {MANIFEST_SCHEMA}")
+    if manifest.get("format") != MANIFEST_FORMAT:
+        raise RuntimeError(f"{path}: expected {MANIFEST_FORMAT}")
+    cases = manifest.get("cases")
+    if not isinstance(cases, list) or not cases:
+        raise RuntimeError(f"{path}: cases must be a non-empty array")
+    names: set[str] = set()
+    for case in cases:
+        if not isinstance(case, dict) or not isinstance(case.get("name"), str):
+            raise RuntimeError(f"{path}: every case needs a name")
+        if case["name"] in names:
+            raise RuntimeError(f"{path}: duplicate case {case['name']!r}")
+        names.add(case["name"])
+        if not isinstance(case.get("artifact"), str):
+            raise RuntimeError(f"{case['name']}: artifact must be a path")
+        if not isinstance(case.get("playback_passes"), int) or case[
+            "playback_passes"
+        ] < 1:
+            raise RuntimeError(f"{case['name']}: playback_passes must be positive")
+        if not isinstance(case.get("expect"), dict):
+            raise RuntimeError(f"{case['name']}: expect must be an object")
+    return manifest
 
 
-def load_snapshot(snapshot: Path) -> tuple[dict, dict[str, str]]:
-    manifest_path = snapshot / "snapshot.json"
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("format") not in {
-        "portforge-mac68k-diagnostic-snapshot-v2",
-        "portforge-mac68k-restorable-snapshot-v1",
-    }:
-        raise RuntimeError(
-            f"snapshot has unsupported format: {manifest.get('format')}"
-        )
-    if manifest.get("reason") != "instruction limit reached":
-        raise RuntimeError(
-            f"snapshot stopped for an unexpected reason: "
-            f"{manifest.get('reason')}"
-        )
-    hashes = {
-        "memory": sha256(snapshot / manifest["memory_file"]),
-        "executed": sha256(snapshot / manifest["executed_file"]),
-        "manifest": sha256(manifest_path),
+def observation(artifact: dict[str, Any]) -> dict[str, Any]:
+    schemas = {item["canonical_schema"] for item in artifact["checkpoints"]}
+    terminal = artifact["terminal"]
+    terminal_stamp = terminal["stamp"]
+    terminal_selector = terminal_stamp["selector"]
+    return {
+        "format": artifact.get("format"),
+        "game_id": artifact["identity"]["game_id"],
+        "program_sha256": artifact["identity"]["program_sha256"],
+        "machine_model": artifact["identity"]["machine_model"],
+        "boundary_profile_id": artifact["boundary_profile"]["id"],
+        "boundary_profile_sha256": artifact["boundary_profile"]["sha256"],
+        "canonical_schema": next(iter(schemas)) if len(schemas) == 1 else None,
+        "timeline_boundaries": len(artifact["timeline"]),
+        "events": len(artifact["events"]),
+        "checkpoints": len(artifact["checkpoints"]),
+        "terminal_point": terminal_selector["point"],
+        "terminal_phase": terminal_selector["phase"],
+        "terminal_occurrence": terminal_selector["occurrence"],
+        "terminal_outcome": terminal_stamp["outcome"],
     }
-    if "state_file" in manifest:
-        hashes["state"] = sha256(snapshot / manifest["state_file"])
-    if hashes["memory"] != manifest["memory_sha256"]:
-        raise RuntimeError("snapshot memory hash does not match its manifest")
-    if hashes["executed"] != manifest["executed_sha256"]:
-        raise RuntimeError(
-            "snapshot execution-coverage hash does not match its manifest"
+
+
+def validate_case(case: dict[str, Any]) -> None:
+    path = (ROOT / case["artifact"]).resolve()
+    artifact = json.loads(path.read_text(encoding="utf-8"))
+    hashes = {name: digest_json(artifact[name]) for name in SECTIONS}
+    if artifact.get("content_sha256") != hashes:
+        raise RuntimeError(f"{case['name']}: authoritative section hash mismatch")
+    observed = observation(artifact)
+    failures = [
+        f"{key}: expected {expected!r}, got {observed.get(key)!r}"
+        for key, expected in case["expect"].items()
+        if observed.get(key) != expected
+    ]
+    if failures:
+        raise RuntimeError(f"{case['name']}: " + "; ".join(failures))
+
+
+def replay_case(case: dict[str, Any], *, build: bool) -> None:
+    for run in range(case["playback_passes"]):
+        command = [sys.executable, str(ROOT / "scripts/play.py")]
+        if not build or run:
+            command.append("--no-build")
+        command.extend(
+            [
+                "--play-artifact",
+                case["artifact"],
+                "--exit-after-replay",
+                "--no-snapshot-on-crash",
+            ]
         )
-    if (
-        "state" in hashes
-        and hashes["state"] != manifest["state_sha256"]
-    ):
-        raise RuntimeError(
-            "snapshot persistent-state hash does not match its manifest"
-        )
-    return manifest, hashes
+        if run == 0:
+            command.append("--unthrottled")
+        completed = subprocess.run(command, cwd=ROOT, check=False)
+        if completed.returncode:
+            raise RuntimeError(
+                f"{case['name']}: playback {run + 1} exited "
+                f"{completed.returncode}"
+            )
 
 
 def main() -> int:
-    args = parser().parse_args()
-    if args.instruction_limit <= 0:
-        raise RuntimeError("--instruction-limit must be positive")
-
-    output = args.output
-    if not output.is_absolute():
-        output = PROJECT_ROOT / output
-    output = output.resolve()
-    run_root = (
-        PROJECT_ROOT
-        / "artifacts"
-        / "snapshots"
-        / f"determinism_{args.instruction_limit}"
-    )
-    first = run_root / "run_a.pfmacsnapshot"
-    second = run_root / "run_b.pfmacsnapshot"
-    run_once(args.replay, args.instruction_limit, first, args.build)
-    run_once(args.replay, args.instruction_limit, second, False)
-
-    first_manifest, first_hashes = load_snapshot(first)
-    second_manifest, second_hashes = load_snapshot(second)
-    if first_hashes != second_hashes:
-        raise RuntimeError(
-            "replay diverged: " + json.dumps(
-                {
-                    "first": first_hashes,
-                    "second": second_hashes,
-                },
-                sort_keys=True,
-            )
-        )
-    if (
-        args.expected_manifest_sha256
-        and first_hashes["manifest"].lower()
-        != args.expected_manifest_sha256.lower()
-    ):
-        raise RuntimeError(
-            "replay is internally deterministic but differs from the "
-            "expected manifest: "
-            f"{first_hashes['manifest']}"
-        )
-
-    evidence = {
-        "format": "simant-macintosh-determinism-evidence-v1",
-        "replay": args.replay,
-        "instruction_limit": args.instruction_limit,
-        "pc": first_manifest["cpu"]["pc"],
-        "timeline_ticks": first_manifest["runtime"]["timeline_ticks"],
-        "event_cursor": first_manifest["runtime"]["event_cursor"],
-        "guest_windows": len(first_manifest["windows"]),
-        "trap_sites": len(first_manifest["trap_coverage"]),
-        "resource_queries": len(first_manifest["resource_lookups"]),
-        "low_memory_sites": len(first_manifest["low_memory_accesses"]),
-        "executed_code_write_sites": len(
-            first_manifest["executed_code_writes"]
-        ),
-        "hashes": first_hashes,
-        "snapshots": [
-            str(first.relative_to(PROJECT_ROOT)),
-            str(second.relative_to(PROJECT_ROOT)),
-        ],
-    }
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(
-        json.dumps(evidence, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
-    print(f"deterministic: {first_hashes['manifest']}")
-    print(f"evidence: {output}")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    parser.add_argument("--validate-only", action="store_true")
+    parser.add_argument("--allow-missing-artifacts", action="store_true")
+    parser.add_argument("--build", action="store_true")
+    options = parser.parse_args()
+    cases = load_manifest(options.manifest.resolve())["cases"]
+    available = []
+    for case in cases:
+        path = ROOT / case["artifact"]
+        if not path.is_file() and options.allow_missing_artifacts:
+            print(f"SKIP {case['name']}: {path} is absent")
+            continue
+        validate_case(case)
+        available.append(case)
+        print(f"VALID {case['name']}")
+    if options.validate_only:
+        return 0
+    for case in available:
+        replay_case(case, build=options.build)
+        print(f"PASS {case['name']}: {case['playback_passes']} playback(s)")
     return 0
 
 
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except (
-        OSError,
-        RuntimeError,
-        ValueError,
-        subprocess.SubprocessError,
-    ) as error:
+    except (OSError, RuntimeError, ValueError, subprocess.SubprocessError) as error:
         print(f"verify_replay.py: {error}", file=sys.stderr)
         raise SystemExit(1)

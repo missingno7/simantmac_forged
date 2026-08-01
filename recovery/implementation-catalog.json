@@ -1,0 +1,52 @@
+{
+  "$schema": "port_forge/schemas/portforge-implementation-catalog-v1.schema.json",
+  "format": "portforge-implementation-catalog-v1",
+  "project": "simant-mac",
+  "platform": "mac68k",
+  "descriptors": [
+    {
+      "id": "simant-mac.bootstrap.original-hfs",
+      "kind": "bootstrap-provider",
+      "owns": ["bootstrap.media", "bootstrap.application"],
+      "provides": ["bootable"],
+      "requires": [],
+      "conflicts": [],
+      "requires_capabilities": [],
+      "runtime_dependencies": ["original-executable", "original-code"],
+      "content": [
+        {"path": "game.json", "sha256": "95fcbe06909a17cecff973caa892d164fc7de34a988dc5ae249cf52207d2b9ba", "role": "mounted media and application identities"},
+        {"path": "docs/asset-inventory.md", "sha256": "0e72d96905628b64b6891165253664dd3f9215db72718eaab03441f26f335ad2", "role": "media provenance"}
+      ],
+      "notes": "The proprietary HFS image remains a runtime input and is authenticated separately by ReplayIdentity/environment."
+    },
+    {
+      "id": "portforge.mac68k.common-session",
+      "kind": "runtime-service",
+      "owns": ["runtime.replay-session", "runtime.semantic-boundary"],
+      "provides": ["replay-recording", "replay-playback", "semantic-boundaries"],
+      "requires": [],
+      "conflicts": [],
+      "requires_capabilities": [],
+      "runtime_dependencies": ["cpu-model", "guest-memory", "platform-services", "portforge-runtime", "replay"],
+      "content": [
+        {"path": "profiles/replay-boundaries-v1.json", "sha256": "e3c971cd69f7df35b971c2433e1196b5842662545022088886ecce643a1802c9", "role": "semantic event-poll contract"}
+      ]
+    },
+    {
+      "id": "simant-mac.oracle-interpreter",
+      "kind": "implementation",
+      "owns": ["execution.cpu", "services.classic-mac-toolbox"],
+      "provides": ["bootable", "normalized-observation"],
+      "requires": ["simant-mac.bootstrap.original-hfs", "portforge.mac68k.common-session"],
+      "conflicts": [],
+      "requires_capabilities": [],
+      "runtime_dependencies": ["interpreter", "oracle", "original-code"],
+      "content": [
+        {"path": "scripts/play.py", "sha256": "9d2fedc6651a66b46f7bd44fe88d458a0abdec6f8fc7a62cb77c09626d164ac8", "role": "Qt/oracle composition and identity binding"}
+      ]
+    }
+  ],
+  "roles": {
+    "oracle-interpreter": ["simant-mac.oracle-interpreter"]
+  }
+}

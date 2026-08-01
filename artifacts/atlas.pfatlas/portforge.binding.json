@@ -1,0 +1,27 @@
+{
+  "format": "portforge-atlas-evidence-v2",
+  "platform": "mac68k",
+  "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
+  "game_config": {
+    "path": "game.json",
+    "sha256": "95fcbe06909a17cecff973caa892d164fc7de34a988dc5ae249cf52207d2b9ba"
+  },
+  "atlas": {
+    "hash_scheme": "portforge-tree-sha256-v1",
+    "sha256": "aff2bf9b45db78f183bd0c2fe826859b57ec6f4402d64b51ecb4ce232de297e9"
+  },
+  "replays": [],
+  "imports": [],
+  "evidence": [
+    {
+      "id": "evidence-mac-oracle-f136144ed64b-ea6a2e7683c9",
+      "kind": "replay-evidence",
+      "origin": "portforge",
+      "sha256": "e0f3dcafd48a0f45dca9b8c1488706a219a543da4841e538da8c6cc6b3bb0e28"
+    }
+  ],
+  "portforge": {
+    "revision": "44a57b3e9ade5be03aeaa19fb9d4c1f4ad22c731",
+    "dirty": false
+  }
+}

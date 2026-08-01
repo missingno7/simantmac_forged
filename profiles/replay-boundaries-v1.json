@@ -1,0 +1,33 @@
+{
+  "format": "portforge-boundary-profile-v1",
+  "id": "mac68k.event-poll-boundaries.v1",
+  "version": 1,
+  "game_id": "simant-mac",
+  "machine_model": "pf-mac68k-macii-system7-color4-v1",
+  "points": [
+    {
+      "id": "mac.event.poll",
+      "phases": ["before", "after"],
+      "channels": [
+        {"channel": "mac.pointer.position", "semantics": "hold", "phases": ["before"], "visibility": "at-boundary"},
+        {"channel": "mac.pointer.button", "semantics": "edge", "phases": ["before"], "visibility": "at-boundary"},
+        {"channel": "mac.keyboard.key", "semantics": "edge", "phases": ["before"], "visibility": "at-boundary"},
+        {"channel": "mac.window.activation", "semantics": "edge", "phases": ["before"], "visibility": "at-boundary"},
+        {"channel": "mac.menu.command", "semantics": "pulse", "phases": ["before"], "visibility": "at-boundary"},
+        {"channel": "mac.control.action", "semantics": "pulse", "phases": ["before"], "visibility": "at-boundary"},
+        {"channel": "mac.window.geometry", "semantics": "latch", "phases": ["before"], "visibility": "at-boundary"},
+        {"channel": "mac.window.update", "semantics": "pulse", "phases": ["before"], "visibility": "at-boundary"}
+      ],
+      "game_states": ["boot", "event-loop", "dialog", "simulation", "shutdown"],
+      "occurrence_policy": "point-local",
+      "terminal": false,
+      "recognition": {
+        "runtime_event": "top-level Event Manager GetNextEvent or WaitNextEvent trap",
+        "before": "A-line instruction, CPU, trap registry, and managers are untouched",
+        "after": "trap handler, CPU result, schedulers, and guest accounting are committed",
+        "clock_rule": "mac.tick is evidence and never the semantic selector"
+      }
+    }
+  ],
+  "sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096"
+}

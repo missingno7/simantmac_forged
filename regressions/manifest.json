@@ -1,0 +1,27 @@
+{
+  "$schema": "port_forge/schemas/portforge-replay-regressions-v1.schema.json",
+  "format": "portforge-replay-regressions-v1",
+  "cases": [
+    {
+      "name": "canonical-event-poll-v2",
+      "artifact": "artifacts/replays/canonical-event-poll-v2.pfreplay.json",
+      "playback_passes": 2,
+      "expect": {
+        "format": "portforge-replay-v2",
+        "game_id": "simant-mac",
+        "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
+        "machine_model": "pf-mac68k-macii-system7-color4-v1",
+        "boundary_profile_id": "mac68k.event-poll-boundaries.v1",
+        "boundary_profile_sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096",
+        "canonical_schema": "pf-canonical-mac68k-v1",
+        "timeline_boundaries": 17,
+        "events": 1,
+        "checkpoints": 8,
+        "terminal_point": "mac.event.poll",
+        "terminal_phase": "before",
+        "terminal_occurrence": 8,
+        "terminal_outcome": "terminal"
+      }
+    }
+  ]
+}
