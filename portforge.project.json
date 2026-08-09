@@ -9,8 +9,13 @@
     "runtimes": {
       "oracle": {
         "supported": true,
-        "adapter": "scripts/play.py:mac68k-oracle",
-        "build_hint": "python scripts/play.py"
+        "adapter": "scripts/play.py:mac68k-event-poll-live-session",
+        "build_hint": "python scripts/play.py",
+        "replay": {
+          "supported": true,
+          "boundary_profile": "profiles/replay-boundaries-v1.json",
+          "implementation_plan": "recovery/execution-plan-oracle.json"
+        }
       },
       "generated": {
         "supported": false,
@@ -40,9 +45,9 @@
   "known_gaps": [
     {
       "severity": "risk",
-      "scope": "replay-continuation",
-      "summary": "The real Qt ArtifactV2 path uses a cold-start session and does not yet expose a persisted ReplaySession continuation envelope.",
-      "evidence": "recovery/replay-conformance.json"
+      "scope": "live-atlas",
+      "summary": "Offline Atlas is regeneratable evidence; live M68K Atlas awaits stable-identity observer fan-out beside ReplaySessionEvidence.",
+      "evidence": "README.md"
     },
     {
       "severity": "risk",
@@ -64,18 +69,18 @@
       "description": "Run the original HFS application through the Mac68k oracle."
     },
     "record-canonical-replay": {
-      "command": ["python", "scripts/play.py", "--record-artifact", "canonical-event-poll-v2", "--replay-boundary-limit", "8", "--exit-after-replay", "--no-snapshot-on-crash", "--unthrottled"],
+      "command": ["python", "scripts/play.py", "--record-replay", "canonical-event-poll-v2", "--replay-boundary-limit", "8", "--exit-after-replay", "--no-snapshot-on-crash", "--unthrottled"],
       "scope": "semantic-replay-recording",
       "description": "Record the canonical ReplayArtifactV2 at Event Manager poll boundaries."
     },
     "verify-replay": {
-      "command": ["python", "scripts/verify_replay.py"],
+      "command": ["python", "scripts/verify_replay.py", "--build"],
       "scope": "semantic-replay-conformance",
       "description": "Validate the current artifact and play it twice fail-closed.",
       "gate": true
     },
     "collect-replay-evidence": {
-      "command": ["python", "scripts/play.py", "--play-artifact", "canonical-event-poll-v2", "--evidence-out", "artifacts/evidence/canonical-event-poll-oracle-v3.json", "--exit-after-replay", "--no-snapshot-on-crash", "--unthrottled"],
+      "command": ["python", "scripts/play.py", "--verify-replay", "canonical-event-poll-v2", "--evidence-out", "artifacts/evidence/canonical-event-poll-oracle-v3.json", "--no-snapshot-on-crash"],
       "scope": "normalized-replay-observation",
       "description": "Replay the canonical artifact and publish execution-bound Mac68k EvidenceV3."
     },
@@ -85,10 +90,26 @@
       "description": "Delete and atomically rematerialize Atlas from declared EvidenceV3."
     },
     "verify-snapshot-resume": {
-      "command": ["python", "scripts/verify_snapshot_resume.py"],
+      "command": ["python", "scripts/verify_snapshot_resume.py", "--build"],
       "scope": "machine-continuation",
       "description": "Compare a real resumed run byte-for-byte with uninterrupted execution.",
       "gate": true
+    },
+    "inspect-replay": {
+      "command": ["python", "scripts/play.py", "--inspect-replay", "canonical-event-poll-v2"],
+      "scope": "artifact-inspection",
+      "description": "Authenticate and summarize ArtifactV2 through the shared artifact tool."
+    },
+    "check-player-interface": {
+      "command": ["python", "scripts/check_play_interface.py"],
+      "scope": "launcher-architecture-guard",
+      "description": "Guard aliases, strict forwarding, shared identity bindings, and retired authority removal.",
+      "gate": true
+    },
+    "resume-live-session": {
+      "command": ["python", "scripts/play.py", "--snapshot", "PATH.pfsession.json"],
+      "scope": "replay-session-continuation",
+      "description": "Resume direct, recording-draft, or playback mode from an F12 publication."
     },
     "plan-oracle": {
       "command": ["python", "port_forge/tools/pf_project.py", "plan", ".", "oracle-interpreter", "--output", "recovery/execution-plan-oracle.json"],

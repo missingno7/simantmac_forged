@@ -2,54 +2,54 @@
   "format": "simant-mac-replay-conformance-v3",
   "result": "passed",
   "claim": "semantic-boundary-equivalence",
-  "portforge_revision": "ce9f4e93d69efbc5b60424ba371b60d4e2bab2ed",
+  "portforge_revision": "b2e651970b255c325fa7f9ee4bf60f07b68618ec",
   "artifact": {
     "path": "artifacts/replays/canonical-event-poll-v2.pfreplay.json",
-    "sha256": "f136144ed64be3c9b70c59a4fb3a86e738a0b0e85c4ebcc66d560733d1e53fc9",
+    "sha256": "118a43e20f87ac732cc43941b6ac7d692f9020aa38f69f8cd8963f80addaf0c9",
     "format": "portforge-replay-v2",
     "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
     "image_sha256": "8e7518796dbf32db9ff483dcc49069d4d8ec6e4625918fe4d47b03de8cc5fb0b",
     "assets_sha256": "804a015a3bc99ee6c5e7b093f9239df7a7157a3b834a2d27ec0948d725edea25",
-    "replay_identity_sha256": "7370d79b5ba5fe1deb6270f2aaad65adad9db158b1d5be2adfe27d4f4c77ac22",
+    "replay_identity_sha256": "b35e01938a33744a258228493c6121f8217a3a5b5bf74053f6cb8cb90148be27",
     "canonical_schema": "pf-canonical-mac68k-v1",
     "application_path": "SimAnt/SimAnt\\xAA",
     "utf8_valid": true,
-    "boundaries": 17,
+    "boundaries": 16,
     "events": 1,
-    "checkpoints": 8,
-    "terminal": "mac.event.poll#8/before"
+    "checkpoints": 0,
+    "terminal": "mac.event.poll#7/after"
   },
   "boundary_profile": {
     "path": "profiles/replay-boundaries-v1.json",
-    "file_sha256": "e3c971cd69f7df35b971c2433e1196b5842662545022088886ecce643a1802c9",
-    "identity_sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096"
+    "file_sha256": "b85223488a44667380e583c6717e41269aba33645ce6cc173045765d7bf8f902",
+    "identity_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956"
   },
   "execution": {
     "role": "oracle-interpreter",
     "plan": "recovery/execution-plan-oracle.json",
-    "plan_sha256": "342fdf0c5767947083dde8b2990dbbdd9c28e75f3040c1aa43c214f2ad2667b3",
-    "executable_sha256": "4d12c3cc00cdad98ab52f55c5562d1d15a9d943341bb5fa912c1f5a151319e83",
-    "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
+    "plan_sha256": "f90c2809688bc78ddedc4c9f6bbf7828dc931fe1a1aa26d3a7fc88be5195ffa3",
+    "executable_sha256": "d372d09cc92c74efca5c11e180f064b8a91ada88782e479c8aecd74a08223526",
+    "execution_identity_sha256": "26bbb4173ebb892dbe3721060120099ffef00ef94ed15ca9d754095b376551c4",
     "playback_passes": 2,
     "result": "passed"
   },
   "normalized_observation": {
     "format": "pf-replay-evidence-v3",
     "path": "artifacts/evidence/canonical-event-poll-oracle-v3.json",
-    "sha256": "e0f3dcafd48a0f45dca9b8c1488706a219a543da4841e538da8c6cc6b3bb0e28",
+    "sha256": "5e3aff8f5b719faa050caa9abb464fe8ad33166c68a300ad1856122157e0c541",
     "semantic_region": "mac.event.poll",
     "function_visits": 136,
     "transfers": 608,
     "covered_addresses": 4997,
-    "verification_points": 10,
+    "verification_points": 4,
     "graph_completeness": "partial-native",
     "coverage_completeness": "complete"
   },
   "atlas": {
     "role": "regeneratable-evidence-projection",
     "path": "artifacts/atlas.pfatlas",
-    "binding_sha256": "9193044c8f6b0ff09888aff9d379ae17d553164fdb46af91a0ea6fdc5c262809",
-    "projection_sha256": "aff2bf9b45db78f183bd0c2fe826859b57ec6f4402d64b51ecb4ce232de297e9",
+    "binding_sha256": "de04b8a7e7962beb4351449faa6310dc73774f798a81f965cb0338545d806e95",
+    "projection_sha256": "8e1ba5bb1401a44de8a87ef0d04659448c8a6cfbe5bb4888858533c640f5ffde",
     "sources": 1,
     "nodes": 847,
     "edges": 608,
@@ -58,7 +58,7 @@
   },
   "machine_continuation": {
     "report": "recovery/snapshot-conformance.json",
-    "report_sha256": "0f3cd6c8505b5df04fd0703a4577e70d0ada3a946d544eccfa2a8d28860d5339",
+    "report_sha256": "25f2e50b1115e8c96ad77163234851eece26b48491d3c53816e9d242f1e8f975",
     "claim": "machine-exact",
     "result": "passed",
     "checkpoint_instructions": 2000000,
@@ -75,6 +75,7 @@
   },
   "artifact_capabilities": [
     "mac-event-poll",
+    "machine-time-input",
     "replay-recording",
     "replay-playback",
     "semantic-boundaries"
@@ -88,7 +89,7 @@
   "limitations": [
     "Toolbox service interiors make the transfer graph explicitly partial.",
     "Machine-exact is proven by a separate snapshot workflow, not declared by this cold-start replay artifact.",
-    "Replay-session-exact continuation is unavailable in the real Qt artifact path.",
+    "Replay-session-exact continuation is available at trap/callback-safe cooperative slices, but is proven separately from this cold-start replay corpus.",
     "Canonical audio/video stream hashes and generated/native/detached execution are not proven."
   ]
 }

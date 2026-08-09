@@ -8,6 +8,7 @@ import hashlib
 import json
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -114,19 +115,23 @@ def validate_case(case: dict[str, Any]) -> None:
 
 def replay_case(case: dict[str, Any], *, build: bool) -> None:
     for run in range(case["playback_passes"]):
+        evidence_name = (
+            f"{case['name']}_evidence_"
+            f"{datetime.now().strftime('%Y%m%d_%H%M%S_%f')}_"
+            f"pass{run + 1}"
+        )
         command = [sys.executable, str(ROOT / "scripts/play.py")]
         if not build or run:
             command.append("--no-build")
         command.extend(
             [
-                "--play-artifact",
+                "--verify-replay",
                 case["artifact"],
-                "--exit-after-replay",
+                "--evidence-out",
+                evidence_name,
                 "--no-snapshot-on-crash",
             ]
         )
-        if run == 0:
-            command.append("--unthrottled")
         completed = subprocess.run(command, cwd=ROOT, check=False)
         if completed.returncode:
             raise RuntimeError(

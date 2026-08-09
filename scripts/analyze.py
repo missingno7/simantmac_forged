@@ -84,7 +84,7 @@ def attach_dynamic_evidence(report: dict, snapshot: Path) -> None:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     if manifest.get("format") not in {
         "portforge-mac68k-diagnostic-snapshot-v2",
-        "portforge-mac68k-restorable-snapshot-v1",
+        "portforge-mac68k-restorable-snapshot-v2",
     }:
         raise RuntimeError(
             f"unsupported diagnostic snapshot: {manifest.get('format')}"

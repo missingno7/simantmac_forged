@@ -1,9 +1,9 @@
 {
   "$schema": "port_forge/schemas/portforge-execution-plan-v1.schema.json",
-  "catalog_sha256": "c1eb185bd6bd9e3c36ad91972b1e0965fcb02dfee0d6957741fcf7e61fc18e9c",
+  "catalog_sha256": "fffdc3f8c35049e8e4765f1b221fc58e35dc998029bc36033eb7fbc093e263ad",
   "descriptors": [
     {
-      "descriptor_sha256": "b3b721dd47eb9c53b7737253e4de94ec89a3ba71d6d327a3c27bc3f363fba0ba",
+      "descriptor_sha256": "ee2a18d95315c6576feff73404cdcff58f62a453d825fc08295ead3e7d2ba8eb",
       "id": "portforge.mac68k.common-session",
       "kind": "runtime-service",
       "runtime_dependencies": [
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "descriptor_sha256": "a49ab387c893354d0ec0cf137e04e74c964eb81289d3c629cb0fd0f986f94e84",
+      "descriptor_sha256": "3d0847ac5ea4c1bb6803ae64ba894c8eee5446e12a9cfc24b933da3a8bd5780e",
       "id": "simant-mac.oracle-interpreter",
       "kind": "implementation",
       "runtime_dependencies": [
@@ -48,7 +48,7 @@
     "runtime.semantic-boundary",
     "services.classic-mac-toolbox"
   ],
-  "plan_sha256": "342fdf0c5767947083dde8b2990dbbdd9c28e75f3040c1aa43c214f2ad2667b3",
+  "plan_sha256": "f90c2809688bc78ddedc4c9f6bbf7828dc931fe1a1aa26d3a7fc88be5195ffa3",
   "platform": "mac68k",
   "project": "simant-mac",
   "provides": [

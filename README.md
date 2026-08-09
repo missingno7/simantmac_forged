@@ -5,71 +5,128 @@ its HFS CD image through PortForge. Proprietary media remains ignored; exact
 ISO, HFS application, Finder metadata, and resource-fork identities are pinned
 in `game.json` and `docs/asset-inventory.md`.
 
-## Run
+## Player and development interface
 
 ```powershell
 python scripts\play.py
+python scripts\play.py --help
 ```
 
-The Qt frontend is a host presentation/input adapter. CPU cycles, Event
-Manager ticks, VBL tasks, Toolbox callbacks, QuickDraw state, and Sound Manager
-state advance under the deterministic Mac runtime.
+Plain invocation selects the declared `oracle` stage. The Qt frontend only
+presents pixels/audio and collects host intent. Direct play, ArtifactV2
+recording, playback, and resumed sessions all traverse the same
+`EventPollReplayDriver`, `Mac68kReplayRuntimeAdapter`, `LiveReplaySession`, and
+semantic cycle. CPU cycles, Event Manager ticks, VBL tasks, Toolbox callbacks,
+QuickDraw state, and Sound Manager source state remain guest/runtime authority.
+The oracle runtime's ArtifactV2 capability is declared in
+`portforge.project.json`, including the authoritative event-poll boundary
+profile and immutable oracle implementation plan used for replay preflight.
 
-## Semantic replay
+Interactive controls:
+
+- F11 starts ArtifactV2 recording from an exact current machine snapshot, or
+  stops the active recording at the returned semantic seam.
+- F12 publishes a `.pfsession.json` continuation plus an authenticated exact
+  machine attachment. During recording it also binds the recording base;
+  during playback it binds the immutable replay.
+
+Host input is encoded into typed Macintosh channels. Ordinary transactions
+become visible at `mac.event.poll:before`; input observed while a poll is
+already pending is session-owned and timestamped in deterministic `mac.tick`
+time. This lets classic modal button tracking observe mouse-up without
+fabricating a semantic boundary or depending on host wall time.
+Long simulation work between polls runs in bounded cooperative slices; every
+incomplete slice returns to Qt for presentation and realtime pacing without
+inventing an extra replay boundary.
+
+## Replay workflows
 
 ```powershell
-python scripts\play.py --record-artifact canonical-event-poll-v2 `
-  --replay-boundary-limit 8 --exit-after-replay `
-  --no-snapshot-on-crash --unthrottled
+# Interactive: press F11 whenever the desired scenario begins/ends.
+python scripts\play.py
 
-python scripts\play.py --no-build `
-  --play-artifact canonical-event-poll-v2 --exit-after-replay `
-  --no-snapshot-on-crash --unthrottled
+# Start recording immediately and finish after eight completed polls.
+python scripts\play.py --record-replay canonical-event-poll-v2 `
+  --replay-boundary-limit 8 --exit-after-replay --unthrottled
+
+# Interactive playback.
+python scripts\play.py --play-replay canonical-event-poll-v2
+
+# Bounded offscreen verification with ReplayEvidenceV3.
+python scripts\play.py --verify-replay canonical-event-poll-v2
+
+# Structural ArtifactV2 inspection through the shared artifact tool.
+python scripts\play.py --inspect-replay canonical-event-poll-v2
 ```
 
-The common artifact uses `mac.event.poll` + point-local occurrence + phase.
-Mac ticks and A-line addresses are evidence, not durable replay coordinates.
-Host input becomes a typed guest-platform event only at a poll-before boundary.
-Playback disables live host input and fails closed on identity, plan, boundary,
-checkpoint, cursor, or terminal mismatch.
+Playback disables live host input and fails closed on replay/environment,
+execution plan, boundary, event cursor, checkpoint, continuation, or terminal
+mismatch. `--headless` uses Qt's offscreen sink and requires a bounded replay,
+recording boundary limit, session-snapshot boundary, or diagnostic instruction
+limit. A recording or playback publication retains its mode when resumed.
+Advanced runner arguments remain available only after an explicit `--`
+delimiter.
 
-The selected corpus is
-`artifacts/replays/canonical-event-poll-v2.pfreplay.json`. Its profile,
-implementation plan, detachment report, and evidence are tracked in
-`profiles/`, `regressions/`, and `recovery/`.
-
-The complete oracle playback also publishes
-`artifacts/evidence/canonical-event-poll-oracle-v3.json`. It binds real Mac
-function visits, transfers, semantic regions, address coverage, and checkpoint
-verification to the artifact and exact execution identity. The derived
-`artifacts/atlas.pfatlas` tree is deletable and non-authoritative.
-
-## Verification
+## Session snapshots
 
 ```powershell
-python scripts\verify_replay.py
-python scripts\verify_snapshot_resume.py
-python scripts\play.py --no-build --play-artifact canonical-event-poll-v2 `
-  --evidence-out artifacts/evidence/canonical-event-poll-oracle-v3.json `
-  --exit-after-replay --no-snapshot-on-crash --unthrottled
+# F12 writes the target announced at launch.
+python scripts\play.py --session-snapshot artifacts\snapshots\manual.pfsession.json
+
+# Resume direct, recording-draft, or playback mode from its publication.
+python scripts\play.py --snapshot artifacts\snapshots\manual.pfsession.json
+
+# Deterministically finish a resumed recording draft after eight more polls.
+python scripts\play.py --snapshot artifacts\snapshots\draft.pfsession.json `
+  --headless --replay-boundary-limit 8
+
+# Exercise the exact F12 path without a visible host window.
+python scripts\play.py --headless --snapshot-after-polls 8 `
+  --session-snapshot artifacts\snapshots\smoke.pfsession.json
+
+python scripts\play.py --inspect-session manual
+python scripts\play.py --verify-session manual
+```
+
+The F12 callback only defers a request. Publication happens after the shared
+semantic cycle returns; the `LiveSessionContinuationEnvelope` and machine
+attachment are captured without intervening guest execution and are required
+to contain byte-identical memory, executed-map, and manager-state payloads.
+
+Raw `.pfmacsnapshot` directories remain available through
+`--snapshot-on-crash` and `--snapshot` for diagnostic compatibility and the
+older machine-only equivalence gate. They are not replay authority and do not
+contain a recording draft or playback cursor.
+
+The current raw directory format is
+`portforge-mac68k-restorable-snapshot-v2`. Its state v3 payload serializes
+`Machine::event_cursor` once and reports it as `machine_event_cursor`.
+Restorable state v1/v2 and Mac continuation v2 are rejected, not migrated.
+
+## Evidence, Atlas, and current blockers
+
+The complete oracle playback can publish execution-bound ReplayEvidenceV3.
+The tracked `artifacts/atlas.pfatlas` is a deletable, regeneratable projection
+of that evidence, never runtime or replay authority.
+
+```powershell
+python scripts\verify_replay.py --build
+python scripts\verify_snapshot_resume.py --build
 python port_forge\tools\pf_project.py atlas . rebuild-evidence `
-  artifacts/evidence/canonical-event-poll-oracle-v3.json
+  artifacts\evidence\canonical-event-poll-oracle-v3.json
 python ..\port_forge\tools\pf_project.py validate .
-python ..\port_forge\tools\pf_project.py platform conformance . --platform mac68k
 ```
 
-The snapshot proof runs a real cold start to a checkpoint, resumes for a
-second interval, runs the same total interval uninterrupted, authenticates all
-snapshot regions, and requires byte-identical final memory, executed coverage,
-and complete restorable state.
+Live Atlas is deliberately reported as unavailable by `scripts/play.py` until
+stable M68K identity telemetry can fan out beside ReplaySessionEvidence without
+installing a second observer or address-only identity authority. Offline Atlas
+rebuild is supported.
 
-Current evidence proves semantic recording/playback, normalized observation,
-deterministic Atlas rematerialization, and exact machine-state resume. Toolbox
-service interiors keep the transfer graph explicitly partial.
-Replay-session-exact continuation is not claimed because ArtifactV2
-sessions are still cold-start-only in the Qt runner. Canonical audio/video
-stream equivalence and generated/native/detached execution also remain open.
+Mac ArtifactV2 currently publishes canonical state only. QuickDraw and Sound
+Manager deterministic source state are resumable, but canonical PCM and video
+commit streams are not implemented, so artifacts do not claim
+`canonical-audio`, `canonical-video`, `audio-continuing`, or
+`video-continuing`. Generated/native/detached execution also remains open.
 
-Timestamp-addressed `.pfmacreplay.json` journals and their pinned goldens are
-retired development artifacts. They have no compatibility reader or active
-workflow.
+The retired `portforge-mac68k-replay-v1` timestamp journal has no compatibility
+reader, alias, or active workflow.

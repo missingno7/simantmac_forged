@@ -3,24 +3,24 @@
     "boundary_profile": {
       "format": "portforge-boundary-profile-v1",
       "id": "mac68k.event-poll-boundaries.v1",
-      "sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096"
+      "sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956"
     },
     "canonical_projection": {
       "projection_sha256": "98f04337e49feeefc83d314d6262c09738c19056a401ba3182f365102a35fc57",
       "schema": "pf-canonical-mac68k-v1"
     },
     "execution_identity": {
-      "sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
+      "sha256": "26bbb4173ebb892dbe3721060120099ffef00ef94ed15ca9d754095b376551c4",
       "value": {
-        "boundary_profile_sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096",
+        "boundary_profile_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956",
         "canonical_schema": "pf-canonical-mac68k-v1",
-        "continuation_schema": "pf-continuation-mac68k-v2",
+        "continuation_schema": "pf-continuation-mac68k-v4",
         "devices_sha256": "ad6f305ad5d0f22b3d11a7dca49cdb0bb44af39e7778a5653af999bf41eaa1f1",
         "effects_abi_sha256": "5bde32ee140a98a112814b4ff8148d6dfa3d4dfec22ab2167860bcec6a12aefe",
-        "executable_sha256": "4d12c3cc00cdad98ab52f55c5562d1d15a9d943341bb5fa912c1f5a151319e83",
-        "implementation_plan_sha256": "342fdf0c5767947083dde8b2990dbbdd9c28e75f3040c1aa43c214f2ad2667b3",
-        "platform_runtime_sha256": "e28ed51c41d66ace83a78ec58b44e3ee13043f0fc5a1e80c7e9ff0af43c26574",
-        "replay_identity_sha256": "7370d79b5ba5fe1deb6270f2aaad65adad9db158b1d5be2adfe27d4f4c77ac22",
+        "executable_sha256": "d372d09cc92c74efca5c11e180f064b8a91ada88782e479c8aecd74a08223526",
+        "implementation_plan_sha256": "f90c2809688bc78ddedc4c9f6bbf7828dc931fe1a1aa26d3a7fc88be5195ffa3",
+        "platform_runtime_sha256": "f6861020fbb2c6ba5437b72ff22d5b7aeca7bfe53905eb7a9ce95227ec88272f",
+        "replay_identity_sha256": "b35e01938a33744a258228493c6121f8217a3a5b5bf74053f6cb8cb90148be27",
         "role": "oracle-interpreter",
         "schema": "pf-replay-execution-identity-v1",
         "services_sha256": "69320769f80be16bafbafe3545f8e8f2a3eca8294ff3e317e7e8a603a08d72e2",
@@ -31,25 +31,25 @@
       "format": "portforge-replay-v2",
       "replay_identity": {
         "assets_sha256": "804a015a3bc99ee6c5e7b093f9239df7a7157a3b834a2d27ec0948d725edea25",
-        "boundary_profile_sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096",
-        "environment_sha256": "e20518452868e4bef0a3fbf969bacf30a20a92c90de75950c2d7e529eaf36548",
+        "boundary_profile_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956",
+        "environment_sha256": "80e9451f97164f3a98831b00bbe7ed6b70333560fc479c1db79bf8a2073fbc63",
         "game_id": "simant-mac",
-        "launch_sha256": "48ceb6a725563e22062afd8d3861f86cde3f29537292eaedc6921e0c5bfc6f5c",
+        "launch_sha256": "498cf58a8cc720ff9b86f1f97300772c124515d0a44dd39b4d6af34e1b1e9b8a",
         "machine_model": "pf-mac68k-macii-system7-color4-v1",
         "machine_profile_sha256": "2464fbf55a343e6163c454c14c3929ff163abaa2911b52fe7a35ab5c2304d37f",
         "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
         "schema": "pf-replay-identity-v1"
       },
-      "replay_identity_sha256": "7370d79b5ba5fe1deb6270f2aaad65adad9db158b1d5be2adfe27d4f4c77ac22",
-      "sha256": "f136144ed64be3c9b70c59a4fb3a86e738a0b0e85c4ebcc66d560733d1e53fc9"
+      "replay_identity_sha256": "b35e01938a33744a258228493c6121f8217a3a5b5bf74053f6cb8cb90148be27",
+      "sha256": "118a43e20f87ac732cc43941b6ac7d692f9020aa38f69f8cd8963f80addaf0c9"
     }
   },
   "completeness": {
     "call_returns": "partial-native",
     "coverage": "complete",
     "layers": "unavailable",
-    "open_frames_at_end": 53,
-    "open_regions_at_end": 1,
+    "open_frames_at_end": 51,
+    "open_regions_at_end": 0,
     "semantic_regions": "observed",
     "transfer_graph": "partial-native",
     "unmatched_irets": 0,
@@ -9450,31 +9450,31 @@
           "id": "mac:022F9C"
         },
         {
-          "count": 9,
+          "count": 8,
           "id": "mac:023046"
         },
         {
-          "count": 9,
+          "count": 8,
           "id": "mac:023056"
         },
         {
-          "count": 8,
+          "count": 7,
           "id": "mac:0230CA"
         }
       ],
-      "completed_invocations": 31,
+      "completed_invocations": 28,
       "final_completed_exit": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359210
+        "runtime_instruction": 1358607
       },
       "first_entry": {
         "predecessor": {
@@ -9491,26 +9491,26 @@
       },
       "id": "mac:5F914E",
       "incomplete": false,
-      "invocations": 31,
+      "invocations": 28,
       "kinds": [
         "call-indirect"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359177
+        "runtime_instruction": 1358574
       },
-      "max_call_depth": 56,
+      "max_call_depth": 54,
       "max_recursive_depth": 1,
-      "nested_invocations": 31,
+      "nested_invocations": 28,
       "occurrences": [
         {
           "caller": "mac:022DFC",
@@ -9757,8 +9757,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -9771,8 +9771,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -9791,8 +9791,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -9805,8 +9805,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -9825,8 +9825,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -9839,8 +9839,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -9859,7 +9859,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -9873,7 +9873,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -9893,7 +9893,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -9907,7 +9907,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -9927,7 +9927,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -9941,7 +9941,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -9961,7 +9961,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -9975,7 +9975,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -9995,7 +9995,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -10009,7 +10009,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -10029,7 +10029,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -10043,7 +10043,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -10786,23 +10786,23 @@
       "active_calls_at_end": 0,
       "callers": [
         {
-          "count": 9,
+          "count": 8,
           "id": "mac:5F9278"
         }
       ],
-      "completed_invocations": 9,
+      "completed_invocations": 8,
       "final_completed_exit": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359167
+        "runtime_instruction": 1358564
       },
       "first_entry": {
         "predecessor": {
@@ -10819,26 +10819,26 @@
       },
       "id": "mac:5FB54E",
       "incomplete": false,
-      "invocations": 9,
+      "invocations": 8,
       "kinds": [
         "call"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359156
+        "runtime_instruction": 1358553
       },
-      "max_call_depth": 57,
+      "max_call_depth": 55,
       "max_recursive_depth": 1,
-      "nested_invocations": 9,
+      "nested_invocations": 8,
       "occurrences": [
         {
           "caller": "mac:5F9278",
@@ -10881,8 +10881,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -10895,8 +10895,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -10915,7 +10915,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -10929,7 +10929,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -10949,7 +10949,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -10963,7 +10963,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -10983,7 +10983,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -10997,7 +10997,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -11017,7 +11017,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -11031,7 +11031,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -11051,7 +11051,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -11065,7 +11065,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -11085,7 +11085,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -11099,7 +11099,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -11111,45 +11111,11 @@
           },
           "inclusive_cost": 11,
           "recursive": false
-        },
-        {
-          "caller": "mac:5F9278",
-          "complete": true,
-          "depth": 56,
-          "entry": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1359156
-          },
-          "exclusive_cost": 11,
-          "exit": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1359167
-          },
-          "inclusive_cost": 11,
-          "recursive": false
         }
       ],
       "occurrences_aborted": 0,
-      "occurrences_completed": 9,
-      "occurrences_recorded": 9,
+      "occurrences_completed": 8,
+      "occurrences_recorded": 8,
       "recursive_invocations": 0
     },
     {
@@ -11352,23 +11318,23 @@
       "active_calls_at_end": 0,
       "callers": [
         {
-          "count": 17,
+          "count": 15,
           "id": "mac:5F928C"
         }
       ],
-      "completed_invocations": 17,
+      "completed_invocations": 15,
       "final_completed_exit": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359205
+        "runtime_instruction": 1358602
       },
       "first_entry": {
         "predecessor": {
@@ -11385,26 +11351,26 @@
       },
       "id": "mac:5FB6E2",
       "incomplete": false,
-      "invocations": 17,
+      "invocations": 15,
       "kinds": [
         "call"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359197
+        "runtime_instruction": 1358594
       },
-      "max_call_depth": 57,
+      "max_call_depth": 55,
       "max_recursive_depth": 1,
-      "nested_invocations": 17,
+      "nested_invocations": 15,
       "occurrences": [
         {
           "caller": "mac:5F928C",
@@ -11447,8 +11413,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -11461,8 +11427,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -11481,8 +11447,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -11495,8 +11461,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -11515,7 +11481,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -11529,7 +11495,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -11549,7 +11515,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -11563,7 +11529,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -11583,7 +11549,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -11597,7 +11563,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -11617,7 +11583,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -11631,7 +11597,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -11651,7 +11617,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -11665,7 +11631,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -11685,7 +11651,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -11699,7 +11665,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -11719,7 +11685,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -11733,7 +11699,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -11753,7 +11719,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -11767,7 +11733,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -11787,7 +11753,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -11801,7 +11767,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -11821,7 +11787,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -11835,7 +11801,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -11855,7 +11821,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -11869,7 +11835,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -11889,7 +11855,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -11903,7 +11869,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -11915,45 +11881,11 @@
           },
           "inclusive_cost": 8,
           "recursive": false
-        },
-        {
-          "caller": "mac:5F928C",
-          "complete": true,
-          "depth": 54,
-          "entry": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1358706
-          },
-          "exclusive_cost": 8,
-          "exit": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1358714
-          },
-          "inclusive_cost": 8,
-          "recursive": false
         }
       ],
       "occurrences_aborted": 0,
-      "occurrences_completed": 16,
-      "occurrences_recorded": 16,
+      "occurrences_completed": 15,
+      "occurrences_recorded": 15,
       "recursive_invocations": 0
     },
     {
@@ -12292,23 +12224,23 @@
       "active_calls_at_end": 1,
       "callers": [
         {
-          "count": 22,
+          "count": 20,
           "id": "mac:022D06"
         }
       ],
-      "completed_invocations": 21,
+      "completed_invocations": 19,
       "final_completed_exit": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359221
+        "runtime_instruction": 1358618
       },
       "first_entry": {
         "predecessor": {
@@ -12325,26 +12257,26 @@
       },
       "id": "mac:6FF4B2",
       "incomplete": true,
-      "invocations": 22,
+      "invocations": 20,
       "kinds": [
         "call-indirect"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359112
+        "runtime_instruction": 1358509
       },
-      "max_call_depth": 55,
+      "max_call_depth": 53,
       "max_recursive_depth": 2,
-      "nested_invocations": 22,
+      "nested_invocations": 20,
       "occurrences": [
         {
           "caller": "mac:022D06",
@@ -12542,8 +12474,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -12556,8 +12488,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -12576,8 +12508,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -12590,8 +12522,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -12610,7 +12542,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -12624,7 +12556,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -12644,7 +12576,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -12658,7 +12590,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -12678,7 +12610,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -12692,7 +12624,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -12712,7 +12644,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -12726,7 +12658,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -12746,7 +12678,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -12760,7 +12692,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -12780,7 +12712,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -12794,7 +12726,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -12814,7 +12746,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -12828,7 +12760,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -12848,7 +12780,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -12862,7 +12794,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -12879,7 +12811,7 @@
       "occurrences_aborted": 0,
       "occurrences_completed": 15,
       "occurrences_recorded": 16,
-      "recursive_invocations": 21
+      "recursive_invocations": 19
     },
     {
       "active_calls_at_end": 0,
@@ -14508,11 +14440,11 @@
           "id": "mac:02433A"
         },
         {
-          "count": 12,
+          "count": 11,
           "id": "mac:024454"
         },
         {
-          "count": 8,
+          "count": 7,
           "id": "mac:024488"
         },
         {
@@ -14520,19 +14452,19 @@
           "id": "mac:024526"
         }
       ],
-      "completed_invocations": 21,
+      "completed_invocations": 19,
       "final_completed_exit": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359223
+        "runtime_instruction": 1358620
       },
       "first_entry": {
         "predecessor": {
@@ -14549,26 +14481,26 @@
       },
       "id": "mac:6FF63A",
       "incomplete": true,
-      "invocations": 22,
+      "invocations": 20,
       "kinds": [
         "call-indirect"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359107
+        "runtime_instruction": 1358504
       },
-      "max_call_depth": 54,
+      "max_call_depth": 52,
       "max_recursive_depth": 2,
-      "nested_invocations": 22,
+      "nested_invocations": 20,
       "occurrences": [
         {
           "caller": "mac:02433A",
@@ -14766,8 +14698,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -14780,8 +14712,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -14800,8 +14732,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -14814,8 +14746,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -14834,7 +14766,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -14848,7 +14780,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -14868,7 +14800,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -14882,7 +14814,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -14902,7 +14834,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -14916,7 +14848,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -14936,7 +14868,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -14950,7 +14882,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -14970,7 +14902,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -14984,7 +14916,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -15004,7 +14936,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -15018,7 +14950,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -15038,7 +14970,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -15052,7 +14984,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -15072,7 +15004,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -15086,7 +15018,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -15103,7 +15035,7 @@
       "occurrences_aborted": 0,
       "occurrences_completed": 15,
       "occurrences_recorded": 16,
-      "recursive_invocations": 21
+      "recursive_invocations": 19
     },
     {
       "active_calls_at_end": 1,
@@ -15278,23 +15210,23 @@
       "active_calls_at_end": 0,
       "callers": [
         {
-          "count": 9,
+          "count": 8,
           "id": "mac:024654"
         }
       ],
-      "completed_invocations": 9,
+      "completed_invocations": 8,
       "final_completed_exit": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359094
+        "runtime_instruction": 1358491
       },
       "first_entry": {
         "predecessor": {
@@ -15311,26 +15243,26 @@
       },
       "id": "mac:6FF68A",
       "incomplete": false,
-      "invocations": 9,
+      "invocations": 8,
       "kinds": [
         "call-indirect"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358760
+        "runtime_instruction": 1358157
       },
-      "max_call_depth": 54,
+      "max_call_depth": 52,
       "max_recursive_depth": 1,
-      "nested_invocations": 9,
+      "nested_invocations": 8,
       "occurrences": [
         {
           "caller": "mac:024654",
@@ -15373,8 +15305,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -15387,8 +15319,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -15407,7 +15339,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -15421,7 +15353,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -15441,7 +15373,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -15455,7 +15387,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -15475,7 +15407,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -15489,7 +15421,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -15509,7 +15441,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -15523,7 +15455,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -15543,7 +15475,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -15557,7 +15489,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -15577,7 +15509,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -15591,7 +15523,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -15603,52 +15535,18 @@
           },
           "inclusive_cost": 334,
           "recursive": false
-        },
-        {
-          "caller": "mac:024654",
-          "complete": true,
-          "depth": 53,
-          "entry": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1358760
-          },
-          "exclusive_cost": 334,
-          "exit": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1359094
-          },
-          "inclusive_cost": 334,
-          "recursive": false
         }
       ],
       "occurrences_aborted": 0,
-      "occurrences_completed": 9,
-      "occurrences_recorded": 9,
+      "occurrences_completed": 8,
+      "occurrences_recorded": 8,
       "recursive_invocations": 0
     },
     {
-      "active_calls_at_end": 9,
+      "active_calls_at_end": 8,
       "callers": [
         {
-          "count": 9,
+          "count": 8,
           "id": "mac:02E6D8"
         }
       ],
@@ -15669,26 +15567,26 @@
       },
       "id": "mac:6FF6BA",
       "incomplete": true,
-      "invocations": 9,
+      "invocations": 8,
       "kinds": [
         "call-indirect"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358744
+        "runtime_instruction": 1358141
       },
-      "max_call_depth": 52,
-      "max_recursive_depth": 9,
-      "nested_invocations": 9,
+      "max_call_depth": 50,
+      "max_recursive_depth": 8,
+      "nested_invocations": 8,
       "occurrences": [
         {
           "caller": "mac:02E6D8",
@@ -15716,8 +15614,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -15735,7 +15633,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -15754,7 +15652,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -15773,7 +15671,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -15792,7 +15690,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -15811,7 +15709,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -15830,7 +15728,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -15841,31 +15739,12 @@
             "runtime_instruction": 1358141
           },
           "recursive": true
-        },
-        {
-          "caller": "mac:02E6D8",
-          "complete": false,
-          "depth": 51,
-          "entry": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1358744
-          },
-          "recursive": true
         }
       ],
       "occurrences_aborted": 0,
       "occurrences_completed": 0,
-      "occurrences_recorded": 9,
-      "recursive_invocations": 8
+      "occurrences_recorded": 8,
+      "recursive_invocations": 7
     },
     {
       "active_calls_at_end": 0,
@@ -18175,10 +18054,10 @@
       "recursive_invocations": 0
     },
     {
-      "active_calls_at_end": 8,
+      "active_calls_at_end": 7,
       "callers": [
         {
-          "count": 8,
+          "count": 7,
           "id": "mac:02E748"
         }
       ],
@@ -18187,8 +18066,8 @@
       "first_entry": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -18199,26 +18078,26 @@
       },
       "id": "mac:6FF7C2",
       "incomplete": true,
-      "invocations": 8,
+      "invocations": 7,
       "kinds": [
         "call-indirect"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358650
+        "runtime_instruction": 1358047
       },
-      "max_call_depth": 51,
-      "max_recursive_depth": 8,
-      "nested_invocations": 8,
+      "max_call_depth": 49,
+      "max_recursive_depth": 7,
+      "nested_invocations": 7,
       "occurrences": [
         {
           "caller": "mac:02E748",
@@ -18227,8 +18106,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -18246,7 +18125,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -18265,7 +18144,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -18284,7 +18163,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -18303,7 +18182,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -18322,7 +18201,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -18341,7 +18220,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -18352,31 +18231,12 @@
             "runtime_instruction": 1358047
           },
           "recursive": true
-        },
-        {
-          "caller": "mac:02E748",
-          "complete": false,
-          "depth": 50,
-          "entry": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1358650
-          },
-          "recursive": true
         }
       ],
       "occurrences_aborted": 0,
       "occurrences_completed": 0,
-      "occurrences_recorded": 8,
-      "recursive_invocations": 7
+      "occurrences_recorded": 7,
+      "recursive_invocations": 6
     },
     {
       "active_calls_at_end": 1,
@@ -18524,23 +18384,23 @@
       "active_calls_at_end": 0,
       "callers": [
         {
-          "count": 9,
+          "count": 8,
           "id": "mac:020DB0"
         }
       ],
-      "completed_invocations": 9,
+      "completed_invocations": 8,
       "final_completed_exit": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359097
+        "runtime_instruction": 1358494
       },
       "first_entry": {
         "predecessor": {
@@ -18557,26 +18417,26 @@
       },
       "id": "mac:6FF822",
       "incomplete": false,
-      "invocations": 9,
+      "invocations": 8,
       "kinds": [
         "call-indirect"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358754
+        "runtime_instruction": 1358151
       },
-      "max_call_depth": 53,
+      "max_call_depth": 51,
       "max_recursive_depth": 1,
-      "nested_invocations": 9,
+      "nested_invocations": 8,
       "occurrences": [
         {
           "caller": "mac:020DB0",
@@ -18619,8 +18479,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -18633,8 +18493,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -18653,7 +18513,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -18667,7 +18527,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -18687,7 +18547,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -18701,7 +18561,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -18721,7 +18581,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -18735,7 +18595,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -18755,7 +18615,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -18769,7 +18629,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -18789,7 +18649,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -18803,7 +18663,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -18823,7 +18683,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -18837,7 +18697,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -18849,52 +18709,18 @@
           },
           "inclusive_cost": 343,
           "recursive": false
-        },
-        {
-          "caller": "mac:020DB0",
-          "complete": true,
-          "depth": 52,
-          "entry": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1358754
-          },
-          "exclusive_cost": 9,
-          "exit": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1359097
-          },
-          "inclusive_cost": 343,
-          "recursive": false
         }
       ],
       "occurrences_aborted": 0,
-      "occurrences_completed": 9,
-      "occurrences_recorded": 9,
+      "occurrences_completed": 8,
+      "occurrences_recorded": 8,
       "recursive_invocations": 0
     },
     {
       "active_calls_at_end": 2,
       "callers": [
         {
-          "count": 9,
+          "count": 8,
           "id": "mac:020DB4"
         },
         {
@@ -18910,19 +18736,19 @@
           "id": "mac:02E582"
         }
       ],
-      "completed_invocations": 10,
+      "completed_invocations": 9,
       "final_completed_exit": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358640
+        "runtime_instruction": 1358037
       },
       "first_entry": {
         "predecessor": {
@@ -18939,26 +18765,26 @@
       },
       "id": "mac:6FF83A",
       "incomplete": true,
-      "invocations": 12,
+      "invocations": 11,
       "kinds": [
         "call-indirect"
       ],
       "last_entry": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359098
+        "runtime_instruction": 1358495
       },
-      "max_call_depth": 53,
+      "max_call_depth": 51,
       "max_recursive_depth": 2,
-      "nested_invocations": 12,
+      "nested_invocations": 11,
       "occurrences": [
         {
           "caller": "mac:021104",
@@ -19068,8 +18894,8 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -19088,8 +18914,8 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 1,
-              "checkpoint_cursor": 1,
-              "event_cursor": 0,
+              "checkpoint_cursor": 0,
+              "event_cursor": 1,
               "selector": {
                 "occurrence": 0,
                 "phase": "after",
@@ -19102,7 +18928,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -19122,7 +18948,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 3,
-              "checkpoint_cursor": 2,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 1,
@@ -19136,7 +18962,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -19156,7 +18982,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 5,
-              "checkpoint_cursor": 3,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 2,
@@ -19170,7 +18996,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -19190,7 +19016,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 7,
-              "checkpoint_cursor": 4,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 3,
@@ -19204,7 +19030,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -19224,7 +19050,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 9,
-              "checkpoint_cursor": 5,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 4,
@@ -19238,7 +19064,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -19258,7 +19084,7 @@
           "entry": {
             "predecessor": {
               "boundary_ordinal": 11,
-              "checkpoint_cursor": 6,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 5,
@@ -19272,7 +19098,7 @@
           "exit": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -19287,12 +19113,12 @@
         },
         {
           "caller": "mac:020DB4",
-          "complete": true,
+          "complete": false,
           "depth": 50,
           "entry": {
             "predecessor": {
               "boundary_ordinal": 13,
-              "checkpoint_cursor": 7,
+              "checkpoint_cursor": 0,
               "event_cursor": 1,
               "selector": {
                 "occurrence": 6,
@@ -19302,47 +19128,13 @@
             },
             "runtime_instruction": 1358495
           },
-          "exclusive_cost": 29,
-          "exit": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1358640
-          },
-          "inclusive_cost": 145,
-          "recursive": true
-        },
-        {
-          "caller": "mac:020DB4",
-          "complete": false,
-          "depth": 52,
-          "entry": {
-            "predecessor": {
-              "boundary_ordinal": 15,
-              "checkpoint_cursor": 8,
-              "event_cursor": 1,
-              "selector": {
-                "occurrence": 7,
-                "phase": "after",
-                "point": "mac.event.poll"
-              }
-            },
-            "runtime_instruction": 1359098
-          },
           "recursive": true
         }
       ],
       "occurrences_aborted": 0,
-      "occurrences_completed": 10,
-      "occurrences_recorded": 12,
-      "recursive_invocations": 10
+      "occurrences_completed": 9,
+      "occurrences_recorded": 11,
+      "recursive_invocations": 9
     },
     {
       "active_calls_at_end": 0,
@@ -23680,7 +23472,7 @@
     "atlas_role": "regeneratable-evidence-projection",
     "occurrence_cap": 16,
     "origin": "portforge",
-    "runtime_revision": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376"
+    "runtime_revision": "26bbb4173ebb892dbe3721060120099ffef00ef94ed15ca9d754095b376551c4"
   },
   "replay_coverage": {
     "address_coverage": "complete",
@@ -43675,7 +43467,7 @@
         1
       ]
     ],
-    "semantic_boundaries_observed": 17,
+    "semantic_boundaries_observed": 16,
     "semantic_boundary_ordinals": [
       0,
       1,
@@ -43692,27 +43484,26 @@
       12,
       13,
       14,
-      15,
-      16
+      15
     ],
     "semantic_timeline_complete": true,
     "source": "mac68k-instruction-starts"
   },
   "runtime_variant": {
-    "executable_sha256": "4d12c3cc00cdad98ab52f55c5562d1d15a9d943341bb5fa912c1f5a151319e83",
-    "implementation_plan_sha256": "342fdf0c5767947083dde8b2990dbbdd9c28e75f3040c1aa43c214f2ad2667b3",
+    "executable_sha256": "d372d09cc92c74efca5c11e180f064b8a91ada88782e479c8aecd74a08223526",
+    "implementation_plan_sha256": "f90c2809688bc78ddedc4c9f6bbf7828dc931fe1a1aa26d3a7fc88be5195ffa3",
     "mode": "mac-oracle",
-    "platform_runtime_sha256": "e28ed51c41d66ace83a78ec58b44e3ee13043f0fc5a1e80c7e9ff0af43c26574",
+    "platform_runtime_sha256": "f6861020fbb2c6ba5437b72ff22d5b7aeca7bfe53905eb7a9ce95227ec88272f",
     "role": "oracle-interpreter"
   },
   "scope": {
     "end": {
-      "boundary_ordinal": 16,
-      "checkpoint_cursor": 8,
+      "boundary_ordinal": 15,
+      "checkpoint_cursor": 0,
       "event_cursor": 1,
       "selector": {
-        "occurrence": 8,
-        "phase": "before",
+        "occurrence": 7,
+        "phase": "after",
         "point": "mac.event.poll"
       }
     },
@@ -43731,12 +43522,12 @@
   },
   "semantic_region_visits": [
     {
-      "active_calls_at_end": 1,
+      "active_calls_at_end": 0,
       "completed_visits": 8,
       "final_completed_exit": {
         "predecessor": {
           "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
             "occurrence": 7,
@@ -43760,12 +43551,12 @@
         "runtime_instruction": 1354389
       },
       "id": "mac.event.poll",
-      "incomplete": true,
+      "incomplete": false,
       "max_depth": 1,
       "max_recursive_depth": 1,
       "nested_visits": 0,
       "recursive_visits": 0,
-      "visits": 9
+      "visits": 8
     }
   ],
   "services": [],
@@ -43931,7 +43722,7 @@
       "to": "mac:022F5A"
     },
     {
-      "count": 12,
+      "count": 11,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -43949,26 +43740,26 @@
       "kind": "jump-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359125
+        "runtime_instruction": 1358522
       },
       "to": "mac:023016"
     },
     {
-      "count": 8,
+      "count": 7,
       "first": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -43981,16 +43772,16 @@
       "kind": "jump-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358675
+        "runtime_instruction": 1358072
       },
       "to": "mac:0230A6"
     },
@@ -44955,7 +44746,7 @@
       "to": "mac:02E5A4"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -44973,21 +44764,21 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358754
+        "runtime_instruction": 1358151
       },
       "to": "mac:6FF822"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -45005,26 +44796,26 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359098
+        "runtime_instruction": 1358495
       },
       "to": "mac:6FF83A"
     },
     {
-      "count": 8,
+      "count": 7,
       "first": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -45037,16 +44828,16 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358640
+        "runtime_instruction": 1358037
       },
       "to": "mac:02E6DC"
     },
@@ -48411,7 +48202,7 @@
       "to": "mac:0226B4"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -48429,16 +48220,16 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359094
+        "runtime_instruction": 1358491
       },
       "to": "mac:024658"
     },
@@ -48603,7 +48394,7 @@
       "to": "mac:022E12"
     },
     {
-      "count": 22,
+      "count": 20,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -48621,16 +48412,16 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359112
+        "runtime_instruction": 1358509
       },
       "to": "mac:6FF4B2"
     },
@@ -48923,7 +48714,7 @@
       "to": "mac:5F914E"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -48941,21 +48732,21 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359140
+        "runtime_instruction": 1358537
       },
       "to": "mac:5F914E"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -48973,26 +48764,26 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359177
+        "runtime_instruction": 1358574
       },
       "to": "mac:5F914E"
     },
     {
-      "count": 8,
+      "count": 7,
       "first": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -49005,16 +48796,16 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358686
+        "runtime_instruction": 1358083
       },
       "to": "mac:5F914E"
     },
@@ -49051,7 +48842,7 @@
       "to": "mac:02433E"
     },
     {
-      "count": 12,
+      "count": 11,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -49069,26 +48860,26 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359221
+        "runtime_instruction": 1358618
       },
       "to": "mac:024458"
     },
     {
-      "count": 8,
+      "count": 7,
       "first": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -49101,16 +48892,16 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358729
+        "runtime_instruction": 1358126
       },
       "to": "mac:02448C"
     },
@@ -51323,7 +51114,7 @@
       "to": "mac:02451E"
     },
     {
-      "count": 12,
+      "count": 11,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -51341,21 +51132,21 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359107
+        "runtime_instruction": 1358504
       },
       "to": "mac:6FF63A"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -51373,16 +51164,16 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359223
+        "runtime_instruction": 1358620
       },
       "to": "mac:020DB8"
     },
@@ -51483,12 +51274,12 @@
       "to": "mac:02E586"
     },
     {
-      "count": 8,
+      "count": 7,
       "first": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -51501,26 +51292,26 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358657
+        "runtime_instruction": 1358054
       },
       "to": "mac:6FF63A"
     },
     {
-      "count": 8,
+      "count": 7,
       "first": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -51533,16 +51324,16 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358735
+        "runtime_instruction": 1358132
       },
       "to": "mac:02E74C"
     },
@@ -51675,7 +51466,7 @@
       "to": "mac:02E6B2"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -51693,21 +51484,21 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358760
+        "runtime_instruction": 1358157
       },
       "to": "mac:6FF68A"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -51725,16 +51516,16 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359097
+        "runtime_instruction": 1358494
       },
       "to": "mac:020DB4"
     },
@@ -57691,7 +57482,7 @@
       "to": "mac:6FF72A"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -57709,26 +57500,26 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358744
+        "runtime_instruction": 1358141
       },
       "to": "mac:6FF6BA"
     },
     {
-      "count": 8,
+      "count": 7,
       "first": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -57741,16 +57532,16 @@
       "kind": "call-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358650
+        "runtime_instruction": 1358047
       },
       "to": "mac:6FF7C2"
     },
@@ -60315,7 +60106,7 @@
       "to": "mac:022F9E"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -60333,21 +60124,21 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359172
+        "runtime_instruction": 1358569
       },
       "to": "mac:023048"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -60365,26 +60156,26 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359210
+        "runtime_instruction": 1358607
       },
       "to": "mac:023058"
     },
     {
-      "count": 8,
+      "count": 7,
       "first": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -60397,16 +60188,16 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358719
+        "runtime_instruction": 1358116
       },
       "to": "mac:0230CC"
     },
@@ -60507,7 +60298,7 @@
       "to": "mac:5FB732"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -60525,21 +60316,21 @@
       "kind": "call",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359156
+        "runtime_instruction": 1358553
       },
       "to": "mac:5FB54E"
     },
     {
-      "count": 17,
+      "count": 15,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -60557,16 +60348,16 @@
       "kind": "call",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359197
+        "runtime_instruction": 1358594
       },
       "to": "mac:5FB6E2"
     },
@@ -60987,7 +60778,7 @@
       "to": "mac:5F9306"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -61005,16 +60796,16 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359167
+        "runtime_instruction": 1358564
       },
       "to": "mac:5F927C"
     },
@@ -61115,7 +60906,7 @@
       "to": "mac:5FB6B6"
     },
     {
-      "count": 17,
+      "count": 15,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -61133,16 +60924,16 @@
       "kind": "ret",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359205
+        "runtime_instruction": 1358602
       },
       "to": "mac:5F9290"
     },
@@ -61403,7 +61194,7 @@
       "to": "mac:5FB85A"
     },
     {
-      "count": 22,
+      "count": 20,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -61421,16 +61212,16 @@
       "kind": "jump-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359113
+        "runtime_instruction": 1358510
       },
       "to": "mac:0200BE"
     },
@@ -61787,7 +61578,7 @@
       "to": "mac:0218D8"
     },
     {
-      "count": 22,
+      "count": 20,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -61805,16 +61596,16 @@
       "kind": "jump-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359108
+        "runtime_instruction": 1358505
       },
       "to": "mac:022CFA"
     },
@@ -61883,7 +61674,7 @@
       "to": "mac:0226A0"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -61901,21 +61692,21 @@
       "kind": "jump-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358761
+        "runtime_instruction": 1358158
       },
       "to": "mac:022BBE"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -61933,16 +61724,16 @@
       "kind": "jump-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358745
+        "runtime_instruction": 1358142
       },
       "to": "mac:020D98"
     },
@@ -62235,12 +62026,12 @@
       "to": "mac:02CE2E"
     },
     {
-      "count": 8,
+      "count": 7,
       "first": {
         "predecessor": {
           "boundary_ordinal": 1,
-          "checkpoint_cursor": 1,
-          "event_cursor": 0,
+          "checkpoint_cursor": 0,
+          "event_cursor": 1,
           "selector": {
             "occurrence": 0,
             "phase": "after",
@@ -62253,16 +62044,16 @@
       "kind": "jump-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358651
+        "runtime_instruction": 1358048
       },
       "to": "mac:024474"
     },
@@ -62331,7 +62122,7 @@
       "to": "mac:024302"
     },
     {
-      "count": 9,
+      "count": 8,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -62349,21 +62140,21 @@
       "kind": "jump-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1358755
+        "runtime_instruction": 1358152
       },
       "to": "mac:024646"
     },
     {
-      "count": 12,
+      "count": 11,
       "first": {
         "predecessor": {
           "boundary_ordinal": 0,
@@ -62381,16 +62172,16 @@
       "kind": "jump-indirect",
       "last": {
         "predecessor": {
-          "boundary_ordinal": 15,
-          "checkpoint_cursor": 8,
+          "boundary_ordinal": 13,
+          "checkpoint_cursor": 0,
           "event_cursor": 1,
           "selector": {
-            "occurrence": 7,
+            "occurrence": 6,
             "phase": "after",
             "point": "mac.event.poll"
           }
         },
-        "runtime_instruction": 1359099
+        "runtime_instruction": 1358496
       },
       "to": "mac:02443A"
     },
@@ -63440,1554 +63231,7 @@
           "schema": "pf-execution-effect-trace-v1"
         },
         "event_cursor": 0,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
-        "outputs": {
-          "audio": [],
-          "first_audio_sequence": 0,
-          "first_video_sequence": 0,
-          "schema": "pf-canonical-output-trace-v1",
-          "video": []
-        },
-        "safe_points": [],
-        "schema": "pf-verification-point-v1"
-      },
-      {
-        "boundary": {
-          "evidence": {
-            "code_identity": "mac.code.2.2978",
-            "delivered_events": 0,
-            "event_found": false,
-            "guest_instructions": 1354390,
-            "instruction_pc": 134608,
-            "opcode": 43104,
-            "trap": "WaitNextEvent"
-          },
-          "global_ordinal": 1,
-          "machine_time": {
-            "domain": "mac.tick",
-            "units_per_second_den": 1,
-            "units_per_second_num": 60,
-            "value": 39
-          },
-          "outcome": "reached",
-          "schema": "pf-boundary-stamp-v1",
-          "selector": {
-            "occurrence": 0,
-            "phase": "after",
-            "point": "mac.event.poll"
-          }
-        },
-        "canonical": {
-          "canonical_schema": "pf-canonical-mac68k-v1",
-          "canonical_sha256": "2439f40df7118589ffd613197ae4ff6ff2c8705b590279d0e09ec0f34629ce72",
-          "event_cursor": 0,
-          "fields": {
-            "a5": 7337080,
-            "callback_depth": 0,
-            "code_generation": 42,
-            "code_load_generation": 8,
-            "code_ranges": [
-              {
-                "load_generation": 1,
-                "resource_id": 1,
-                "resource_offset": 4,
-                "runtime_base": 131076,
-                "size": 554
-              },
-              {
-                "load_generation": 2,
-                "resource_id": 2,
-                "resource_offset": 4,
-                "runtime_base": 131634,
-                "size": 13300
-              },
-              {
-                "load_generation": 3,
-                "resource_id": 4,
-                "resource_offset": 4,
-                "runtime_base": 144964,
-                "size": 5174
-              },
-              {
-                "load_generation": 4,
-                "resource_id": 3,
-                "resource_offset": 4,
-                "runtime_base": 183810,
-                "size": 7342
-              },
-              {
-                "load_generation": 5,
-                "resource_id": 7,
-                "resource_offset": 4,
-                "runtime_base": 381916,
-                "size": 22318
-              },
-              {
-                "load_generation": 6,
-                "resource_id": 6,
-                "resource_offset": 4,
-                "runtime_base": 532482,
-                "size": 9534
-              },
-              {
-                "load_generation": 7,
-                "resource_id": 5,
-                "resource_offset": 4,
-                "runtime_base": 651752,
-                "size": 25052
-              },
-              {
-                "load_generation": 8,
-                "resource_id": 8,
-                "resource_offset": 4,
-                "runtime_base": 973202,
-                "size": 18600
-              }
-            ],
-            "cpu": {
-              "a": [
-                6263118,
-                7318526,
-                131832,
-                66340,
-                7318598,
-                7337080,
-                7318546,
-                7318528
-              ],
-              "d": [
-                0,
-                0,
-                12,
-                0,
-                0,
-                0,
-                1239,
-                0
-              ],
-              "pc": 134610,
-              "ssp": 7318754,
-              "status": 8196,
-              "stopped": false,
-              "usp": 0,
-              "vbr": 0
-            },
-            "cpu_cycles": 10499352,
-            "current_port": 191788,
-            "delivered_input_cursor": 0,
-            "drawing_depth": 0,
-            "events": {
-              "button_down": false,
-              "delivered": 0,
-              "key_map": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "modifiers": 0,
-              "mouse": {
-                "horizontal": 0,
-                "vertical": 0
-              },
-              "next_sequence": 0,
-              "queue": [],
-              "ready_control_gesture": null,
-              "ready_menu_result": null,
-              "ready_window_grow": null
-            },
-            "exit_code": 0,
-            "exited": false,
-            "file_error": 0,
-            "instructions": 1354390,
-            "memory_error": 0,
-            "modal_depth": 0,
-            "profile": {
-              "address_space_bytes": 8388608,
-              "application_heap_base": 131072,
-              "application_heap_limit": 6291456,
-              "color_quickdraw": true,
-              "cpu_cycles_per_second": 16000000,
-              "double_click_ticks": 30,
-              "environment_version": 2,
-              "framebuffer_base": 7340032,
-              "has_fpu": false,
-              "keyboard_type": 5,
-              "low_memory_limit": 65536,
-              "machine_model": "pf-mac68k-macii-system7-color4-v1",
-              "machine_type": 4,
-              "master_pointer_base": 65536,
-              "master_pointer_limit": 98304,
-              "processor_type": 3,
-              "screen_color": true,
-              "screen_height": 480,
-              "screen_pixel_depth": 4,
-              "screen_width": 640,
-              "stack_base": 6291456,
-              "stack_limit": 7340032,
-              "system_folder_id": 3,
-              "system_object_base": 98304,
-              "system_object_limit": 131072,
-              "system_resource_file_bytes": 1048576,
-              "system_version": 1792,
-              "system_volume_allocation_block_size": 512,
-              "system_volume_allocation_blocks": 32767,
-              "system_volume_free_blocks": 16384,
-              "ticks_per_second": 60
-            },
-            "projection_scope": "mac68k-event-poll-v1",
-            "resource_error": 0,
-            "timeline_ticks": 39,
-            "trap_depth": 0
-          },
-          "regions": [
-            {
-              "name": "executed-byte-map",
-              "sha256": "1cf568d09622a4991c419dc96c34b9caaa08dbc67d2544a676d75b1aaa68ee43",
-              "size": 1048576
-            },
-            {
-              "name": "guest-memory",
-              "sha256": "51ee009763be551757d7faf01fdfb655792f656c05345093c83bb0b2d7a64b2a",
-              "size": 8388608
-            }
-          ],
-          "schema": "pf-owned-canonical-projection-v1"
-        },
-        "checkpoint_cursor": 1,
-        "effects": {
-          "effects": [],
-          "first_sequence": 0,
-          "schema": "pf-execution-effect-trace-v1"
-        },
-        "event_cursor": 0,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
-        "outputs": {
-          "audio": [],
-          "first_audio_sequence": 0,
-          "first_video_sequence": 0,
-          "schema": "pf-canonical-output-trace-v1",
-          "video": []
-        },
-        "safe_points": [],
-        "schema": "pf-verification-point-v1"
-      },
-      {
-        "boundary": {
-          "evidence": {
-            "code_identity": "mac.code.2.2978",
-            "delivered_events": 1,
-            "event_found": true,
-            "guest_instructions": 1354993,
-            "instruction_pc": 134608,
-            "opcode": 43104,
-            "trap": "WaitNextEvent"
-          },
-          "global_ordinal": 3,
-          "machine_time": {
-            "domain": "mac.tick",
-            "units_per_second_den": 1,
-            "units_per_second_num": 60,
-            "value": 39
-          },
-          "outcome": "reached",
-          "schema": "pf-boundary-stamp-v1",
-          "selector": {
-            "occurrence": 1,
-            "phase": "after",
-            "point": "mac.event.poll"
-          }
-        },
-        "canonical": {
-          "canonical_schema": "pf-canonical-mac68k-v1",
-          "canonical_sha256": "05599f5e95b940776a69dda184024788413f2b85282e7abe108d546f0128362e",
-          "event_cursor": 1,
-          "fields": {
-            "a5": 7337080,
-            "callback_depth": 0,
-            "code_generation": 42,
-            "code_load_generation": 8,
-            "code_ranges": [
-              {
-                "load_generation": 1,
-                "resource_id": 1,
-                "resource_offset": 4,
-                "runtime_base": 131076,
-                "size": 554
-              },
-              {
-                "load_generation": 2,
-                "resource_id": 2,
-                "resource_offset": 4,
-                "runtime_base": 131634,
-                "size": 13300
-              },
-              {
-                "load_generation": 3,
-                "resource_id": 4,
-                "resource_offset": 4,
-                "runtime_base": 144964,
-                "size": 5174
-              },
-              {
-                "load_generation": 4,
-                "resource_id": 3,
-                "resource_offset": 4,
-                "runtime_base": 183810,
-                "size": 7342
-              },
-              {
-                "load_generation": 5,
-                "resource_id": 7,
-                "resource_offset": 4,
-                "runtime_base": 381916,
-                "size": 22318
-              },
-              {
-                "load_generation": 6,
-                "resource_id": 6,
-                "resource_offset": 4,
-                "runtime_base": 532482,
-                "size": 9534
-              },
-              {
-                "load_generation": 7,
-                "resource_id": 5,
-                "resource_offset": 4,
-                "runtime_base": 651752,
-                "size": 25052
-              },
-              {
-                "load_generation": 8,
-                "resource_id": 8,
-                "resource_offset": 4,
-                "runtime_base": 973202,
-                "size": 18600
-              }
-            ],
-            "cpu": {
-              "a": [
-                6263118,
-                7318526,
-                131832,
-                66340,
-                7318598,
-                7337080,
-                7318546,
-                7318528
-              ],
-              "d": [
-                0,
-                0,
-                12,
-                0,
-                0,
-                0,
-                1239,
-                0
-              ],
-              "pc": 134610,
-              "ssp": 7318754,
-              "status": 8196,
-              "stopped": false,
-              "usp": 0,
-              "vbr": 0
-            },
-            "cpu_cycles": 10503898,
-            "current_port": 191788,
-            "delivered_input_cursor": 1,
-            "drawing_depth": 0,
-            "events": {
-              "button_down": false,
-              "delivered": 1,
-              "key_map": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "modifiers": 1,
-              "mouse": {
-                "horizontal": 0,
-                "vertical": 0
-              },
-              "next_sequence": 1,
-              "queue": [],
-              "ready_control_gesture": null,
-              "ready_menu_result": null,
-              "ready_window_grow": null
-            },
-            "exit_code": 0,
-            "exited": false,
-            "file_error": 0,
-            "instructions": 1354993,
-            "memory_error": 0,
-            "modal_depth": 0,
-            "profile": {
-              "address_space_bytes": 8388608,
-              "application_heap_base": 131072,
-              "application_heap_limit": 6291456,
-              "color_quickdraw": true,
-              "cpu_cycles_per_second": 16000000,
-              "double_click_ticks": 30,
-              "environment_version": 2,
-              "framebuffer_base": 7340032,
-              "has_fpu": false,
-              "keyboard_type": 5,
-              "low_memory_limit": 65536,
-              "machine_model": "pf-mac68k-macii-system7-color4-v1",
-              "machine_type": 4,
-              "master_pointer_base": 65536,
-              "master_pointer_limit": 98304,
-              "processor_type": 3,
-              "screen_color": true,
-              "screen_height": 480,
-              "screen_pixel_depth": 4,
-              "screen_width": 640,
-              "stack_base": 6291456,
-              "stack_limit": 7340032,
-              "system_folder_id": 3,
-              "system_object_base": 98304,
-              "system_object_limit": 131072,
-              "system_resource_file_bytes": 1048576,
-              "system_version": 1792,
-              "system_volume_allocation_block_size": 512,
-              "system_volume_allocation_blocks": 32767,
-              "system_volume_free_blocks": 16384,
-              "ticks_per_second": 60
-            },
-            "projection_scope": "mac68k-event-poll-v1",
-            "resource_error": 0,
-            "timeline_ticks": 39,
-            "trap_depth": 0
-          },
-          "regions": [
-            {
-              "name": "executed-byte-map",
-              "sha256": "c94fe81834435f607a333090297821dd691c4f8baf91e74a15eaf53cbbceca6f",
-              "size": 1048576
-            },
-            {
-              "name": "guest-memory",
-              "sha256": "5afcace6dcaed642e6fb579aeb9e5792ff91f89bb06eb6c65a4e3d6d4fce9ea0",
-              "size": 8388608
-            }
-          ],
-          "schema": "pf-owned-canonical-projection-v1"
-        },
-        "checkpoint_cursor": 2,
-        "effects": {
-          "effects": [],
-          "first_sequence": 0,
-          "schema": "pf-execution-effect-trace-v1"
-        },
-        "event_cursor": 1,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
-        "outputs": {
-          "audio": [],
-          "first_audio_sequence": 0,
-          "first_video_sequence": 0,
-          "schema": "pf-canonical-output-trace-v1",
-          "video": []
-        },
-        "safe_points": [],
-        "schema": "pf-verification-point-v1"
-      },
-      {
-        "boundary": {
-          "evidence": {
-            "code_identity": "mac.code.2.2978",
-            "delivered_events": 1,
-            "event_found": false,
-            "guest_instructions": 1355614,
-            "instruction_pc": 134608,
-            "opcode": 43104,
-            "trap": "WaitNextEvent"
-          },
-          "global_ordinal": 5,
-          "machine_time": {
-            "domain": "mac.tick",
-            "units_per_second_den": 1,
-            "units_per_second_num": 60,
-            "value": 39
-          },
-          "outcome": "reached",
-          "schema": "pf-boundary-stamp-v1",
-          "selector": {
-            "occurrence": 2,
-            "phase": "after",
-            "point": "mac.event.poll"
-          }
-        },
-        "canonical": {
-          "canonical_schema": "pf-canonical-mac68k-v1",
-          "canonical_sha256": "9d4a7f5e0009c6563d237a02cbc11103f0c8af5128a714650492a376f4c0c049",
-          "event_cursor": 1,
-          "fields": {
-            "a5": 7337080,
-            "callback_depth": 0,
-            "code_generation": 42,
-            "code_load_generation": 8,
-            "code_ranges": [
-              {
-                "load_generation": 1,
-                "resource_id": 1,
-                "resource_offset": 4,
-                "runtime_base": 131076,
-                "size": 554
-              },
-              {
-                "load_generation": 2,
-                "resource_id": 2,
-                "resource_offset": 4,
-                "runtime_base": 131634,
-                "size": 13300
-              },
-              {
-                "load_generation": 3,
-                "resource_id": 4,
-                "resource_offset": 4,
-                "runtime_base": 144964,
-                "size": 5174
-              },
-              {
-                "load_generation": 4,
-                "resource_id": 3,
-                "resource_offset": 4,
-                "runtime_base": 183810,
-                "size": 7342
-              },
-              {
-                "load_generation": 5,
-                "resource_id": 7,
-                "resource_offset": 4,
-                "runtime_base": 381916,
-                "size": 22318
-              },
-              {
-                "load_generation": 6,
-                "resource_id": 6,
-                "resource_offset": 4,
-                "runtime_base": 532482,
-                "size": 9534
-              },
-              {
-                "load_generation": 7,
-                "resource_id": 5,
-                "resource_offset": 4,
-                "runtime_base": 651752,
-                "size": 25052
-              },
-              {
-                "load_generation": 8,
-                "resource_id": 8,
-                "resource_offset": 4,
-                "runtime_base": 973202,
-                "size": 18600
-              }
-            ],
-            "cpu": {
-              "a": [
-                6263118,
-                7318526,
-                131832,
-                66340,
-                7318598,
-                7337080,
-                7318546,
-                7318528
-              ],
-              "d": [
-                0,
-                0,
-                12,
-                0,
-                0,
-                0,
-                1239,
-                0
-              ],
-              "pc": 134610,
-              "ssp": 7318754,
-              "status": 8196,
-              "stopped": false,
-              "usp": 0,
-              "vbr": 0
-            },
-            "cpu_cycles": 10508576,
-            "current_port": 191788,
-            "delivered_input_cursor": 1,
-            "drawing_depth": 0,
-            "events": {
-              "button_down": false,
-              "delivered": 1,
-              "key_map": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "modifiers": 1,
-              "mouse": {
-                "horizontal": 0,
-                "vertical": 0
-              },
-              "next_sequence": 1,
-              "queue": [],
-              "ready_control_gesture": null,
-              "ready_menu_result": null,
-              "ready_window_grow": null
-            },
-            "exit_code": 0,
-            "exited": false,
-            "file_error": 0,
-            "instructions": 1355614,
-            "memory_error": 0,
-            "modal_depth": 0,
-            "profile": {
-              "address_space_bytes": 8388608,
-              "application_heap_base": 131072,
-              "application_heap_limit": 6291456,
-              "color_quickdraw": true,
-              "cpu_cycles_per_second": 16000000,
-              "double_click_ticks": 30,
-              "environment_version": 2,
-              "framebuffer_base": 7340032,
-              "has_fpu": false,
-              "keyboard_type": 5,
-              "low_memory_limit": 65536,
-              "machine_model": "pf-mac68k-macii-system7-color4-v1",
-              "machine_type": 4,
-              "master_pointer_base": 65536,
-              "master_pointer_limit": 98304,
-              "processor_type": 3,
-              "screen_color": true,
-              "screen_height": 480,
-              "screen_pixel_depth": 4,
-              "screen_width": 640,
-              "stack_base": 6291456,
-              "stack_limit": 7340032,
-              "system_folder_id": 3,
-              "system_object_base": 98304,
-              "system_object_limit": 131072,
-              "system_resource_file_bytes": 1048576,
-              "system_version": 1792,
-              "system_volume_allocation_block_size": 512,
-              "system_volume_allocation_blocks": 32767,
-              "system_volume_free_blocks": 16384,
-              "ticks_per_second": 60
-            },
-            "projection_scope": "mac68k-event-poll-v1",
-            "resource_error": 0,
-            "timeline_ticks": 39,
-            "trap_depth": 0
-          },
-          "regions": [
-            {
-              "name": "executed-byte-map",
-              "sha256": "593939c12446dd73f357322800fd19f4b8b717718998d39c58c8e72b7da2df51",
-              "size": 1048576
-            },
-            {
-              "name": "guest-memory",
-              "sha256": "ddc3e69e12028075d7738471b211ba2a4ace1ffdda2f9b2278f9a974317ef20f",
-              "size": 8388608
-            }
-          ],
-          "schema": "pf-owned-canonical-projection-v1"
-        },
-        "checkpoint_cursor": 3,
-        "effects": {
-          "effects": [],
-          "first_sequence": 0,
-          "schema": "pf-execution-effect-trace-v1"
-        },
-        "event_cursor": 1,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
-        "outputs": {
-          "audio": [],
-          "first_audio_sequence": 0,
-          "first_video_sequence": 0,
-          "schema": "pf-canonical-output-trace-v1",
-          "video": []
-        },
-        "safe_points": [],
-        "schema": "pf-verification-point-v1"
-      },
-      {
-        "boundary": {
-          "evidence": {
-            "code_identity": "mac.code.2.2978",
-            "delivered_events": 1,
-            "event_found": false,
-            "guest_instructions": 1356217,
-            "instruction_pc": 134608,
-            "opcode": 43104,
-            "trap": "WaitNextEvent"
-          },
-          "global_ordinal": 7,
-          "machine_time": {
-            "domain": "mac.tick",
-            "units_per_second_den": 1,
-            "units_per_second_num": 60,
-            "value": 39
-          },
-          "outcome": "reached",
-          "schema": "pf-boundary-stamp-v1",
-          "selector": {
-            "occurrence": 3,
-            "phase": "after",
-            "point": "mac.event.poll"
-          }
-        },
-        "canonical": {
-          "canonical_schema": "pf-canonical-mac68k-v1",
-          "canonical_sha256": "e69ba5c1d0ed6b13680e11c2a34753b9b9f927110bc9344168fc87a4c2110bbf",
-          "event_cursor": 1,
-          "fields": {
-            "a5": 7337080,
-            "callback_depth": 0,
-            "code_generation": 42,
-            "code_load_generation": 8,
-            "code_ranges": [
-              {
-                "load_generation": 1,
-                "resource_id": 1,
-                "resource_offset": 4,
-                "runtime_base": 131076,
-                "size": 554
-              },
-              {
-                "load_generation": 2,
-                "resource_id": 2,
-                "resource_offset": 4,
-                "runtime_base": 131634,
-                "size": 13300
-              },
-              {
-                "load_generation": 3,
-                "resource_id": 4,
-                "resource_offset": 4,
-                "runtime_base": 144964,
-                "size": 5174
-              },
-              {
-                "load_generation": 4,
-                "resource_id": 3,
-                "resource_offset": 4,
-                "runtime_base": 183810,
-                "size": 7342
-              },
-              {
-                "load_generation": 5,
-                "resource_id": 7,
-                "resource_offset": 4,
-                "runtime_base": 381916,
-                "size": 22318
-              },
-              {
-                "load_generation": 6,
-                "resource_id": 6,
-                "resource_offset": 4,
-                "runtime_base": 532482,
-                "size": 9534
-              },
-              {
-                "load_generation": 7,
-                "resource_id": 5,
-                "resource_offset": 4,
-                "runtime_base": 651752,
-                "size": 25052
-              },
-              {
-                "load_generation": 8,
-                "resource_id": 8,
-                "resource_offset": 4,
-                "runtime_base": 973202,
-                "size": 18600
-              }
-            ],
-            "cpu": {
-              "a": [
-                6263118,
-                7318526,
-                131832,
-                66340,
-                7318598,
-                7337080,
-                7318546,
-                7318528
-              ],
-              "d": [
-                0,
-                0,
-                12,
-                0,
-                0,
-                0,
-                1239,
-                0
-              ],
-              "pc": 134610,
-              "ssp": 7318754,
-              "status": 8196,
-              "stopped": false,
-              "usp": 0,
-              "vbr": 0
-            },
-            "cpu_cycles": 10513122,
-            "current_port": 191788,
-            "delivered_input_cursor": 1,
-            "drawing_depth": 0,
-            "events": {
-              "button_down": false,
-              "delivered": 1,
-              "key_map": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "modifiers": 1,
-              "mouse": {
-                "horizontal": 0,
-                "vertical": 0
-              },
-              "next_sequence": 1,
-              "queue": [],
-              "ready_control_gesture": null,
-              "ready_menu_result": null,
-              "ready_window_grow": null
-            },
-            "exit_code": 0,
-            "exited": false,
-            "file_error": 0,
-            "instructions": 1356217,
-            "memory_error": 0,
-            "modal_depth": 0,
-            "profile": {
-              "address_space_bytes": 8388608,
-              "application_heap_base": 131072,
-              "application_heap_limit": 6291456,
-              "color_quickdraw": true,
-              "cpu_cycles_per_second": 16000000,
-              "double_click_ticks": 30,
-              "environment_version": 2,
-              "framebuffer_base": 7340032,
-              "has_fpu": false,
-              "keyboard_type": 5,
-              "low_memory_limit": 65536,
-              "machine_model": "pf-mac68k-macii-system7-color4-v1",
-              "machine_type": 4,
-              "master_pointer_base": 65536,
-              "master_pointer_limit": 98304,
-              "processor_type": 3,
-              "screen_color": true,
-              "screen_height": 480,
-              "screen_pixel_depth": 4,
-              "screen_width": 640,
-              "stack_base": 6291456,
-              "stack_limit": 7340032,
-              "system_folder_id": 3,
-              "system_object_base": 98304,
-              "system_object_limit": 131072,
-              "system_resource_file_bytes": 1048576,
-              "system_version": 1792,
-              "system_volume_allocation_block_size": 512,
-              "system_volume_allocation_blocks": 32767,
-              "system_volume_free_blocks": 16384,
-              "ticks_per_second": 60
-            },
-            "projection_scope": "mac68k-event-poll-v1",
-            "resource_error": 0,
-            "timeline_ticks": 39,
-            "trap_depth": 0
-          },
-          "regions": [
-            {
-              "name": "executed-byte-map",
-              "sha256": "593939c12446dd73f357322800fd19f4b8b717718998d39c58c8e72b7da2df51",
-              "size": 1048576
-            },
-            {
-              "name": "guest-memory",
-              "sha256": "ddc3e69e12028075d7738471b211ba2a4ace1ffdda2f9b2278f9a974317ef20f",
-              "size": 8388608
-            }
-          ],
-          "schema": "pf-owned-canonical-projection-v1"
-        },
-        "checkpoint_cursor": 4,
-        "effects": {
-          "effects": [],
-          "first_sequence": 0,
-          "schema": "pf-execution-effect-trace-v1"
-        },
-        "event_cursor": 1,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
-        "outputs": {
-          "audio": [],
-          "first_audio_sequence": 0,
-          "first_video_sequence": 0,
-          "schema": "pf-canonical-output-trace-v1",
-          "video": []
-        },
-        "safe_points": [],
-        "schema": "pf-verification-point-v1"
-      },
-      {
-        "boundary": {
-          "evidence": {
-            "code_identity": "mac.code.2.2978",
-            "delivered_events": 1,
-            "event_found": false,
-            "guest_instructions": 1356820,
-            "instruction_pc": 134608,
-            "opcode": 43104,
-            "trap": "WaitNextEvent"
-          },
-          "global_ordinal": 9,
-          "machine_time": {
-            "domain": "mac.tick",
-            "units_per_second_den": 1,
-            "units_per_second_num": 60,
-            "value": 39
-          },
-          "outcome": "reached",
-          "schema": "pf-boundary-stamp-v1",
-          "selector": {
-            "occurrence": 4,
-            "phase": "after",
-            "point": "mac.event.poll"
-          }
-        },
-        "canonical": {
-          "canonical_schema": "pf-canonical-mac68k-v1",
-          "canonical_sha256": "393d6ac945b4dd20815576b71362b4e3c5b0caa8739cfeb564cc7fc23a501034",
-          "event_cursor": 1,
-          "fields": {
-            "a5": 7337080,
-            "callback_depth": 0,
-            "code_generation": 42,
-            "code_load_generation": 8,
-            "code_ranges": [
-              {
-                "load_generation": 1,
-                "resource_id": 1,
-                "resource_offset": 4,
-                "runtime_base": 131076,
-                "size": 554
-              },
-              {
-                "load_generation": 2,
-                "resource_id": 2,
-                "resource_offset": 4,
-                "runtime_base": 131634,
-                "size": 13300
-              },
-              {
-                "load_generation": 3,
-                "resource_id": 4,
-                "resource_offset": 4,
-                "runtime_base": 144964,
-                "size": 5174
-              },
-              {
-                "load_generation": 4,
-                "resource_id": 3,
-                "resource_offset": 4,
-                "runtime_base": 183810,
-                "size": 7342
-              },
-              {
-                "load_generation": 5,
-                "resource_id": 7,
-                "resource_offset": 4,
-                "runtime_base": 381916,
-                "size": 22318
-              },
-              {
-                "load_generation": 6,
-                "resource_id": 6,
-                "resource_offset": 4,
-                "runtime_base": 532482,
-                "size": 9534
-              },
-              {
-                "load_generation": 7,
-                "resource_id": 5,
-                "resource_offset": 4,
-                "runtime_base": 651752,
-                "size": 25052
-              },
-              {
-                "load_generation": 8,
-                "resource_id": 8,
-                "resource_offset": 4,
-                "runtime_base": 973202,
-                "size": 18600
-              }
-            ],
-            "cpu": {
-              "a": [
-                6263118,
-                7318526,
-                131832,
-                66340,
-                7318598,
-                7337080,
-                7318546,
-                7318528
-              ],
-              "d": [
-                0,
-                0,
-                12,
-                0,
-                0,
-                0,
-                1239,
-                0
-              ],
-              "pc": 134610,
-              "ssp": 7318754,
-              "status": 8196,
-              "stopped": false,
-              "usp": 0,
-              "vbr": 0
-            },
-            "cpu_cycles": 10517668,
-            "current_port": 191788,
-            "delivered_input_cursor": 1,
-            "drawing_depth": 0,
-            "events": {
-              "button_down": false,
-              "delivered": 1,
-              "key_map": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "modifiers": 1,
-              "mouse": {
-                "horizontal": 0,
-                "vertical": 0
-              },
-              "next_sequence": 1,
-              "queue": [],
-              "ready_control_gesture": null,
-              "ready_menu_result": null,
-              "ready_window_grow": null
-            },
-            "exit_code": 0,
-            "exited": false,
-            "file_error": 0,
-            "instructions": 1356820,
-            "memory_error": 0,
-            "modal_depth": 0,
-            "profile": {
-              "address_space_bytes": 8388608,
-              "application_heap_base": 131072,
-              "application_heap_limit": 6291456,
-              "color_quickdraw": true,
-              "cpu_cycles_per_second": 16000000,
-              "double_click_ticks": 30,
-              "environment_version": 2,
-              "framebuffer_base": 7340032,
-              "has_fpu": false,
-              "keyboard_type": 5,
-              "low_memory_limit": 65536,
-              "machine_model": "pf-mac68k-macii-system7-color4-v1",
-              "machine_type": 4,
-              "master_pointer_base": 65536,
-              "master_pointer_limit": 98304,
-              "processor_type": 3,
-              "screen_color": true,
-              "screen_height": 480,
-              "screen_pixel_depth": 4,
-              "screen_width": 640,
-              "stack_base": 6291456,
-              "stack_limit": 7340032,
-              "system_folder_id": 3,
-              "system_object_base": 98304,
-              "system_object_limit": 131072,
-              "system_resource_file_bytes": 1048576,
-              "system_version": 1792,
-              "system_volume_allocation_block_size": 512,
-              "system_volume_allocation_blocks": 32767,
-              "system_volume_free_blocks": 16384,
-              "ticks_per_second": 60
-            },
-            "projection_scope": "mac68k-event-poll-v1",
-            "resource_error": 0,
-            "timeline_ticks": 39,
-            "trap_depth": 0
-          },
-          "regions": [
-            {
-              "name": "executed-byte-map",
-              "sha256": "593939c12446dd73f357322800fd19f4b8b717718998d39c58c8e72b7da2df51",
-              "size": 1048576
-            },
-            {
-              "name": "guest-memory",
-              "sha256": "ddc3e69e12028075d7738471b211ba2a4ace1ffdda2f9b2278f9a974317ef20f",
-              "size": 8388608
-            }
-          ],
-          "schema": "pf-owned-canonical-projection-v1"
-        },
-        "checkpoint_cursor": 5,
-        "effects": {
-          "effects": [],
-          "first_sequence": 0,
-          "schema": "pf-execution-effect-trace-v1"
-        },
-        "event_cursor": 1,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
-        "outputs": {
-          "audio": [],
-          "first_audio_sequence": 0,
-          "first_video_sequence": 0,
-          "schema": "pf-canonical-output-trace-v1",
-          "video": []
-        },
-        "safe_points": [],
-        "schema": "pf-verification-point-v1"
-      },
-      {
-        "boundary": {
-          "evidence": {
-            "code_identity": "mac.code.2.2978",
-            "delivered_events": 1,
-            "event_found": false,
-            "guest_instructions": 1357423,
-            "instruction_pc": 134608,
-            "opcode": 43104,
-            "trap": "WaitNextEvent"
-          },
-          "global_ordinal": 11,
-          "machine_time": {
-            "domain": "mac.tick",
-            "units_per_second_den": 1,
-            "units_per_second_num": 60,
-            "value": 39
-          },
-          "outcome": "reached",
-          "schema": "pf-boundary-stamp-v1",
-          "selector": {
-            "occurrence": 5,
-            "phase": "after",
-            "point": "mac.event.poll"
-          }
-        },
-        "canonical": {
-          "canonical_schema": "pf-canonical-mac68k-v1",
-          "canonical_sha256": "83e9728844ac70cea1d7b3cf1d5ae7f5a64673fb1058a605ebac1e5993c7f5e4",
-          "event_cursor": 1,
-          "fields": {
-            "a5": 7337080,
-            "callback_depth": 0,
-            "code_generation": 42,
-            "code_load_generation": 8,
-            "code_ranges": [
-              {
-                "load_generation": 1,
-                "resource_id": 1,
-                "resource_offset": 4,
-                "runtime_base": 131076,
-                "size": 554
-              },
-              {
-                "load_generation": 2,
-                "resource_id": 2,
-                "resource_offset": 4,
-                "runtime_base": 131634,
-                "size": 13300
-              },
-              {
-                "load_generation": 3,
-                "resource_id": 4,
-                "resource_offset": 4,
-                "runtime_base": 144964,
-                "size": 5174
-              },
-              {
-                "load_generation": 4,
-                "resource_id": 3,
-                "resource_offset": 4,
-                "runtime_base": 183810,
-                "size": 7342
-              },
-              {
-                "load_generation": 5,
-                "resource_id": 7,
-                "resource_offset": 4,
-                "runtime_base": 381916,
-                "size": 22318
-              },
-              {
-                "load_generation": 6,
-                "resource_id": 6,
-                "resource_offset": 4,
-                "runtime_base": 532482,
-                "size": 9534
-              },
-              {
-                "load_generation": 7,
-                "resource_id": 5,
-                "resource_offset": 4,
-                "runtime_base": 651752,
-                "size": 25052
-              },
-              {
-                "load_generation": 8,
-                "resource_id": 8,
-                "resource_offset": 4,
-                "runtime_base": 973202,
-                "size": 18600
-              }
-            ],
-            "cpu": {
-              "a": [
-                6263118,
-                7318526,
-                131832,
-                66340,
-                7318598,
-                7337080,
-                7318546,
-                7318528
-              ],
-              "d": [
-                0,
-                0,
-                12,
-                0,
-                0,
-                0,
-                1239,
-                0
-              ],
-              "pc": 134610,
-              "ssp": 7318754,
-              "status": 8196,
-              "stopped": false,
-              "usp": 0,
-              "vbr": 0
-            },
-            "cpu_cycles": 10522214,
-            "current_port": 191788,
-            "delivered_input_cursor": 1,
-            "drawing_depth": 0,
-            "events": {
-              "button_down": false,
-              "delivered": 1,
-              "key_map": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "modifiers": 1,
-              "mouse": {
-                "horizontal": 0,
-                "vertical": 0
-              },
-              "next_sequence": 1,
-              "queue": [],
-              "ready_control_gesture": null,
-              "ready_menu_result": null,
-              "ready_window_grow": null
-            },
-            "exit_code": 0,
-            "exited": false,
-            "file_error": 0,
-            "instructions": 1357423,
-            "memory_error": 0,
-            "modal_depth": 0,
-            "profile": {
-              "address_space_bytes": 8388608,
-              "application_heap_base": 131072,
-              "application_heap_limit": 6291456,
-              "color_quickdraw": true,
-              "cpu_cycles_per_second": 16000000,
-              "double_click_ticks": 30,
-              "environment_version": 2,
-              "framebuffer_base": 7340032,
-              "has_fpu": false,
-              "keyboard_type": 5,
-              "low_memory_limit": 65536,
-              "machine_model": "pf-mac68k-macii-system7-color4-v1",
-              "machine_type": 4,
-              "master_pointer_base": 65536,
-              "master_pointer_limit": 98304,
-              "processor_type": 3,
-              "screen_color": true,
-              "screen_height": 480,
-              "screen_pixel_depth": 4,
-              "screen_width": 640,
-              "stack_base": 6291456,
-              "stack_limit": 7340032,
-              "system_folder_id": 3,
-              "system_object_base": 98304,
-              "system_object_limit": 131072,
-              "system_resource_file_bytes": 1048576,
-              "system_version": 1792,
-              "system_volume_allocation_block_size": 512,
-              "system_volume_allocation_blocks": 32767,
-              "system_volume_free_blocks": 16384,
-              "ticks_per_second": 60
-            },
-            "projection_scope": "mac68k-event-poll-v1",
-            "resource_error": 0,
-            "timeline_ticks": 39,
-            "trap_depth": 0
-          },
-          "regions": [
-            {
-              "name": "executed-byte-map",
-              "sha256": "593939c12446dd73f357322800fd19f4b8b717718998d39c58c8e72b7da2df51",
-              "size": 1048576
-            },
-            {
-              "name": "guest-memory",
-              "sha256": "ddc3e69e12028075d7738471b211ba2a4ace1ffdda2f9b2278f9a974317ef20f",
-              "size": 8388608
-            }
-          ],
-          "schema": "pf-owned-canonical-projection-v1"
-        },
-        "checkpoint_cursor": 6,
-        "effects": {
-          "effects": [],
-          "first_sequence": 0,
-          "schema": "pf-execution-effect-trace-v1"
-        },
-        "event_cursor": 1,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
-        "outputs": {
-          "audio": [],
-          "first_audio_sequence": 0,
-          "first_video_sequence": 0,
-          "schema": "pf-canonical-output-trace-v1",
-          "video": []
-        },
-        "safe_points": [],
-        "schema": "pf-verification-point-v1"
-      },
-      {
-        "boundary": {
-          "evidence": {
-            "code_identity": "mac.code.2.2978",
-            "delivered_events": 1,
-            "event_found": false,
-            "guest_instructions": 1358026,
-            "instruction_pc": 134608,
-            "opcode": 43104,
-            "trap": "WaitNextEvent"
-          },
-          "global_ordinal": 13,
-          "machine_time": {
-            "domain": "mac.tick",
-            "units_per_second_den": 1,
-            "units_per_second_num": 60,
-            "value": 39
-          },
-          "outcome": "reached",
-          "schema": "pf-boundary-stamp-v1",
-          "selector": {
-            "occurrence": 6,
-            "phase": "after",
-            "point": "mac.event.poll"
-          }
-        },
-        "canonical": {
-          "canonical_schema": "pf-canonical-mac68k-v1",
-          "canonical_sha256": "07a374a4511e6124e9409ac9c15c48c279e4940c08d1b402044300efb9061727",
-          "event_cursor": 1,
-          "fields": {
-            "a5": 7337080,
-            "callback_depth": 0,
-            "code_generation": 42,
-            "code_load_generation": 8,
-            "code_ranges": [
-              {
-                "load_generation": 1,
-                "resource_id": 1,
-                "resource_offset": 4,
-                "runtime_base": 131076,
-                "size": 554
-              },
-              {
-                "load_generation": 2,
-                "resource_id": 2,
-                "resource_offset": 4,
-                "runtime_base": 131634,
-                "size": 13300
-              },
-              {
-                "load_generation": 3,
-                "resource_id": 4,
-                "resource_offset": 4,
-                "runtime_base": 144964,
-                "size": 5174
-              },
-              {
-                "load_generation": 4,
-                "resource_id": 3,
-                "resource_offset": 4,
-                "runtime_base": 183810,
-                "size": 7342
-              },
-              {
-                "load_generation": 5,
-                "resource_id": 7,
-                "resource_offset": 4,
-                "runtime_base": 381916,
-                "size": 22318
-              },
-              {
-                "load_generation": 6,
-                "resource_id": 6,
-                "resource_offset": 4,
-                "runtime_base": 532482,
-                "size": 9534
-              },
-              {
-                "load_generation": 7,
-                "resource_id": 5,
-                "resource_offset": 4,
-                "runtime_base": 651752,
-                "size": 25052
-              },
-              {
-                "load_generation": 8,
-                "resource_id": 8,
-                "resource_offset": 4,
-                "runtime_base": 973202,
-                "size": 18600
-              }
-            ],
-            "cpu": {
-              "a": [
-                6263118,
-                7318526,
-                131832,
-                66340,
-                7318598,
-                7337080,
-                7318546,
-                7318528
-              ],
-              "d": [
-                0,
-                0,
-                12,
-                0,
-                0,
-                0,
-                1239,
-                0
-              ],
-              "pc": 134610,
-              "ssp": 7318754,
-              "status": 8196,
-              "stopped": false,
-              "usp": 0,
-              "vbr": 0
-            },
-            "cpu_cycles": 10526760,
-            "current_port": 191788,
-            "delivered_input_cursor": 1,
-            "drawing_depth": 0,
-            "events": {
-              "button_down": false,
-              "delivered": 1,
-              "key_map": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "modifiers": 1,
-              "mouse": {
-                "horizontal": 0,
-                "vertical": 0
-              },
-              "next_sequence": 1,
-              "queue": [],
-              "ready_control_gesture": null,
-              "ready_menu_result": null,
-              "ready_window_grow": null
-            },
-            "exit_code": 0,
-            "exited": false,
-            "file_error": 0,
-            "instructions": 1358026,
-            "memory_error": 0,
-            "modal_depth": 0,
-            "profile": {
-              "address_space_bytes": 8388608,
-              "application_heap_base": 131072,
-              "application_heap_limit": 6291456,
-              "color_quickdraw": true,
-              "cpu_cycles_per_second": 16000000,
-              "double_click_ticks": 30,
-              "environment_version": 2,
-              "framebuffer_base": 7340032,
-              "has_fpu": false,
-              "keyboard_type": 5,
-              "low_memory_limit": 65536,
-              "machine_model": "pf-mac68k-macii-system7-color4-v1",
-              "machine_type": 4,
-              "master_pointer_base": 65536,
-              "master_pointer_limit": 98304,
-              "processor_type": 3,
-              "screen_color": true,
-              "screen_height": 480,
-              "screen_pixel_depth": 4,
-              "screen_width": 640,
-              "stack_base": 6291456,
-              "stack_limit": 7340032,
-              "system_folder_id": 3,
-              "system_object_base": 98304,
-              "system_object_limit": 131072,
-              "system_resource_file_bytes": 1048576,
-              "system_version": 1792,
-              "system_volume_allocation_block_size": 512,
-              "system_volume_allocation_blocks": 32767,
-              "system_volume_free_blocks": 16384,
-              "ticks_per_second": 60
-            },
-            "projection_scope": "mac68k-event-poll-v1",
-            "resource_error": 0,
-            "timeline_ticks": 39,
-            "trap_depth": 0
-          },
-          "regions": [
-            {
-              "name": "executed-byte-map",
-              "sha256": "593939c12446dd73f357322800fd19f4b8b717718998d39c58c8e72b7da2df51",
-              "size": 1048576
-            },
-            {
-              "name": "guest-memory",
-              "sha256": "ddc3e69e12028075d7738471b211ba2a4ace1ffdda2f9b2278f9a974317ef20f",
-              "size": 8388608
-            }
-          ],
-          "schema": "pf-owned-canonical-projection-v1"
-        },
-        "checkpoint_cursor": 7,
-        "effects": {
-          "effects": [],
-          "first_sequence": 0,
-          "schema": "pf-execution-effect-trace-v1"
-        },
-        "event_cursor": 1,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
+        "execution_identity_sha256": "26bbb4173ebb892dbe3721060120099ffef00ef94ed15ca9d754095b376551c4",
         "outputs": {
           "audio": [],
           "first_audio_sequence": 0,
@@ -65016,7 +63260,7 @@
             "units_per_second_num": 60,
             "value": 39
           },
-          "outcome": "reached",
+          "outcome": "terminal",
           "schema": "pf-boundary-stamp-v1",
           "selector": {
             "occurrence": 7,
@@ -65201,234 +63445,14 @@
           ],
           "schema": "pf-owned-canonical-projection-v1"
         },
-        "checkpoint_cursor": 8,
+        "checkpoint_cursor": 0,
         "effects": {
           "effects": [],
           "first_sequence": 0,
           "schema": "pf-execution-effect-trace-v1"
         },
         "event_cursor": 1,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
-        "outputs": {
-          "audio": [],
-          "first_audio_sequence": 0,
-          "first_video_sequence": 0,
-          "schema": "pf-canonical-output-trace-v1",
-          "video": []
-        },
-        "safe_points": [],
-        "schema": "pf-verification-point-v1"
-      },
-      {
-        "boundary": {
-          "evidence": {
-            "code_identity": "mac.code.2.2978",
-            "delivered_events": 1,
-            "guest_instructions": 1359231,
-            "instruction_pc": 134608,
-            "opcode": 43104,
-            "trap": "WaitNextEvent"
-          },
-          "global_ordinal": 16,
-          "machine_time": {
-            "domain": "mac.tick",
-            "units_per_second_den": 1,
-            "units_per_second_num": 60,
-            "value": 39
-          },
-          "outcome": "terminal",
-          "schema": "pf-boundary-stamp-v1",
-          "selector": {
-            "occurrence": 8,
-            "phase": "before",
-            "point": "mac.event.poll"
-          }
-        },
-        "canonical": {
-          "canonical_schema": "pf-canonical-mac68k-v1",
-          "canonical_sha256": "a6d29a0b0ea8604e36c6f7d980a21f20d945891996645abb6db3b2b6e7d7089a",
-          "event_cursor": 1,
-          "fields": {
-            "a5": 7337080,
-            "callback_depth": 0,
-            "code_generation": 42,
-            "code_load_generation": 8,
-            "code_ranges": [
-              {
-                "load_generation": 1,
-                "resource_id": 1,
-                "resource_offset": 4,
-                "runtime_base": 131076,
-                "size": 554
-              },
-              {
-                "load_generation": 2,
-                "resource_id": 2,
-                "resource_offset": 4,
-                "runtime_base": 131634,
-                "size": 13300
-              },
-              {
-                "load_generation": 3,
-                "resource_id": 4,
-                "resource_offset": 4,
-                "runtime_base": 144964,
-                "size": 5174
-              },
-              {
-                "load_generation": 4,
-                "resource_id": 3,
-                "resource_offset": 4,
-                "runtime_base": 183810,
-                "size": 7342
-              },
-              {
-                "load_generation": 5,
-                "resource_id": 7,
-                "resource_offset": 4,
-                "runtime_base": 381916,
-                "size": 22318
-              },
-              {
-                "load_generation": 6,
-                "resource_id": 6,
-                "resource_offset": 4,
-                "runtime_base": 532482,
-                "size": 9534
-              },
-              {
-                "load_generation": 7,
-                "resource_id": 5,
-                "resource_offset": 4,
-                "runtime_base": 651752,
-                "size": 25052
-              },
-              {
-                "load_generation": 8,
-                "resource_id": 8,
-                "resource_offset": 4,
-                "runtime_base": 973202,
-                "size": 18600
-              }
-            ],
-            "cpu": {
-              "a": [
-                6263118,
-                7318526,
-                131832,
-                66340,
-                7318598,
-                7337080,
-                7318546,
-                7318514
-              ],
-              "d": [
-                0,
-                0,
-                12,
-                0,
-                0,
-                0,
-                1239,
-                0
-              ],
-              "pc": 134608,
-              "ssp": 7318754,
-              "status": 8196,
-              "stopped": false,
-              "usp": 0,
-              "vbr": 0
-            },
-            "cpu_cycles": 10535848,
-            "current_port": 191788,
-            "delivered_input_cursor": 1,
-            "drawing_depth": 0,
-            "events": {
-              "button_down": false,
-              "delivered": 1,
-              "key_map": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "modifiers": 1,
-              "mouse": {
-                "horizontal": 0,
-                "vertical": 0
-              },
-              "next_sequence": 1,
-              "queue": [],
-              "ready_control_gesture": null,
-              "ready_menu_result": null,
-              "ready_window_grow": null
-            },
-            "exit_code": 0,
-            "exited": false,
-            "file_error": 0,
-            "instructions": 1359231,
-            "memory_error": 0,
-            "modal_depth": 0,
-            "profile": {
-              "address_space_bytes": 8388608,
-              "application_heap_base": 131072,
-              "application_heap_limit": 6291456,
-              "color_quickdraw": true,
-              "cpu_cycles_per_second": 16000000,
-              "double_click_ticks": 30,
-              "environment_version": 2,
-              "framebuffer_base": 7340032,
-              "has_fpu": false,
-              "keyboard_type": 5,
-              "low_memory_limit": 65536,
-              "machine_model": "pf-mac68k-macii-system7-color4-v1",
-              "machine_type": 4,
-              "master_pointer_base": 65536,
-              "master_pointer_limit": 98304,
-              "processor_type": 3,
-              "screen_color": true,
-              "screen_height": 480,
-              "screen_pixel_depth": 4,
-              "screen_width": 640,
-              "stack_base": 6291456,
-              "stack_limit": 7340032,
-              "system_folder_id": 3,
-              "system_object_base": 98304,
-              "system_object_limit": 131072,
-              "system_resource_file_bytes": 1048576,
-              "system_version": 1792,
-              "system_volume_allocation_block_size": 512,
-              "system_volume_allocation_blocks": 32767,
-              "system_volume_free_blocks": 16384,
-              "ticks_per_second": 60
-            },
-            "projection_scope": "mac68k-event-poll-v1",
-            "resource_error": 0,
-            "timeline_ticks": 39,
-            "trap_depth": 0
-          },
-          "regions": [
-            {
-              "name": "executed-byte-map",
-              "sha256": "593939c12446dd73f357322800fd19f4b8b717718998d39c58c8e72b7da2df51",
-              "size": 1048576
-            },
-            {
-              "name": "guest-memory",
-              "sha256": "ddc3e69e12028075d7738471b211ba2a4ace1ffdda2f9b2278f9a974317ef20f",
-              "size": 8388608
-            }
-          ],
-          "schema": "pf-owned-canonical-projection-v1"
-        },
-        "checkpoint_cursor": 8,
-        "effects": {
-          "effects": [],
-          "first_sequence": 0,
-          "schema": "pf-execution-effect-trace-v1"
-        },
-        "event_cursor": 1,
-        "execution_identity_sha256": "ea6a2e7683c9ec5070032084cd15312cf9ba816fc2431be1194fda09a3326376",
+        "execution_identity_sha256": "26bbb4173ebb892dbe3721060120099ffef00ef94ed15ca9d754095b376551c4",
         "outputs": {
           "audio": [],
           "first_audio_sequence": 0,
@@ -65442,12 +63466,12 @@
     ],
     "scope": {
       "end": {
-        "boundary_ordinal": 16,
-        "checkpoint_cursor": 8,
+        "boundary_ordinal": 15,
+        "checkpoint_cursor": 0,
         "event_cursor": 1,
         "selector": {
-          "occurrence": 8,
-          "phase": "before",
+          "occurrence": 7,
+          "phase": "after",
           "point": "mac.event.poll"
         }
       },

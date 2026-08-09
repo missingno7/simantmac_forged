@@ -60,7 +60,7 @@ def attach_dynamic_evidence(plan: dict, snapshot: Path) -> None:
     )
     if manifest.get("format") not in {
         "portforge-mac68k-diagnostic-snapshot-v2",
-        "portforge-mac68k-restorable-snapshot-v1",
+        "portforge-mac68k-restorable-snapshot-v2",
     }:
         raise RuntimeError(
             f"unsupported snapshot: {manifest.get('format')}"
@@ -132,7 +132,7 @@ def attach_dynamic_evidence(plan: dict, snapshot: Path) -> None:
         "snapshot": str(snapshot.relative_to(PROJECT_ROOT)),
         "instruction": manifest["runtime"]["instructions"],
         "timeline_ticks": manifest["runtime"]["timeline_ticks"],
-        "replay_cursor": manifest.get("replay_cursor"),
+        "machine_event_cursor": manifest.get("machine_event_cursor"),
         "executed_exports": len(candidates),
         "ranked_exports": candidates,
         "candidate_rule": (

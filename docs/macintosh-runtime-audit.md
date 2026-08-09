@@ -1,6 +1,7 @@
 # Macintosh runtime audit and forging path
 
-Status: evidence refreshed 2026-07-31.
+Status: architecture refreshed 2026-08-02; the tracked canonical corpus remains
+the previously recorded conformance evidence until deliberately re-frozen.
 
 This document separates SimAnt-specific evidence from reusable PortForge
 runtime behavior. No reference-project source was copied. The references were
@@ -8,56 +9,54 @@ used to check application-visible contracts and architecture; their licenses
 remain incompatible with copying implementation code into PortForge without a
 separate licensing decision.
 
-## Verified SimAnt baseline
+## Verified baseline and current session architecture
 
-The canonical short regression is:
+The canonical tracked regression remains `ReplayArtifactV2` at
+`artifacts/replays/canonical-event-poll-v2.pfreplay.json`. Validate its content
+bindings and execute its declared playback passes with:
 
 ```powershell
-python scripts\verify_replay.py
-python scripts\verify_snapshot_resume.py
-python scripts\analyze.py --no-build
-python scripts\lift.py --no-build --snapshot `
-    artifacts\snapshots\determinism_30000000\run_a.pfmacsnapshot
+python scripts\verify_replay.py --build
+python scripts\play.py --verify-replay canonical-event-poll-v2
+python scripts\verify_snapshot_resume.py --build
 ```
 
-`verify_replay.py` launches the Qt runtime twice with the same journal and an
-exact 30,000,000-instruction stop. Both runs currently end at PC `0x024444`
-with seven guest windows, event cursor 4, and timeline tick 849. The compared
-artifacts are byte-identical:
+The current Qt runtime no longer has separate direct and artifact loops. Every
+mode uses `EventPollReplayDriver`, `Mac68kReplayRuntimeAdapter`,
+`LiveReplaySession`, and `SinglePointLiveCycle`. The driver step alone composes
+M68K execution, VBL, Sound Manager callbacks, and Event Manager time.
+Presentation only observes returned execution slices.
 
-- restorable manifest:
-  `8f64c2e63d1be5528d3e87da37a8d9c64a80dce4b2505f2b2ce7a36fe70e4c02`
-- guest RAM:
-  `432e580d210eb90a554a40bf2ff628feb107259155f29e8546ac0dee370868f3`
-- executed-byte map:
-  `47838ef28fcfaeeb798efb7c427e6d1d4c6b9860f94a4bc3890a036c56e9f3ca`
-- persistent manager state:
-  `9b1f4e393459a623323ba4d536d610f16683bb6318c06141793cac818ba2f838`
+F11 can begin recording mid-game. Before replacing the direct session, the
+runner writes an authenticated exact machine base beside the future replay and
+binds its directory digest, canonical state, image, application, profile, and
+execution plan into ArtifactV2 identity. F11 stop finalizes at the next
+returned semantic seam; no timestamp journal or viewer cursor exists.
 
-The full machine-readable result is
-`artifacts/analysis/determinism_30m.json`. A separate resize/gameplay journal
-has reached 130,000,000 instructions, event cursor 99, and PC `0x6FF6D2`
-without an unsupported trap. The short replay is the pinned regression because
-it is fast enough to run routinely; the longer run remains supporting reach
-evidence, not the canonical digest.
+F12 is a deferred host command. A key received during nested Qt processing
+only sets a flag. After the live cycle returns, the runner captures a
+`LiveSessionContinuationEnvelope` and exact machine directory without further
+guest execution, byte-compares all three machine payloads with the envelope,
+and publishes their content-bound attachment graph. Recording publications
+retain the builder draft and recording base; playback publications retain the
+immutable artifact. Resumption restores the same execution mode and semantic
+occurrence.
 
-This checkpoint includes the shared MC68000 correction that charges 12 cycles,
-not 8, for an untaken `Bcc.W` after fetching its extension word. The executed
-byte map stayed identical across that correction, while the deterministic
-timeline and RAM digest changed as expected.
+The v3 continuation removes the old duplicate cursor from `state.bin`.
+`Machine::event_cursor` is the sole platform input-delivery cursor and is
+reported as `machine_event_cursor`; ReplaySession position remains solely in
+the live envelope. Restorable state v1/v2 and Mac continuation v2 fail closed.
 
-The snapshot is now a restorable safe-boundary checkpoint. In addition to
-authenticated RAM and executed-byte coverage, `state.bin` explicitly encodes
-CPU/runtime state, manager Handles and resources, loaded segments and patched
-jump tables, events, QuickDraw ports, Toolbox managers, callback queues,
-coverage, and the replay cursor. It contains no host pointers or compiler
-object layout. The image, application, machine profile, all three regions, and
-the replay journal (when present) are authenticated before continuation.
+`verify_snapshot_resume.py` remains the raw machine-only equivalence gate. Raw
+`.pfmacsnapshot` directories authenticate RAM, executed coverage, and portable
+manager state, but they are now explicitly diagnostic compatibility rather
+than replay/session authority.
 
-`verify_snapshot_resume.py` checkpoints the resize replay at 10,000,000
-instructions, restores it, and executes 2,000,000 more. Its final RAM,
-executed map, persistent state, manifest, PC `0x022BEA`, tick 340, and replay
-cursor 123 are byte-identical to an uninterrupted 12,000,000-instruction run.
+The tracked conformance evidence predates the new live-session publication
+workflow. Focused shared tests prove record-draft continuation restore,
+canonical-state equality, equal final ArtifactV2 output, and terminal playback;
+a refreshed real F12 corpus should be frozen only after the platform gaps below
+are closed.
 
 ## What the audit found
 
@@ -132,7 +131,7 @@ The current slice adds:
 - the game-owned two-run deterministic verifier.
 
 All runtime changes are general Macintosh contracts in `port_forge`.
-SimAnt’s ISO path, creator/application choice, journals, snapshots, pinned
+SimAnt’s ISO path, creator/application choice, replay corpus, snapshots, pinned
 digest, and candidate ranking remain in this project.
 
 ## Reference comparison
@@ -179,11 +178,12 @@ segment unloading/purging and full zone behavior remain approximate.
    reached as `SFGetFile` (selector 2) in the 2026-07-31 interactive evidence.
    It remains explicit until the host picker can return an HFS/File Manager
    identity rather than only a host path.
-2. **Dialog Manager and remaining TextEdit selectors.** Styled creation,
-   selection, deletion, selector-7 insertion and update redraw now cover the
-   reached late help-window path. Dialog item text/event semantics and the
-   remaining TextEdit editing, measurement and scrolling selectors still form
-   the largest coherent UI gap. They should continue sharing guest records and
+2. **Remaining Dialog Manager and TextEdit selectors.** Resource-backed
+   `GetNewDialog`/`DITL` records, item get/set, update drawing, dialog-event
+   routing, selection, and disposal now cover SimAnt's real save-on-quit
+   prompt. Dialog item text mutation, editable fields, and the remaining
+   TextEdit editing, measurement, and scrolling selectors still form the
+   largest coherent UI gap. They should continue sharing guest records and
    event semantics with the existing Window/Control Managers and project only
    standard widgets to Qt.
 3. **Macintosh generated semantics and parity machinery.** Stable identities,
@@ -226,7 +226,7 @@ segment unloading/purging and full zone behavior remain approximate.
 The exact 40-slot frontier and every static caller site are in
 `artifacts/analysis/mac_trap_frontier.json`.
 
-The 2026-07-31 gameplay journal reached `SetCPixel` at instruction
+Historical 2026-07-31 development-trace evidence reached `SetCPixel` at instruction
 432,751,354. The old checkpoint is repaired from its authenticated incomplete
 trap trace, re-enters `$AA16` at `mac.code.5.13210`, executes five pixel writes,
 and continues for one million instructions. New unresolved A-line stops retain

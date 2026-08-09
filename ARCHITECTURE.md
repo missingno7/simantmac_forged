@@ -1,7 +1,8 @@
 # SimAnt Macintosh PortForge architecture
 
-Status: living architecture map, updated 2026-07-30. Initial PortForge baseline:
-`e26eb0f4d96aaa4f9affce417ca7da9d18233ae2`.
+Status: living architecture map, updated 2026-08-02. The checked-out
+`port_forge` gitlink and the project validator are the revision authority;
+the earlier `e26eb0f4d96aaa4f9affce417ca7da9d18233ae2` baseline is historical.
 
 ## Existing execution layers
 
@@ -28,10 +29,10 @@ The Win16 SimAnt path is:
 NE image -> x86_16 -> win16 KERNEL/USER/GDI -> ui::Surface -> Qt
 ```
 
-Its reusable mechanisms are the checked loader/platform split, exact guest
-instruction stops, canonical state, replay journals, callback-depth snapshot
-barriers, exact-byte-guarded native execution, interpreter fallback, retained
-software surfaces, and a host presenter that owns no guest semantics.
+Its reusable mechanisms are the checked loader/platform split, canonical
+state, semantic ArtifactV2 sessions, continuation barriers,
+exact-byte-guarded native execution, interpreter fallback, retained software
+surfaces, and a host presenter that owns no guest semantics.
 
 Its NE selectors, Pascal imports, KERNEL/USER/GDI objects, HWND/HDC values,
 Windows messages, virtual-key codes, and Win16 runtime tables are not reusable
@@ -97,11 +98,51 @@ QAction/QScrollBar/QSizeGrip
 ui::InputEvent (full semantic ID)
         |
         v
-mac68k HostInput + replay journal
+typed mac68k replay channel transaction
+        |
+        v
+LiveReplaySession at mac.event.poll:before
         |
         v
 Event/Control/Window Manager guest semantics
 ```
+
+The viewer never delivers `HostInput` directly. It retains host intent until
+`LiveReplaySession::queue_live_input` owns the encoded transaction. Ordinary
+event-loop input becomes visible at the next supported before seam. If the
+guest is already between polls, the session anchors the transaction to the
+preceding stamp and records its exact deterministic `mac.tick` coordinate;
+the Event Manager then exposes due mouse/key hardware state to modal
+`Button`, `StillDown`, `GetKeys`, and `GetMouse` loops.
+
+The driver-owned instruction step is the sole scheduler composition:
+vertical-retrace prepare, sound-callback prepare, M68K execution, sound/VBL
+completion, then Event Manager time admission. Qt pumping and presentation are
+observational. Direct, record, and playback modes do not have separate loops
+or cursors.
+
+Seeking either side of an Event Manager poll is cooperatively partitioned at
+20,000 guest instructions. Each incomplete partition returns to the outer Qt
+timer for presentation and realtime pacing, so simulation work between polls
+cannot monopolize the host event loop. Because Macintosh has no stable
+instruction coordinate, sub-poll intent uses the shared emulated `mac.tick`
+domain. In particular, mouse-up cannot be postponed to a poll that a modal
+button tracker needs that same release in order to reach.
+
+F11 replaces the live-session mode at a returned semantic safe seam. A
+recording binds an exact restorable base directory into its environment
+identity. F12 only sets a deferred host request while nested Qt events are
+serviced; after any continuation-safe cooperative slice returns, the runner
+captures the live envelope (including a pending semantic target when present)
+and exact machine attachment without intervening guest execution and proves
+their three state blobs are byte-identical before publication.
+
+The Mac continuation contract is `pf-continuation-mac68k-v4`. Its
+restorable-state v3 binary has no extra replay cursor: the platform's one
+input-delivery cursor is `Machine::event_cursor`, while ReplaySession boundary,
+event, checkpoint, recording-draft, and playback positions remain solely in
+the live-session envelope. Diagnostic manifests expose the platform value as
+`machine_event_cursor`.
 
 Menu selection is event-causal: a completed native choice is metadata on its
 synthetic `mouseDown`, `EventAvail` cannot expose it, and consuming the event
@@ -127,20 +168,22 @@ BitMap/PixMap and WindowRecord geometry, and rebuild standard WDEF regions and
 update damage. Qt callbacks never propagate runtime exceptions; the backend
 defers the first failure to the runner's guarded execution slice.
 
-## Required shared-core changes
+## Shared-core invariants
 
-1. Add a platform-neutral A-line callback to `m68k::Interpreter`; Toolbox trap
-   policy remains in `platform/mac68k`.
-2. Preserve code origin independently of runtime address as
+1. `m68k::Interpreter` exposes a platform-neutral A-line callback; Toolbox
+   trap policy remains in `platform/mac68k`.
+2. Code origin is preserved independently of runtime address as
    `mac.code.<resource-id>.<offset>`.
-3. Treat snapshot eligibility as an explicit continuation barrier: between
+3. Snapshot eligibility is an explicit continuation barrier: between
    guest instructions, outside host-held guest callback frames and unfinished
    drawing transactions.
-4. Translate neutral host key/text/mouse input in the Mac Event Manager; do
-   not reuse Windows VK/message values as Macintosh key codes.
-5. Guard generated instructions with every original instruction byte,
-   including extension words, and use precise interpreter steps near replay
-   or snapshot stops.
+4. Neutral host key/text/mouse input is translated in the Mac Event Manager;
+   the runtime does not reuse Windows VK/message values as Macintosh key
+   codes.
+5. Future generated Macintosh instructions must be guarded by every original
+   instruction byte, including extension words, and must use precise
+   interpreter steps near replay or snapshot stops. No generated Mac execution
+   is claimed today.
 
 ## Original module plan and current status
 
@@ -161,9 +204,9 @@ port_forge/src/platform/mac68k/
   quickdraw.hpp
   executor.hpp
   replay.hpp
-  canonical.hpp  (planned)
-  snapshot.hpp   (planned)
-  native.hpp     (planned)
+  canonical.hpp
+  snapshot.hpp
+  native.hpp     (source-guarded registry present; parity/promotion planned)
 ```
 
 The first implementation slice was deliberately narrower: validated resource
@@ -182,12 +225,12 @@ Requirement discovery now has two complementary inputs:
 Static output is a conservative implementation frontier, not a claim that
 every discovered slot executes in the recorded game path.
 
-Current diagnostic snapshots are exact comparison artifacts, not yet the
-planned restorable canonical snapshot. Likewise, stable CODE identities and
-native-candidate evidence now exist, but the Macintosh exact-byte-guarded
-function hook/parity layer remains planned. Those distinctions are deliberate:
-the replay oracle must be faithful before replacement code becomes
-authoritative.
+Raw diagnostic snapshots remain comparison artifacts, while authenticated
+restorable machine snapshots and content-bound LiveReplaySession publications
+now provide continuation. Stable CODE identities and native-candidate evidence
+also exist, but the Macintosh exact-byte-guarded function hook/parity layer
+remains planned. Those distinctions are deliberate: the replay oracle must be
+faithful before replacement code becomes authoritative.
 
 The shared 68000 static decoder treats Line-A as a CPU exception and reports
 generic `d16(An)` control-transfer operands. Classic Macintosh fall-through,

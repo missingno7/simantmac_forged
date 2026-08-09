@@ -1,10 +1,11 @@
 {
   "boundary_profile": {
     "id": "mac68k.event-poll-boundaries.v1",
-    "sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096"
+    "sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956"
   },
   "capabilities": [
     "mac-event-poll",
+    "machine-time-input",
     "replay-playback",
     "replay-recording",
     "semantic-boundaries"
@@ -59,143 +60,29 @@
       "semantics": "pulse"
     }
   ],
-  "checkpoints": [
-    {
-      "at": {
-        "occurrence": 0,
-        "phase": "after",
-        "point": "mac.event.poll"
-      },
-      "boundary_ordinal": 1,
-      "canonical_schema": "pf-canonical-mac68k-v1",
-      "canonical_sha256": "2439f40df7118589ffd613197ae4ff6ff2c8705b590279d0e09ec0f34629ce72",
-      "claim": "semantic-boundary-equivalence",
-      "event_cursor": 0,
-      "expectations": {},
-      "schema": "pf-replay-checkpoint-v2",
-      "sequence": 0
-    },
-    {
-      "at": {
-        "occurrence": 1,
-        "phase": "after",
-        "point": "mac.event.poll"
-      },
-      "boundary_ordinal": 3,
-      "canonical_schema": "pf-canonical-mac68k-v1",
-      "canonical_sha256": "05599f5e95b940776a69dda184024788413f2b85282e7abe108d546f0128362e",
-      "claim": "semantic-boundary-equivalence",
-      "event_cursor": 1,
-      "expectations": {},
-      "schema": "pf-replay-checkpoint-v2",
-      "sequence": 1
-    },
-    {
-      "at": {
-        "occurrence": 2,
-        "phase": "after",
-        "point": "mac.event.poll"
-      },
-      "boundary_ordinal": 5,
-      "canonical_schema": "pf-canonical-mac68k-v1",
-      "canonical_sha256": "9d4a7f5e0009c6563d237a02cbc11103f0c8af5128a714650492a376f4c0c049",
-      "claim": "semantic-boundary-equivalence",
-      "event_cursor": 1,
-      "expectations": {},
-      "schema": "pf-replay-checkpoint-v2",
-      "sequence": 2
-    },
-    {
-      "at": {
-        "occurrence": 3,
-        "phase": "after",
-        "point": "mac.event.poll"
-      },
-      "boundary_ordinal": 7,
-      "canonical_schema": "pf-canonical-mac68k-v1",
-      "canonical_sha256": "e69ba5c1d0ed6b13680e11c2a34753b9b9f927110bc9344168fc87a4c2110bbf",
-      "claim": "semantic-boundary-equivalence",
-      "event_cursor": 1,
-      "expectations": {},
-      "schema": "pf-replay-checkpoint-v2",
-      "sequence": 3
-    },
-    {
-      "at": {
-        "occurrence": 4,
-        "phase": "after",
-        "point": "mac.event.poll"
-      },
-      "boundary_ordinal": 9,
-      "canonical_schema": "pf-canonical-mac68k-v1",
-      "canonical_sha256": "393d6ac945b4dd20815576b71362b4e3c5b0caa8739cfeb564cc7fc23a501034",
-      "claim": "semantic-boundary-equivalence",
-      "event_cursor": 1,
-      "expectations": {},
-      "schema": "pf-replay-checkpoint-v2",
-      "sequence": 4
-    },
-    {
-      "at": {
-        "occurrence": 5,
-        "phase": "after",
-        "point": "mac.event.poll"
-      },
-      "boundary_ordinal": 11,
-      "canonical_schema": "pf-canonical-mac68k-v1",
-      "canonical_sha256": "83e9728844ac70cea1d7b3cf1d5ae7f5a64673fb1058a605ebac1e5993c7f5e4",
-      "claim": "semantic-boundary-equivalence",
-      "event_cursor": 1,
-      "expectations": {},
-      "schema": "pf-replay-checkpoint-v2",
-      "sequence": 5
-    },
-    {
-      "at": {
-        "occurrence": 6,
-        "phase": "after",
-        "point": "mac.event.poll"
-      },
-      "boundary_ordinal": 13,
-      "canonical_schema": "pf-canonical-mac68k-v1",
-      "canonical_sha256": "07a374a4511e6124e9409ac9c15c48c279e4940c08d1b402044300efb9061727",
-      "claim": "semantic-boundary-equivalence",
-      "event_cursor": 1,
-      "expectations": {},
-      "schema": "pf-replay-checkpoint-v2",
-      "sequence": 6
-    },
-    {
-      "at": {
-        "occurrence": 7,
-        "phase": "after",
-        "point": "mac.event.poll"
-      },
-      "boundary_ordinal": 15,
-      "canonical_schema": "pf-canonical-mac68k-v1",
-      "canonical_sha256": "fcb77c6950a2641c231d096725360de646afe9854cb1d95f7bc28e3f774fe042",
-      "claim": "semantic-boundary-equivalence",
-      "event_cursor": 1,
-      "expectations": {},
-      "schema": "pf-replay-checkpoint-v2",
-      "sequence": 7
-    }
-  ],
+  "checkpoints": [],
   "content_sha256": {
-    "boundary_profile": "ee93ddd969efcb7640a9999ac71537cc4a7d9817b6bd39e23f7434dc1963828b",
-    "capabilities": "e4aa51fb023a07a1c10ea958f0c2f61456a74b0efa5c6559e6d7a472d5b090b1",
+    "boundary_profile": "91904f0a02590286c9f79d9a0e412ee6cb079899654f2f055122cd560672c4a1",
+    "capabilities": "0aff1ee63af83589925c56a2b6401013cfa49f49ce58d066f1257a2d432019aa",
     "channels": "5f56461a3fb3875ac256b40f289d3dd4b858163f65cabb8f40e54d09aac4adbb",
-    "checkpoints": "06aa9ea7535b431fd731dc7be0e475efd704a4a7279b243e1f6cd4ea99b5bddd",
-    "environment": "e20518452868e4bef0a3fbf969bacf30a20a92c90de75950c2d7e529eaf36548",
-    "events": "1be25b098438d212d2140797d2a998c4983d0c1e383877d005da17cbd9ef3603",
-    "identity": "7370d79b5ba5fe1deb6270f2aaad65adad9db158b1d5be2adfe27d4f4c77ac22",
+    "checkpoints": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "environment": "80e9451f97164f3a98831b00bbe7ed6b70333560fc479c1db79bf8a2073fbc63",
+    "events": "681643629e65b39799463bdb540d6547abe450c294a44a04177dc6e444e0d85f",
+    "identity": "b35e01938a33744a258228493c6121f8217a3a5b5bf74053f6cb8cb90148be27",
     "schema_versions": "de2f465e21a8adf24b2952e29d4da84b309284fd64b21d067ffbbe41956b980d",
-    "terminal": "3bc1eac933411a6001e1b3f076d8395bfe2d37acd46a4081a1da4cd6c871470b",
-    "timeline": "344d958bf3fbb306bec257cbd08f4457041b8e974e7fae5d2b7521d098893e8e"
+    "terminal": "fd6b7e8ee221ffeea02aa60fba370997ab6a8dbdb8a032ec0f0688a829f9401d",
+    "timeline": "b61f3054f31e225c68757f74dcbd48709bdf8a333e018b5482bdb19d58e165f4"
   },
   "environment": {
     "application_path": "SimAnt/SimAnt\\xAA",
-    "base": "cold-start",
+    "base": "snapshot",
+    "base_snapshot": {
+      "canonical_schema": "pf-canonical-mac68k-v1",
+      "canonical_sha256": "add6c537c50b8c85e19dded62b50579ac62b3d5985bfd4eda90da47cd54cbfa5",
+      "file": "canonical-event-poll-v2.pfreplay.json.base.pfmacsnapshot",
+      "format": "portforge-mac68k-restorable-snapshot-v2",
+      "sha256": "df59278ffcc094934982dfffd7cee38b82df68515244b5fc3261759628c6725e"
+    },
     "clock_model": "m68k-cycles-and-event-manager-ticks-v1",
     "host_wall_clock_authoritative": false,
     "image_sha256": "8e7518796dbf32db9ff483dcc49069d4d8ec6e4625918fe4d47b03de8cc5fb0b",
@@ -204,13 +91,19 @@
   "events": [
     {
       "at": {
-        "occurrence": 1,
-        "phase": "before",
+        "occurrence": 0,
+        "phase": "after",
         "point": "mac.event.poll"
       },
-      "boundary_ordinal": 2,
+      "boundary_ordinal": 1,
       "channel": "mac.window.activation",
       "compatibility_guards": {},
+      "effective_machine_time": {
+        "domain": "mac.tick",
+        "units_per_second_den": 1,
+        "units_per_second_num": 60,
+        "value": 39
+      },
       "payload": {
         "active": true,
         "modifiers": 0,
@@ -223,10 +116,10 @@
   "format": "portforge-replay-v2",
   "identity": {
     "assets_sha256": "804a015a3bc99ee6c5e7b093f9239df7a7157a3b834a2d27ec0948d725edea25",
-    "boundary_profile_sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096",
-    "environment_sha256": "e20518452868e4bef0a3fbf969bacf30a20a92c90de75950c2d7e529eaf36548",
+    "boundary_profile_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956",
+    "environment_sha256": "80e9451f97164f3a98831b00bbe7ed6b70333560fc479c1db79bf8a2073fbc63",
     "game_id": "simant-mac",
-    "launch_sha256": "48ceb6a725563e22062afd8d3861f86cde3f29537292eaedc6921e0c5bfc6f5c",
+    "launch_sha256": "498cf58a8cc720ff9b86f1f97300772c124515d0a44dd39b4d6af34e1b1e9b8a",
     "machine_model": "pf-mac68k-macii-system7-color4-v1",
     "machine_profile_sha256": "2464fbf55a343e6163c454c14c3929ff163abaa2911b52fe7a35ab5c2304d37f",
     "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
@@ -242,20 +135,21 @@
     "terminal": 3
   },
   "terminal": {
-    "canonical_sha256": "a6d29a0b0ea8604e36c6f7d980a21f20d945891996645abb6db3b2b6e7d7089a",
+    "canonical_sha256": "fcb77c6950a2641c231d096725360de646afe9854cb1d95f7bc28e3f774fe042",
     "event_cursor": 1,
-    "reason": "configured semantic event-poll limit reached",
+    "reason": "interactive recording stopped at an event-poll seam",
     "schema": "pf-replay-terminal-v3",
     "stamp": {
       "evidence": {
         "code_identity": "mac.code.2.2978",
         "delivered_events": 1,
-        "guest_instructions": 1359231,
+        "event_found": false,
+        "guest_instructions": 1358629,
         "instruction_pc": 134608,
         "opcode": 43104,
         "trap": "WaitNextEvent"
       },
-      "global_ordinal": 16,
+      "global_ordinal": 15,
       "machine_time": {
         "domain": "mac.tick",
         "units_per_second_den": 1,
@@ -265,8 +159,8 @@
       "outcome": "terminal",
       "schema": "pf-boundary-stamp-v1",
       "selector": {
-        "occurrence": 8,
-        "phase": "before",
+        "occurrence": 7,
+        "phase": "after",
         "point": "mac.event.poll"
       }
     }
@@ -724,34 +618,6 @@
         "selector": {
           "occurrence": 7,
           "phase": "after",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "guest_instructions": 1359231,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 16,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 8,
-          "phase": "before",
           "point": "mac.event.poll"
         }
       }

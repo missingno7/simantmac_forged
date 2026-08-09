@@ -7,78 +7,78 @@
   "claims": {
     "bootable": {
       "state": "conformant",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "be2d6c3bc2bcb24b4514959ce473aec7882ec9409e137d647096d4fe3ade94bc", "detail": "The bound HFS application boots from the exact ISO/resource-fork identities and reaches Event Manager polling."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "1f5a5fcefae78f6cdb37fb8431631c7a2d14ca507c71aa40b9b1afbb93dd15bc", "detail": "The bound HFS application boots from the exact ISO/resource-fork identities and reaches Event Manager polling."}],
       "blockers": []
     },
     "deterministic-time": {
       "state": "conformant",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "be2d6c3bc2bcb24b4514959ce473aec7882ec9409e137d647096d4fe3ade94bc", "detail": "Two playbacks repeat all checkpoints under CPU-cycle/Event-Manager time with host wall clock non-authoritative."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "1f5a5fcefae78f6cdb37fb8431631c7a2d14ca507c71aa40b9b1afbb93dd15bc", "detail": "Two playbacks repeat the complete timed-input artifact under CPU-cycle/Event-Manager time with host wall clock non-authoritative."}],
       "blockers": []
     },
     "semantic-boundaries": {
       "state": "conformant",
-      "evidence": [{"kind": "source", "path": "profiles/replay-boundaries-v1.json", "sha256": "e3c971cd69f7df35b971c2433e1196b5842662545022088886ecce643a1802c9", "detail": "Versioned Event Manager poll point with typed input visibility and point-local before/after occurrences."}],
+      "evidence": [{"kind": "source", "path": "profiles/replay-boundaries-v1.json", "sha256": "b85223488a44667380e583c6717e41269aba33645ce6cc173045765d7bf8f902", "detail": "Versioned Event Manager poll point with typed boundary and deterministic mac.tick input visibility plus point-local before/after occurrences."}],
       "blockers": []
     },
     "replay-recording": {
       "state": "conformant",
-      "evidence": [{"kind": "artifact", "path": "artifacts/replays/canonical-event-poll-v2.pfreplay.json", "sha256": "f136144ed64be3c9b70c59a4fb3a86e738a0b0e85c4ebcc66d560733d1e53fc9", "detail": "UTF-8 ReplayArtifactV2 with 17 poll boundaries, one typed activation, and eight canonical checkpoints."}],
+      "evidence": [{"kind": "artifact", "path": "artifacts/replays/canonical-event-poll-v2.pfreplay.json", "sha256": "118a43e20f87ac732cc43941b6ac7d692f9020aa38f69f8cd8963f80addaf0c9", "detail": "UTF-8 ReplayArtifactV2 with 16 poll boundaries and one mac.tick-timed activation transaction."}],
       "blockers": []
     },
     "replay-playback": {
       "state": "conformant",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "be2d6c3bc2bcb24b4514959ce473aec7882ec9409e137d647096d4fe3ade94bc", "detail": "Two real playbacks consume the complete artifact and verify every checkpoint and terminal boundary."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "1f5a5fcefae78f6cdb37fb8431631c7a2d14ca507c71aa40b9b1afbb93dd15bc", "detail": "Two real playbacks consume the complete artifact and verify its terminal boundary."}],
       "blockers": []
     },
     "deadline-safe": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "be2d6c3bc2bcb24b4514959ce473aec7882ec9409e137d647096d4fe3ade94bc", "detail": "A-line poll gates prove untouched before and fully committed after semantics around real traps."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "1f5a5fcefae78f6cdb37fb8431631c7a2d14ca507c71aa40b9b1afbb93dd15bc", "detail": "A-line poll gates prove untouched before and fully committed after semantics around real traps."}],
       "blockers": ["Complete safe-point proofs for every long Toolbox service/callback relative to VBL, sound, and Event Manager deadlines."]
     },
     "machine-exact-snapshot": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "0f3cd6c8505b5df04fd0703a4577e70d0ada3a946d544eccfa2a8d28860d5339", "detail": "A real 2M + 0.5M resumed run exactly matches a direct 2.5M run across memory, executed coverage, and complete restorable state."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "25f2e50b1115e8c96ad77163234851eece26b48491d3c53816e9d242f1e8f975", "detail": "A real 2M + 0.5M resumed run exactly matches a direct 2.5M run across memory, executed coverage, cursor-free v3 restorable state, and the single machine event cursor."}],
       "blockers": ["The scoped machine-exact proof passes, but graph-level conformance awaits complete deadline-safe coverage."]
     },
     "replay-session-continuation": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "be2d6c3bc2bcb24b4514959ce473aec7882ec9409e137d647096d4fe3ade94bc", "detail": "The common adapter supports execution-bound session state, but the real Qt artifact path is cold-start-only."}],
-      "blockers": ["Expose and pass a persisted ReplaySession continuation envelope in the real Qt workflow."]
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "1f5a5fcefae78f6cdb37fb8431631c7a2d14ca507c71aa40b9b1afbb93dd15bc", "detail": "The tracked corpus proves the shared semantic adapter; the current Qt runner additionally publishes and resumes execution-bound LiveReplaySession envelopes and recording drafts."}],
+      "blockers": ["Refresh and freeze a real-project F12 recording-draft/playback publication corpus before promoting the capability claim to conformant."]
     },
     "canonical-audio": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "0f3cd6c8505b5df04fd0703a4577e70d0ada3a946d544eccfa2a8d28860d5339", "detail": "Machine continuation includes deterministic Sound Manager source state and excludes the host queue."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "25f2e50b1115e8c96ad77163234851eece26b48491d3c53816e9d242f1e8f975", "detail": "Machine continuation includes deterministic Sound Manager source state and excludes the host queue."}],
       "blockers": ["Add canonical PCM sequence/hash and host callback partition-invariance conformance with active playback."]
     },
     "canonical-video": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "0f3cd6c8505b5df04fd0703a4577e70d0ada3a946d544eccfa2a8d28860d5339", "detail": "Machine continuation includes QuickDraw/source surfaces and excludes Qt window/GPU authority."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "25f2e50b1115e8c96ad77163234851eece26b48491d3c53816e9d242f1e8f975", "detail": "Machine continuation includes QuickDraw/source surfaces and excludes Qt window/GPU authority."}],
       "blockers": ["Add timestamped canonical video commit hashes independent of presentation cadence."]
     },
     "normalized-observation": {
       "state": "conformant",
       "evidence": [
-        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-oracle-v3.json", "sha256": "e0f3dcafd48a0f45dca9b8c1488706a219a543da4841e538da8c6cc6b3bb0e28", "detail": "ReplayEvidenceV3 binds 136 function visits, 608 observed transfers, 4,997 covered addresses, and 10 verification points to the Mac oracle execution identity."},
-        {"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "be2d6c3bc2bcb24b4514959ce473aec7882ec9409e137d647096d4fe3ade94bc", "detail": "Coverage is complete for the replayed trace; Toolbox service interiors remain explicitly partial-native."}
+        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-oracle-v3.json", "sha256": "5e3aff8f5b719faa050caa9abb464fe8ad33166c68a300ad1856122157e0c541", "detail": "ReplayEvidenceV3 binds 136 function visits, 608 observed transfers, 4,997 covered addresses, and 4 verification points to the Mac oracle execution identity."},
+        {"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "1f5a5fcefae78f6cdb37fb8431631c7a2d14ca507c71aa40b9b1afbb93dd15bc", "detail": "Coverage is complete for the replayed trace; Toolbox service interiors remain explicitly partial-native."}
       ],
       "blockers": []
     },
     "atlas": {
       "state": "conformant",
-      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "9193044c8f6b0ff09888aff9d379ae17d553164fdb46af91a0ea6fdc5c262809", "detail": "Regeneratable one-source evidence projection with 847 nodes, 608 edges, 136 occurrences, and stable delete/rematerialize output."}],
+      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "de04b8a7e7962beb4351449faa6310dc73774f798a81f965cb0338545d806e95", "detail": "Regeneratable one-source evidence projection with 847 nodes, 608 edges, 136 occurrences, and stable delete/rematerialize output."}],
       "blockers": []
     },
     "implementation-planning": {
       "state": "conformant",
       "evidence": [
-        {"kind": "source", "path": "recovery/implementation-catalog.json", "sha256": "4971f5e476968764998b327ea7ca03862777b828897f8b9cdca998f4cc46fc17", "detail": "Content-bound HFS bootstrap, common session, and oracle descriptors."},
-        {"kind": "artifact", "path": "recovery/execution-plan-oracle.json", "sha256": "f607f691add554f85378356eb0f26dae13cf686540ac32d6e5dcdc3f512c065c", "detail": "Resolved immutable oracle dependency closure."}
+        {"kind": "source", "path": "recovery/implementation-catalog.json", "sha256": "384d3fcce71d734416c5d4ff4ec9f2eeb17f04270a06e9a9d4a7621043038ed5", "detail": "Content-bound HFS bootstrap, common session, and oracle descriptors."},
+        {"kind": "artifact", "path": "recovery/execution-plan-oracle.json", "sha256": "ec787b53f5c3cf81f360261dd6f56e1155f399ab5cbd536208acfb8eac6b92bb", "detail": "Resolved immutable oracle dependency closure."}
       ],
       "blockers": []
     },
     "detachment-reporting": {
       "state": "conformant",
-      "evidence": [{"kind": "workflow-report", "path": "recovery/execution-plan-oracle.detachment.json", "sha256": "5a241bf7b7037794a1475988b5ee41a61b0c1b96a97a703cec15a01805089b19", "detail": "The plan truthfully reports original media/code, interpreter, PortForge runtime, platform service, and replay dependencies."}],
+      "evidence": [{"kind": "workflow-report", "path": "recovery/execution-plan-oracle.detachment.json", "sha256": "13d59bdd54011e4b994c229b9f0c3bde781b383331e2dd26060e742112d3f45d", "detail": "The plan truthfully reports original media/code, interpreter, PortForge runtime, platform service, and replay dependencies."}],
       "blockers": []
     },
     "generated-execution": {

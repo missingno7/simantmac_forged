@@ -9,14 +9,14 @@
       "id": "mac.event.poll",
       "phases": ["before", "after"],
       "channels": [
-        {"channel": "mac.pointer.position", "semantics": "hold", "phases": ["before"], "visibility": "at-boundary"},
-        {"channel": "mac.pointer.button", "semantics": "edge", "phases": ["before"], "visibility": "at-boundary"},
-        {"channel": "mac.keyboard.key", "semantics": "edge", "phases": ["before"], "visibility": "at-boundary"},
-        {"channel": "mac.window.activation", "semantics": "edge", "phases": ["before"], "visibility": "at-boundary"},
-        {"channel": "mac.menu.command", "semantics": "pulse", "phases": ["before"], "visibility": "at-boundary"},
-        {"channel": "mac.control.action", "semantics": "pulse", "phases": ["before"], "visibility": "at-boundary"},
-        {"channel": "mac.window.geometry", "semantics": "latch", "phases": ["before"], "visibility": "at-boundary"},
-        {"channel": "mac.window.update", "semantics": "pulse", "phases": ["before"], "visibility": "at-boundary"}
+        {"channel": "mac.pointer.position", "semantics": "hold", "phases": ["before", "after"], "visibility": "at-boundary"},
+        {"channel": "mac.pointer.button", "semantics": "edge", "phases": ["before", "after"], "visibility": "at-boundary"},
+        {"channel": "mac.keyboard.key", "semantics": "edge", "phases": ["before", "after"], "visibility": "at-boundary"},
+        {"channel": "mac.window.activation", "semantics": "edge", "phases": ["before", "after"], "visibility": "at-boundary"},
+        {"channel": "mac.menu.command", "semantics": "pulse", "phases": ["before", "after"], "visibility": "at-boundary"},
+        {"channel": "mac.control.action", "semantics": "pulse", "phases": ["before", "after"], "visibility": "at-boundary"},
+        {"channel": "mac.window.geometry", "semantics": "latch", "phases": ["before", "after"], "visibility": "at-boundary"},
+        {"channel": "mac.window.update", "semantics": "pulse", "phases": ["before", "after"], "visibility": "at-boundary"}
       ],
       "game_states": ["boot", "event-loop", "dialog", "simulation", "shutdown"],
       "occurrence_policy": "point-local",
@@ -29,5 +29,5 @@
       }
     }
   ],
-  "sha256": "540b6018cb6c4d7f9ebf1fd5e58ada4cb0c94cde60887c85911b19d1be9a5096"
+  "sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956"
 }

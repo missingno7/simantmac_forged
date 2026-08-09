@@ -29,7 +29,7 @@
       "requires_capabilities": [],
       "runtime_dependencies": ["cpu-model", "guest-memory", "platform-services", "portforge-runtime", "replay"],
       "content": [
-        {"path": "profiles/replay-boundaries-v1.json", "sha256": "e3c971cd69f7df35b971c2433e1196b5842662545022088886ecce643a1802c9", "role": "semantic event-poll contract"}
+        {"path": "profiles/replay-boundaries-v1.json", "sha256": "b85223488a44667380e583c6717e41269aba33645ce6cc173045765d7bf8f902", "role": "semantic event-poll and mac.tick timed-input contract"}
       ]
     },
     {
@@ -42,7 +42,7 @@
       "requires_capabilities": [],
       "runtime_dependencies": ["interpreter", "oracle", "original-code"],
       "content": [
-        {"path": "scripts/play.py", "sha256": "9d2fedc6651a66b46f7bd44fe88d458a0abdec6f8fc7a62cb77c09626d164ac8", "role": "Qt/oracle composition and identity binding"}
+        {"path": "scripts/play.py", "sha256": "1bbe9db61ea7b46d055f8ec07110f610b63358df53f2f3e9984c2f5bca9bf79a", "role": "Qt/oracle composition and identity binding"}
       ]
     }
   ],

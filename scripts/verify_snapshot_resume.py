@@ -60,7 +60,7 @@ def run(
 def authenticated_snapshot(snapshot: Path) -> tuple[dict[str, Any], dict[str, str]]:
     manifest_path = snapshot / "snapshot.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("format") != "portforge-mac68k-restorable-snapshot-v1":
+    if manifest.get("format") != "portforge-mac68k-restorable-snapshot-v2":
         raise RuntimeError(f"snapshot is not restorable: {snapshot}")
     hashes: dict[str, str] = {}
     for region in ("memory", "executed", "state"):
@@ -114,7 +114,7 @@ def main() -> int:
         )
 
     evidence = {
-        "format": "simant-mac-snapshot-conformance-v2",
+        "format": "simant-mac-snapshot-conformance-v3",
         "result": "passed",
         "claim": "machine-exact",
         "scope": "real cold-start oracle; byte-identical authenticated final continuation state",
@@ -133,7 +133,7 @@ def main() -> int:
             "timeline_ticks": resumed_manifest["runtime"]["timeline_ticks"],
             "hashes": resumed_hashes,
             "direct_hashes": direct_hashes,
-            "replay_cursor": resumed_manifest["replay_cursor"],
+            "machine_event_cursor": resumed_manifest["machine_event_cursor"],
         },
         "authenticated_regions": ["memory", "executed", "state"],
         "state_contract": {
