@@ -3,7 +3,7 @@
   "format": "pf-atlas-v2",
   "projection_identity": {
     "boundary_profile_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956",
-    "canonical_projection_sha256": "98f04337e49feeefc83d314d6262c09738c19056a401ba3182f365102a35fc57",
+    "canonical_projection_sha256": "5abbc6063f130e02863ee61e926a2154b7df0588414c16dc09f28d13a9afe8fd",
     "canonical_schema": "pf-canonical-mac68k-v1",
     "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351"
   },
@@ -14,10 +14,10 @@
   },
   "role": "regeneratable-evidence-projection",
   "sources": {
-    "evidence-mac-oracle-118a43e20f87-26bbb4173ebb": {
+    "evidence-mac-oracle-118a43e20f87-f86fa9681379": {
       "kind": "replay-evidence",
       "origin": "portforge",
-      "sha256": "5e3aff8f5b719faa050caa9abb464fe8ad33166c68a300ad1856122157e0c541"
+      "sha256": "a6bbcc77b7ca9de764e99fb70e1489385674d7e8c361a9fdf573cdbff54bb50a"
     }
   }
 }
