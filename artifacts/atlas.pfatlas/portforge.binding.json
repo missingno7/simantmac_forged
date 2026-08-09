@@ -1,5 +1,5 @@
 {
-  "format": "portforge-atlas-evidence-v2",
+  "format": "portforge-atlas-evidence-v3",
   "platform": "mac68k",
   "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
   "game_config": {
@@ -11,7 +11,6 @@
     "sha256": "faf90454b9e539e5f079bfa36a8cf79ef5bcdd367f70a36eb560e3fb2c75b80f"
   },
   "replays": [],
-  "imports": [],
   "evidence": [
     {
       "id": "evidence-mac-oracle-118a43e20f87-f86fa9681379",
@@ -21,7 +20,7 @@
     }
   ],
   "portforge": {
-    "revision": "beae1b798803141bd8e4e63606d1443b45b5b1ca",
+    "revision": "13ff439064ea1e94e56c2cd909b6563840bd6b06",
     "dirty": false
   }
 }
