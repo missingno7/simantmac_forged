@@ -22,19 +22,15 @@
   "producer": {
     "scheme": "portforge-source-closure-sha256-v1",
     "roots": [
-      "build.py",
-      "config/build-targets-v2.json",
-      "scripts/build_target_registry.py",
+      "scripts/compiler_profile.py",
       "scripts/project_contracts.py",
       "scripts/project_workspace.py",
       "tools/pf_atlas.cpp"
     ],
     "files": {
-      "build.py": "248c9bdcc1b0ed246ceb3b22169342c6eae1c67d2420fdc08cf965bb51add913",
-      "config/build-targets-v2.json": "81f226cc4c5ea4a0aba8450dde35925b40903eabeb7347aef059ddb569fa9e21",
-      "scripts/build_target_registry.py": "7e75557c40fafb591fa233c1be1893d8681ab8ace03b5d1ca7bc2599b95d220a",
+      "scripts/compiler_profile.py": "628acab37b8a124aa904ac1ce180bd9d3e2067de21a995734dcab40eb937c8d2",
       "scripts/project_contracts.py": "bcb91330822475fc48d1d75424fcbb455d19d64b4e363fd6a3d8f4ac11a4ecb8",
-      "scripts/project_workspace.py": "8f41d0eabb30dadce932534762a53bb62e1753a4567d049ff5e233e64e0bec3b",
+      "scripts/project_workspace.py": "e2d35b163dc7c33bf3c96bc46a964d2c2dccf907674b7db8fa17470efdc28c3a",
       "src/arch/x86_16/cpu.hpp": "e49eb184c7aa8ecf071e450d24f1ee5f1f8e92013a35ed23c9f019561b02d63f",
       "src/arch/x86_16/protected_memory.hpp": "d6fdd49d5921e3911d37ca15f7e3fdb98327b079ad3dca6b106c736330ac39b0",
       "src/core/authority_codec.hpp": "5787f1c2bb036a4d36c679402987e667f685375c0424feba3624c267dbe11f64",
@@ -59,6 +55,6 @@
       "src/replay/verification.hpp": "4590a13fb27e938afed4ba44a3521b8409d804b544f9091827c270d20e1d7007",
       "tools/pf_atlas.cpp": "b66ef6cfff4aea2456bdc42e47c44675a1558e04ba03d1c582743e706b0511ca"
     },
-    "sha256": "384b642be4f913f21be496e90817a7c9dad49e238b8f204ccf4ff87004acb97e"
+    "sha256": "ce7bae29375ccc698374f796c3fb26762a33c94385ddc38a824a06890ef16ee6"
   }
 }
