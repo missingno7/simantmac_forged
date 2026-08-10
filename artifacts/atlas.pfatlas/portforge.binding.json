@@ -1,5 +1,5 @@
 {
-  "format": "portforge-atlas-evidence-v3",
+  "format": "portforge-atlas-evidence-v4",
   "platform": "mac68k",
   "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
   "game_config": {
@@ -19,8 +19,46 @@
       "sha256": "a6bbcc77b7ca9de764e99fb70e1489385674d7e8c361a9fdf573cdbff54bb50a"
     }
   ],
-  "portforge": {
-    "revision": "755eee5ad426005e97ab917bd7a1ad7c53b732b3",
-    "dirty": false
+  "producer": {
+    "scheme": "portforge-source-closure-sha256-v1",
+    "roots": [
+      "build.py",
+      "config/build-targets-v2.json",
+      "scripts/build_target_registry.py",
+      "scripts/project_contracts.py",
+      "scripts/project_workspace.py",
+      "tools/pf_atlas.cpp"
+    ],
+    "files": {
+      "build.py": "248c9bdcc1b0ed246ceb3b22169342c6eae1c67d2420fdc08cf965bb51add913",
+      "config/build-targets-v2.json": "81f226cc4c5ea4a0aba8450dde35925b40903eabeb7347aef059ddb569fa9e21",
+      "scripts/build_target_registry.py": "7e75557c40fafb591fa233c1be1893d8681ab8ace03b5d1ca7bc2599b95d220a",
+      "scripts/project_contracts.py": "bcb91330822475fc48d1d75424fcbb455d19d64b4e363fd6a3d8f4ac11a4ecb8",
+      "scripts/project_workspace.py": "8f41d0eabb30dadce932534762a53bb62e1753a4567d049ff5e233e64e0bec3b",
+      "src/arch/x86_16/cpu.hpp": "e49eb184c7aa8ecf071e450d24f1ee5f1f8e92013a35ed23c9f019561b02d63f",
+      "src/arch/x86_16/protected_memory.hpp": "d6fdd49d5921e3911d37ca15f7e3fdb98327b079ad3dca6b106c736330ac39b0",
+      "src/core/authority_codec.hpp": "5787f1c2bb036a4d36c679402987e667f685375c0424feba3624c267dbe11f64",
+      "src/core/io.hpp": "bdb4ad73c22c7159b10ff4e4822ed303fb48bd8b9388237c03ebf46f533ff3b6",
+      "src/core/json.hpp": "7590142d5e9f3154cc3627b14c1283bb832348ae246143b4aa94ce31a227680f",
+      "src/core/observe.hpp": "37d3f5cb37db9dfa4a9e516ce1461a97eaf4813f16797e99e29fed778e6a5462",
+      "src/core/sha256.hpp": "a7cb9b35ede9bbd0ce100ef50700b05716da0b6ec329e2155310e53b4d018882",
+      "src/formats/ne.hpp": "6e823f2ef53f29c900f806c3da72098e47abadf9b67a9c108876c019c6703b5e",
+      "src/platform/win16/abi.hpp": "d56de3713ccee475143e7c71bc34f42e87debdb92bc391c6b9d9ba443eb4ad05",
+      "src/platform/win16/api_registry.hpp": "9c785ccc313a08d84bee0f76550f1175a5c4309e9c9f69981d067e6d6996ae6f",
+      "src/platform/win16/loader.hpp": "25de8872a513ba44ada4ae7416a05eddfc0f55e1f987c065810b49605421a877",
+      "src/platform/win16/machine.hpp": "5f72bf96eaa417730044359ac809d25ddec51d5a21382df1e6ce191b9bf12178",
+      "src/replay/artifact.hpp": "9d1e18c79722a01e407047bdac15dbfd06699fc813132bf8f0001633e3503432",
+      "src/replay/atlas.hpp": "9820656564fe67e5c3e24c2141c5f2074fe0f9864b043cd04a978b288fd106e9",
+      "src/replay/atlas_evidence.hpp": "bc1af7f607656266ede8bc99072d08b9155aa285971e020e720ba64c36db540d",
+      "src/replay/authority_limits.hpp": "3599178263cbd6ded1ea28c88d6a45c3a2cf4ec7076ac18e22e8db553cb1097b",
+      "src/replay/boundary.hpp": "5456d1716de32a2621204d46572a502bee308345f471d34682b93325dd331f26",
+      "src/replay/canonical.hpp": "8a1ae34adfe98e8ce593b28303f5652784f49ecf4bd06d41bb83a2cb36e2e49b",
+      "src/replay/identity.hpp": "25f5b3b4528adc5b3503fe1c898e40d149ad3285086d647fa5dbf6538cb3f787",
+      "src/replay/output.hpp": "432b2eb924c0173855e49732742f87dd7e161bbb64bca257ef25cd6841900ee4",
+      "src/replay/symbols.hpp": "2a3e71786e83aac1c9b9689d23d680af5058adf848b29e36568ce2c4bea59b12",
+      "src/replay/verification.hpp": "4590a13fb27e938afed4ba44a3521b8409d804b544f9091827c270d20e1d7007",
+      "tools/pf_atlas.cpp": "b66ef6cfff4aea2456bdc42e47c44675a1558e04ba03d1c582743e706b0511ca"
+    },
+    "sha256": "384b642be4f913f21be496e90817a7c9dad49e238b8f204ccf4ff87004acb97e"
   }
 }

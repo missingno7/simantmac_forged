@@ -65,7 +65,7 @@
     },
     "atlas": {
       "state": "conformant",
-      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "1ac9402fd648169b6599b34bd61f0f07ab84e6d9644cdd62bf99487f1c463454", "detail": "Regeneratable one-source evidence projection with 847 nodes, 608 edges, 136 occurrences, and stable delete/rematerialize output."}],
+      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "9959f41fc800fd02a8f3fb160718fcf6883a48c3b6e4665cadad717ca4b9020d", "detail": "Regeneratable one-source evidence projection with 847 nodes, 608 edges, 136 occurrences, and stable delete/rematerialize output."}],
       "blockers": []
     },
     "implementation-planning": {
