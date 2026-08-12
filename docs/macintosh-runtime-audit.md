@@ -1,6 +1,6 @@
 # Macintosh runtime audit and forging path
 
-Status: architecture refreshed 2026-08-02; the tracked canonical corpus remains
+Status: architecture refreshed 2026-08-12; the tracked canonical corpus remains
 the previously recorded conformance evidence until deliberately re-frozen.
 
 This document separates SimAnt-specific evidence from reusable PortForge
@@ -25,7 +25,10 @@ The current Qt runtime no longer has separate direct and artifact loops. Every
 mode uses `EventPollReplayDriver`, `Mac68kReplayRuntimeAdapter`,
 `LiveReplaySession`, and `SinglePointLiveCycle`. The driver step alone composes
 M68K execution, VBL, Sound Manager callbacks, and Event Manager time.
-Presentation only observes returned execution slices.
+Presentation is observational. The Qt runner uses non-transactional semantic
+advances and the event-poll driver pumps Qt internally every 20,000 guest
+instructions so long work remains responsive without a per-boundary durable
+rollback.
 
 F11 can begin recording mid-game. Before replacing the direct session, the
 runner writes an authenticated exact machine base beside the future replay and
@@ -42,7 +45,7 @@ retain the builder draft and recording base; playback publications retain the
 immutable artifact. Resumption restores the same execution mode and semantic
 occurrence.
 
-The v3 continuation removes the old duplicate cursor from `state.bin`.
+The v4 continuation removes the old duplicate cursor from `state.bin`.
 `Machine::event_cursor` is the sole platform input-delivery cursor and is
 reported as `machine_event_cursor`; ReplaySession position remains solely in
 the live envelope. Restorable state v1/v2 and Mac continuation v2 fail closed.

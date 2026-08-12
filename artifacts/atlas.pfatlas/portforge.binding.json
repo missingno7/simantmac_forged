@@ -30,7 +30,7 @@
     "files": {
       "scripts/compiler_profile.py": "628acab37b8a124aa904ac1ce180bd9d3e2067de21a995734dcab40eb937c8d2",
       "scripts/project_contracts.py": "cae651e80744bbf6443ebc46646abe6409de84c02dfcea72ab63cdc62a40e560",
-      "scripts/project_workspace.py": "54649de524a1e6b55e451a5195c4d3bf4a05ffcbf815cd8a0c73294fff225b7c",
+      "scripts/project_workspace.py": "2d6ffd697f75522aa17035ff8c836b98b4323931bd9435c6194fb2788488a308",
       "src/arch/x86_16/cpu.hpp": "e49eb184c7aa8ecf071e450d24f1ee5f1f8e92013a35ed23c9f019561b02d63f",
       "src/arch/x86_16/protected_memory.hpp": "d6fdd49d5921e3911d37ca15f7e3fdb98327b079ad3dca6b106c736330ac39b0",
       "src/core/authority_codec.hpp": "5787f1c2bb036a4d36c679402987e667f685375c0424feba3624c267dbe11f64",
@@ -57,6 +57,6 @@
       "src/replay/verification.hpp": "7bedf3540d35e2b9c43ce623523eb065158f993d2b95d372638484295228eec5",
       "tools/pf_atlas.cpp": "296eafe26af92f2a28ed96715ada594e3f127813ab7d6946e9142d7174431e50"
     },
-    "sha256": "4c5bf86febc93eeb5cc44931b98ff3fd9fa90e491b9c602036cb3b95335c63c6"
+    "sha256": "c105b0a8a6e5c7c1f40a18a7a528e5a1b560fe4ecd0222a21f81fadd46220ff2"
   }
 }

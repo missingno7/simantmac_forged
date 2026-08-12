@@ -20,13 +20,7 @@ DEFAULT_ISO = PROJECT_ROOT / "assets" / "SimAnt_CD.iso"
 DEFAULT_OUTPUT = (
     PROJECT_ROOT / "artifacts" / "analysis" / "mac_trap_frontier.json"
 )
-DEFAULT_SNAPSHOT = (
-    PROJECT_ROOT
-    / "artifacts"
-    / "snapshots"
-    / "determinism_30000000"
-    / "run_a.pfmacsnapshot"
-)
+SNAPSHOT_CONFORMANCE = PROJECT_ROOT / "recovery" / "snapshot-conformance.json"
 
 
 def parser() -> argparse.ArgumentParser:
@@ -61,10 +55,11 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument(
         "--snapshot",
         type=Path,
-        default=DEFAULT_SNAPSHOT,
         help=(
             "optional diagnostic or restorable snapshot used to rank executed "
-            "MPW exports for native replacement"
+            "MPW exports for native replacement; by default the direct "
+            "snapshot named by recovery/snapshot-conformance.json is used "
+            "when available"
         ),
     )
     result.add_argument(
@@ -77,6 +72,18 @@ def parser() -> argparse.ArgumentParser:
 
 def executed(bitmap: bytes, address: int) -> bool:
     return bool(bitmap[address >> 3] & (1 << (address & 7)))
+
+
+def default_snapshot() -> Path | None:
+    """Resolve the current conformance snapshot without pinning ignored data."""
+    if not SNAPSHOT_CONFORMANCE.is_file():
+        return None
+    report = json.loads(SNAPSHOT_CONFORMANCE.read_text(encoding="utf-8"))
+    relative = report.get("snapshots", {}).get("direct")
+    if not isinstance(relative, str):
+        return None
+    candidate = PROJECT_ROOT / relative
+    return candidate if (candidate / "snapshot.json").is_file() else None
 
 
 def attach_dynamic_evidence(report: dict, snapshot: Path) -> None:
@@ -231,12 +238,18 @@ def main() -> int:
     )
     report = json.loads(completed.stdout)
     if not args.no_snapshot:
-        snapshot = args.snapshot
-        if not snapshot.is_absolute():
-            snapshot = PROJECT_ROOT / snapshot
-        snapshot = snapshot.resolve()
-        if snapshot.is_dir():
-            attach_dynamic_evidence(report, snapshot)
+        snapshot = args.snapshot or default_snapshot()
+        if snapshot is None:
+            print(
+                "warning: no current local conformance snapshot; "
+                "writing a static-only frontier (pass --snapshot to add "
+                "dynamic ranking)",
+                file=sys.stderr,
+            )
+        else:
+            if not snapshot.is_absolute():
+                snapshot = PROJECT_ROOT / snapshot
+            attach_dynamic_evidence(report, snapshot.resolve())
 
     output = args.output
     if not output.is_absolute():

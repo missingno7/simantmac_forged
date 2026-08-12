@@ -35,9 +35,12 @@ become visible at `mac.event.poll:before`; input observed while a poll is
 already pending is session-owned and timestamped in deterministic `mac.tick`
 time. This lets classic modal button tracking observe mouse-up without
 fabricating a semantic boundary or depending on host wall time.
-Long simulation work between polls runs in bounded cooperative slices; every
-incomplete slice returns to Qt for presentation and realtime pacing without
-inventing an extra replay boundary.
+Long simulation work between polls stays inside one semantic advance, but the
+event-poll driver pumps Qt every 20,000 guest instructions for input,
+presentation, and realtime pacing. The Qt runner deliberately uses the
+non-transactional callback path so it does not serialize a full rollback image
+at every high-frequency poll; a guest failure is therefore fail-stop for that
+process. None of these host pumps invents an extra replay boundary.
 
 ## Replay workflows
 
@@ -128,6 +131,9 @@ Manager deterministic source state are resumable, but canonical PCM and video
 commit streams are not implemented, so artifacts do not claim
 `canonical-audio`, `canonical-video`, `audio-continuing`, or
 `video-continuing`. Generated/native/detached execution also remains open.
+The exact gap between the current oracle, a Win16-style packaged
+generated-with-fallback runtime, and a genuinely detached product is recorded
+in `docs/standalone-readiness-audit.md`.
 
 The retired `portforge-mac68k-replay-v1` timestamp journal has no compatibility
 reader, alias, or active workflow.

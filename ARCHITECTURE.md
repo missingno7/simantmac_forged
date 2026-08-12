@@ -121,21 +121,22 @@ completion, then Event Manager time admission. Qt pumping and presentation are
 observational. Direct, record, and playback modes do not have separate loops
 or cursors.
 
-Seeking either side of an Event Manager poll is cooperatively partitioned at
-20,000 guest instructions. Each incomplete partition returns to the outer Qt
-timer for presentation and realtime pacing, so simulation work between polls
-cannot monopolize the host event loop. Because Macintosh has no stable
-instruction coordinate, sub-poll intent uses the shared emulated `mac.tick`
-domain. In particular, mouse-up cannot be postponed to a poll that a modal
-button tracker needs that same release in order to reach.
+Seeking either side of an Event Manager poll stays inside one semantic
+advance. The driver pumps Qt every 20,000 guest instructions for presentation,
+pacing, and input admission, so simulation work between polls cannot
+monopolize the host event loop. The Qt runner selects non-transactional driver
+callbacks: a failed advance terminates the process instead of paying for a
+durable full-machine rollback at every high-frequency poll. Because Macintosh
+has no stable instruction coordinate, sub-poll intent uses the shared emulated
+`mac.tick` domain. In particular, mouse-up cannot be postponed to a poll that
+a modal button tracker needs that same release in order to reach.
 
 F11 replaces the live-session mode at a returned semantic safe seam. A
 recording binds an exact restorable base directory into its environment
 identity. F12 only sets a deferred host request while nested Qt events are
-serviced; after any continuation-safe cooperative slice returns, the runner
-captures the live envelope (including a pending semantic target when present)
-and exact machine attachment without intervening guest execution and proves
-their three state blobs are byte-identical before publication.
+serviced; after the semantic advance returns, the runner captures the live
+envelope and exact machine attachment without intervening guest execution and
+proves their three state blobs are byte-identical before publication.
 
 The Mac continuation contract is `pf-continuation-mac68k-v4`. Its
 restorable-state v3 binary has no extra replay cursor: the platform's one
