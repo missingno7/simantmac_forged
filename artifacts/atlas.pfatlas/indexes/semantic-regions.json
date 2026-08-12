@@ -2,7 +2,7 @@
   "mac.event.poll": {
     "completed_visits": 8,
     "evidence": [
-      "evidence-mac-oracle-118a43e20f87-f86fa9681379"
+      "evidence-mac-oracle-44d9cd3f8fcd-56374b775c29"
     ],
     "replays": [
       {
@@ -13,14 +13,14 @@
           "predecessor": {
             "boundary_ordinal": 15,
             "checkpoint_cursor": 0,
-            "event_cursor": 1,
+            "event_cursor": 4,
             "selector": {
               "occurrence": 7,
               "phase": "after",
               "point": "mac.event.poll"
             }
           },
-          "runtime_instruction": 1358629
+          "runtime_instruction": 1365186
         },
         "first_entry": {
           "predecessor": {
@@ -42,7 +42,7 @@
         "max_recursive_depth": 1,
         "nested_visits": 0,
         "recursive_visits": 0,
-        "replay": "118a43e20f87ac732cc43941b6ac7d692f9020aa38f69f8cd8963f80addaf0c9",
+        "replay": "44d9cd3f8fcdbc7726a91c25fdbc5d45a2fddec2416bcc3e256603b14f1e9a24",
         "visits": 8
       }
     ],

@@ -47,7 +47,8 @@ python scripts\play.py
 
 # Start recording immediately and finish after eight completed polls.
 python scripts\play.py --record-replay canonical-event-poll-v2 `
-  --replay-boundary-limit 8 --exit-after-replay --unthrottled
+  --replay-boundary-limit 8 --exit-after-replay --auto-click-splash `
+  --unthrottled
 
 # Interactive playback.
 python scripts\play.py --play-replay canonical-event-poll-v2

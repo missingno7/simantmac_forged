@@ -7,12 +7,12 @@
   "claims": {
     "bootable": {
       "state": "conformant",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "c4aad7656862aed959befe52eef82eb176ad8e7ff0ae034dff44c522bf1a3ce1", "detail": "The bound HFS application boots from the exact ISO/resource-fork identities and reaches Event Manager polling."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "e22c366befec1d51379891f94d2e5d7857114b4f3b261742739797634ec307c0", "detail": "The bound HFS application boots from the exact ISO/resource-fork identities and reaches Event Manager polling."}],
       "blockers": []
     },
     "deterministic-time": {
       "state": "conformant",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "c4aad7656862aed959befe52eef82eb176ad8e7ff0ae034dff44c522bf1a3ce1", "detail": "Two playbacks repeat the complete timed-input artifact under CPU-cycle/Event-Manager time with host wall clock non-authoritative."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "e22c366befec1d51379891f94d2e5d7857114b4f3b261742739797634ec307c0", "detail": "Two playbacks repeat the complete timed-input artifact under CPU-cycle/Event-Manager time with host wall clock non-authoritative."}],
       "blockers": []
     },
     "semantic-boundaries": {
@@ -22,50 +22,50 @@
     },
     "replay-recording": {
       "state": "conformant",
-      "evidence": [{"kind": "artifact", "path": "artifacts/replays/canonical-event-poll-v2.pfreplay.json", "sha256": "118a43e20f87ac732cc43941b6ac7d692f9020aa38f69f8cd8963f80addaf0c9", "detail": "UTF-8 ReplayArtifactV2 with 16 poll boundaries and one mac.tick-timed activation transaction."}],
+      "evidence": [{"kind": "artifact", "path": "artifacts/replays/canonical-event-poll-v2.pfreplay.json", "sha256": "0c291a4b04c726d40cabb436ce4e3e82d2565273d9d298f649221d7cbc679b29", "detail": "UTF-8 ReplayArtifactV2 with 16 poll boundaries and four mac.tick-timed pointer/activation events."}],
       "blockers": []
     },
     "replay-playback": {
       "state": "conformant",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "c4aad7656862aed959befe52eef82eb176ad8e7ff0ae034dff44c522bf1a3ce1", "detail": "Two real playbacks consume the complete artifact and verify its terminal boundary."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "e22c366befec1d51379891f94d2e5d7857114b4f3b261742739797634ec307c0", "detail": "Two real playbacks consume the complete artifact and verify its terminal boundary."}],
       "blockers": []
     },
     "deadline-safe": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "c4aad7656862aed959befe52eef82eb176ad8e7ff0ae034dff44c522bf1a3ce1", "detail": "A-line poll gates prove untouched before and fully committed after semantics around real traps."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "e22c366befec1d51379891f94d2e5d7857114b4f3b261742739797634ec307c0", "detail": "A-line poll gates prove untouched before and fully committed after semantics around real traps."}],
       "blockers": ["Complete safe-point proofs for every long Toolbox service/callback relative to VBL, sound, and Event Manager deadlines."]
     },
     "machine-exact-snapshot": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "25f2e50b1115e8c96ad77163234851eece26b48491d3c53816e9d242f1e8f975", "detail": "A real 2M + 0.5M resumed run exactly matches a direct 2.5M run across memory, executed coverage, cursor-free v3 restorable state, and the single machine event cursor."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "b10b0f87c83f5ee9368cc431e1f1a359e9c4cf84b6933cb213684c5ee4411617", "detail": "A real 2M + 0.5M resumed run exactly matches a direct 2.5M run across memory, executed coverage, cursor-free v3 restorable state, and the single machine event cursor."}],
       "blockers": ["The scoped machine-exact proof passes, but graph-level conformance awaits complete deadline-safe coverage."]
     },
     "replay-session-continuation": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "c4aad7656862aed959befe52eef82eb176ad8e7ff0ae034dff44c522bf1a3ce1", "detail": "The tracked corpus proves the shared semantic adapter; the current Qt runner additionally publishes and resumes execution-bound LiveReplaySession envelopes and recording drafts."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "e22c366befec1d51379891f94d2e5d7857114b4f3b261742739797634ec307c0", "detail": "The tracked corpus proves the shared semantic adapter; the current Qt runner additionally publishes and resumes execution-bound LiveReplaySession envelopes and recording drafts."}],
       "blockers": ["Refresh and freeze a real-project F12 recording-draft/playback publication corpus before promoting the capability claim to conformant."]
     },
     "canonical-audio": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "25f2e50b1115e8c96ad77163234851eece26b48491d3c53816e9d242f1e8f975", "detail": "Machine continuation includes deterministic Sound Manager source state and excludes the host queue."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "b10b0f87c83f5ee9368cc431e1f1a359e9c4cf84b6933cb213684c5ee4411617", "detail": "Machine continuation includes deterministic Sound Manager source state and excludes the host queue."}],
       "blockers": ["Add canonical PCM sequence/hash and host callback partition-invariance conformance with active playback."]
     },
     "canonical-video": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "25f2e50b1115e8c96ad77163234851eece26b48491d3c53816e9d242f1e8f975", "detail": "Machine continuation includes QuickDraw/source surfaces and excludes Qt window/GPU authority."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "b10b0f87c83f5ee9368cc431e1f1a359e9c4cf84b6933cb213684c5ee4411617", "detail": "Machine continuation includes QuickDraw/source surfaces and excludes Qt window/GPU authority."}],
       "blockers": ["Add timestamped canonical video commit hashes independent of presentation cadence."]
     },
     "normalized-observation": {
       "state": "conformant",
       "evidence": [
-        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-oracle-v3.json", "sha256": "a6bbcc77b7ca9de764e99fb70e1489385674d7e8c361a9fdf573cdbff54bb50a", "detail": "ReplayEvidenceV3 binds 136 function visits, 608 observed transfers, 4,997 covered addresses, and 4 verification points to the Mac oracle execution identity."},
-        {"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "c4aad7656862aed959befe52eef82eb176ad8e7ff0ae034dff44c522bf1a3ce1", "detail": "Coverage is complete for the replayed trace; Toolbox service interiors remain explicitly partial-native."}
+        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-oracle-v3.json", "sha256": "b2ae1ad609548d4d1d4d71ad09a1324443a565b644e6b00e2b2ebbc2b9d0fad9", "detail": "ReplayEvidenceV3 binds 152 function visits, 699 observed transfers, 5,472 covered addresses, and 2 verification points to the Mac oracle execution identity."},
+        {"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "e22c366befec1d51379891f94d2e5d7857114b4f3b261742739797634ec307c0", "detail": "Coverage is complete for the replayed trace; Toolbox service interiors remain explicitly partial-native."}
       ],
       "blockers": []
     },
     "atlas": {
       "state": "conformant",
-      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "9fd9bcd312d37dbe6190d917f6eec1e3303b3d431a1c345b7b771e2d3ed03030", "detail": "Regeneratable one-source evidence projection with 847 nodes, 608 edges, 136 occurrences, and stable delete/rematerialize output."}],
+      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "dab377cfd39497001bc0fd032d6bcc5a95e305622ab528175765ae70800d16ba", "detail": "Regeneratable one-source evidence projection with 957 nodes, 699 edges, 152 occurrences, and stable delete/rematerialize output."}],
       "blockers": []
     },
     "implementation-planning": {

@@ -14,7 +14,7 @@
         "boundary_profile_id": "mac68k.event-poll-boundaries.v1",
         "boundary_profile_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956",
         "timeline_boundaries": 16,
-        "events": 1,
+        "events": 4,
         "checkpoints": 0,
         "terminal_point": "mac.event.poll",
         "terminal_phase": "after",

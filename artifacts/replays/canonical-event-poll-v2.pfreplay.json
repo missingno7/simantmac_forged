@@ -1,626 +1,697 @@
 {
-  "boundary_profile": {
-    "id": "mac68k.event-poll-boundaries.v1",
-    "sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956"
-  },
-  "capabilities": [
-    "mac-event-poll",
-    "machine-time-input",
-    "replay-playback",
-    "replay-recording",
-    "semantic-boundaries"
-  ],
-  "channels": [
-    {
-      "id": "mac.pointer.position",
-      "payload_schema": "pf-mac-pointer-position-v1",
-      "payload_type": "object",
-      "semantics": "hold"
+    "boundary_profile": {
+        "id": "mac68k.event-poll-boundaries.v1",
+        "sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956"
     },
-    {
-      "id": "mac.pointer.button",
-      "payload_schema": "pf-mac-pointer-button-v1",
-      "payload_type": "object",
-      "semantics": "edge"
-    },
-    {
-      "id": "mac.keyboard.key",
-      "payload_schema": "pf-mac-keyboard-key-v1",
-      "payload_type": "object",
-      "semantics": "edge"
-    },
-    {
-      "id": "mac.window.activation",
-      "payload_schema": "pf-mac-window-activation-v1",
-      "payload_type": "object",
-      "semantics": "edge"
-    },
-    {
-      "id": "mac.menu.command",
-      "payload_schema": "pf-mac-menu-command-v1",
-      "payload_type": "object",
-      "semantics": "pulse"
-    },
-    {
-      "id": "mac.control.action",
-      "payload_schema": "pf-mac-control-action-v1",
-      "payload_type": "object",
-      "semantics": "pulse"
-    },
-    {
-      "id": "mac.window.geometry",
-      "payload_schema": "pf-mac-window-geometry-v1",
-      "payload_type": "object",
-      "semantics": "latch"
-    },
-    {
-      "id": "mac.window.update",
-      "payload_schema": "pf-mac-window-update-v1",
-      "payload_type": "object",
-      "semantics": "pulse"
-    }
-  ],
-  "checkpoints": [],
-  "content_sha256": {
-    "boundary_profile": "91904f0a02590286c9f79d9a0e412ee6cb079899654f2f055122cd560672c4a1",
-    "capabilities": "0aff1ee63af83589925c56a2b6401013cfa49f49ce58d066f1257a2d432019aa",
-    "channels": "5f56461a3fb3875ac256b40f289d3dd4b858163f65cabb8f40e54d09aac4adbb",
-    "checkpoints": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-    "environment": "80e9451f97164f3a98831b00bbe7ed6b70333560fc479c1db79bf8a2073fbc63",
-    "events": "681643629e65b39799463bdb540d6547abe450c294a44a04177dc6e444e0d85f",
-    "identity": "b35e01938a33744a258228493c6121f8217a3a5b5bf74053f6cb8cb90148be27",
-    "schema_versions": "de2f465e21a8adf24b2952e29d4da84b309284fd64b21d067ffbbe41956b980d",
-    "terminal": "fd6b7e8ee221ffeea02aa60fba370997ab6a8dbdb8a032ec0f0688a829f9401d",
-    "timeline": "b61f3054f31e225c68757f74dcbd48709bdf8a333e018b5482bdb19d58e165f4"
-  },
-  "environment": {
-    "application_path": "SimAnt/SimAnt\\xAA",
-    "base": "snapshot",
-    "base_snapshot": {
-      "canonical_schema": "pf-canonical-mac68k-v1",
-      "canonical_sha256": "add6c537c50b8c85e19dded62b50579ac62b3d5985bfd4eda90da47cd54cbfa5",
-      "file": "canonical-event-poll-v2.pfreplay.json.base.pfmacsnapshot",
-      "format": "portforge-mac68k-restorable-snapshot-v2",
-      "sha256": "df59278ffcc094934982dfffd7cee38b82df68515244b5fc3261759628c6725e"
-    },
-    "clock_model": "m68k-cycles-and-event-manager-ticks-v1",
-    "host_wall_clock_authoritative": false,
-    "image_sha256": "8e7518796dbf32db9ff483dcc49069d4d8ec6e4625918fe4d47b03de8cc5fb0b",
-    "schema": "pf-mac68k-replay-environment-v1"
-  },
-  "events": [
-    {
-      "at": {
-        "occurrence": 0,
-        "phase": "after",
-        "point": "mac.event.poll"
-      },
-      "boundary_ordinal": 1,
-      "channel": "mac.window.activation",
-      "compatibility_guards": {},
-      "effective_machine_time": {
-        "domain": "mac.tick",
-        "units_per_second_den": 1,
-        "units_per_second_num": 60,
-        "value": 39
-      },
-      "payload": {
-        "active": true,
-        "modifiers": 0,
-        "target": 840398
-      },
-      "schema": "pf-replay-event-v2",
-      "sequence": 0
-    }
-  ],
-  "format": "portforge-replay-v2",
-  "identity": {
-    "assets_sha256": "804a015a3bc99ee6c5e7b093f9239df7a7157a3b834a2d27ec0948d725edea25",
-    "boundary_profile_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956",
-    "environment_sha256": "80e9451f97164f3a98831b00bbe7ed6b70333560fc479c1db79bf8a2073fbc63",
-    "game_id": "simant-mac",
-    "launch_sha256": "498cf58a8cc720ff9b86f1f97300772c124515d0a44dd39b4d6af34e1b1e9b8a",
-    "machine_model": "pf-mac68k-macii-system7-color4-v1",
-    "machine_profile_sha256": "2464fbf55a343e6163c454c14c3929ff163abaa2911b52fe7a35ab5c2304d37f",
-    "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
-    "schema": "pf-replay-identity-v1"
-  },
-  "schema_versions": {
-    "artifact": 2,
-    "boundary": 3,
-    "boundary_stamp": 1,
-    "checkpoint": 2,
-    "event": 2,
-    "identity": 1,
-    "terminal": 3
-  },
-  "terminal": {
-    "canonical_sha256": "fcb77c6950a2641c231d096725360de646afe9854cb1d95f7bc28e3f774fe042",
-    "event_cursor": 1,
-    "reason": "interactive recording stopped at an event-poll seam",
-    "schema": "pf-replay-terminal-v3",
-    "stamp": {
-      "evidence": {
-        "code_identity": "mac.code.2.2978",
-        "delivered_events": 1,
-        "event_found": false,
-        "guest_instructions": 1358629,
-        "instruction_pc": 134608,
-        "opcode": 43104,
-        "trap": "WaitNextEvent"
-      },
-      "global_ordinal": 15,
-      "machine_time": {
-        "domain": "mac.tick",
-        "units_per_second_den": 1,
-        "units_per_second_num": 60,
-        "value": 39
-      },
-      "outcome": "terminal",
-      "schema": "pf-boundary-stamp-v1",
-      "selector": {
-        "occurrence": 7,
-        "phase": "after",
-        "point": "mac.event.poll"
-      }
-    }
-  },
-  "timeline": [
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 0,
-          "guest_instructions": 1354389,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
+    "capabilities": [
+        "mac-event-poll",
+        "machine-time-input",
+        "replay-playback",
+        "replay-recording",
+        "semantic-boundaries"
+    ],
+    "channels": [
+        {
+            "id": "mac.pointer.position",
+            "payload_schema": "pf-mac-pointer-position-v1",
+            "payload_type": "object",
+            "semantics": "hold"
         },
-        "global_ordinal": 0,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
+        {
+            "id": "mac.pointer.button",
+            "payload_schema": "pf-mac-pointer-button-v1",
+            "payload_type": "object",
+            "semantics": "edge"
         },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 0,
-          "phase": "before",
-          "point": "mac.event.poll"
+        {
+            "id": "mac.keyboard.key",
+            "payload_schema": "pf-mac-keyboard-key-v1",
+            "payload_type": "object",
+            "semantics": "edge"
+        },
+        {
+            "id": "mac.window.activation",
+            "payload_schema": "pf-mac-window-activation-v1",
+            "payload_type": "object",
+            "semantics": "edge"
+        },
+        {
+            "id": "mac.menu.command",
+            "payload_schema": "pf-mac-menu-command-v1",
+            "payload_type": "object",
+            "semantics": "pulse"
+        },
+        {
+            "id": "mac.control.action",
+            "payload_schema": "pf-mac-control-action-v1",
+            "payload_type": "object",
+            "semantics": "pulse"
+        },
+        {
+            "id": "mac.window.geometry",
+            "payload_schema": "pf-mac-window-geometry-v1",
+            "payload_type": "object",
+            "semantics": "latch"
+        },
+        {
+            "id": "mac.window.update",
+            "payload_schema": "pf-mac-window-update-v1",
+            "payload_type": "object",
+            "semantics": "pulse"
         }
-      }
+    ],
+    "checkpoints": [],
+    "content_sha256": {
+        "boundary_profile": "91904f0a02590286c9f79d9a0e412ee6cb079899654f2f055122cd560672c4a1",
+        "capabilities": "0aff1ee63af83589925c56a2b6401013cfa49f49ce58d066f1257a2d432019aa",
+        "channels": "5f56461a3fb3875ac256b40f289d3dd4b858163f65cabb8f40e54d09aac4adbb",
+        "checkpoints": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "environment": "80e9451f97164f3a98831b00bbe7ed6b70333560fc479c1db79bf8a2073fbc63",
+        "events": "b0f2902dc4c143e632c61b0862e6d6d7865d3aecd28a536c789c9793e94922c4",
+        "identity": "b35e01938a33744a258228493c6121f8217a3a5b5bf74053f6cb8cb90148be27",
+        "schema_versions": "de2f465e21a8adf24b2952e29d4da84b309284fd64b21d067ffbbe41956b980d",
+        "terminal": "c905fc71e08ef1b95f62796c709f40b487ed48e9c76d7f1499fedceca6411c9b",
+        "timeline": "dbef9009abcf668e3d467e387e73b971849c00aab962707ccecb27a929488ac6"
     },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 0,
-          "event_found": false,
-          "guest_instructions": 1354390,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
+    "environment": {
+        "application_path": "SimAnt/SimAnt\\xAA",
+        "base": "snapshot",
+        "base_snapshot": {
+            "canonical_schema": "pf-canonical-mac68k-v1",
+            "canonical_sha256": "add6c537c50b8c85e19dded62b50579ac62b3d5985bfd4eda90da47cd54cbfa5",
+            "file": "canonical-event-poll-v2.pfreplay.json.base.pfmacsnapshot",
+            "format": "portforge-mac68k-restorable-snapshot-v2",
+            "sha256": "df59278ffcc094934982dfffd7cee38b82df68515244b5fc3261759628c6725e"
         },
-        "global_ordinal": 1,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 0,
-          "phase": "after",
-          "point": "mac.event.poll"
-        }
-      }
+        "clock_model": "m68k-cycles-and-event-manager-ticks-v1",
+        "host_wall_clock_authoritative": false,
+        "image_sha256": "8e7518796dbf32db9ff483dcc49069d4d8ec6e4625918fe4d47b03de8cc5fb0b",
+        "schema": "pf-mac68k-replay-environment-v1"
     },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 0,
-          "guest_instructions": 1354992,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
+    "events": [
+        {
+            "at": {
+                "occurrence": 0,
+                "phase": "after",
+                "point": "mac.event.poll"
+            },
+            "boundary_ordinal": 1,
+            "channel": "mac.pointer.button",
+            "compatibility_guards": {},
+            "effective_machine_time": {
+                "domain": "mac.tick",
+                "units_per_second_den": 1,
+                "units_per_second_num": 60,
+                "value": 49
+            },
+            "payload": {
+                "down": true,
+                "modifiers": 0,
+                "x": 320,
+                "y": 240
+            },
+            "schema": "pf-replay-event-v2",
+            "sequence": 0
         },
-        "global_ordinal": 2,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
+        {
+            "at": {
+                "occurrence": 0,
+                "phase": "after",
+                "point": "mac.event.poll"
+            },
+            "boundary_ordinal": 1,
+            "channel": "mac.pointer.button",
+            "compatibility_guards": {},
+            "effective_machine_time": {
+                "domain": "mac.tick",
+                "units_per_second_den": 1,
+                "units_per_second_num": 60,
+                "value": 49
+            },
+            "payload": {
+                "down": false,
+                "modifiers": 0,
+                "x": 320,
+                "y": 240
+            },
+            "schema": "pf-replay-event-v2",
+            "sequence": 1
         },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 1,
-          "phase": "before",
-          "point": "mac.event.poll"
+        {
+            "at": {
+                "occurrence": 0,
+                "phase": "after",
+                "point": "mac.event.poll"
+            },
+            "boundary_ordinal": 1,
+            "channel": "mac.window.activation",
+            "compatibility_guards": {},
+            "effective_machine_time": {
+                "domain": "mac.tick",
+                "units_per_second_den": 1,
+                "units_per_second_num": 60,
+                "value": 49
+            },
+            "payload": {
+                "active": true,
+                "modifiers": 0,
+                "target": 840398
+            },
+            "schema": "pf-replay-event-v2",
+            "sequence": 2
+        },
+        {
+            "at": {
+                "occurrence": 3,
+                "phase": "after",
+                "point": "mac.event.poll"
+            },
+            "boundary_ordinal": 7,
+            "channel": "mac.window.activation",
+            "compatibility_guards": {},
+            "effective_machine_time": {
+                "domain": "mac.tick",
+                "units_per_second_den": 1,
+                "units_per_second_num": 60,
+                "value": 50
+            },
+            "payload": {
+                "active": true,
+                "modifiers": 0,
+                "target": 841726
+            },
+            "schema": "pf-replay-event-v2",
+            "sequence": 3
         }
-      }
+    ],
+    "format": "portforge-replay-v2",
+    "identity": {
+        "assets_sha256": "804a015a3bc99ee6c5e7b093f9239df7a7157a3b834a2d27ec0948d725edea25",
+        "boundary_profile_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956",
+        "environment_sha256": "80e9451f97164f3a98831b00bbe7ed6b70333560fc479c1db79bf8a2073fbc63",
+        "game_id": "simant-mac",
+        "launch_sha256": "498cf58a8cc720ff9b86f1f97300772c124515d0a44dd39b4d6af34e1b1e9b8a",
+        "machine_model": "pf-mac68k-macii-system7-color4-v1",
+        "machine_profile_sha256": "2464fbf55a343e6163c454c14c3929ff163abaa2911b52fe7a35ab5c2304d37f",
+        "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
+        "schema": "pf-replay-identity-v1"
     },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "event_found": true,
-          "guest_instructions": 1354993,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 3,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 1,
-          "phase": "after",
-          "point": "mac.event.poll"
-        }
-      }
+    "schema_versions": {
+        "artifact": 2,
+        "boundary": 3,
+        "boundary_stamp": 1,
+        "checkpoint": 2,
+        "event": 2,
+        "identity": 1,
+        "terminal": 3
     },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "guest_instructions": 1355613,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 4,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 2,
-          "phase": "before",
-          "point": "mac.event.poll"
+    "terminal": {
+        "canonical_sha256": "391aabac2be8986beaf3aaab4dffc2510e676d228bfebbeb020511385474a9fe",
+        "event_cursor": 4,
+        "reason": "interactive recording stopped at an event-poll seam",
+        "schema": "pf-replay-terminal-v3",
+        "stamp": {
+            "evidence": {
+                "code_identity": "mac.code.2.2978",
+                "delivered_events": 4,
+                "event_found": false,
+                "guest_instructions": 1365186,
+                "instruction_pc": 134608,
+                "opcode": 43104,
+                "trap": "WaitNextEvent"
+            },
+            "global_ordinal": 15,
+            "machine_time": {
+                "domain": "mac.tick",
+                "units_per_second_den": 1,
+                "units_per_second_num": 60,
+                "value": 50
+            },
+            "outcome": "terminal",
+            "schema": "pf-boundary-stamp-v1",
+            "selector": {
+                "occurrence": 7,
+                "phase": "after",
+                "point": "mac.event.poll"
+            }
         }
-      }
     },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "event_found": false,
-          "guest_instructions": 1355614,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
+    "timeline": [
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 0,
+                    "guest_instructions": 1354389,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 0,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 49
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 0,
+                    "phase": "before",
+                    "point": "mac.event.poll"
+                }
+            }
         },
-        "global_ordinal": 5,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 0,
+                    "event_found": false,
+                    "guest_instructions": 1354390,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 1,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 49
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 0,
+                    "phase": "after",
+                    "point": "mac.event.poll"
+                }
+            }
         },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 2,
-          "phase": "after",
-          "point": "mac.event.poll"
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 0,
+                    "guest_instructions": 1354992,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 2,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 49
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 1,
+                    "phase": "before",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 1,
+                    "event_found": true,
+                    "guest_instructions": 1354993,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 3,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 49
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 1,
+                    "phase": "after",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 1,
+                    "guest_instructions": 1361673,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 4,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 49
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 2,
+                    "phase": "before",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 2,
+                    "event_found": true,
+                    "guest_instructions": 1361674,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 5,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 49
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 2,
+                    "phase": "after",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 2,
+                    "guest_instructions": 1362505,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 6,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 3,
+                    "phase": "before",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 3,
+                    "event_found": true,
+                    "guest_instructions": 1362506,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 7,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 3,
+                    "phase": "after",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 3,
+                    "guest_instructions": 1363338,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 8,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 4,
+                    "phase": "before",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 4,
+                    "event_found": true,
+                    "guest_instructions": 1363339,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 9,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 4,
+                    "phase": "after",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 4,
+                    "guest_instructions": 1364171,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 10,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 5,
+                    "phase": "before",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 4,
+                    "event_found": false,
+                    "guest_instructions": 1364172,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 11,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 5,
+                    "phase": "after",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 4,
+                    "guest_instructions": 1364678,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 12,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 6,
+                    "phase": "before",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 4,
+                    "event_found": false,
+                    "guest_instructions": 1364679,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 13,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 6,
+                    "phase": "after",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 4,
+                    "guest_instructions": 1365185,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 14,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 7,
+                    "phase": "before",
+                    "point": "mac.event.poll"
+                }
+            }
+        },
+        {
+            "compatibility_guards": {},
+            "schema": "pf-replay-boundary-v3",
+            "stamp": {
+                "evidence": {
+                    "code_identity": "mac.code.2.2978",
+                    "delivered_events": 4,
+                    "event_found": false,
+                    "guest_instructions": 1365186,
+                    "instruction_pc": 134608,
+                    "opcode": 43104,
+                    "trap": "WaitNextEvent"
+                },
+                "global_ordinal": 15,
+                "machine_time": {
+                    "domain": "mac.tick",
+                    "units_per_second_den": 1,
+                    "units_per_second_num": 60,
+                    "value": 50
+                },
+                "outcome": "reached",
+                "schema": "pf-boundary-stamp-v1",
+                "selector": {
+                    "occurrence": 7,
+                    "phase": "after",
+                    "point": "mac.event.poll"
+                }
+            }
         }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "guest_instructions": 1356216,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 6,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 3,
-          "phase": "before",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "event_found": false,
-          "guest_instructions": 1356217,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 7,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 3,
-          "phase": "after",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "guest_instructions": 1356819,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 8,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 4,
-          "phase": "before",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "event_found": false,
-          "guest_instructions": 1356820,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 9,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 4,
-          "phase": "after",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "guest_instructions": 1357422,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 10,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 5,
-          "phase": "before",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "event_found": false,
-          "guest_instructions": 1357423,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 11,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 5,
-          "phase": "after",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "guest_instructions": 1358025,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 12,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 6,
-          "phase": "before",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "event_found": false,
-          "guest_instructions": 1358026,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 13,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 6,
-          "phase": "after",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "guest_instructions": 1358628,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 14,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 7,
-          "phase": "before",
-          "point": "mac.event.poll"
-        }
-      }
-    },
-    {
-      "compatibility_guards": {},
-      "schema": "pf-replay-boundary-v3",
-      "stamp": {
-        "evidence": {
-          "code_identity": "mac.code.2.2978",
-          "delivered_events": 1,
-          "event_found": false,
-          "guest_instructions": 1358629,
-          "instruction_pc": 134608,
-          "opcode": 43104,
-          "trap": "WaitNextEvent"
-        },
-        "global_ordinal": 15,
-        "machine_time": {
-          "domain": "mac.tick",
-          "units_per_second_den": 1,
-          "units_per_second_num": 60,
-          "value": 39
-        },
-        "outcome": "reached",
-        "schema": "pf-boundary-stamp-v1",
-        "selector": {
-          "occurrence": 7,
-          "phase": "after",
-          "point": "mac.event.poll"
-        }
-      }
-    }
-  ]
+    ]
 }
