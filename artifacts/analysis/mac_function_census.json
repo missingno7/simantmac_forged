@@ -1,0 +1,8156 @@
+{
+  "$schema": "port_forge/schemas/portforge-function-census-v1.schema.json",
+  "code_units": [
+    {
+      "end": "mac.code.1.8",
+      "generated_symbol": "native_mac_code_1_4",
+      "id": "mac.code.1.4",
+      "instruction_count": 1,
+      "states": [
+        "discovered",
+        "statically_reachable",
+        "dynamically_observed",
+        "generated",
+        "active"
+      ]
+    },
+    {
+      "end": "mac.code.1.150",
+      "generated_symbol": null,
+      "id": "mac.code.1.8",
+      "instruction_count": 52,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.1.170",
+      "generated_symbol": null,
+      "id": "mac.code.1.150",
+      "instruction_count": 8,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.1.190",
+      "generated_symbol": null,
+      "id": "mac.code.1.170",
+      "instruction_count": 8,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.1.218",
+      "generated_symbol": null,
+      "id": "mac.code.1.190",
+      "instruction_count": 12,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.1.272",
+      "generated_symbol": null,
+      "id": "mac.code.1.218",
+      "instruction_count": 21,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.1.304",
+      "generated_symbol": null,
+      "id": "mac.code.1.272",
+      "instruction_count": 9,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.1.338",
+      "generated_symbol": null,
+      "id": "mac.code.1.304",
+      "instruction_count": 10,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.1.370",
+      "generated_symbol": null,
+      "id": "mac.code.1.338",
+      "instruction_count": 9,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.1.556",
+      "generated_symbol": null,
+      "id": "mac.code.1.370",
+      "instruction_count": 81,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.1.558",
+      "generated_symbol": null,
+      "id": "mac.code.1.556",
+      "instruction_count": 1,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.648",
+      "generated_symbol": null,
+      "id": "mac.code.2.506",
+      "instruction_count": 52,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.768",
+      "generated_symbol": null,
+      "id": "mac.code.2.648",
+      "instruction_count": 45,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.796",
+      "generated_symbol": null,
+      "id": "mac.code.2.768",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.1102",
+      "generated_symbol": null,
+      "id": "mac.code.2.796",
+      "instruction_count": 33,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.1496",
+      "generated_symbol": null,
+      "id": "mac.code.2.1102",
+      "instruction_count": 126,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.2484",
+      "generated_symbol": null,
+      "id": "mac.code.2.1496",
+      "instruction_count": 24,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.2622",
+      "generated_symbol": null,
+      "id": "mac.code.2.2484",
+      "instruction_count": 49,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.2672",
+      "generated_symbol": null,
+      "id": "mac.code.2.2622",
+      "instruction_count": 20,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.2906",
+      "generated_symbol": null,
+      "id": "mac.code.2.2672",
+      "instruction_count": 15,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.2922",
+      "generated_symbol": "native_mac_code_2_2906",
+      "id": "mac.code.2.2906",
+      "instruction_count": 5,
+      "states": [
+        "discovered",
+        "dynamically_observed",
+        "generated",
+        "active"
+      ]
+    },
+    {
+      "end": "mac.code.2.3222",
+      "generated_symbol": null,
+      "id": "mac.code.2.2922",
+      "instruction_count": 99,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3558",
+      "generated_symbol": null,
+      "id": "mac.code.2.3222",
+      "instruction_count": 91,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3622",
+      "generated_symbol": null,
+      "id": "mac.code.2.3558",
+      "instruction_count": 26,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3718",
+      "generated_symbol": null,
+      "id": "mac.code.2.3622",
+      "instruction_count": 36,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3756",
+      "generated_symbol": null,
+      "id": "mac.code.2.3718",
+      "instruction_count": 15,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3794",
+      "generated_symbol": null,
+      "id": "mac.code.2.3756",
+      "instruction_count": 15,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3812",
+      "generated_symbol": null,
+      "id": "mac.code.2.3794",
+      "instruction_count": 6,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3824",
+      "generated_symbol": null,
+      "id": "mac.code.2.3812",
+      "instruction_count": 5,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3836",
+      "generated_symbol": null,
+      "id": "mac.code.2.3824",
+      "instruction_count": 5,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3854",
+      "generated_symbol": null,
+      "id": "mac.code.2.3836",
+      "instruction_count": 6,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.3864",
+      "generated_symbol": null,
+      "id": "mac.code.2.3854",
+      "instruction_count": 4,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.3898",
+      "generated_symbol": null,
+      "id": "mac.code.2.3864",
+      "instruction_count": 14,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4016",
+      "generated_symbol": null,
+      "id": "mac.code.2.3898",
+      "instruction_count": 43,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4064",
+      "generated_symbol": null,
+      "id": "mac.code.2.4016",
+      "instruction_count": 20,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4150",
+      "generated_symbol": null,
+      "id": "mac.code.2.4064",
+      "instruction_count": 34,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4280",
+      "generated_symbol": null,
+      "id": "mac.code.2.4150",
+      "instruction_count": 51,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4366",
+      "generated_symbol": null,
+      "id": "mac.code.2.4280",
+      "instruction_count": 28,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4446",
+      "generated_symbol": null,
+      "id": "mac.code.2.4366",
+      "instruction_count": 33,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4838",
+      "generated_symbol": null,
+      "id": "mac.code.2.4446",
+      "instruction_count": 113,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4866",
+      "generated_symbol": null,
+      "id": "mac.code.2.4838",
+      "instruction_count": 14,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4896",
+      "generated_symbol": null,
+      "id": "mac.code.2.4866",
+      "instruction_count": 14,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.4960",
+      "generated_symbol": null,
+      "id": "mac.code.2.4896",
+      "instruction_count": 24,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5020",
+      "generated_symbol": null,
+      "id": "mac.code.2.4960",
+      "instruction_count": 30,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5084",
+      "generated_symbol": null,
+      "id": "mac.code.2.5020",
+      "instruction_count": 19,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5110",
+      "generated_symbol": null,
+      "id": "mac.code.2.5084",
+      "instruction_count": 9,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5114",
+      "generated_symbol": null,
+      "id": "mac.code.2.5110",
+      "instruction_count": 2,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5182",
+      "generated_symbol": null,
+      "id": "mac.code.2.5114",
+      "instruction_count": 21,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5236",
+      "generated_symbol": null,
+      "id": "mac.code.2.5182",
+      "instruction_count": 16,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5270",
+      "generated_symbol": null,
+      "id": "mac.code.2.5236",
+      "instruction_count": 11,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5302",
+      "generated_symbol": null,
+      "id": "mac.code.2.5270",
+      "instruction_count": 10,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5364",
+      "generated_symbol": null,
+      "id": "mac.code.2.5302",
+      "instruction_count": 19,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5400",
+      "generated_symbol": null,
+      "id": "mac.code.2.5364",
+      "instruction_count": 11,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5458",
+      "generated_symbol": null,
+      "id": "mac.code.2.5400",
+      "instruction_count": 18,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5492",
+      "generated_symbol": null,
+      "id": "mac.code.2.5458",
+      "instruction_count": 11,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5530",
+      "generated_symbol": null,
+      "id": "mac.code.2.5492",
+      "instruction_count": 11,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5598",
+      "generated_symbol": null,
+      "id": "mac.code.2.5530",
+      "instruction_count": 26,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5616",
+      "generated_symbol": null,
+      "id": "mac.code.2.5598",
+      "instruction_count": 9,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5652",
+      "generated_symbol": null,
+      "id": "mac.code.2.5616",
+      "instruction_count": 14,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5722",
+      "generated_symbol": null,
+      "id": "mac.code.2.5652",
+      "instruction_count": 27,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5758",
+      "generated_symbol": null,
+      "id": "mac.code.2.5722",
+      "instruction_count": 14,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5802",
+      "generated_symbol": null,
+      "id": "mac.code.2.5758",
+      "instruction_count": 7,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5830",
+      "generated_symbol": null,
+      "id": "mac.code.2.5802",
+      "instruction_count": 9,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5836",
+      "generated_symbol": null,
+      "id": "mac.code.2.5830",
+      "instruction_count": 2,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5850",
+      "generated_symbol": null,
+      "id": "mac.code.2.5836",
+      "instruction_count": 4,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5912",
+      "generated_symbol": null,
+      "id": "mac.code.2.5850",
+      "instruction_count": 22,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5936",
+      "generated_symbol": null,
+      "id": "mac.code.2.5912",
+      "instruction_count": 10,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5950",
+      "generated_symbol": null,
+      "id": "mac.code.2.5936",
+      "instruction_count": 4,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.5958",
+      "generated_symbol": null,
+      "id": "mac.code.2.5950",
+      "instruction_count": 3,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.5976",
+      "generated_symbol": null,
+      "id": "mac.code.2.5958",
+      "instruction_count": 6,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6004",
+      "generated_symbol": null,
+      "id": "mac.code.2.5976",
+      "instruction_count": 10,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6028",
+      "generated_symbol": null,
+      "id": "mac.code.2.6004",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6052",
+      "generated_symbol": null,
+      "id": "mac.code.2.6028",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6076",
+      "generated_symbol": null,
+      "id": "mac.code.2.6052",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6100",
+      "generated_symbol": null,
+      "id": "mac.code.2.6076",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6124",
+      "generated_symbol": null,
+      "id": "mac.code.2.6100",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6148",
+      "generated_symbol": null,
+      "id": "mac.code.2.6124",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6172",
+      "generated_symbol": null,
+      "id": "mac.code.2.6148",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6246",
+      "generated_symbol": null,
+      "id": "mac.code.2.6172",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.6294",
+      "generated_symbol": null,
+      "id": "mac.code.2.6246",
+      "instruction_count": 17,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.7596",
+      "generated_symbol": null,
+      "id": "mac.code.2.6294",
+      "instruction_count": 75,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.7838",
+      "generated_symbol": null,
+      "id": "mac.code.2.7596",
+      "instruction_count": 67,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.7896",
+      "generated_symbol": null,
+      "id": "mac.code.2.7838",
+      "instruction_count": 21,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.8968",
+      "generated_symbol": null,
+      "id": "mac.code.2.7896",
+      "instruction_count": 316,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.9282",
+      "generated_symbol": null,
+      "id": "mac.code.2.8968",
+      "instruction_count": 99,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.9330",
+      "generated_symbol": null,
+      "id": "mac.code.2.9282",
+      "instruction_count": 17,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.9382",
+      "generated_symbol": null,
+      "id": "mac.code.2.9330",
+      "instruction_count": 18,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.10040",
+      "generated_symbol": null,
+      "id": "mac.code.2.9382",
+      "instruction_count": 81,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.10146",
+      "generated_symbol": null,
+      "id": "mac.code.2.10040",
+      "instruction_count": 35,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.10260",
+      "generated_symbol": null,
+      "id": "mac.code.2.10146",
+      "instruction_count": 38,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.2.10396",
+      "generated_symbol": null,
+      "id": "mac.code.2.10260",
+      "instruction_count": 42,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.10498",
+      "generated_symbol": null,
+      "id": "mac.code.2.10396",
+      "instruction_count": 34,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.10640",
+      "generated_symbol": null,
+      "id": "mac.code.2.10498",
+      "instruction_count": 6,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.10956",
+      "generated_symbol": null,
+      "id": "mac.code.2.10640",
+      "instruction_count": 22,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.2.13304",
+      "generated_symbol": null,
+      "id": "mac.code.2.10956",
+      "instruction_count": 77,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.3.2632",
+      "generated_symbol": null,
+      "id": "mac.code.3.48",
+      "instruction_count": 857,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.3.2962",
+      "generated_symbol": null,
+      "id": "mac.code.3.2632",
+      "instruction_count": 123,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.3.5924",
+      "generated_symbol": null,
+      "id": "mac.code.3.2962",
+      "instruction_count": 884,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.3.6034",
+      "generated_symbol": null,
+      "id": "mac.code.3.5924",
+      "instruction_count": 35,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.3.6538",
+      "generated_symbol": null,
+      "id": "mac.code.3.6034",
+      "instruction_count": 164,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.3.7346",
+      "generated_symbol": null,
+      "id": "mac.code.3.6538",
+      "instruction_count": 252,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.60",
+      "generated_symbol": null,
+      "id": "mac.code.4.32",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.88",
+      "generated_symbol": null,
+      "id": "mac.code.4.60",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.2220",
+      "generated_symbol": null,
+      "id": "mac.code.4.88",
+      "instruction_count": 672,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.2388",
+      "generated_symbol": null,
+      "id": "mac.code.4.2220",
+      "instruction_count": 62,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.2576",
+      "generated_symbol": null,
+      "id": "mac.code.4.2388",
+      "instruction_count": 66,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.2692",
+      "generated_symbol": null,
+      "id": "mac.code.4.2576",
+      "instruction_count": 43,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3266",
+      "generated_symbol": null,
+      "id": "mac.code.4.2692",
+      "instruction_count": 75,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3366",
+      "generated_symbol": null,
+      "id": "mac.code.4.3266",
+      "instruction_count": 28,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3424",
+      "generated_symbol": null,
+      "id": "mac.code.4.3366",
+      "instruction_count": 16,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3458",
+      "generated_symbol": null,
+      "id": "mac.code.4.3424",
+      "instruction_count": 9,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3484",
+      "generated_symbol": null,
+      "id": "mac.code.4.3458",
+      "instruction_count": 7,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3528",
+      "generated_symbol": null,
+      "id": "mac.code.4.3484",
+      "instruction_count": 11,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3538",
+      "generated_symbol": null,
+      "id": "mac.code.4.3528",
+      "instruction_count": 3,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.4.3544",
+      "generated_symbol": null,
+      "id": "mac.code.4.3538",
+      "instruction_count": 2,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.4.3578",
+      "generated_symbol": null,
+      "id": "mac.code.4.3544",
+      "instruction_count": 10,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.4.3612",
+      "generated_symbol": null,
+      "id": "mac.code.4.3578",
+      "instruction_count": 10,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3636",
+      "generated_symbol": null,
+      "id": "mac.code.4.3612",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3678",
+      "generated_symbol": null,
+      "id": "mac.code.4.3636",
+      "instruction_count": 15,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3726",
+      "generated_symbol": null,
+      "id": "mac.code.4.3678",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.3826",
+      "generated_symbol": null,
+      "id": "mac.code.4.3726",
+      "instruction_count": 30,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.4022",
+      "generated_symbol": null,
+      "id": "mac.code.4.3826",
+      "instruction_count": 64,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.4056",
+      "generated_symbol": null,
+      "id": "mac.code.4.4022",
+      "instruction_count": 9,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.4.4102",
+      "generated_symbol": null,
+      "id": "mac.code.4.4056",
+      "instruction_count": 11,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.4126",
+      "generated_symbol": null,
+      "id": "mac.code.4.4102",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.4272",
+      "generated_symbol": null,
+      "id": "mac.code.4.4126",
+      "instruction_count": 51,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.4.4502",
+      "generated_symbol": null,
+      "id": "mac.code.4.4272",
+      "instruction_count": 67,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.4940",
+      "generated_symbol": null,
+      "id": "mac.code.4.4502",
+      "instruction_count": 166,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.5052",
+      "generated_symbol": null,
+      "id": "mac.code.4.4940",
+      "instruction_count": 47,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.4.5178",
+      "generated_symbol": null,
+      "id": "mac.code.4.5052",
+      "instruction_count": 47,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.8518",
+      "generated_symbol": null,
+      "id": "mac.code.5.8276",
+      "instruction_count": 71,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.8686",
+      "generated_symbol": null,
+      "id": "mac.code.5.8518",
+      "instruction_count": 47,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.8776",
+      "generated_symbol": null,
+      "id": "mac.code.5.8686",
+      "instruction_count": 32,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.8974",
+      "generated_symbol": null,
+      "id": "mac.code.5.8776",
+      "instruction_count": 64,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.9074",
+      "generated_symbol": null,
+      "id": "mac.code.5.8974",
+      "instruction_count": 33,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.9174",
+      "generated_symbol": null,
+      "id": "mac.code.5.9074",
+      "instruction_count": 33,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.9802",
+      "generated_symbol": null,
+      "id": "mac.code.5.9174",
+      "instruction_count": 199,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.9892",
+      "generated_symbol": null,
+      "id": "mac.code.5.9802",
+      "instruction_count": 29,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.9998",
+      "generated_symbol": null,
+      "id": "mac.code.5.9892",
+      "instruction_count": 38,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.10648",
+      "generated_symbol": null,
+      "id": "mac.code.5.9998",
+      "instruction_count": 181,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.13854",
+      "generated_symbol": null,
+      "id": "mac.code.5.10648",
+      "instruction_count": 283,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.16238",
+      "generated_symbol": null,
+      "id": "mac.code.5.13854",
+      "instruction_count": 241,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.16298",
+      "generated_symbol": null,
+      "id": "mac.code.5.16238",
+      "instruction_count": 19,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.17934",
+      "generated_symbol": null,
+      "id": "mac.code.5.16298",
+      "instruction_count": 494,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.18024",
+      "generated_symbol": null,
+      "id": "mac.code.5.17934",
+      "instruction_count": 27,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.18740",
+      "generated_symbol": null,
+      "id": "mac.code.5.18024",
+      "instruction_count": 265,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.19354",
+      "generated_symbol": null,
+      "id": "mac.code.5.18740",
+      "instruction_count": 208,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.20630",
+      "generated_symbol": null,
+      "id": "mac.code.5.19354",
+      "instruction_count": 394,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.5.21132",
+      "generated_symbol": null,
+      "id": "mac.code.5.20630",
+      "instruction_count": 66,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.21222",
+      "generated_symbol": null,
+      "id": "mac.code.5.21132",
+      "instruction_count": 26,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.5.21312",
+      "generated_symbol": null,
+      "id": "mac.code.5.21222",
+      "instruction_count": 26,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.5.21402",
+      "generated_symbol": null,
+      "id": "mac.code.5.21312",
+      "instruction_count": 26,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.5.23980",
+      "generated_symbol": null,
+      "id": "mac.code.5.21402",
+      "instruction_count": 531,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.24158",
+      "generated_symbol": null,
+      "id": "mac.code.5.23980",
+      "instruction_count": 70,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.24260",
+      "generated_symbol": null,
+      "id": "mac.code.5.24158",
+      "instruction_count": 36,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.24596",
+      "generated_symbol": null,
+      "id": "mac.code.5.24260",
+      "instruction_count": 98,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.5.25056",
+      "generated_symbol": null,
+      "id": "mac.code.5.24596",
+      "instruction_count": 132,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.1350",
+      "generated_symbol": null,
+      "id": "mac.code.6.830",
+      "instruction_count": 171,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.1424",
+      "generated_symbol": null,
+      "id": "mac.code.6.1350",
+      "instruction_count": 23,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.1580",
+      "generated_symbol": null,
+      "id": "mac.code.6.1424",
+      "instruction_count": 55,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.6.1720",
+      "generated_symbol": null,
+      "id": "mac.code.6.1580",
+      "instruction_count": 14,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.3168",
+      "generated_symbol": null,
+      "id": "mac.code.6.1720",
+      "instruction_count": 282,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.4232",
+      "generated_symbol": null,
+      "id": "mac.code.6.3168",
+      "instruction_count": 334,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.5176",
+      "generated_symbol": null,
+      "id": "mac.code.6.4232",
+      "instruction_count": 126,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.6728",
+      "generated_symbol": null,
+      "id": "mac.code.6.5176",
+      "instruction_count": 304,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.7924",
+      "generated_symbol": null,
+      "id": "mac.code.6.6728",
+      "instruction_count": 30,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.6.8118",
+      "generated_symbol": null,
+      "id": "mac.code.6.7924",
+      "instruction_count": 61,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.8302",
+      "generated_symbol": null,
+      "id": "mac.code.6.8118",
+      "instruction_count": 54,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.8348",
+      "generated_symbol": null,
+      "id": "mac.code.6.8302",
+      "instruction_count": 18,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.8632",
+      "generated_symbol": null,
+      "id": "mac.code.6.8348",
+      "instruction_count": 86,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.8878",
+      "generated_symbol": null,
+      "id": "mac.code.6.8632",
+      "instruction_count": 80,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.9048",
+      "generated_symbol": null,
+      "id": "mac.code.6.8878",
+      "instruction_count": 57,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.6.9538",
+      "generated_symbol": null,
+      "id": "mac.code.6.9048",
+      "instruction_count": 159,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.694",
+      "generated_symbol": null,
+      "id": "mac.code.7.486",
+      "instruction_count": 46,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.2178",
+      "generated_symbol": null,
+      "id": "mac.code.7.694",
+      "instruction_count": 362,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.2288",
+      "generated_symbol": null,
+      "id": "mac.code.7.2178",
+      "instruction_count": 37,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.2398",
+      "generated_symbol": null,
+      "id": "mac.code.7.2288",
+      "instruction_count": 37,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.2610",
+      "generated_symbol": null,
+      "id": "mac.code.7.2398",
+      "instruction_count": 67,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.3372",
+      "generated_symbol": null,
+      "id": "mac.code.7.2610",
+      "instruction_count": 246,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.3578",
+      "generated_symbol": null,
+      "id": "mac.code.7.3372",
+      "instruction_count": 61,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.4530",
+      "generated_symbol": null,
+      "id": "mac.code.7.3578",
+      "instruction_count": 298,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.5520",
+      "generated_symbol": null,
+      "id": "mac.code.7.4530",
+      "instruction_count": 301,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.5672",
+      "generated_symbol": null,
+      "id": "mac.code.7.5520",
+      "instruction_count": 50,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.5964",
+      "generated_symbol": null,
+      "id": "mac.code.7.5672",
+      "instruction_count": 96,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.6100",
+      "generated_symbol": null,
+      "id": "mac.code.7.5964",
+      "instruction_count": 43,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.6148",
+      "generated_symbol": null,
+      "id": "mac.code.7.6100",
+      "instruction_count": 15,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.6340",
+      "generated_symbol": null,
+      "id": "mac.code.7.6148",
+      "instruction_count": 59,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.6482",
+      "generated_symbol": null,
+      "id": "mac.code.7.6340",
+      "instruction_count": 47,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.6560",
+      "generated_symbol": null,
+      "id": "mac.code.7.6482",
+      "instruction_count": 28,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.6922",
+      "generated_symbol": null,
+      "id": "mac.code.7.6560",
+      "instruction_count": 111,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.7224",
+      "generated_symbol": null,
+      "id": "mac.code.7.6922",
+      "instruction_count": 106,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.7592",
+      "generated_symbol": null,
+      "id": "mac.code.7.7224",
+      "instruction_count": 108,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.7622",
+      "generated_symbol": null,
+      "id": "mac.code.7.7592",
+      "instruction_count": 9,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.7928",
+      "generated_symbol": null,
+      "id": "mac.code.7.7622",
+      "instruction_count": 74,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.8838",
+      "generated_symbol": null,
+      "id": "mac.code.7.7928",
+      "instruction_count": 197,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.9408",
+      "generated_symbol": null,
+      "id": "mac.code.7.8838",
+      "instruction_count": 194,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.10488",
+      "generated_symbol": null,
+      "id": "mac.code.7.9408",
+      "instruction_count": 374,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.12740",
+      "generated_symbol": null,
+      "id": "mac.code.7.10488",
+      "instruction_count": 701,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.13168",
+      "generated_symbol": null,
+      "id": "mac.code.7.12740",
+      "instruction_count": 138,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.13242",
+      "generated_symbol": null,
+      "id": "mac.code.7.13168",
+      "instruction_count": 21,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.13298",
+      "generated_symbol": null,
+      "id": "mac.code.7.13242",
+      "instruction_count": 17,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.14048",
+      "generated_symbol": null,
+      "id": "mac.code.7.13298",
+      "instruction_count": 256,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.14316",
+      "generated_symbol": null,
+      "id": "mac.code.7.14048",
+      "instruction_count": 86,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.14558",
+      "generated_symbol": null,
+      "id": "mac.code.7.14316",
+      "instruction_count": 78,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.14838",
+      "generated_symbol": null,
+      "id": "mac.code.7.14558",
+      "instruction_count": 98,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.14974",
+      "generated_symbol": null,
+      "id": "mac.code.7.14838",
+      "instruction_count": 40,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.15060",
+      "generated_symbol": null,
+      "id": "mac.code.7.14974",
+      "instruction_count": 30,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.15846",
+      "generated_symbol": null,
+      "id": "mac.code.7.15060",
+      "instruction_count": 241,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.15948",
+      "generated_symbol": null,
+      "id": "mac.code.7.15846",
+      "instruction_count": 40,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.16834",
+      "generated_symbol": null,
+      "id": "mac.code.7.15948",
+      "instruction_count": 292,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.16994",
+      "generated_symbol": null,
+      "id": "mac.code.7.16834",
+      "instruction_count": 50,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.17392",
+      "generated_symbol": null,
+      "id": "mac.code.7.16994",
+      "instruction_count": 132,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.17482",
+      "generated_symbol": null,
+      "id": "mac.code.7.17392",
+      "instruction_count": 31,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.17556",
+      "generated_symbol": null,
+      "id": "mac.code.7.17482",
+      "instruction_count": 27,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.18050",
+      "generated_symbol": null,
+      "id": "mac.code.7.17556",
+      "instruction_count": 171,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.18246",
+      "generated_symbol": null,
+      "id": "mac.code.7.18050",
+      "instruction_count": 64,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.18844",
+      "generated_symbol": null,
+      "id": "mac.code.7.18246",
+      "instruction_count": 202,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.19014",
+      "generated_symbol": null,
+      "id": "mac.code.7.18844",
+      "instruction_count": 59,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.19390",
+      "generated_symbol": null,
+      "id": "mac.code.7.19014",
+      "instruction_count": 133,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.19416",
+      "generated_symbol": null,
+      "id": "mac.code.7.19390",
+      "instruction_count": 9,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.19638",
+      "generated_symbol": null,
+      "id": "mac.code.7.19416",
+      "instruction_count": 88,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.19896",
+      "generated_symbol": null,
+      "id": "mac.code.7.19638",
+      "instruction_count": 80,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.7.19988",
+      "generated_symbol": null,
+      "id": "mac.code.7.19896",
+      "instruction_count": 32,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.20026",
+      "generated_symbol": null,
+      "id": "mac.code.7.19988",
+      "instruction_count": 14,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.7.22322",
+      "generated_symbol": null,
+      "id": "mac.code.7.20026",
+      "instruction_count": 608,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.8.8958",
+      "generated_symbol": null,
+      "id": "mac.code.8.8846",
+      "instruction_count": 36,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.8.9072",
+      "generated_symbol": null,
+      "id": "mac.code.8.8958",
+      "instruction_count": 37,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.9238",
+      "generated_symbol": null,
+      "id": "mac.code.8.9072",
+      "instruction_count": 51,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.8.13878",
+      "generated_symbol": null,
+      "id": "mac.code.8.9238",
+      "instruction_count": 844,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.13956",
+      "generated_symbol": null,
+      "id": "mac.code.8.13878",
+      "instruction_count": 26,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.15398",
+      "generated_symbol": null,
+      "id": "mac.code.8.13956",
+      "instruction_count": 430,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.16268",
+      "generated_symbol": null,
+      "id": "mac.code.8.15398",
+      "instruction_count": 284,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.16696",
+      "generated_symbol": null,
+      "id": "mac.code.8.16268",
+      "instruction_count": 134,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.16980",
+      "generated_symbol": null,
+      "id": "mac.code.8.16696",
+      "instruction_count": 108,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.17138",
+      "generated_symbol": null,
+      "id": "mac.code.8.16980",
+      "instruction_count": 58,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.17218",
+      "generated_symbol": null,
+      "id": "mac.code.8.17138",
+      "instruction_count": 27,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.17238",
+      "generated_symbol": null,
+      "id": "mac.code.8.17218",
+      "instruction_count": 7,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.17650",
+      "generated_symbol": null,
+      "id": "mac.code.8.17238",
+      "instruction_count": 136,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.8.17816",
+      "generated_symbol": null,
+      "id": "mac.code.8.17650",
+      "instruction_count": 59,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.8.18604",
+      "generated_symbol": null,
+      "id": "mac.code.8.17816",
+      "instruction_count": 234,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.1382",
+      "generated_symbol": null,
+      "id": "mac.code.9.604",
+      "instruction_count": 269,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.1698",
+      "generated_symbol": null,
+      "id": "mac.code.9.1382",
+      "instruction_count": 114,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.9.1818",
+      "generated_symbol": null,
+      "id": "mac.code.9.1698",
+      "instruction_count": 42,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.2360",
+      "generated_symbol": null,
+      "id": "mac.code.9.1818",
+      "instruction_count": 122,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.2456",
+      "generated_symbol": null,
+      "id": "mac.code.9.2360",
+      "instruction_count": 31,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.2552",
+      "generated_symbol": null,
+      "id": "mac.code.9.2456",
+      "instruction_count": 31,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.2650",
+      "generated_symbol": null,
+      "id": "mac.code.9.2552",
+      "instruction_count": 42,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.2676",
+      "generated_symbol": null,
+      "id": "mac.code.9.2650",
+      "instruction_count": 8,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.2714",
+      "generated_symbol": null,
+      "id": "mac.code.9.2676",
+      "instruction_count": 13,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.3476",
+      "generated_symbol": null,
+      "id": "mac.code.9.2714",
+      "instruction_count": 281,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.3538",
+      "generated_symbol": null,
+      "id": "mac.code.9.3476",
+      "instruction_count": 20,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.10962",
+      "generated_symbol": null,
+      "id": "mac.code.9.3538",
+      "instruction_count": 224,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.11324",
+      "generated_symbol": null,
+      "id": "mac.code.9.10962",
+      "instruction_count": 60,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.12226",
+      "generated_symbol": null,
+      "id": "mac.code.9.11324",
+      "instruction_count": 124,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.12346",
+      "generated_symbol": null,
+      "id": "mac.code.9.12226",
+      "instruction_count": 46,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.15180",
+      "generated_symbol": null,
+      "id": "mac.code.9.12346",
+      "instruction_count": 506,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.17216",
+      "generated_symbol": null,
+      "id": "mac.code.9.15180",
+      "instruction_count": 265,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.23566",
+      "generated_symbol": null,
+      "id": "mac.code.9.17216",
+      "instruction_count": 884,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.9.26080",
+      "generated_symbol": null,
+      "id": "mac.code.9.23566",
+      "instruction_count": 160,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.2700",
+      "generated_symbol": null,
+      "id": "mac.code.10.1482",
+      "instruction_count": 386,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.10014",
+      "generated_symbol": null,
+      "id": "mac.code.10.2700",
+      "instruction_count": 274,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.10706",
+      "generated_symbol": null,
+      "id": "mac.code.10.10014",
+      "instruction_count": 215,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.10840",
+      "generated_symbol": null,
+      "id": "mac.code.10.10706",
+      "instruction_count": 42,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.10950",
+      "generated_symbol": null,
+      "id": "mac.code.10.10840",
+      "instruction_count": 41,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.11522",
+      "generated_symbol": null,
+      "id": "mac.code.10.10950",
+      "instruction_count": 206,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.11556",
+      "generated_symbol": null,
+      "id": "mac.code.10.11522",
+      "instruction_count": 10,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.11720",
+      "generated_symbol": null,
+      "id": "mac.code.10.11556",
+      "instruction_count": 35,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.11852",
+      "generated_symbol": null,
+      "id": "mac.code.10.11720",
+      "instruction_count": 52,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.11978",
+      "generated_symbol": null,
+      "id": "mac.code.10.11852",
+      "instruction_count": 49,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.12198",
+      "generated_symbol": null,
+      "id": "mac.code.10.11978",
+      "instruction_count": 84,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.12392",
+      "generated_symbol": null,
+      "id": "mac.code.10.12198",
+      "instruction_count": 62,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.12510",
+      "generated_symbol": null,
+      "id": "mac.code.10.12392",
+      "instruction_count": 38,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.12682",
+      "generated_symbol": null,
+      "id": "mac.code.10.12510",
+      "instruction_count": 42,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.12700",
+      "generated_symbol": null,
+      "id": "mac.code.10.12682",
+      "instruction_count": 5,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.10.12738",
+      "generated_symbol": null,
+      "id": "mac.code.10.12700",
+      "instruction_count": 10,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.10.16740",
+      "generated_symbol": null,
+      "id": "mac.code.10.12738",
+      "instruction_count": 1136,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.17822",
+      "generated_symbol": null,
+      "id": "mac.code.10.16740",
+      "instruction_count": 177,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.18288",
+      "generated_symbol": null,
+      "id": "mac.code.10.17822",
+      "instruction_count": 169,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.18400",
+      "generated_symbol": null,
+      "id": "mac.code.10.18288",
+      "instruction_count": 43,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.18498",
+      "generated_symbol": null,
+      "id": "mac.code.10.18400",
+      "instruction_count": 36,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.19202",
+      "generated_symbol": null,
+      "id": "mac.code.10.18498",
+      "instruction_count": 148,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.19272",
+      "generated_symbol": null,
+      "id": "mac.code.10.19202",
+      "instruction_count": 26,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.20114",
+      "generated_symbol": null,
+      "id": "mac.code.10.19272",
+      "instruction_count": 285,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.20810",
+      "generated_symbol": null,
+      "id": "mac.code.10.20114",
+      "instruction_count": 235,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.10.21736",
+      "generated_symbol": null,
+      "id": "mac.code.10.20810",
+      "instruction_count": 282,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.24440",
+      "generated_symbol": null,
+      "id": "mac.code.10.21736",
+      "instruction_count": 480,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.10.24542",
+      "generated_symbol": null,
+      "id": "mac.code.10.24440",
+      "instruction_count": 32,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.10.24728",
+      "generated_symbol": null,
+      "id": "mac.code.10.24542",
+      "instruction_count": 57,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.10.25248",
+      "generated_symbol": null,
+      "id": "mac.code.10.24728",
+      "instruction_count": 155,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.10.25974",
+      "generated_symbol": null,
+      "id": "mac.code.10.25248",
+      "instruction_count": 12,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.486",
+      "generated_symbol": null,
+      "id": "mac.code.11.312",
+      "instruction_count": 63,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.832",
+      "generated_symbol": null,
+      "id": "mac.code.11.486",
+      "instruction_count": 123,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.1204",
+      "generated_symbol": null,
+      "id": "mac.code.11.832",
+      "instruction_count": 134,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.1452",
+      "generated_symbol": null,
+      "id": "mac.code.11.1204",
+      "instruction_count": 87,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.1640",
+      "generated_symbol": null,
+      "id": "mac.code.11.1452",
+      "instruction_count": 66,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.1946",
+      "generated_symbol": null,
+      "id": "mac.code.11.1640",
+      "instruction_count": 111,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.2258",
+      "generated_symbol": null,
+      "id": "mac.code.11.1946",
+      "instruction_count": 113,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.2658",
+      "generated_symbol": null,
+      "id": "mac.code.11.2258",
+      "instruction_count": 141,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.3016",
+      "generated_symbol": null,
+      "id": "mac.code.11.2658",
+      "instruction_count": 127,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.3250",
+      "generated_symbol": null,
+      "id": "mac.code.11.3016",
+      "instruction_count": 84,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.3574",
+      "generated_symbol": null,
+      "id": "mac.code.11.3250",
+      "instruction_count": 84,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.6306",
+      "generated_symbol": null,
+      "id": "mac.code.11.3574",
+      "instruction_count": 121,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.7692",
+      "generated_symbol": null,
+      "id": "mac.code.11.6306",
+      "instruction_count": 326,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.7868",
+      "generated_symbol": null,
+      "id": "mac.code.11.7692",
+      "instruction_count": 64,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.8058",
+      "generated_symbol": null,
+      "id": "mac.code.11.7868",
+      "instruction_count": 71,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.8168",
+      "generated_symbol": null,
+      "id": "mac.code.11.8058",
+      "instruction_count": 39,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.8224",
+      "generated_symbol": null,
+      "id": "mac.code.11.8168",
+      "instruction_count": 20,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.8256",
+      "generated_symbol": null,
+      "id": "mac.code.11.8224",
+      "instruction_count": 10,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.8386",
+      "generated_symbol": null,
+      "id": "mac.code.11.8256",
+      "instruction_count": 47,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.8478",
+      "generated_symbol": null,
+      "id": "mac.code.11.8386",
+      "instruction_count": 31,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.8908",
+      "generated_symbol": null,
+      "id": "mac.code.11.8478",
+      "instruction_count": 148,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.9408",
+      "generated_symbol": null,
+      "id": "mac.code.11.8908",
+      "instruction_count": 180,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.9618",
+      "generated_symbol": null,
+      "id": "mac.code.11.9408",
+      "instruction_count": 75,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.9684",
+      "generated_symbol": null,
+      "id": "mac.code.11.9618",
+      "instruction_count": 24,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.9938",
+      "generated_symbol": null,
+      "id": "mac.code.11.9684",
+      "instruction_count": 93,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.10146",
+      "generated_symbol": null,
+      "id": "mac.code.11.9938",
+      "instruction_count": 79,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.10310",
+      "generated_symbol": null,
+      "id": "mac.code.11.10146",
+      "instruction_count": 55,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.10408",
+      "generated_symbol": null,
+      "id": "mac.code.11.10310",
+      "instruction_count": 30,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.10506",
+      "generated_symbol": null,
+      "id": "mac.code.11.10408",
+      "instruction_count": 30,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.10604",
+      "generated_symbol": null,
+      "id": "mac.code.11.10506",
+      "instruction_count": 30,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.10760",
+      "generated_symbol": null,
+      "id": "mac.code.11.10604",
+      "instruction_count": 56,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.10832",
+      "generated_symbol": null,
+      "id": "mac.code.11.10760",
+      "instruction_count": 26,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.10910",
+      "generated_symbol": null,
+      "id": "mac.code.11.10832",
+      "instruction_count": 28,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.10988",
+      "generated_symbol": null,
+      "id": "mac.code.11.10910",
+      "instruction_count": 28,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.11074",
+      "generated_symbol": null,
+      "id": "mac.code.11.10988",
+      "instruction_count": 29,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.11160",
+      "generated_symbol": null,
+      "id": "mac.code.11.11074",
+      "instruction_count": 29,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.11418",
+      "generated_symbol": null,
+      "id": "mac.code.11.11160",
+      "instruction_count": 85,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.11522",
+      "generated_symbol": null,
+      "id": "mac.code.11.11418",
+      "instruction_count": 29,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.11626",
+      "generated_symbol": null,
+      "id": "mac.code.11.11522",
+      "instruction_count": 29,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.11800",
+      "generated_symbol": null,
+      "id": "mac.code.11.11626",
+      "instruction_count": 29,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.11934",
+      "generated_symbol": null,
+      "id": "mac.code.11.11800",
+      "instruction_count": 45,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.11940",
+      "generated_symbol": null,
+      "id": "mac.code.11.11934",
+      "instruction_count": 2,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.11946",
+      "generated_symbol": null,
+      "id": "mac.code.11.11940",
+      "instruction_count": 2,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12068",
+      "generated_symbol": null,
+      "id": "mac.code.11.11946",
+      "instruction_count": 49,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12190",
+      "generated_symbol": null,
+      "id": "mac.code.11.12068",
+      "instruction_count": 49,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12222",
+      "generated_symbol": null,
+      "id": "mac.code.11.12190",
+      "instruction_count": 12,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12254",
+      "generated_symbol": null,
+      "id": "mac.code.11.12222",
+      "instruction_count": 12,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12332",
+      "generated_symbol": null,
+      "id": "mac.code.11.12254",
+      "instruction_count": 30,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12410",
+      "generated_symbol": null,
+      "id": "mac.code.11.12332",
+      "instruction_count": 30,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12732",
+      "generated_symbol": null,
+      "id": "mac.code.11.12410",
+      "instruction_count": 106,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12802",
+      "generated_symbol": null,
+      "id": "mac.code.11.12732",
+      "instruction_count": 24,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.11.12866",
+      "generated_symbol": null,
+      "id": "mac.code.11.12802",
+      "instruction_count": 22,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12900",
+      "generated_symbol": null,
+      "id": "mac.code.11.12866",
+      "instruction_count": 13,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12934",
+      "generated_symbol": null,
+      "id": "mac.code.11.12900",
+      "instruction_count": 13,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.12968",
+      "generated_symbol": null,
+      "id": "mac.code.11.12934",
+      "instruction_count": 13,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.13002",
+      "generated_symbol": null,
+      "id": "mac.code.11.12968",
+      "instruction_count": 13,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.11.13048",
+      "generated_symbol": null,
+      "id": "mac.code.11.13002",
+      "instruction_count": 16,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.12.780",
+      "generated_symbol": null,
+      "id": "mac.code.12.408",
+      "instruction_count": 130,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.12.1724",
+      "generated_symbol": null,
+      "id": "mac.code.12.780",
+      "instruction_count": 326,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.12.1784",
+      "generated_symbol": null,
+      "id": "mac.code.12.1724",
+      "instruction_count": 24,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.12.1938",
+      "generated_symbol": null,
+      "id": "mac.code.12.1784",
+      "instruction_count": 55,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.12.1998",
+      "generated_symbol": null,
+      "id": "mac.code.12.1938",
+      "instruction_count": 19,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.12.3770",
+      "generated_symbol": null,
+      "id": "mac.code.12.1998",
+      "instruction_count": 587,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.12.3874",
+      "generated_symbol": null,
+      "id": "mac.code.12.3770",
+      "instruction_count": 26,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.12.6664",
+      "generated_symbol": null,
+      "id": "mac.code.12.3874",
+      "instruction_count": 847,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.12.7416",
+      "generated_symbol": null,
+      "id": "mac.code.12.6664",
+      "instruction_count": 258,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.12.7810",
+      "generated_symbol": null,
+      "id": "mac.code.12.7416",
+      "instruction_count": 113,
+      "states": [
+        "discovered"
+      ]
+    },
+    {
+      "end": "mac.code.12.7998",
+      "generated_symbol": null,
+      "id": "mac.code.12.7810",
+      "instruction_count": 41,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    },
+    {
+      "end": "mac.code.12.15306",
+      "generated_symbol": null,
+      "id": "mac.code.12.7998",
+      "instruction_count": 1927,
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ]
+    }
+  ],
+  "format": "portforge-function-census-v1",
+  "functions": [
+    {
+      "dynamic": null,
+      "entry_root": true,
+      "generated_symbol": "native_mac_code_1_4",
+      "hook_target": true,
+      "id": "mac.code.1.4",
+      "states": [
+        "discovered",
+        "statically_reachable",
+        "dynamically_observed",
+        "generated",
+        "active"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.8",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.150",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.170",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.190",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.218",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.272",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.304",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.338",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.370",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.1.556",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.506",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.648",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.768",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.796",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.1102",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.1496",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.2484",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.2622",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.2672",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": "native_mac_code_2_2906",
+      "hook_target": true,
+      "id": "mac.code.2.2906",
+      "states": [
+        "discovered",
+        "dynamically_observed",
+        "generated",
+        "active"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.2922",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3222",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3558",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3622",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3718",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3756",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3794",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3812",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3824",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3836",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3854",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3864",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.3898",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4016",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4064",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4150",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4280",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4366",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4446",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4838",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4866",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4896",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.4960",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5020",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5084",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5110",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5114",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5182",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5236",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5270",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5302",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5364",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5400",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5458",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5492",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5530",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5598",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5616",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5652",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5722",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5758",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5802",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5830",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5836",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5850",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5912",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5936",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5950",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5958",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.5976",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6004",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6028",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6052",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6076",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6100",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6124",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6148",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6172",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6246",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.6294",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.7596",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.7838",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.7896",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.8968",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.9282",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.9330",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.9382",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.10040",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.10146",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.10260",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.10396",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.10498",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.10640",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.2.10956",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.3.48",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.3.2632",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.3.2962",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.3.5924",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.3.6034",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.3.6538",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.32",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.60",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.88",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.2220",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.2388",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.2576",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.2692",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3266",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3366",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3424",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3458",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3484",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3528",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3538",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3544",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3578",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3612",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3636",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3678",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3726",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.3826",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.4022",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.4056",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.4102",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.4126",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.4272",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.4502",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.4940",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.4.5052",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.8276",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.8518",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.8686",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.8776",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.8974",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.9074",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.9174",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.9802",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.9892",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.9998",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.10648",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.13854",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.16238",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.16298",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.17934",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.18024",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.18740",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.19354",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.20630",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.21132",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.21222",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.21312",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.21402",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.23980",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.24158",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.24260",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.5.24596",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.830",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.1350",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.1424",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.1580",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.1720",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.3168",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.4232",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.5176",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.6728",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.7924",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.8118",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.8302",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.8348",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.8632",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.8878",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.6.9048",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.486",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.694",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.2178",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.2288",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.2398",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.2610",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.3372",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.3578",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.4530",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.5520",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.5672",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.5964",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.6100",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.6148",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.6340",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.6482",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.6560",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.6922",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.7224",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.7592",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.7622",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.7928",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.8838",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.9408",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.10488",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.12740",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.13168",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.13242",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.13298",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.14048",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.14316",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.14558",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.14838",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.14974",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.15060",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.15846",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.15948",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.16834",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.16994",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.17392",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.17482",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.17556",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.18050",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.18246",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.18844",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.19014",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.19390",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.19416",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.19638",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.19896",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.19988",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.7.20026",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.8846",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.8958",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.9072",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.9238",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.13878",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.13956",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.15398",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.16268",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.16696",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.16980",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.17138",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.17218",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.17238",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.17650",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.8.17816",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.604",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.1382",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.1698",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.1818",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.2360",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.2456",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.2552",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.2650",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.2676",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.2714",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.3476",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.3538",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.10962",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.11324",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.12226",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.12346",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.15180",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.17216",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.9.23566",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.1482",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.2700",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.10014",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.10706",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.10840",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.10950",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.11522",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.11556",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.11720",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.11852",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.11978",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.12198",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.12392",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.12510",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.12682",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.12700",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.12738",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.16740",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.17822",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.18288",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.18400",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.18498",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.19202",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.19272",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.20114",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.20810",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.21736",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.24440",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.24542",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.24728",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.10.25248",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.312",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.486",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.832",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.1204",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.1452",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.1640",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.1946",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.2258",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.2658",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.3016",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.3250",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.3574",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.6306",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.7692",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.7868",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.8058",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.8168",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.8224",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.8256",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.8386",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.8478",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.8908",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.9408",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.9618",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.9684",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.9938",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.10146",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.10310",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.10408",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.10506",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.10604",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.10760",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.10832",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.10910",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.10988",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.11074",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.11160",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.11418",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.11522",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.11626",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.11800",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.11934",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.11940",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.11946",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12068",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12190",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12222",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12254",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12332",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12410",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12732",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12802",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12866",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12900",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12934",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.12968",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.11.13002",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.408",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.780",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.1724",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.1784",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.1938",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.1998",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.3770",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.3874",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.6664",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.7416",
+      "states": [
+        "discovered"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.7810",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    },
+    {
+      "dynamic": null,
+      "entry_root": false,
+      "generated_symbol": null,
+      "hook_target": false,
+      "id": "mac.code.12.7998",
+      "states": [
+        "discovered",
+        "dynamically_observed"
+      ],
+      "static_block": true,
+      "static_callers": []
+    }
+  ],
+  "scope": {
+    "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
+    "rule": "Every MPW export is discovered; only the launch entry is statically reachable without a complete call graph. Dynamic observation records executed-byte evidence, not invocation counts.",
+    "static_completeness": {
+      "boundary_authority": "MPW export table",
+      "code_bytes": 182266,
+      "decoded_bytes": 123172,
+      "exports": 359,
+      "indirect_control_transfer_sites": 1569,
+      "unresolved_target_enumeration": "not available in lift plan v1"
+    }
+  },
+  "sources": {
+    "lift_plan": "artifacts/analysis/mac_static_lift_plan.json",
+    "lift_plan_sha256": "6ca054324c5a4f5d66174c1bc96dcd421d101c847d166b68da8d320d679a19f6",
+    "native_selection": "recovery/native-selection.json",
+    "native_selection_sha256": "a0506ead4ed4da9cb76893a7c809c249d3fbfde12e639552a626d5c745b8841d"
+  },
+  "state_definitions": {
+    "active": "The generated-with-fallback runtime installs this implementation by default.",
+    "discovered": "An MPW export boundary identifies the function entry.",
+    "dynamically_observed": "At least one byte in the export span was executed in the linked lift snapshot.",
+    "generated": "A deterministic native emitter owns an exact-source-guarded implementation.",
+    "statically_reachable": "The entry is the application root or has a proven static path from it."
+  },
+  "summary": {
+    "code_states": {
+      "active": 2,
+      "discovered": 359,
+      "dynamically_observed": 277,
+      "generated": 2,
+      "statically_reachable": 1
+    },
+    "code_units": 359,
+    "function_states": {
+      "active": 2,
+      "discovered": 359,
+      "dynamically_observed": 277,
+      "generated": 2,
+      "statically_reachable": 1
+    },
+    "functions": 359,
+    "unresolved_indirect_targets": 0
+  },
+  "unresolved_indirect_targets": []
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "port_forge/schemas/portforge-detachment-report-v1.schema.json",
   "format": "portforge-detachment-report-v1",
-  "plan_sha256": "982295d554002531097c0d0d55c40cf25de04f5093815d825dcfa4a3fa8b41ef",
+  "plan_sha256": "b5d21749256626b6ceb0a2ba61a53b744caa86d29dc95d99ca17449a32d7859c",
   "platform": "mac68k",
   "project": "simant-mac",
   "properties": {

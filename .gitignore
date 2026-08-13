@@ -2,6 +2,9 @@
 assets/*
 !assets/README.md
 artifacts/*
+!artifacts/analysis/
+artifacts/analysis/*
+!artifacts/analysis/mac_function_census.json
 !artifacts/replays/
 artifacts/replays/*
 !artifacts/replays/canonical-event-poll-v2.pfreplay.json

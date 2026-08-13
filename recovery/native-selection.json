@@ -1,0 +1,25 @@
+{
+  "format": "simant-mac-native-selection-v1",
+  "program_sha256": "3e73ef63500bed0c666db56a25b5a5951c09d9a266c8c682f373b2825050f351",
+  "lift_plan_sha256": "6ca054324c5a4f5d66174c1bc96dcd421d101c847d166b68da8d320d679a19f6",
+  "functions": [
+    {
+      "code_identity": "mac.code.1.4",
+      "certificate": "instruction",
+      "source_instructions": [
+        {"bytes": "00000312", "length": 4, "resource_offset": 4}
+      ]
+    },
+    {
+      "code_identity": "mac.code.2.2906",
+      "certificate": "linear-function",
+      "source_instructions": [
+        {"bytes": "4e560000", "length": 4, "resource_offset": 2906},
+        {"bytes": "206e0008", "length": 4, "resource_offset": 2910},
+        {"bytes": "20280002", "length": 4, "resource_offset": 2914},
+        {"bytes": "4e5e", "length": 2, "resource_offset": 2918},
+        {"bytes": "4e75", "length": 2, "resource_offset": 2920}
+      ]
+    }
+  ]
+}

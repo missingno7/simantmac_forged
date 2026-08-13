@@ -1,14 +1,15 @@
 # Standalone and generated-build readiness audit
 
-Status: audited against PortForge `2cf2aa73` on 2026-08-13.
+Status: audited against PortForge `af621168` on 2026-08-13.
 
 ## Verdict
 
 The project is a working, reproducible Mac68k **oracle** integration and now
 also has a first generated-with-fallback executable. The generated composition
-executes `mac.code.1.4` natively and interprets every remaining CODE
-instruction. It is not a detached native port: both runtimes boot the original
-HFS application from `SimAnt_CD.iso`.
+executes `mac.code.1.4` and the first recovered linear leaf
+`mac.code.2.2906` natively, and interprets every remaining CODE instruction.
+It is not a detached native port: both runtimes boot the original HFS
+application from `SimAnt_CD.iso`.
 
 The Win16 `simant_forged` release is the nearest achievable first target, but
 that target must be described accurately: it is a packaged
@@ -30,8 +31,11 @@ milestone.
 - Static recovery decodes 123,172 of 182,266 CODE bytes (67.58%), identifies
   40,160 instructions, 359 MPW export spans, and 1,587 direct trap sites across
   219 trap slots.
-- The retained dynamic audit reaches 205 export ranges and marks 49 as
-  conservative native candidates. Candidate status is triage only; it is not
+- The retained dynamic audit touches 277 export ranges. The machine-readable
+  census keeps all 359 stable MPW export identities visible and marks exactly
+  two generated implementations active. Dynamic byte coverage is not promoted
+  into invented invocation counts or static reachability. It also identifies
+  conservative native candidates; candidate status is triage only and is not
   a semantic-equivalence proof.
 - Forty statically reachable trap slots are still unimplemented. The largest
   groups are File Manager I/O and metadata, Dialog Manager, TextEdit,
@@ -46,10 +50,11 @@ milestone.
 - PortForge already provides source-authenticated CODE identities, a Mac68k
   lift plan, movable-segment-aware exact-byte native hook guards, and safe
   fallback primitives. The shared Mac executor now dispatches certified
-  one-instruction fallthrough hooks, emits native/fallback observations, and
-  forces interpreter execution for precise steps. The project owns the first
-  generated block and generated Qt runner; a general Mac code generator does
-  not yet exist.
+  one-instruction fallthrough hooks and fully decoded linear functions ending
+  in return, emits native/fallback observations, and forces interpreter
+  execution for precise steps. The project owns a deterministic, deliberately
+  strict generator for the two selected forms and the generated Qt runner; a
+  general control-flow generator does not yet exist.
 
 ## Milestone A: packaged generated-with-fallback executable
 
@@ -58,10 +63,12 @@ This is the correct analogue of the present Win16 release.
 1. Promote the reusable Mac decoder/IR/lifting chain from analysis artifacts
    into declared PortForge capabilities. Every undecoded edge must remain an
    explicit frontier, never guessed control flow.
-2. Expand the current hand-authored first block into a Mac68k generator that emits compilable host blocks from stable
-   `mac.code.<resource>.<offset>` identities and exact source hashes.
-3. Extend the now-active `NativeHooks` executor dispatch beyond certified
-   one-instruction fallthrough blocks. A generated block must enter
+2. Expand the current strict two-form Mac68k generator into additional proved
+   IR forms while retaining stable `mac.code.<resource>.<offset>` identities
+   and exact source hashes.
+3. Extend `NativeHooks` beyond certified one-instruction and linear-return
+   functions only when the generator can publish a stronger control-flow
+   certificate. A generated block must enter
    and leave through authenticated CPU/memory state, follow movable CODE
    segments, expose normalized observations, and fall back before effects when
    its guard or coverage fails.
@@ -113,11 +120,14 @@ detached engine may still need an external lawful asset-install step.
 
 ## Work order
 
-The first generated vertical slice is complete for `mac.code.1.4`: executor
-dispatch, exact source guards, exhaustive instruction parity, observable
-fallback, generated execution identity, and canonical replay all pass. The
-next bounded slice should promote a small executed trap-free routine and add
-the generator/ABI contract needed to avoid hand-authoring it. In parallel with
+The first generated instruction and function slices are complete. The entry
+instruction `mac.code.1.4` passes 8,192 exhaustive input/flag cases, while
+`mac.code.2.2906` passes 8,224 full entry-to-return oracle comparisons plus
+wrong-offset, wrong-endian, and changed-source poison gates. Both are emitted
+from the lift plan and selection record rather than hand-authored in the
+tracked header. The next bounded slice should add measured ABI/read-write
+evidence and promote a branch-bearing routine only after its control-flow
+certificate exists. In parallel with
 later coverage work, complete canonical PCM/video,
 deadline-safety, F12 corpus, and external-emulator differential scenarios so
 the oracle remains trustworthy enough to certify replacements.

@@ -1,6 +1,6 @@
 {
   "$schema": "port_forge/schemas/portforge-execution-plan-v1.schema.json",
-  "catalog_sha256": "f07ab7bc219df7b51b600f3ad468fa6c67ce51647fa8ef8f4c840cae1d891e3a",
+  "catalog_sha256": "9ee0885bacb9cd583220c82b8b20d3154a2cea06e644ea8ef8eb2319268c9ecb",
   "descriptors": [
     {
       "descriptor_sha256": "ee2a18d95315c6576feff73404cdcff58f62a453d825fc08295ead3e7d2ba8eb",
@@ -48,7 +48,7 @@
     "runtime.semantic-boundary",
     "services.classic-mac-toolbox"
   ],
-  "plan_sha256": "5d6522959e634c00800ef367d4141f38acf85d81f11cfa8d59ccdcc71ff10a1c",
+  "plan_sha256": "f9c5281ee44f9ae2d5bab3a9ebe24f35bc2bc8a920dcb9894bb17fe2e9831c76",
   "platform": "mac68k",
   "project": "simant-mac",
   "provides": [

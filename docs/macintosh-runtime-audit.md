@@ -120,6 +120,11 @@ The current slice adds:
 - a generated-with-fallback Qt composition whose first SimAnt instruction
   (`mac.code.1.4`) passes 8,192 exhaustive register/flag parity cases and the
   complete canonical ArtifactV2 playback;
+- deterministic generation and full entry-to-return differential coverage for
+  the first linear leaf (`mac.code.2.2906`): 8,224 oracle comparisons plus
+  wrong-offset, wrong-endian, and exact-source mutation poison gates;
+- a stable 359-function MPW export census that exposes 277 dynamically touched
+  ranges to PortForge status, context, and census-only frontier analysis;
 - host-time display pacing, exact QuickDraw source caching, and a bounded Qt
   paint flush so long simulation/recording advances cannot leave a responsive
   Quick Game frame visually stale or repeatedly reproject unchanged bitmaps;
@@ -197,11 +202,12 @@ segment unloading/purging and full zone behavior remain approximate.
    event semantics with the existing Window/Control Managers and project only
    standard widgets to Qt.
 3. **Macintosh generated semantics and parity machinery.** Stable identities,
-   source-authenticated lift plans, movable-segment native block registration,
-   source-change fallback, and exhaustive parity for the first generated
-   instruction now exist. The Mac path still needs a general generator,
-   function ABI/effect descriptions, and automatic original-versus-native
-   entry/return checkpoint comparison for wider blocks.
+   source-authenticated lift plans, movable-segment native registration,
+   source-change fallback, deterministic generation, and exhaustive parity for
+   the first instruction and linear function now exist. The Mac path still
+   needs a general control-flow generator, machine-readable ABI/effect
+   descriptions, and automatic entry/return checkpoint comparison for wider
+   branch-bearing functions.
 4. **Remaining graphics contracts.** `SetPortBits`, `ClosePort`, and
    `SetCPortPix` remain fail-loud. The reached `SetCPixel`, `GetFontInfo`,
    `PaintRgn`, and `FillCRgn` paths now use indexed pixel writes, synthetic
@@ -245,14 +251,15 @@ the failing PC directly, so future trap snapshots need no legacy repair.
 
 ## First native replacement candidates
 
-The lift plan contains 40,160 decoded instructions and overlays the canonical
-checkpoint onto 205 executed MPW export ranges. Its stricter first pass finds
-49 ranges with no direct static trap, unresolved indirect transfer, or
+The lift plan contains 40,160 decoded instructions and overlays the retained
+checkpoint onto 277 executed MPW export ranges. Its stricter first pass finds
+77 ranges with no direct static trap, unresolved indirect transfer, or
 dynamically attributed trap call. The best initial parity experiments are
 small, completely executed ranges:
 
 | Stable identity | Span | Executed | Coverage |
 |---|---:|---:|---:|
+| `mac.code.2.2906` (generated) | 16 | 16 | 100% |
 | `mac.code.7.3372` | 206 | 206 | 100% |
 | `mac.code.12.7810` | 188 | 188 | 100% |
 | `mac.code.10.10840` | 110 | 110 | 100% |

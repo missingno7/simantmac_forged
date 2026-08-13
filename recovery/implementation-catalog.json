@@ -1,69 +1,162 @@
 {
   "$schema": "port_forge/schemas/portforge-implementation-catalog-v1.schema.json",
-  "format": "portforge-implementation-catalog-v1",
-  "project": "simant-mac",
-  "platform": "mac68k",
   "descriptors": [
     {
+      "conflicts": [],
+      "content": [
+        {
+          "path": "game.json",
+          "role": "mounted media and application identities",
+          "sha256": "95fcbe06909a17cecff973caa892d164fc7de34a988dc5ae249cf52207d2b9ba"
+        },
+        {
+          "path": "docs/asset-inventory.md",
+          "role": "media provenance",
+          "sha256": "0e72d96905628b64b6891165253664dd3f9215db72718eaab03441f26f335ad2"
+        }
+      ],
       "id": "simant-mac.bootstrap.original-hfs",
       "kind": "bootstrap-provider",
-      "owns": ["bootstrap.media", "bootstrap.application"],
-      "provides": ["bootable"],
-      "requires": [],
-      "conflicts": [],
-      "requires_capabilities": [],
-      "runtime_dependencies": ["original-executable", "original-code"],
-      "content": [
-        {"path": "game.json", "sha256": "95fcbe06909a17cecff973caa892d164fc7de34a988dc5ae249cf52207d2b9ba", "role": "mounted media and application identities"},
-        {"path": "docs/asset-inventory.md", "sha256": "0e72d96905628b64b6891165253664dd3f9215db72718eaab03441f26f335ad2", "role": "media provenance"}
+      "notes": "The proprietary HFS image remains a runtime input and is authenticated separately by ReplayIdentity/environment.",
+      "owns": [
+        "bootstrap.media",
+        "bootstrap.application"
       ],
-      "notes": "The proprietary HFS image remains a runtime input and is authenticated separately by ReplayIdentity/environment."
+      "provides": [
+        "bootable"
+      ],
+      "requires": [],
+      "requires_capabilities": [],
+      "runtime_dependencies": [
+        "original-executable",
+        "original-code"
+      ]
     },
     {
+      "conflicts": [],
+      "content": [
+        {
+          "path": "profiles/replay-boundaries-v1.json",
+          "role": "semantic event-poll and mac.tick timed-input contract",
+          "sha256": "b85223488a44667380e583c6717e41269aba33645ce6cc173045765d7bf8f902"
+        }
+      ],
       "id": "portforge.mac68k.common-session",
       "kind": "runtime-service",
-      "owns": ["runtime.replay-session", "runtime.semantic-boundary"],
-      "provides": ["replay-recording", "replay-playback", "semantic-boundaries"],
+      "owns": [
+        "runtime.replay-session",
+        "runtime.semantic-boundary"
+      ],
+      "provides": [
+        "replay-recording",
+        "replay-playback",
+        "semantic-boundaries"
+      ],
       "requires": [],
-      "conflicts": [],
       "requires_capabilities": [],
-      "runtime_dependencies": ["cpu-model", "guest-memory", "platform-services", "portforge-runtime", "replay"],
-      "content": [
-        {"path": "profiles/replay-boundaries-v1.json", "sha256": "b85223488a44667380e583c6717e41269aba33645ce6cc173045765d7bf8f902", "role": "semantic event-poll and mac.tick timed-input contract"}
+      "runtime_dependencies": [
+        "cpu-model",
+        "guest-memory",
+        "platform-services",
+        "portforge-runtime",
+        "replay"
       ]
     },
     {
+      "conflicts": [
+        "simant-mac.generated-with-fallback"
+      ],
+      "content": [
+        {
+          "path": "scripts/play.py",
+          "role": "Qt runtime selection and identity binding",
+          "sha256": "6a9987f4a9f74585b906aee006119544c191e219a6abe858490a7da0ff402a02"
+        }
+      ],
       "id": "simant-mac.oracle-interpreter",
       "kind": "implementation",
-      "owns": ["execution.cpu", "services.classic-mac-toolbox"],
-      "provides": ["bootable", "normalized-observation"],
-      "requires": ["simant-mac.bootstrap.original-hfs", "portforge.mac68k.common-session"],
-      "conflicts": ["simant-mac.generated-with-fallback"],
+      "owns": [
+        "execution.cpu",
+        "services.classic-mac-toolbox"
+      ],
+      "provides": [
+        "bootable",
+        "normalized-observation"
+      ],
+      "requires": [
+        "simant-mac.bootstrap.original-hfs",
+        "portforge.mac68k.common-session"
+      ],
       "requires_capabilities": [],
-      "runtime_dependencies": ["interpreter", "oracle", "original-code"],
-      "content": [
-        {"path": "scripts/play.py", "sha256": "6a9987f4a9f74585b906aee006119544c191e219a6abe858490a7da0ff402a02", "role": "Qt runtime selection and identity binding"}
+      "runtime_dependencies": [
+        "interpreter",
+        "oracle",
+        "original-code"
       ]
     },
     {
+      "conflicts": [
+        "simant-mac.oracle-interpreter"
+      ],
+      "content": [
+        {
+          "path": "native/simant_mac_generated.hpp",
+          "role": "source-guarded generated Mac68k implementations",
+          "sha256": "79ff5ae8829a7d85d71480af44597967eb9439cd27a6dcd255c7a5e55f433ced"
+        },
+        {
+          "path": "scripts/generate_native.py",
+          "role": "deterministic native emitter",
+          "sha256": "59acabdbe5fdf6db6e7a2d1abcd498672333251f261c53d63cd3a94af2161849"
+        },
+        {
+          "path": "recovery/native-selection.json",
+          "role": "selected stable identities and dispatch certificates",
+          "sha256": "a0506ead4ed4da9cb76893a7c809c249d3fbfde12e639552a626d5c745b8841d"
+        },
+        {
+          "path": "simant_mac_generated.pro",
+          "role": "generated Qt composition",
+          "sha256": "51b39dbc23848e42280eef9f76d209b13a9f31fc687c4645f7001409bd9aa75a"
+        },
+        {
+          "path": "scripts/play.py",
+          "role": "generated runtime selection and plan binding",
+          "sha256": "6a9987f4a9f74585b906aee006119544c191e219a6abe858490a7da0ff402a02"
+        }
+      ],
       "id": "simant-mac.generated-with-fallback",
       "kind": "implementation",
-      "owns": ["execution.cpu", "services.classic-mac-toolbox"],
-      "provides": ["bootable", "generated-execution", "normalized-observation"],
-      "requires": ["simant-mac.bootstrap.original-hfs", "portforge.mac68k.common-session"],
-      "conflicts": ["simant-mac.oracle-interpreter"],
-      "requires_capabilities": [],
-      "runtime_dependencies": ["interpreter", "original-code"],
-      "content": [
-        {"path": "native/simant_mac_generated.hpp", "sha256": "727a40579e911019beb41879bd464195fe276168f54a2b7b6430179fbb1f62de", "role": "source-guarded generated mac.code.1.4 implementation"},
-        {"path": "simant_mac_generated.pro", "sha256": "51b39dbc23848e42280eef9f76d209b13a9f31fc687c4645f7001409bd9aa75a", "role": "generated Qt composition"},
-        {"path": "scripts/play.py", "sha256": "6a9987f4a9f74585b906aee006119544c191e219a6abe858490a7da0ff402a02", "role": "generated runtime selection and plan binding"}
+      "notes": "The generated entry instruction and first linear leaf are exact-source guarded; interpreter fallback remains explicit. This is not a detached product.",
+      "owns": [
+        "execution.cpu",
+        "services.classic-mac-toolbox"
       ],
-      "notes": "The first generated fallthrough instruction is exact-source guarded and interpreter fallback remains explicit. This is not a detached product."
+      "provides": [
+        "bootable",
+        "generated-execution",
+        "normalized-observation"
+      ],
+      "requires": [
+        "simant-mac.bootstrap.original-hfs",
+        "portforge.mac68k.common-session"
+      ],
+      "requires_capabilities": [],
+      "runtime_dependencies": [
+        "interpreter",
+        "original-code"
+      ]
     }
   ],
+  "format": "portforge-implementation-catalog-v1",
+  "platform": "mac68k",
+  "project": "simant-mac",
   "roles": {
-    "oracle-interpreter": ["simant-mac.oracle-interpreter"],
-    "generated-with-fallback": ["simant-mac.generated-with-fallback"]
+    "generated-with-fallback": [
+      "simant-mac.generated-with-fallback"
+    ],
+    "oracle-interpreter": [
+      "simant-mac.oracle-interpreter"
+    ]
   }
 }

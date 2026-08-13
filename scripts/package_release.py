@@ -29,9 +29,9 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def reset_stage(path: Path) -> None:
+def reset_stage(path: Path, dist: Path) -> None:
     resolved = path.resolve()
-    if resolved.parent != DIST.resolve():
+    if resolved.parent != dist.resolve():
         raise RuntimeError(f"refusing to replace unexpected path: {resolved}")
     if resolved.exists():
         shutil.rmtree(resolved)
@@ -71,8 +71,8 @@ def build_launcher(compiler: Path, stage: Path, environment: dict[str, str]) -> 
     subprocess.run(command, cwd=ROOT, env=environment, check=True)
 
 
-def make_zip(stage: Path) -> Path:
-    archive = DIST / f"{PACKAGE_NAME}.zip"
+def make_zip(stage: Path, dist: Path) -> Path:
+    archive = dist / f"{PACKAGE_NAME}.zip"
     if archive.exists():
         archive.unlink()
     with zipfile.ZipFile(
@@ -94,9 +94,15 @@ def make_zip(stage: Path) -> Path:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port-forge", type=Path, default=port_forge_default())
+    parser.add_argument(
+        "--dist", type=Path, default=DIST,
+        help="output directory (defaults to the project dist directory)",
+    )
     parser.add_argument("--no-build", action="store_true")
     options = parser.parse_args()
     port_forge = options.port_forge.resolve()
+    dist = options.dist.resolve()
+    dist.mkdir(parents=True, exist_ok=True)
     sys.path.insert(0, str(port_forge / "scripts"))
     import qt_build_util
 
@@ -107,13 +113,13 @@ def main() -> int:
     elif not runner.is_file():
         raise RuntimeError(f"--no-build requested but {runner} is absent")
 
-    stage = DIST / PACKAGE_NAME
-    reset_stage(stage)
+    stage = dist / PACKAGE_NAME
+    reset_stage(stage, dist)
     deploy_qt(qmake, runner, stage, environment)
     build_launcher(make.parent / "g++.exe", stage, environment)
-    archive = make_zip(stage)
+    archive = make_zip(stage, dist)
     digest = sha256(archive)
-    checksum = DIST / f"{archive.name}.sha256"
+    checksum = dist / f"{archive.name}.sha256"
     checksum.write_text(
         f"{digest}  {archive.name}\n", encoding="ascii", newline="\n"
     )

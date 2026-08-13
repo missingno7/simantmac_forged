@@ -37,7 +37,7 @@
     },
     "machine-exact-snapshot": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "057b6540fc5bf04890a188e2e48f0f6fb0eafb068ddef5704c7353a68bfb1c99", "detail": "A real 2M + 0.5M resumed run exactly matches a direct 2.5M run across memory, executed coverage, cursor-free v3 restorable state, and the single machine event cursor."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "f1eaa744853648263097cf3f997c3d13354754e749d36d67fa2c54ef249aa539", "detail": "A real 2M + 0.5M resumed run exactly matches a direct 2.5M run across memory, executed coverage, cursor-free v3 restorable state, and the single machine event cursor."}],
       "blockers": ["The scoped machine-exact proof passes, but graph-level conformance awaits complete deadline-safe coverage."]
     },
     "replay-session-continuation": {
@@ -47,12 +47,12 @@
     },
     "canonical-audio": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "057b6540fc5bf04890a188e2e48f0f6fb0eafb068ddef5704c7353a68bfb1c99", "detail": "Machine continuation includes deterministic Sound Manager source state and excludes the host queue."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "f1eaa744853648263097cf3f997c3d13354754e749d36d67fa2c54ef249aa539", "detail": "Machine continuation includes deterministic Sound Manager source state and excludes the host queue."}],
       "blockers": ["Add canonical PCM sequence/hash and host callback partition-invariance conformance with active playback."]
     },
     "canonical-video": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "057b6540fc5bf04890a188e2e48f0f6fb0eafb068ddef5704c7353a68bfb1c99", "detail": "Machine continuation includes QuickDraw/source surfaces and excludes Qt window/GPU authority."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "f1eaa744853648263097cf3f997c3d13354754e749d36d67fa2c54ef249aa539", "detail": "Machine continuation includes QuickDraw/source surfaces and excludes Qt window/GPU authority."}],
       "blockers": ["Add timestamped canonical video commit hashes independent of presentation cadence."]
     },
     "normalized-observation": {
@@ -65,38 +65,39 @@
     },
     "atlas": {
       "state": "conformant",
-      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "978a70fd2c7fa7ab1fabb9b5d824c013834c0e84a8ac7e4f68d7b738e5ec9ba3", "detail": "Regeneratable oracle evidence projection with a content-addressed input and stable delete/rematerialize output; generated parity remains separate evidence to avoid duplicate interpreted occurrences."}],
+      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "ec9d1efd60252d0aedc42f65d9d6479d079a3f8bf1c7abae70807f9b110a9616", "detail": "Regeneratable oracle evidence projection with a content-addressed input and stable delete/rematerialize output; generated parity remains separate evidence to avoid duplicate interpreted occurrences."}],
       "blockers": []
     },
     "implementation-planning": {
       "state": "conformant",
       "evidence": [
-        {"kind": "source", "path": "recovery/implementation-catalog.json", "sha256": "1dbaa3caa32a1b21e0f177d7d12383f4d521b5d14f86cd31172d3b8b8e13d99e", "detail": "Content-bound HFS bootstrap, common session, oracle, and generated-with-fallback descriptors."},
-        {"kind": "artifact", "path": "recovery/execution-plan-oracle.json", "sha256": "91af72ce5243b285fa15ae3c1c85b052f9a27832817e7a59138c895898ee3358", "detail": "Resolved immutable oracle dependency closure."},
-        {"kind": "artifact", "path": "recovery/execution-plan-generated.json", "sha256": "42a17a3d5e2ca251275c607aa036a65e67982bfc9b5f5a9adab374861a8e859f", "detail": "Resolved generated-with-interpreter-fallback dependency closure."}
+        {"kind": "source", "path": "recovery/implementation-catalog.json", "sha256": "7020575d1a75fd48b9f870b11e7a1c83ca699850f8bda0346ce3afbf3754d003", "detail": "Content-bound HFS bootstrap, common session, oracle, and generated-with-fallback descriptors."},
+        {"kind": "artifact", "path": "recovery/execution-plan-oracle.json", "sha256": "f27fad32becde1c1fff36e5438499ab1ac2dc29db8d94808154e97bfd3f04243", "detail": "Resolved immutable oracle dependency closure."},
+        {"kind": "artifact", "path": "recovery/execution-plan-generated.json", "sha256": "c02c39591f1222fffa2e7567554909380d9b0485f2e5c54a6146c0b3935773c4", "detail": "Resolved generated-with-interpreter-fallback dependency closure."}
       ],
       "blockers": []
     },
     "detachment-reporting": {
       "state": "conformant",
       "evidence": [
-        {"kind": "workflow-report", "path": "recovery/execution-plan-oracle.detachment.json", "sha256": "0f84d1335c61bd6531c6e854df70f1ea25f935e90138c938a6bf108ce1102ed9", "detail": "The oracle plan truthfully reports original media/code, interpreter, PortForge runtime, platform service, and replay dependencies."},
-        {"kind": "workflow-report", "path": "recovery/execution-plan-generated.detachment.json", "sha256": "d704bce25b528d161843fda37345749a1c78d8c37e5e78aacd8f27f4c2ef49c6", "detail": "The generated plan removes oracle authority but truthfully retains original media/code, interpreter fallback, platform services, replay, and PortForge runtime."}
+        {"kind": "workflow-report", "path": "recovery/execution-plan-oracle.detachment.json", "sha256": "03503c668ac3bc77ab5644c81811ff7e06e672cd488ff3cc9f10df07410db591", "detail": "The oracle plan truthfully reports original media/code, interpreter, PortForge runtime, platform service, and replay dependencies."},
+        {"kind": "workflow-report", "path": "recovery/execution-plan-generated.detachment.json", "sha256": "2e3a93f27c27f8e8780812a5679f00c08a5660612a6d96d8e7e5b161cc06cb2b", "detail": "The generated plan removes oracle authority but truthfully retains original media/code, interpreter fallback, platform services, replay, and PortForge runtime."}
       ],
       "blockers": []
     },
     "generated-execution": {
       "state": "partial",
-      "evidence": [{"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-generated-v3.json", "sha256": "072a4c6552649b9a627397d4690aa396c0e11a4a16edd6372dd924db7fcd62ad", "detail": "The generated-with-fallback Qt composition verifies all 16 canonical replay boundaries with one source-guarded native mac.code.1.4 dispatch and an explicit transition to interpreter fallback for the remainder."}],
-      "blockers": ["Expand generated coverage beyond one instruction and close the decoder/IR/lifting and deadline-safe prerequisites before conformance."]
+      "evidence": [{"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-generated-v3.json", "sha256": "f3e968a1fc335bcd4a4bdc9d0c78c8b1356c67d2a229b14de65297f3ecd38f7a", "detail": "The generated-with-fallback Qt composition verifies all 16 canonical replay boundaries with one source-guarded native mac.code.1.4 dispatch and an explicit transition to interpreter fallback for the remainder."}],
+      "blockers": ["Expand generated coverage beyond two selected identities, add branch-bearing IR certificates, and close deadline-safe prerequisites before conformance; the canonical replay currently observes only mac.code.1.4."]
     },
     "native-replacement": {
       "state": "partial",
       "evidence": [
-        {"kind": "source", "path": "scripts/verify_native_entry.py", "sha256": "edf9932f2b1027dc31518ba0089822f1aff26a3ab537ab4d4aa24d57033af12b", "detail": "Builds the project-owned generated entry implementation and binds it to the retained lift-plan source bytes."},
-        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-generated-v3.json", "sha256": "072a4c6552649b9a627397d4690aa396c0e11a4a16edd6372dd924db7fcd62ad", "detail": "Cross-representation canonical replay records the mac.code.1.4 native dispatch, one interpreter-layer transition, zero SMC fallbacks, and identical terminal verification."}
+        {"kind": "source", "path": "scripts/verify_native_entry.py", "sha256": "ba9e1897f6de14169025422b51a8621c261aeb9b01e0056aa2427a8628f86ecb", "detail": "Regenerates the selected native slice and binds both implementations to retained lift-plan source bytes."},
+        {"kind": "conformance-report", "path": "recovery/native-function-conformance.json", "sha256": "fa61767a5557e5494e8454d080ae75f303e9ff3e9e1dbe47c90f40af76b2baf2", "detail": "Records 8,192 exhaustive entry-instruction cases and 8,224 full linear-function oracle comparisons with wrong-offset, wrong-endian, and exact-source guards."},
+        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-generated-v3.json", "sha256": "f3e968a1fc335bcd4a4bdc9d0c78c8b1356c67d2a229b14de65297f3ecd38f7a", "detail": "Cross-representation canonical replay records the mac.code.1.4 native dispatch, one interpreter-layer transition, zero SMC fallbacks, and identical terminal verification."}
       ],
-      "blockers": ["Only mac.code.1.4 is replaced; promote further candidates with ABI/effect parity and canonical replay evidence."]
+      "blockers": ["Only mac.code.1.4 and mac.code.2.2906 are replaced; add machine-readable ABI/effect evidence and representative replay reach before wider promotion."]
     },
     "detached-product": {
       "state": "unsupported",

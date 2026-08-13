@@ -15,8 +15,9 @@ python scripts\play.py --help
 
 Plain invocation selects the declared `oracle` stage. `--runtime generated`
 builds the project-owned Qt composition, executes the source-guarded
-`mac.code.1.4` instruction natively, and retains observable interpreter
-fallback everywhere else. It is a generated-with-fallback proof, not a
+`mac.code.1.4` instruction and linear leaf `mac.code.2.2906` natively, and
+retains observable interpreter fallback everywhere else. It is a
+generated-with-fallback proof, not a
 detached port, and still requires the exact original ISO. The Qt frontend only
 presents pixels/audio and collects host intent. Direct play, ArtifactV2
 recording, playback, and resumed sessions all traverse the same
@@ -123,6 +124,7 @@ python scripts\verify_replay.py --build
 python scripts\play.py --runtime generated --verify-replay `
   canonical-event-poll-v2
 python scripts\verify_native_entry.py
+python scripts\build_function_census.py
 python scripts\verify_snapshot_resume.py --build
 python port_forge\tools\pf_project.py atlas . rebuild-evidence `
   artifacts\evidence\canonical-event-poll-oracle-v3.json
@@ -141,8 +143,10 @@ Manager deterministic source state are resumable, but canonical PCM and video
 commit streams are not implemented, so artifacts do not claim
 `canonical-audio`, `canonical-video`, `audio-continuing`, or
 `video-continuing`. Generated/native execution is partial: one entry
-instruction is cross-representation verified and the rest is explicit
-interpreter fallback. Detached execution remains open.
+instruction and one complete linear function are cross-representation verified
+and the rest is explicit interpreter fallback. The stable function census
+keeps all 359 MPW exports queryable through `pf_project status`, `frontier`,
+and `context`. Detached execution remains open.
 The exact gap between the current oracle, a Win16-style packaged
 generated-with-fallback runtime, and a genuinely detached product is recorded
 in `docs/standalone-readiness-audit.md`.

@@ -30,7 +30,7 @@
             "artifacts/evidence/canonical-event-poll-generated-v3.json",
             "recovery/execution-plan-generated.json"
           ],
-          "notes": "mac.code.1.4 is generated and exact-source guarded; all remaining instructions retain explicit interpreter fallback."
+          "notes": "mac.code.1.4 and the linear leaf mac.code.2.2906 are generated and exact-source guarded; all remaining instructions retain explicit interpreter fallback."
         },
         "replay": {
           "supported": true,
@@ -43,6 +43,11 @@
         "reason": "No PortForge-independent Macintosh source port exists."
       }
     }
+  },
+  "corpora": {
+    "recovery": [
+      "canonical-event-poll-v2"
+    ]
   },
   "artifacts": {
     "replay_boundaries": "profiles/replay-boundaries-v1.json",
@@ -60,7 +65,9 @@
     "replay_conformance": "recovery/replay-conformance.json",
     "snapshot_conformance": "recovery/snapshot-conformance.json",
     "replays": "artifacts/replays",
-    "snapshots": "artifacts/snapshots"
+    "snapshots": "artifacts/snapshots",
+    "function_census": "artifacts/analysis/mac_function_census.json",
+    "native_function_conformance": "recovery/native-function-conformance.json"
   },
   "known_gaps": [
     {
@@ -100,21 +107,27 @@
       "gate": true
     },
     "verify-generated-replay": {
-      "command": ["python", "scripts/play.py", "--runtime", "generated", "--verify-replay", "canonical-event-poll-v2", "--evidence-out", "artifacts/evidence/canonical-event-poll-generated-v3.json", "--no-snapshot-on-crash", "--unthrottled", "--no-host-input"],
+      "command": ["python", "scripts/play.py", "--runtime", "generated", "--verify-replay", "canonical-event-poll-v2", "--no-snapshot-on-crash", "--unthrottled", "--no-host-input"],
       "scope": "cross-execution-replay",
-      "description": "Build the generated-with-fallback runner and verify the canonical artifact with execution-bound layer evidence.",
+      "description": "Build the generated-with-fallback runner and verify the canonical artifact with uniquely named execution-bound layer evidence.",
       "gate": true
     },
     "verify-native-entry": {
       "command": ["python", "scripts/verify_native_entry.py"],
       "scope": "native-replacement-parity",
-      "description": "Exhaustively compare generated mac.code.1.4 with the 68k oracle across all byte inputs and condition-code combinations.",
+      "description": "Regenerate native code and compare the generated entry instruction and first recovered leaf function with the 68k oracle, including poison and source guards.",
+      "gate": true
+    },
+    "build-function-census": {
+      "command": ["python", "scripts/build_function_census.py"],
+      "scope": "mac68k-recovery-control-plane",
+      "description": "Verify the stable-identity MPW export census and generated-function state projection are current.",
       "gate": true
     },
     "package-generated-release": {
-      "command": ["python", "scripts/package_release.py"],
+      "command": ["python", "scripts/package_release.py", "--dist", "build/release-verification"],
       "scope": "generated-windows-bundle",
-      "description": "Build and verify the generated-with-fallback Windows bundle without original media.",
+      "description": "Build and verify the generated-with-fallback Windows bundle in a clean verification output without touching a user-populated dist directory.",
       "gate": true
     },
     "collect-replay-evidence": {

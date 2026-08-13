@@ -1,0 +1,25 @@
+{
+  "format": "simant-mac-native-function-conformance-v1",
+  "guards": {
+    "exact_source_mutation": "passed",
+    "wrong_endianness": "passed",
+    "wrong_field_offset": "passed"
+  },
+  "oracle_cases": {
+    "instruction": 8192,
+    "linear_function": 8224
+  },
+  "result": "passed",
+  "source": {
+    "generated_header": "native/simant_mac_generated.hpp",
+    "generated_header_sha256": "79ff5ae8829a7d85d71480af44597967eb9439cd27a6dcd255c7a5e55f433ced",
+    "lift_plan": "artifacts/analysis/mac_static_lift_plan.json",
+    "lift_plan_sha256": "6ca054324c5a4f5d66174c1bc96dcd421d101c847d166b68da8d320d679a19f6",
+    "native_selection": "recovery/native-selection.json",
+    "native_selection_sha256": "a0506ead4ed4da9cb76893a7c809c249d3fbfde12e639552a626d5c745b8841d"
+  },
+  "verified_identities": [
+    "mac.code.1.4",
+    "mac.code.2.2906"
+  ]
+}
