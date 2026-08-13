@@ -10,14 +10,14 @@
       "schema": "pf-canonical-mac68k-v1"
     },
     "execution_identity": {
-      "sha256": "ace00ccd264f136678d46a12f28b4e91c2c216db4b966878d5c0a97ae057d9a4",
+      "sha256": "91b23cd2ac6b0e3b2887cac6bc6c8193f0ac42717849f0641a773c2b3eeae5b7",
       "value": {
         "boundary_profile_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956",
         "canonical_schema": "pf-canonical-mac68k-v1",
         "continuation_schema": "pf-continuation-mac68k-v4",
         "devices_sha256": "ad6f305ad5d0f22b3d11a7dca49cdb0bb44af39e7778a5653af999bf41eaa1f1",
         "effects_abi_sha256": "5bde32ee140a98a112814b4ff8148d6dfa3d4dfec22ab2167860bcec6a12aefe",
-        "executable_sha256": "f1e0498bac4ec7102f381d26daa2411850e2fd17890c8d611bec5c30b44d7416",
+        "executable_sha256": "38cfafe6e1544342ddb5ce1d432c30bd2e1142529e896bbcce8b3324ea5ecce8",
         "implementation_plan_sha256": "982295d554002531097c0d0d55c40cf25de04f5093815d825dcfa4a3fa8b41ef",
         "platform_runtime_sha256": "ab81690a727f9146de9ed3304a73ced98d42bd3523c0cb8431fc96cdb6a7c9e8",
         "replay_identity_sha256": "b35e01938a33744a258228493c6121f8217a3a5b5bf74053f6cb8cb90148be27",
@@ -28742,7 +28742,7 @@
     "atlas_role": "regeneratable-evidence-projection",
     "occurrence_cap": 16,
     "origin": "portforge",
-    "runtime_revision": "ace00ccd264f136678d46a12f28b4e91c2c216db4b966878d5c0a97ae057d9a4"
+    "runtime_revision": "91b23cd2ac6b0e3b2887cac6bc6c8193f0ac42717849f0641a773c2b3eeae5b7"
   },
   "replay_coverage": {
     "address_coverage": "complete",
@@ -50660,7 +50660,7 @@
     "source": "mac68k-instruction-starts"
   },
   "runtime_variant": {
-    "executable_sha256": "f1e0498bac4ec7102f381d26daa2411850e2fd17890c8d611bec5c30b44d7416",
+    "executable_sha256": "38cfafe6e1544342ddb5ce1d432c30bd2e1142529e896bbcce8b3324ea5ecce8",
     "implementation_plan_sha256": "982295d554002531097c0d0d55c40cf25de04f5093815d825dcfa4a3fa8b41ef",
     "mode": "mac-generated",
     "platform_runtime_sha256": "ab81690a727f9146de9ed3304a73ced98d42bd3523c0cb8431fc96cdb6a7c9e8",
@@ -73313,7 +73313,7 @@
           "schema": "pf-execution-effect-trace-v1"
         },
         "event_cursor": 0,
-        "execution_identity_sha256": "ace00ccd264f136678d46a12f28b4e91c2c216db4b966878d5c0a97ae057d9a4",
+        "execution_identity_sha256": "91b23cd2ac6b0e3b2887cac6bc6c8193f0ac42717849f0641a773c2b3eeae5b7",
         "outputs": {
           "audio": [],
           "first_audio_sequence": 0,
@@ -73534,7 +73534,7 @@
           "schema": "pf-execution-effect-trace-v1"
         },
         "event_cursor": 4,
-        "execution_identity_sha256": "ace00ccd264f136678d46a12f28b4e91c2c216db4b966878d5c0a97ae057d9a4",
+        "execution_identity_sha256": "91b23cd2ac6b0e3b2887cac6bc6c8193f0ac42717849f0641a773c2b3eeae5b7",
         "outputs": {
           "audio": [],
           "first_audio_sequence": 0,

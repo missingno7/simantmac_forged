@@ -37,7 +37,7 @@
     },
     "machine-exact-snapshot": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "b10b0f87c83f5ee9368cc431e1f1a359e9c4cf84b6933cb213684c5ee4411617", "detail": "A real 2M + 0.5M resumed run exactly matches a direct 2.5M run across memory, executed coverage, cursor-free v3 restorable state, and the single machine event cursor."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "057b6540fc5bf04890a188e2e48f0f6fb0eafb068ddef5704c7353a68bfb1c99", "detail": "A real 2M + 0.5M resumed run exactly matches a direct 2.5M run across memory, executed coverage, cursor-free v3 restorable state, and the single machine event cursor."}],
       "blockers": ["The scoped machine-exact proof passes, but graph-level conformance awaits complete deadline-safe coverage."]
     },
     "replay-session-continuation": {
@@ -47,25 +47,25 @@
     },
     "canonical-audio": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "b10b0f87c83f5ee9368cc431e1f1a359e9c4cf84b6933cb213684c5ee4411617", "detail": "Machine continuation includes deterministic Sound Manager source state and excludes the host queue."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "057b6540fc5bf04890a188e2e48f0f6fb0eafb068ddef5704c7353a68bfb1c99", "detail": "Machine continuation includes deterministic Sound Manager source state and excludes the host queue."}],
       "blockers": ["Add canonical PCM sequence/hash and host callback partition-invariance conformance with active playback."]
     },
     "canonical-video": {
       "state": "partial",
-      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "b10b0f87c83f5ee9368cc431e1f1a359e9c4cf84b6933cb213684c5ee4411617", "detail": "Machine continuation includes QuickDraw/source surfaces and excludes Qt window/GPU authority."}],
+      "evidence": [{"kind": "conformance-report", "path": "recovery/snapshot-conformance.json", "sha256": "057b6540fc5bf04890a188e2e48f0f6fb0eafb068ddef5704c7353a68bfb1c99", "detail": "Machine continuation includes QuickDraw/source surfaces and excludes Qt window/GPU authority."}],
       "blockers": ["Add timestamped canonical video commit hashes independent of presentation cadence."]
     },
     "normalized-observation": {
       "state": "conformant",
       "evidence": [
-        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-oracle-v3.json", "sha256": "b2ae1ad609548d4d1d4d71ad09a1324443a565b644e6b00e2b2ebbc2b9d0fad9", "detail": "ReplayEvidenceV3 binds 152 function visits, 699 observed transfers, 5,472 covered addresses, and 2 verification points to the Mac oracle execution identity."},
+        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-oracle-v3.json", "sha256": "396928cf1f6492c5479948dfdca356884faa8e838df68cd8452d91a62c9a95f4", "detail": "ReplayEvidenceV3 binds 152 function visits, 699 observed transfers, 5,472 covered addresses, and 2 verification points to the Mac oracle execution identity."},
         {"kind": "conformance-report", "path": "recovery/replay-conformance.json", "sha256": "e22c366befec1d51379891f94d2e5d7857114b4f3b261742739797634ec307c0", "detail": "Coverage is complete for the replayed trace; Toolbox service interiors remain explicitly partial-native."}
       ],
       "blockers": []
     },
     "atlas": {
       "state": "conformant",
-      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "497d6f459a0d596aac4e65538ad5989897f66e16d7cd87e71e8323abfea60d53", "detail": "Regeneratable oracle evidence projection with a content-addressed input and stable delete/rematerialize output; generated parity remains separate evidence to avoid duplicate interpreted occurrences."}],
+      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "d16f6be35e0ba5a1fdf3c2ed266fc427b0e5e0b915a081f06b3081135dd4d781", "detail": "Regeneratable oracle evidence projection with a content-addressed input and stable delete/rematerialize output; generated parity remains separate evidence to avoid duplicate interpreted occurrences."}],
       "blockers": []
     },
     "implementation-planning": {
@@ -87,14 +87,14 @@
     },
     "generated-execution": {
       "state": "partial",
-      "evidence": [{"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-generated-v3.json", "sha256": "400ae94416849e742c27e3c644238b972840c12515f83d0ed707a7355207280e", "detail": "The generated-with-fallback Qt composition verifies all 16 canonical replay boundaries with one source-guarded native mac.code.1.4 dispatch and an explicit transition to interpreter fallback for the remainder."}],
+      "evidence": [{"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-generated-v3.json", "sha256": "072a4c6552649b9a627397d4690aa396c0e11a4a16edd6372dd924db7fcd62ad", "detail": "The generated-with-fallback Qt composition verifies all 16 canonical replay boundaries with one source-guarded native mac.code.1.4 dispatch and an explicit transition to interpreter fallback for the remainder."}],
       "blockers": ["Expand generated coverage beyond one instruction and close the decoder/IR/lifting and deadline-safe prerequisites before conformance."]
     },
     "native-replacement": {
       "state": "partial",
       "evidence": [
         {"kind": "source", "path": "scripts/verify_native_entry.py", "sha256": "edf9932f2b1027dc31518ba0089822f1aff26a3ab537ab4d4aa24d57033af12b", "detail": "Builds the project-owned generated entry implementation and binds it to the retained lift-plan source bytes."},
-        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-generated-v3.json", "sha256": "400ae94416849e742c27e3c644238b972840c12515f83d0ed707a7355207280e", "detail": "Cross-representation canonical replay records the mac.code.1.4 native dispatch, one interpreter-layer transition, zero SMC fallbacks, and identical terminal verification."}
+        {"kind": "artifact", "path": "artifacts/evidence/canonical-event-poll-generated-v3.json", "sha256": "072a4c6552649b9a627397d4690aa396c0e11a4a16edd6372dd924db7fcd62ad", "detail": "Cross-representation canonical replay records the mac.code.1.4 native dispatch, one interpreter-layer transition, zero SMC fallbacks, and identical terminal verification."}
       ],
       "blockers": ["Only mac.code.1.4 is replaced; promote further candidates with ABI/effect parity and canonical replay evidence."]
     },

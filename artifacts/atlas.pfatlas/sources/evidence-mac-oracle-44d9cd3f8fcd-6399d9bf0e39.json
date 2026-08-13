@@ -10,15 +10,15 @@
       "schema": "pf-canonical-mac68k-v1"
     },
     "execution_identity": {
-      "sha256": "56374b775c29f161ba756949b84cd1733093b25e0fd5c5f611a03b40282ecb6c",
+      "sha256": "6399d9bf0e398997da0d1ebdeaeb91f14483afdfdca8eb98b816b39460f0cde9",
       "value": {
         "boundary_profile_sha256": "01ea2982af06c8004ba4a6f69b642ee92a315b0b6aa138d7d65827d526e57956",
         "canonical_schema": "pf-canonical-mac68k-v1",
         "continuation_schema": "pf-continuation-mac68k-v4",
         "devices_sha256": "ad6f305ad5d0f22b3d11a7dca49cdb0bb44af39e7778a5653af999bf41eaa1f1",
         "effects_abi_sha256": "5bde32ee140a98a112814b4ff8148d6dfa3d4dfec22ab2167860bcec6a12aefe",
-        "executable_sha256": "fe0732fddb2710143fcad84d7029488c92495ffa6ee4cba3c8419bb9ed5ce7a7",
-        "implementation_plan_sha256": "f90c2809688bc78ddedc4c9f6bbf7828dc931fe1a1aa26d3a7fc88be5195ffa3",
+        "executable_sha256": "0006d3974c4f7733e8441aeed20b30064d59b283cc4d002aa7566f195c1cb008",
+        "implementation_plan_sha256": "5d6522959e634c00800ef367d4141f38acf85d81f11cfa8d59ccdcc71ff10a1c",
         "platform_runtime_sha256": "f6861020fbb2c6ba5437b72ff22d5b7aeca7bfe53905eb7a9ce95227ec88272f",
         "replay_identity_sha256": "b35e01938a33744a258228493c6121f8217a3a5b5bf74053f6cb8cb90148be27",
         "role": "oracle-interpreter",
@@ -28732,7 +28732,7 @@
     "atlas_role": "regeneratable-evidence-projection",
     "occurrence_cap": 16,
     "origin": "portforge",
-    "runtime_revision": "56374b775c29f161ba756949b84cd1733093b25e0fd5c5f611a03b40282ecb6c"
+    "runtime_revision": "6399d9bf0e398997da0d1ebdeaeb91f14483afdfdca8eb98b816b39460f0cde9"
   },
   "replay_coverage": {
     "address_coverage": "complete",
@@ -50650,8 +50650,8 @@
     "source": "mac68k-instruction-starts"
   },
   "runtime_variant": {
-    "executable_sha256": "fe0732fddb2710143fcad84d7029488c92495ffa6ee4cba3c8419bb9ed5ce7a7",
-    "implementation_plan_sha256": "f90c2809688bc78ddedc4c9f6bbf7828dc931fe1a1aa26d3a7fc88be5195ffa3",
+    "executable_sha256": "0006d3974c4f7733e8441aeed20b30064d59b283cc4d002aa7566f195c1cb008",
+    "implementation_plan_sha256": "5d6522959e634c00800ef367d4141f38acf85d81f11cfa8d59ccdcc71ff10a1c",
     "mode": "mac-oracle",
     "platform_runtime_sha256": "f6861020fbb2c6ba5437b72ff22d5b7aeca7bfe53905eb7a9ce95227ec88272f",
     "role": "oracle-interpreter"
@@ -73303,7 +73303,7 @@
           "schema": "pf-execution-effect-trace-v1"
         },
         "event_cursor": 0,
-        "execution_identity_sha256": "56374b775c29f161ba756949b84cd1733093b25e0fd5c5f611a03b40282ecb6c",
+        "execution_identity_sha256": "6399d9bf0e398997da0d1ebdeaeb91f14483afdfdca8eb98b816b39460f0cde9",
         "outputs": {
           "audio": [],
           "first_audio_sequence": 0,
@@ -73524,7 +73524,7 @@
           "schema": "pf-execution-effect-trace-v1"
         },
         "event_cursor": 4,
-        "execution_identity_sha256": "56374b775c29f161ba756949b84cd1733093b25e0fd5c5f611a03b40282ecb6c",
+        "execution_identity_sha256": "6399d9bf0e398997da0d1ebdeaeb91f14483afdfdca8eb98b816b39460f0cde9",
         "outputs": {
           "audio": [],
           "first_audio_sequence": 0,

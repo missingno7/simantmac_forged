@@ -15,10 +15,10 @@
   "checkpoint": {
     "hashes": {
       "executed": "5ff1a391556c79bb3b7e74e8bcbd976afb1a1a344acb4612e0caa8ba209881a0",
-      "memory": "871486665e17108c4365e7ffed1f9d5e81fa7b6abffca99d5189650cacd56925",
-      "state": "1159b881643cad9ffa515e147b7c9a7cf47edc3312f4a653a0ec07fe09363047"
+      "memory": "ee944b0f7012a2b817e7cebc9e09007c8ac59ed4cfca18988891a3c11ae364e2",
+      "state": "9ab0a46bd7b7495213a895aee4edd3e7fb9b2d2a25aa2f9abae7e32350db2c45"
     },
-    "pc": 134610,
+    "pc": 7337922,
     "timeline_ticks": 77
   },
   "checkpoint_instructions": 2000000,
@@ -27,25 +27,25 @@
   "final": {
     "direct_hashes": {
       "executed": "1628f3cd79fa993c7d2d85e15edf70f5f9fd9a7d57d62a71b02aea42714119fb",
-      "memory": "e81eb3c3834407ac8d4ed0947a38b0f082376ba7c9f79ea91f28eb8f686ebe3a",
-      "state": "c0a8e6eaeff49858437be58be9e12030008da22921cc99480d83b7fe1245a9d0"
+      "memory": "5b2a81ca0e186168e5bab37c0c297ca23db827eff3516eabe56c08dac7e0215a",
+      "state": "d284ea19c208ce1d3852961b78ee928db92c76f10c09efa9a389d483c6793c16"
     },
     "hashes": {
       "executed": "1628f3cd79fa993c7d2d85e15edf70f5f9fd9a7d57d62a71b02aea42714119fb",
-      "memory": "e81eb3c3834407ac8d4ed0947a38b0f082376ba7c9f79ea91f28eb8f686ebe3a",
-      "state": "c0a8e6eaeff49858437be58be9e12030008da22921cc99480d83b7fe1245a9d0"
+      "memory": "5b2a81ca0e186168e5bab37c0c297ca23db827eff3516eabe56c08dac7e0215a",
+      "state": "d284ea19c208ce1d3852961b78ee928db92c76f10c09efa9a389d483c6793c16"
     },
     "machine_event_cursor": 0,
-    "pc": 134610,
+    "pc": 6263424,
     "timeline_ticks": 98
   },
   "format": "simant-mac-snapshot-conformance-v3",
   "result": "passed",
   "scope": "real cold-start oracle; byte-identical authenticated final continuation state",
   "snapshots": {
-    "checkpoint": "artifacts/snapshots/resume-equivalence-20260812T203924Z/checkpoint.pfmacsnapshot",
-    "direct": "artifacts/snapshots/resume-equivalence-20260812T203924Z/direct.pfmacsnapshot",
-    "resumed": "artifacts/snapshots/resume-equivalence-20260812T203924Z/resumed.pfmacsnapshot"
+    "checkpoint": "artifacts/snapshots/resume-equivalence-20260813T105254Z/checkpoint.pfmacsnapshot",
+    "direct": "artifacts/snapshots/resume-equivalence-20260813T105254Z/direct.pfmacsnapshot",
+    "resumed": "artifacts/snapshots/resume-equivalence-20260813T105254Z/resumed.pfmacsnapshot"
   },
   "state_contract": {
     "host_audio_queue_authoritative": false,

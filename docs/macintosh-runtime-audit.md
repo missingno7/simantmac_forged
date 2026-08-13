@@ -120,6 +120,9 @@ The current slice adds:
 - a generated-with-fallback Qt composition whose first SimAnt instruction
   (`mac.code.1.4`) passes 8,192 exhaustive register/flag parity cases and the
   complete canonical ArtifactV2 playback;
+- host-time display pacing, exact QuickDraw source caching, and a bounded Qt
+  paint flush so long simulation/recording advances cannot leave a responsive
+  Quick Game frame visually stale or repeatedly reproject unchanged bitmaps;
 - correlation of static MPW export ranges with dynamic executed bytes and trap
   calls;
 - correct `ApplZone` and `MemErr` low-memory contracts;

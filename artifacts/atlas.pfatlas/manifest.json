@@ -14,10 +14,10 @@
   },
   "role": "regeneratable-evidence-projection",
   "sources": {
-    "evidence-mac-oracle-44d9cd3f8fcd-56374b775c29": {
+    "evidence-mac-oracle-44d9cd3f8fcd-6399d9bf0e39": {
       "kind": "replay-evidence",
       "origin": "portforge",
-      "sha256": "b2ae1ad609548d4d1d4d71ad09a1324443a565b644e6b00e2b2ebbc2b9d0fad9"
+      "sha256": "396928cf1f6492c5479948dfdca356884faa8e838df68cd8452d91a62c9a95f4"
     }
   }
 }
