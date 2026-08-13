@@ -1,7 +1,7 @@
 {
   "$schema": "port_forge/schemas/portforge-detachment-report-v1.schema.json",
   "format": "portforge-detachment-report-v1",
-  "plan_sha256": "5d6522959e634c00800ef367d4141f38acf85d81f11cfa8d59ccdcc71ff10a1c",
+  "plan_sha256": "982295d554002531097c0d0d55c40cf25de04f5093815d825dcfa4a3fa8b41ef",
   "platform": "mac68k",
   "project": "simant-mac",
   "properties": {
@@ -24,20 +24,18 @@
     "interpreter": {
       "detached": false,
       "required_by": [
-        "simant-mac.oracle-interpreter"
+        "simant-mac.generated-with-fallback"
       ]
     },
     "oracle": {
-      "detached": false,
-      "required_by": [
-        "simant-mac.oracle-interpreter"
-      ]
+      "detached": true,
+      "required_by": []
     },
     "original-code": {
       "detached": false,
       "required_by": [
         "simant-mac.bootstrap.original-hfs",
-        "simant-mac.oracle-interpreter"
+        "simant-mac.generated-with-fallback"
       ]
     },
     "original-executable": {
@@ -73,12 +71,11 @@
     "cpu-model",
     "guest-memory",
     "interpreter",
-    "oracle",
     "original-code",
     "original-executable",
     "platform-services",
     "portforge-runtime",
     "replay"
   ],
-  "role": "oracle-interpreter"
+  "role": "generated-with-fallback"
 }

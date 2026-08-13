@@ -9,10 +9,15 @@ in `game.json` and `docs/asset-inventory.md`.
 
 ```powershell
 python scripts\play.py
+python scripts\play.py --runtime generated
 python scripts\play.py --help
 ```
 
-Plain invocation selects the declared `oracle` stage. The Qt frontend only
+Plain invocation selects the declared `oracle` stage. `--runtime generated`
+builds the project-owned Qt composition, executes the source-guarded
+`mac.code.1.4` instruction natively, and retains observable interpreter
+fallback everywhere else. It is a generated-with-fallback proof, not a
+detached port, and still requires the exact original ISO. The Qt frontend only
 presents pixels/audio and collects host intent. Direct play, ArtifactV2
 recording, playback, and resumed sessions all traverse the same
 `EventPollReplayDriver`, `Mac68kReplayRuntimeAdapter`, `LiveReplaySession`, and
@@ -115,6 +120,9 @@ of that evidence, never runtime or replay authority.
 
 ```powershell
 python scripts\verify_replay.py --build
+python scripts\play.py --runtime generated --verify-replay `
+  canonical-event-poll-v2
+python scripts\verify_native_entry.py
 python scripts\verify_snapshot_resume.py --build
 python port_forge\tools\pf_project.py atlas . rebuild-evidence `
   artifacts\evidence\canonical-event-poll-oracle-v3.json
@@ -124,16 +132,34 @@ python ..\port_forge\tools\pf_project.py validate .
 Live Atlas is deliberately reported as unavailable by `scripts/play.py` until
 stable M68K identity telemetry can fan out beside ReplaySessionEvidence without
 installing a second observer or address-only identity authority. Offline Atlas
-rebuild is supported.
+rebuild is supported from the oracle trace. Generated execution is retained as
+separate cross-representation evidence so the Atlas does not duplicate every
+interpreted occurrence in the same canonical trace.
 
 Mac ArtifactV2 currently publishes canonical state only. QuickDraw and Sound
 Manager deterministic source state are resumable, but canonical PCM and video
 commit streams are not implemented, so artifacts do not claim
 `canonical-audio`, `canonical-video`, `audio-continuing`, or
-`video-continuing`. Generated/native/detached execution also remains open.
+`video-continuing`. Generated/native execution is partial: one entry
+instruction is cross-representation verified and the rest is explicit
+interpreter fallback. Detached execution remains open.
 The exact gap between the current oracle, a Win16-style packaged
 generated-with-fallback runtime, and a genuinely detached product is recorded
 in `docs/standalone-readiness-audit.md`.
 
 The retired `portforge-mac68k-replay-v1` timestamp journal has no compatibility
 reader, alias, or active workflow.
+
+## Generated Windows bundle
+
+```powershell
+python scripts\package_release.py
+python scripts\verify_release.py
+```
+
+The package contains `SimAntMac.exe`, the generated-with-fallback Qt runtime,
+and its required Qt/MinGW libraries. It deliberately excludes the original
+CD image. Copy the exact `SimAnt_CD.iso` identified by `game.json` beside
+`SimAntMac.exe`; the launcher and runtime reject a different image SHA-256.
+This is the Macintosh analogue of the current Win16 bundle, not a detached
+source port.

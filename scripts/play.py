@@ -241,8 +241,11 @@ def parser() -> argparse.ArgumentParser:
         help="close after --snapshot-after-polls publishes successfully",
     )
     result.add_argument(
-        "--runtime", choices=("oracle",), default="oracle",
-        help="declared execution stage (only oracle is conformant today)",
+        "--runtime", choices=("oracle", "generated"), default="oracle",
+        help=(
+            "execution stage: oracle interpreter or source-guarded generated "
+            "blocks with explicit interpreter fallback"
+        ),
     )
     result.add_argument("--iso", type=Path, default=DEFAULT_ISO)
     result.add_argument("--port-forge", type=Path, default=port_forge_default())
@@ -355,6 +358,33 @@ def run_inspection(args: argparse.Namespace, port_forge: Path) -> int | None:
     return subprocess.run(command, cwd=PROJECT_ROOT, check=False).returncode
 
 
+def build_generated_qt(qt_build_util, *, quiet: bool) -> tuple[Path, dict[str, str]]:
+    project = PROJECT_ROOT / "simant_mac_generated.pro"
+    output_dir = PROJECT_ROOT / "build-simant_mac_generated"
+    executable = output_dir / "pf_mac_qt_generated.exe"
+    qmake, make, environment = qt_build_util.resolve_toolchain()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    sink = subprocess.DEVNULL if quiet else None
+    subprocess.run(
+        [str(qmake), "-o", "Makefile", str(project)],
+        cwd=output_dir,
+        check=True,
+        env=environment,
+        stdout=sink,
+    )
+    subprocess.run(
+        [str(make)],
+        cwd=output_dir,
+        check=True,
+        env=environment,
+        stdout=sink,
+        stderr=sink,
+    )
+    if not executable.is_file():
+        raise RuntimeError(f"generated Qt build produced no {executable}")
+    return executable, environment
+
+
 def main() -> int:
     args = parser().parse_args()
     if args.runner_args and args.runner_args[0] != "--":
@@ -446,16 +476,31 @@ def main() -> int:
     sys.path.insert(0, str(port_forge / "scripts"))
     import qt_build_util
 
+    generated_runtime = args.runtime == "generated"
+    generated_executable = (
+        PROJECT_ROOT / "build-simant_mac_generated" /
+        "pf_mac_qt_generated.exe"
+    )
     if args.dry_run:
-        executable = port_forge / "build-pf_mac_qt" / "pf_mac_qt.exe"
+        executable = (
+            generated_executable if generated_runtime else
+            port_forge / "build-pf_mac_qt" / "pf_mac_qt.exe"
+        )
         environment = os.environ.copy()
     elif args.no_build:
-        executable = port_forge / "build-pf_mac_qt" / "pf_mac_qt.exe"
+        executable = (
+            generated_executable if generated_runtime else
+            port_forge / "build-pf_mac_qt" / "pf_mac_qt.exe"
+        )
         _, _, environment = qt_build_util.resolve_toolchain()
         if not executable.is_file():
             raise RuntimeError(
                 f"Qt runner is not built: {executable}; omit --no-build"
             )
+    elif generated_runtime:
+        executable, environment = build_generated_qt(
+            qt_build_util, quiet=not args.verbose_build
+        )
     else:
         executable, environment = qt_build_util.build(
             port_forge,
@@ -467,10 +512,16 @@ def main() -> int:
         environment["QT_QPA_PLATFORM"] = "offscreen"
 
     execution_plan = (
-        PROJECT_ROOT / "recovery" / "execution-plan-oracle.json"
+        PROJECT_ROOT / "recovery" /
+        (
+            "execution-plan-generated.json" if generated_runtime else
+            "execution-plan-oracle.json"
+        )
     ).resolve()
     command = [
         str(executable), str(iso), "--creator", "SANT",
+        "--expected-image-sha256",
+        "8e7518796dbf32db9ff483dcc49069d4d8ec6e4625918fe4d47b03de8cc5fb0b",
         "--replay-game-id", "simant-mac",
         "--replay-assets-sha256", replay_asset_manifest(),
         "--implementation-plan", str(execution_plan),
@@ -566,6 +617,7 @@ def main() -> int:
         "--replay-game-id", "--replay-assets-sha256",
         "--implementation-plan", "--evidence-out",
         "--canonical-projections", "--replay-boundary-limit",
+        "--expected-image-sha256",
         "--session-snapshot-boundary",
         "--exit-after-session-snapshot",
     }
@@ -578,7 +630,7 @@ def main() -> int:
     command.extend(runner_args)
 
     print("project: simant-mac", flush=True)
-    print("runtime: oracle", flush=True)
+    print(f"runtime: {args.runtime}", flush=True)
     print("adapter: mac68k-event-poll-live-session", flush=True)
     print("execution: interactive semantic-session viewer", flush=True)
     print("canonical outputs: state only; PCM/video publication unsupported", flush=True)

@@ -24,12 +24,11 @@
       ]
     },
     {
-      "descriptor_sha256": "926c12460bc52d8b4d1ab75e16456b77dccda8f563566a4ddb67b4b968b9cafd",
-      "id": "simant-mac.oracle-interpreter",
+      "descriptor_sha256": "3efff7457e7968f30f2a8bf47f002d0293e7f0fecd4ee49ac19579107b616048",
+      "id": "simant-mac.generated-with-fallback",
       "kind": "implementation",
       "runtime_dependencies": [
         "interpreter",
-        "oracle",
         "original-code"
       ]
     }
@@ -38,7 +37,7 @@
   "order": [
     "portforge.mac68k.common-session",
     "simant-mac.bootstrap.original-hfs",
-    "simant-mac.oracle-interpreter"
+    "simant-mac.generated-with-fallback"
   ],
   "owns": [
     "bootstrap.application",
@@ -48,26 +47,26 @@
     "runtime.semantic-boundary",
     "services.classic-mac-toolbox"
   ],
-  "plan_sha256": "5d6522959e634c00800ef367d4141f38acf85d81f11cfa8d59ccdcc71ff10a1c",
+  "plan_sha256": "982295d554002531097c0d0d55c40cf25de04f5093815d825dcfa4a3fa8b41ef",
   "platform": "mac68k",
   "project": "simant-mac",
   "provides": [
     "bootable",
+    "generated-execution",
     "normalized-observation",
     "replay-playback",
     "replay-recording",
     "semantic-boundaries"
   ],
   "required_capabilities": [],
-  "role": "oracle-interpreter",
+  "role": "generated-with-fallback",
   "roots": [
-    "simant-mac.oracle-interpreter"
+    "simant-mac.generated-with-fallback"
   ],
   "runtime_dependencies": [
     "cpu-model",
     "guest-memory",
     "interpreter",
-    "oracle",
     "original-code",
     "original-executable",
     "platform-services",

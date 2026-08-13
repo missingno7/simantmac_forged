@@ -18,8 +18,25 @@
         }
       },
       "generated": {
-        "supported": false,
-        "reason": "No generated Mac68k execution implementation is declared."
+        "supported": true,
+        "adapter": "scripts/play.py:mac68k-generated-with-fallback",
+        "build_hint": "python scripts/play.py --runtime generated",
+        "fallback": {
+          "mode": "interpreter",
+          "coverage": "partial",
+          "observable": true,
+          "evidence": [
+            "native/simant_mac_generated.hpp",
+            "artifacts/evidence/canonical-event-poll-generated-v3.json",
+            "recovery/execution-plan-generated.json"
+          ],
+          "notes": "mac.code.1.4 is generated and exact-source guarded; all remaining instructions retain explicit interpreter fallback."
+        },
+        "replay": {
+          "supported": true,
+          "boundary_profile": "profiles/replay-boundaries-v1.json",
+          "implementation_plan": "recovery/execution-plan-generated.json"
+        }
       },
       "port": {
         "supported": false,
@@ -32,9 +49,12 @@
     "platform_capabilities": "portforge.capabilities.json",
     "implementation_catalog": "recovery/implementation-catalog.json",
     "execution_plan_oracle": "recovery/execution-plan-oracle.json",
+    "execution_plan_generated": "recovery/execution-plan-generated.json",
     "execution_plan_oracle_detachment": "recovery/execution-plan-oracle.detachment.json",
+    "execution_plan_generated_detachment": "recovery/execution-plan-generated.detachment.json",
     "canonical_replay": "artifacts/replays/canonical-event-poll-v2.pfreplay.json",
     "replay_evidence_oracle": "artifacts/evidence/canonical-event-poll-oracle-v3.json",
+    "replay_evidence_generated": "artifacts/evidence/canonical-event-poll-generated-v3.json",
     "atlas": "artifacts/atlas.pfatlas",
     "canonical_regressions": "regressions/manifest.json",
     "replay_conformance": "recovery/replay-conformance.json",
@@ -79,6 +99,24 @@
       "description": "Validate the current artifact and play it twice fail-closed.",
       "gate": true
     },
+    "verify-generated-replay": {
+      "command": ["python", "scripts/play.py", "--runtime", "generated", "--verify-replay", "canonical-event-poll-v2", "--evidence-out", "artifacts/evidence/canonical-event-poll-generated-v3.json", "--no-snapshot-on-crash", "--unthrottled", "--no-host-input"],
+      "scope": "cross-execution-replay",
+      "description": "Build the generated-with-fallback runner and verify the canonical artifact with execution-bound layer evidence.",
+      "gate": true
+    },
+    "verify-native-entry": {
+      "command": ["python", "scripts/verify_native_entry.py"],
+      "scope": "native-replacement-parity",
+      "description": "Exhaustively compare generated mac.code.1.4 with the 68k oracle across all byte inputs and condition-code combinations.",
+      "gate": true
+    },
+    "package-generated-release": {
+      "command": ["python", "scripts/package_release.py"],
+      "scope": "generated-windows-bundle",
+      "description": "Build and verify the generated-with-fallback Windows bundle without original media.",
+      "gate": true
+    },
     "collect-replay-evidence": {
       "command": ["python", "scripts/play.py", "--verify-replay", "canonical-event-poll-v2", "--evidence-out", "artifacts/evidence/canonical-event-poll-oracle-v3.json", "--no-snapshot-on-crash"],
       "scope": "normalized-replay-observation",
@@ -87,7 +125,7 @@
     "rebuild-atlas": {
       "command": ["python", "port_forge/tools/pf_project.py", "atlas", ".", "rebuild-evidence", "artifacts/evidence/canonical-event-poll-oracle-v3.json"],
       "scope": "regeneratable-evidence-projection",
-      "description": "Delete and atomically rematerialize Atlas from declared EvidenceV3."
+      "description": "Delete and atomically rematerialize Atlas from oracle EvidenceV3; generated parity remains separate evidence to avoid duplicate interpreted occurrences."
     },
     "verify-snapshot-resume": {
       "command": ["python", "scripts/verify_snapshot_resume.py", "--build"],
@@ -115,6 +153,11 @@
       "command": ["python", "port_forge/tools/pf_project.py", "plan", ".", "oracle-interpreter", "--output", "recovery/execution-plan-oracle.json"],
       "scope": "execution-planning",
       "description": "Resolve the exact Mac oracle dependency closure."
+    },
+    "plan-generated": {
+      "command": ["python", "port_forge/tools/pf_project.py", "plan", ".", "generated-with-fallback", "--output", "recovery/execution-plan-generated.json"],
+      "scope": "execution-planning",
+      "description": "Resolve the generated-with-interpreter-fallback dependency closure."
     },
     "platform-status": {
       "command": ["python", "port_forge/tools/pf_project.py", "platform", "status", ".", "--platform", "mac68k"],

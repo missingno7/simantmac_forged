@@ -38,15 +38,32 @@
       "owns": ["execution.cpu", "services.classic-mac-toolbox"],
       "provides": ["bootable", "normalized-observation"],
       "requires": ["simant-mac.bootstrap.original-hfs", "portforge.mac68k.common-session"],
-      "conflicts": [],
+      "conflicts": ["simant-mac.generated-with-fallback"],
       "requires_capabilities": [],
       "runtime_dependencies": ["interpreter", "oracle", "original-code"],
       "content": [
-        {"path": "scripts/play.py", "sha256": "1bbe9db61ea7b46d055f8ec07110f610b63358df53f2f3e9984c2f5bca9bf79a", "role": "Qt/oracle composition and identity binding"}
+        {"path": "scripts/play.py", "sha256": "6a9987f4a9f74585b906aee006119544c191e219a6abe858490a7da0ff402a02", "role": "Qt runtime selection and identity binding"}
       ]
+    },
+    {
+      "id": "simant-mac.generated-with-fallback",
+      "kind": "implementation",
+      "owns": ["execution.cpu", "services.classic-mac-toolbox"],
+      "provides": ["bootable", "generated-execution", "normalized-observation"],
+      "requires": ["simant-mac.bootstrap.original-hfs", "portforge.mac68k.common-session"],
+      "conflicts": ["simant-mac.oracle-interpreter"],
+      "requires_capabilities": [],
+      "runtime_dependencies": ["interpreter", "original-code"],
+      "content": [
+        {"path": "native/simant_mac_generated.hpp", "sha256": "727a40579e911019beb41879bd464195fe276168f54a2b7b6430179fbb1f62de", "role": "source-guarded generated mac.code.1.4 implementation"},
+        {"path": "simant_mac_generated.pro", "sha256": "51b39dbc23848e42280eef9f76d209b13a9f31fc687c4645f7001409bd9aa75a", "role": "generated Qt composition"},
+        {"path": "scripts/play.py", "sha256": "6a9987f4a9f74585b906aee006119544c191e219a6abe858490a7da0ff402a02", "role": "generated runtime selection and plan binding"}
+      ],
+      "notes": "The first generated fallthrough instruction is exact-source guarded and interpreter fallback remains explicit. This is not a detached product."
     }
   ],
   "roles": {
-    "oracle-interpreter": ["simant-mac.oracle-interpreter"]
+    "oracle-interpreter": ["simant-mac.oracle-interpreter"],
+    "generated-with-fallback": ["simant-mac.generated-with-fallback"]
   }
 }

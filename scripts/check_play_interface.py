@@ -50,6 +50,11 @@ def main() -> int:
         "--snapshot session-resume alias disappeared",
     )
     require(
+        parser.parse_args(["--runtime", "generated"]).runtime
+        == "generated",
+        "generated-with-fallback runtime disappeared",
+    )
+    require(
         parser.parse_args(["--", "--unthrottled"]).runner_args
         == ["--", "--unthrottled"],
         "strict '--' forwarding drifted",
@@ -106,6 +111,20 @@ def main() -> int:
             (ROOT / replay[field]).is_file(),
             f"oracle replay authority is missing: {replay[field]}",
         )
+    generated = manifest["player"]["runtimes"]["generated"]
+    require(
+        generated.get("supported") is True and
+        generated.get("fallback", {}).get("mode") == "interpreter" and
+        generated.get("fallback", {}).get("coverage") == "partial" and
+        generated.get("replay", {}).get("implementation_plan") ==
+        "recovery/execution-plan-generated.json",
+        "generated-with-fallback authority is absent or overstated",
+    )
+    require(
+        (ROOT / "native" / "simant_mac_generated.hpp").is_file() and
+        (ROOT / "simant_mac_generated.pro").is_file(),
+        "generated runtime sources are missing",
+    )
     print("Macintosh player interface ok")
     return 0
 

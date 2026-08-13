@@ -115,7 +115,11 @@ The current slice adds:
 - `pf_mac_lift` instruction/CFG plans with source hashes, stable CODE
   identities, branch targets, MPW edges, and explicit decode frontiers;
 - a stable exact-source-guarded native block registry that follows movable
-  CODE segments and falls back when source bytes change;
+  CODE segments, dispatches from the shared executor, and falls back before
+  native effects when source bytes change;
+- a generated-with-fallback Qt composition whose first SimAnt instruction
+  (`mac.code.1.4`) passes 8,192 exhaustive register/flag parity cases and the
+  complete canonical ArtifactV2 playback;
 - correlation of static MPW export ranges with dynamic executed bytes and trap
   calls;
 - correct `ApplZone` and `MemErr` low-memory contracts;
@@ -191,9 +195,10 @@ segment unloading/purging and full zone behavior remain approximate.
    standard widgets to Qt.
 3. **Macintosh generated semantics and parity machinery.** Stable identities,
    source-authenticated lift plans, movable-segment native block registration,
-   and source-change fallback now exist. The Mac path still needs generated
-   instruction semantics, function ABI/effect descriptions, and automatic
-   original-versus-native entry/return checkpoint comparison.
+   source-change fallback, and exhaustive parity for the first generated
+   instruction now exist. The Mac path still needs a general generator,
+   function ABI/effect descriptions, and automatic original-versus-native
+   entry/return checkpoint comparison for wider blocks.
 4. **Remaining graphics contracts.** `SetPortBits`, `ClosePort`, and
    `SetCPortPix` remain fail-loud. The reached `SetCPixel`, `GetFontInfo`,
    `PaintRgn`, and `FillCRgn` paths now use indexed pixel writes, synthetic

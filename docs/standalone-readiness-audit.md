@@ -1,13 +1,14 @@
 # Standalone and generated-build readiness audit
 
-Status: audited against PortForge `c5d8eb76` on 2026-08-12.
+Status: audited against PortForge `2cf2aa73` on 2026-08-13.
 
 ## Verdict
 
-The project is a working, reproducible Mac68k **oracle** integration. It is not
-yet a generated executable or a detached native port. Its current Windows
-entry point is the PortForge Qt runner, which boots the original HFS
-application from `SimAnt_CD.iso` and interprets its CODE resources.
+The project is a working, reproducible Mac68k **oracle** integration and now
+also has a first generated-with-fallback executable. The generated composition
+executes `mac.code.1.4` natively and interprets every remaining CODE
+instruction. It is not a detached native port: both runtimes boot the original
+HFS application from `SimAnt_CD.iso`.
 
 The Win16 `simant_forged` release is the nearest achievable first target, but
 that target must be described accurately: it is a packaged
@@ -39,12 +40,16 @@ milestone.
 - Exact machine snapshot continuation passes for its declared scope. Canonical
   PCM/video publication, complete deadline safety, and a frozen real F12
   session corpus remain partial.
-- `portforge.project.json` truthfully declares only `oracle` as supported.
-  `generated`, `native-replacement`, and `detached-product` are unsupported.
+- `portforge.project.json` declares `oracle` and the partial
+  `generated-with-fallback` runtime. Generated execution and native
+  replacement are partial; `detached-product` remains unsupported.
 - PortForge already provides source-authenticated CODE identities, a Mac68k
   lift plan, movable-segment-aware exact-byte native hook guards, and safe
-  fallback primitives. The Mac executor does not yet dispatch those hooks and
-  no Mac code generator or generated runner exists.
+  fallback primitives. The shared Mac executor now dispatches certified
+  one-instruction fallthrough hooks, emits native/fallback observations, and
+  forces interpreter execution for precise steps. The project owns the first
+  generated block and generated Qt runner; a general Mac code generator does
+  not yet exist.
 
 ## Milestone A: packaged generated-with-fallback executable
 
@@ -53,23 +58,25 @@ This is the correct analogue of the present Win16 release.
 1. Promote the reusable Mac decoder/IR/lifting chain from analysis artifacts
    into declared PortForge capabilities. Every undecoded edge must remain an
    explicit frontier, never guessed control flow.
-2. Add a Mac68k generator that emits compilable host blocks from stable
+2. Expand the current hand-authored first block into a Mac68k generator that emits compilable host blocks from stable
    `mac.code.<resource>.<offset>` identities and exact source hashes.
-3. Dispatch `NativeHooks` from the Mac executor. A generated block must enter
+3. Extend the now-active `NativeHooks` executor dispatch beyond certified
+   one-instruction fallthrough blocks. A generated block must enter
    and leave through authenticated CPU/memory state, follow movable CODE
    segments, expose normalized observations, and fall back before effects when
    its guard or coverage fails.
-4. Add a generated Mac Qt runner and execution identity. Direct, record,
+4. Expand the existing generated Mac Qt runner and execution identity. Direct, record,
    playback, snapshot, and generated/oracle handoff must continue to use the
    same `EventPollReplayDriver`, platform services, and semantic session.
-5. Declare a `generated-with-fallback` implementation, immutable execution
-   plan, and detachment report. Cross-representation replay evidence must prove
-   each promoted block against the oracle before it enters the default plan.
-6. Add project build and release surfaces comparable to Win16: `CMakeLists`,
-   generated source output, launcher, tests, `VERSION`, package script, Qt
-   deployment, and release verifier. The package must exclude the ISO and
-   proprietary resource forks, locate user-supplied media predictably, verify
-   its pinned SHA-256, and give a clear error when it is absent or wrong.
+5. Keep the declared `generated-with-fallback` implementation, immutable
+   execution plan, and detachment report current. The first block has
+   cross-representation replay evidence; every later promoted block must meet
+   the same gate before entering the default plan.
+6. Maintain the project-owned generated Qt build, launcher, parity tests,
+   `version.txt`, deterministic package script, Qt deployment, and release
+   verifier. The implemented package excludes the ISO and proprietary resource
+   forks, locates user-supplied media predictably, verifies its pinned SHA-256,
+   and gives a clear error when it is absent or wrong.
 7. Close or explicitly prove unreachable the 40 static trap gaps for every
    packaged scenario. Writable game workflows additionally need fork-aware
    File Manager semantics rather than a read-only CD shortcut.
@@ -80,6 +87,14 @@ user-supplied exact ISO; records, replays, saves, resumes, and quits cleanly;
 passes oracle/generated canonical-state comparisons; and reports interpreter,
 original-media, platform-service, and PortForge-runtime dependencies rather
 than claiming detachment.
+
+The first packaging surface is now present: `scripts/package_release.py`
+builds a generated Windows runtime and launcher, deploys the Qt/MinGW runtime,
+excludes the original ISO, and produces a verified checksum-bound archive.
+The launcher requires `SimAnt_CD.iso` beside it, and the runtime authenticates
+the image against the SHA-256 pinned in `game.json`. Wider generated coverage
+and interactive release smoke testing remain before treating Milestone A as
+complete.
 
 ## Milestone B: detached native product
 
@@ -98,10 +113,11 @@ detached engine may still need an external lawful asset-install step.
 
 ## Work order
 
-The next bounded engineering slice should be a **single generated Mac block**:
-wire `NativeHooks` into `Executor`, generate one trap-free MPW export with exact
-guards, and prove oracle/generated state equality plus guarded fallback. That
-vertical slice validates the missing execution architecture before expanding
-coverage. In parallel with later coverage work, complete canonical PCM/video,
+The first generated vertical slice is complete for `mac.code.1.4`: executor
+dispatch, exact source guards, exhaustive instruction parity, observable
+fallback, generated execution identity, and canonical replay all pass. The
+next bounded slice should promote a small executed trap-free routine and add
+the generator/ABI contract needed to avoid hand-authoring it. In parallel with
+later coverage work, complete canonical PCM/video,
 deadline-safety, F12 corpus, and external-emulator differential scenarios so
 the oracle remains trustworthy enough to certify replacements.

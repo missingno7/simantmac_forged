@@ -8,8 +8,11 @@ artifacts/replays/*
 !artifacts/evidence/
 artifacts/evidence/*
 !artifacts/evidence/canonical-event-poll-oracle-v3.json
+!artifacts/evidence/canonical-event-poll-generated-v3.json
 !artifacts/atlas.pfatlas/
 !artifacts/atlas.pfatlas/**
 _work/
 build/
+build-simant_mac_generated/
+dist/
 __pycache__/
