@@ -65,7 +65,7 @@
     },
     "atlas": {
       "state": "conformant",
-      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "d16f6be35e0ba5a1fdf3c2ed266fc427b0e5e0b915a081f06b3081135dd4d781", "detail": "Regeneratable oracle evidence projection with a content-addressed input and stable delete/rematerialize output; generated parity remains separate evidence to avoid duplicate interpreted occurrences."}],
+      "evidence": [{"kind": "artifact", "path": "artifacts/atlas.pfatlas/portforge.binding.json", "sha256": "978a70fd2c7fa7ab1fabb9b5d824c013834c0e84a8ac7e4f68d7b738e5ec9ba3", "detail": "Regeneratable oracle evidence projection with a content-addressed input and stable delete/rematerialize output; generated parity remains separate evidence to avoid duplicate interpreted occurrences."}],
       "blockers": []
     },
     "implementation-planning": {
